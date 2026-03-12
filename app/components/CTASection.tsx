@@ -1,14 +1,7 @@
 "use client";
 import ScrollToTopButton from "./ScrollToTopButton";
-
+import Link from "next/link";
 export default function CTASection() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section className="cta-section">
       <div className="cta-hero">
@@ -29,11 +22,13 @@ export default function CTASection() {
             </p>
 
             <div className="cta-buttons">
-              <button className="cta-btn cta-btn-pink">
-                <span>Contact Us</span>
-                <span className="cta-btn-divider">|</span>
-                <span>+</span>
-              </button>
+              <Link href="/contact">
+                <button className="cta-btn cta-btn-pink">
+                  <span>Contact Us</span>
+                  <span className="cta-btn-divider">|</span>
+                  <span>+</span>
+                </button>
+              </Link>
 
               <button className="cta-btn cta-btn-green">
                 <span>Doctors List</span>

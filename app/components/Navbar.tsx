@@ -1,89 +1,107 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function Navbar() {
-  const [showHomeDropdown, setShowHomeDropdown] = useState(false);
+export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  const closeMenu = () => setMenuOpen(false);
+
+  const isActive = (path: string) => pathname === path;
 
   return (
     <header className="site-header">
       <div className="container navbar-wrap">
-        <div className="navbar-logo">
-          <Link href="/" className="navbar-logo-text">
-            Doctio
-          </Link>
-        </div>
+        <Link href="/" className="navbar-logo">
+          <span className="navbar-logo-text">Docto</span>
+        </Link>
 
         <nav className="navbar-links">
-          <div
-            className="nav-item nav-item-dropdown"
-            onMouseEnter={() => setShowHomeDropdown(true)}
-            onMouseLeave={() => setShowHomeDropdown(false)}
+          <Link
+            href="/"
+            className={`nav-link ${isActive("/") ? "active" : ""}`}
           >
-            <Link
-              href="/"
-              className={`nav-link ${pathname === "/" ? "active" : ""}`}
-            >
-              Home
-            </Link>
-
-            {showHomeDropdown && (
-              <div className="nav-dropdown">
-                <Link href="/" className="dropdown-link">
-                  Home One
-                </Link>
-                <Link href="/" className="dropdown-link">
-                  Home Two
-                </Link>
-                <Link href="/" className="dropdown-link">
-                  Home Three
-                </Link>
-              </div>
-            )}
-          </div>
+            Home
+          </Link>
 
           <Link
             href="/about"
-            className={`nav-link ${pathname === "/about" ? "active" : ""}`}
+            className={`nav-link ${isActive("/about") ? "active" : ""}`}
           >
-            About Us
+            About
           </Link>
 
           <Link
             href="/services"
-            className={`nav-link ${
-              pathname.startsWith("/services") ? "active" : ""
-            }`}
+            className={`nav-link ${isActive("/services") ? "active" : ""}`}
           >
-            Our Services
+            Services
           </Link>
 
-          <Link
-            href="/#blog"
-            className={`nav-link ${pathname === "/blog" ? "active" : ""}`}
-          >
+          <Link href="/" className={`nav-link`}>
             Blog
           </Link>
 
           <Link
             href="/contact"
-            className={`nav-link ${pathname === "/contact" ? "active" : ""}`}
+            className={`nav-link ${isActive("/contact") ? "active" : ""}`}
           >
             Contact
           </Link>
         </nav>
 
         <div className="navbar-actions">
-          <button className="contact-button">
-            <span className="contact-text">Contact Us</span>
-            <span className="contact-divider">|</span>
-            <span className="contact-plus">+</span>
+          <Link href="/contact" className="contact-button">
+            Contact Us
+          </Link>
+
+          <button
+            className="mobile-hamburger"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            ☰
           </button>
         </div>
       </div>
+
+      {menuOpen && (
+        <>
+          <div className="mobile-sidebar-overlay" onClick={closeMenu} />
+
+          <aside className="mobile-sidebar open">
+            <div className="mobile-sidebar-top">
+              <span className="mobile-sidebar-title">Menu</span>
+
+              <button
+                className="mobile-close"
+                onClick={closeMenu}
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+            </div>
+
+            <nav className="mobile-nav">
+              <Link href="/" onClick={closeMenu}>
+                Home
+              </Link>
+              <Link href="/about" onClick={closeMenu}>
+                About
+              </Link>
+              <Link href="/services" onClick={closeMenu}>
+                Services
+              </Link>
+              <Link href="/contact" onClick={closeMenu}>
+                Contact
+              </Link>
+            </nav>
+          </aside>
+        </>
+      )}
     </header>
   );
 }

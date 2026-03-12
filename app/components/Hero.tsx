@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Img1 from "../../public/assets/img/homepage/3.webp";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <section className="hero-section">
-      {/* Background word */}
       <div className="hero-bg-text">Medical</div>
 
       <div className="container hero-grid">
@@ -22,8 +22,15 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">Our Services</button>
-            <button className="play-button">▶</button>
+            <Link href="/services" className="hero-services-btn">
+              <span>Our Services</span>
+              <span className="hero-services-divider">|</span>
+              <span>+</span>
+            </Link>
+
+            <button className="play-button" aria-label="Play video">
+              ▶
+            </button>
           </div>
         </div>
 

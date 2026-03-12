@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Img1 from "../../public/assets/img/homepage/8.webp";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -49,11 +50,13 @@ export default function AboutSection() {
           </div>
 
           <div className="about-dp-actions">
-            <button className="about-dp-button">
-              <span>Click Here</span>
-              <span className="about-dp-button-divider">|</span>
-              <span>+</span>
-            </button>
+            <Link href="/contact">
+              <button className="about-dp-button">
+                <span>Click Here</span>
+                <span className="about-dp-button-divider">|</span>
+                <span>+</span>
+              </button>
+            </Link>
 
             <div className="about-dp-phone">
               <span className="about-dp-phone-text">+012 (345) 6789</span>
