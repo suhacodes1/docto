@@ -49,7 +49,7 @@ export default function AboutSection() {
             </p>
           </div>
 
-          <div className="about-dp-actions">
+          <div className="about-dp-actions md:items-start items-center">
             <Link href="/contact">
               <button className="about-dp-button">
                 <span>Click Here</span>
@@ -58,9 +58,11 @@ export default function AboutSection() {
               </button>
             </Link>
 
-            <div className="about-dp-phone">
-              <span className="about-dp-phone-text">+012 (345) 6789</span>
-            </div>
+            <a href="tel:61251194369" className="group">
+              <span className="group-hover:text-[#ef2f6b] transition-colors font-bold text-lg">
+               +612-5119-4369
+              </span>
+            </a>
           </div>
         </div>
       </div>

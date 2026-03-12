@@ -30,7 +30,7 @@ export default function ContactPage() {
             className="contact-left"
           >
             <motion.p custom={0} variants={fadeUp} className="contact-eyebrow">
-              Let’s talk
+              Let’s talks
             </motion.p>
 
             <motion.h1 custom={0.1} variants={fadeUp} className="contact-title">
@@ -46,12 +46,20 @@ export default function ContactPage() {
             <motion.div custom={0.3} variants={fadeUp} className="contact-info-grid">
               <div className="contact-info-card">
                 <h3>Email</h3>
-                <p>hello@digitalparadigm.com.au</p>
+                <a href="mailto:info@digitalparadigm.com.au" className="group">
+                  <span className="group-hover:text-[#ef2f6b] transition-colors text-sm">
+                    info@digitalparadigm.com.au
+                  </span>
+                </a>
               </div>
 
               <div className="contact-info-card">
                 <h3>Phone</h3>
-                <p>+61 400 000 000</p>
+                <a href="tel:61251194369" className="group">
+                  <span className="group-hover:text-[#ef2f6b] transition-colors text-sm">
+                    +612-5119-4369
+                  </span>
+                </a>
               </div>
 
               <div className="contact-info-card">

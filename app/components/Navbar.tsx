@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "../../public/assets/img/Logos/LogoDark.webp";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +18,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container navbar-wrap">
         <Link href="/" className="navbar-logo">
-          <span className="navbar-logo-text">Docto</span>
+          <Image src={Logo} alt="Healthcare Logo" className="h-10 w-auto" />
         </Link>
 
         <nav className="navbar-links">
@@ -28,22 +30,22 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/about"
-            className={`nav-link ${isActive("/about") ? "active" : ""}`}
-          >
-            About
-          </Link>
-
-          <Link
             href="/services"
             className={`nav-link ${isActive("/services") ? "active" : ""}`}
           >
             Services
           </Link>
 
-          <Link href="/" className={`nav-link`}>
-            Blog
+          <Link
+            href="/about"
+            className={`nav-link ${isActive("/about") ? "active" : ""}`}
+          >
+            About
           </Link>
+
+          {/* <Link href="/" className={`nav-link`}>
+            Blog
+          </Link> */}
 
           <Link
             href="/contact"

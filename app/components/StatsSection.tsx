@@ -22,7 +22,7 @@ function CountUp({ end, suffix = "" }: CountUpProps) {
           setHasAnimated(true);
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     observer.observe(node);
@@ -88,59 +88,175 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="stats-section">
-      <div className="stats-bg-text">Statistics</div>
+    <section className="stats-section bg-gray-50 py-8 relative">
+      <div className="stats-bg-text absolute inset-0 opacity-10 text-9xl flex items-center justify-center">
+        Statistics
+      </div>
 
-      <div className="container stats-grid">
-        <div className="stats-left">
-          <h2 className="stats-title">Statistics Section</h2>
-          <p className="stats-description">
-            Replace healthcare stats with{" "}
-            <strong>business credibility metrics.</strong>
+      <div className="container mx-auto px-4 stats-grid grid md:grid-cols-2 gap-12">
+        <div className="stats-left space-y-6">
+          <p className="contact-eyebrow text-sm uppercase text-pink-500">
+            Let’s talk
+          </p>
+          <h2 className="text-white md:text-7xl text-5xl font-bold">
+            Let’s discuss your next digital project
+          </h2>
+          <p className="text-base md:text-lg text-white">
+            Tell us what you’re building, what challenges you’re facing, and
+            what kind of support you need. We’ll help shape the right solution.
           </p>
 
-          <p className="stats-example">Example</p>
+          <div className="grid grid-cols-1 gap-6">
+            <div className="p-4 bg-slate-200 rounded-md shadow">
+              <h3 className="font-semibold text-gray-900 text-lg">Email</h3>
+              <p className="text-black text-base">hello@digitalparadigm.com.au</p>
+            </div>
 
-          <div className="stats-cards">
-            {stats.map((item) => (
-              <article className="stats-card" key={item.label}>
-                <div className="stats-icon">{item.icon}</div>
-                <div className="stats-value">
-                  <CountUp end={item.value} suffix={item.suffix} />
-                </div>
-                <div className="stats-label">{item.label}</div>
-              </article>
-            ))}
+            <div className="p-4 bg-slate-200 rounded-md shadow">
+              <h3 className="font-semibold text-gray-900 text-lg">Phone</h3>
+              <p className="text-black text-base">+61 400 000 000</p>
+            </div>
+
+            <div className="p-4 bg-slate-200 rounded-md shadow">
+              <h3 className="font-semibold text-gray-900 text-lg">Response Time</h3>
+              <p className="text-black text-base">Usually within 1 business day</p>
+            </div>
           </div>
         </div>
 
-        <div className="stats-form-panel">
-          <div className="stats-form-watermark">icon</div>
+        <div className="bg-slate-200 shadow-lg rounded-lg p-6 md:p-8 relative">
+          <p className="text-sm text-black md:text-base uppercase">Make an</p>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-8">
+            Appointment
+          </h3>
 
-          <p className="stats-form-subtitle">Make an</p>
-          <h3 className="stats-form-title">Appointment</h3>
+          <form className="">
+            <div className="contact-form-row flex flex-col md:flex-row gap-4">
+              <div className="contact-field flex-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-white"
+                >
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your full name"
+                  className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+              </div>
 
-          <div className="stats-form-fields">
-            <div className="stats-form-field">
-              <span>Choose A Service</span>
-              <span>⌄</span>
+              <div className="contact-field flex-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-white"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Your email"
+                  className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+              </div>
             </div>
 
-            <div className="stats-form-field">
-              <span>Select Doctors</span>
-              <span>⌄</span>
+            <div className="contact-form-row flex flex-col md:flex-row gap-4">
+              <div className="contact-field flex-1">
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-medium text-white"
+                >
+                  Company
+                </label>
+                <input
+                  id="company"
+                  type="text"
+                  placeholder="Your company"
+                  className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+                />
+              </div>
+
+              <div className="contact-field flex-1">
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-medium text-white"
+                >
+                  Service Needed
+                </label>
+                <select
+                  id="service"
+                  defaultValue=""
+                  className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-pink-500"
+                >
+                  <option value="" disabled>
+                    Select a service
+                  </option>
+                  <option>Custom Web Development</option>
+                  <option>MVP Development</option>
+                  <option>SaaS Development</option>
+                  <option>Enterprise Software Development</option>
+                  <option>Web Portal Development</option>
+                  <option>UI/UX Design</option>
+                  <option>Responsive Web Design</option>
+                  <option>Graphic Design</option>
+                  <option>SEO</option>
+                  <option>Social Media Marketing</option>
+                  <option>Influencer Marketing</option>
+                  <option>PPC</option>
+                </select>
+              </div>
             </div>
 
-            <div className="stats-form-field">
-              <span>dd/mm/yyyy</span>
+            <div className="contact-field">
+              <label
+                htmlFor="budget"
+                className="block text-sm font-medium text-white"
+              >
+                Budget Range
+              </label>
+              <input
+                id="budget"
+                type="text"
+                placeholder="e.g. $5k - $15k"
+                className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              />
             </div>
-          </div>
 
-          <Link href="/contact" className="stats-submit-btn">
-            <span>SUBMIT NOW</span>
-            <span className="stats-submit-divider">|</span>
-            <span>+</span>
-          </Link>
+            <div className="contact-field">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-white"
+              >
+                Project Details
+              </label>
+              <textarea
+                style={{ resize: "none" }}
+                id="message"
+                rows={6}
+                placeholder="Tell us about your project, goals, and any specific features you need..."
+                className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              />
+            </div>
+            <div className="mt-6 flex items-center flex-col gap-4 justify-center">
+              <button
+                type="submit"
+                className="contact-submit-btn w-full inline-flex items-center justify-center bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Send Enquiry
+              </button>
+              <a
+                href="https://calendly.com/digitalparadigm/product-strategy-call"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-submit-btn w-full inline-flex items-center justify-center bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded"
+              >
+                Book a Free Consultation
+              </a>
+            </div>
+          </form>
         </div>
       </div>
     </section>

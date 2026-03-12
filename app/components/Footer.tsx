@@ -1,16 +1,41 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Logo from "../../public/assets/img/Logos/LogoLight.webp";
+import Image from "next/image";
+
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/services", label: "Services" },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  const linkClass = (href: string) =>
+    href === pathname
+      ? "font-semibold"
+      : "text-white hover:text-pink-500 font-thin";
+
+  const linkStyle = (href: string) =>
+    href === pathname ? { color: "#ec4899" } : undefined;
+
   return (
     <footer className="site-footer">
-      <div className="container footer-top">
+      <div className="container flex flex-col md:flex-row items-center justify-between">
         <div className="footer-brand">
-          <div className="footer-logo">
-            <span className="footer-logo-text">Doctio</span>
-          </div>
+          <Link href="/" className="footer-logo">
+            <Image src={Logo} alt="Healthcare Logo" className="h-10 w-auto" />
+          </Link>
         </div>
 
-        <div className="footer-subscribe">
+        {/* <div className="footer-subscribe">
           <p>Subscribe:</p>
-        </div>
+        </div> */}
 
         <div className="footer-stats">
           <span className="footer-stats-number">5M+</span>
@@ -20,7 +45,7 @@ export default function Footer() {
 
       <div className="container footer-divider" />
 
-      <div className="container footer-main">
+      <div className="container footer-main justify-between">
         <div className="footer-column">
           <h3 className="footer-heading">About Us</h3>
           <p className="footer-about-text">
@@ -28,7 +53,7 @@ export default function Footer() {
             there readable an important content.
           </p>
 
-          <h4 className="footer-subheading">Find Us On:</h4>
+          {/* <h4 className="footer-subheading">Find Us On:</h4>
 
           <div className="footer-socials">
             <a href="#" className="footer-social">
@@ -40,31 +65,27 @@ export default function Footer() {
             <a href="#" className="footer-social">
               in
             </a>
-          </div>
+          </div> */}
         </div>
 
         <div className="footer-column">
           <h3 className="footer-heading">Quick Links</h3>
-          <ul className="footer-links">
-            <li>
-              <a href="#">About Us</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Department</a>
-            </li>
-            <li>
-              <a href="#">Doctors</a>
-            </li>
-            <li>
-              <a href="#">Faq’s</a>
-            </li>
+          <ul className="space-y-4 mt-4 md:mt-6">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className={linkClass(link.href)}
+                  style={linkStyle(link.href)}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
-        <div className="footer-column">
+        {/* <div className="footer-column">
           <h3 className="footer-heading">Recent Posts</h3>
 
           <div className="footer-posts">
@@ -96,25 +117,31 @@ export default function Footer() {
               </div>
             </article>
           </div>
-        </div>
+        </div> */}
 
         <div className="footer-column">
           <h3 className="footer-heading">Contact Us</h3>
 
           <ul className="footer-contact-list">
             <li>
-              <span>Obere Haltenstrasse, Lugaggia. Switzerland - 6953</span>
+              <span>
+                <strong>Address:</strong> Level 1 530 Lt Collins Street
+                Melbourne VIC
+              </span>
             </li>
             <li>
-              <span className="footer-contact-icon">✉</span>
-              <span>no@themedraft.net</span>
+              <a href="mailto:info@digitalparadigm.com.au" className="group">
+                <span className="group-hover:text-[#ef2f6b] transition-colors">
+                  <strong>Email:</strong> info@digitalparadigm.com.au
+                </span>
+              </a>
             </li>
             <li>
-              <span className="footer-contact-icon">✉</span>
-              <span>replay@themedraft.net</span>
-            </li>
-            <li>
-              <span>+410 123 456 789</span>
+              <a href="tel:61251194369" className="group">
+                <span className="group-hover:text-[#ef2f6b] transition-colors">
+                  <strong>Hotline:</strong> +612-5119-4369
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -124,11 +151,11 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p className="footer-bottom-left">
-          Doctio | Developed by: <strong>ThemeDraft</strong>
+          Health | Powered by: <strong>Digital Paradigm</strong>
         </p>
 
         <p className="footer-bottom-right">
-          © Doctio 2022 | All Right Reserved
+          © Health {currentYear} | All Right Reserved
         </p>
       </div>
     </footer>

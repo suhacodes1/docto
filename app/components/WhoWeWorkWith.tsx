@@ -75,13 +75,13 @@ export default function WhoWeWorkWith() {
             <article className="who-card" key={`${item.title}-${index}`}>
               <div className="who-image-wrap">
                 <Image src={item.image} alt={item.title} className="who-image" />
-                <button className="who-explore">
+                {/* <button className="who-explore">
                   <span>
                     Explore
                     <br />
                     More
                   </span>
-                </button>
+                </button> */}
               </div>
 
               <h3 className="who-card-title">{item.title}</h3>

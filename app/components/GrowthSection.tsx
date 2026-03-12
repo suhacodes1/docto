@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Img1 from "../../public/assets/img/homepage/12.webp";
+import Img1 from "../../public/assets/img/homepage/14.webp";
 
 const growthCards = {
   leftTop: {
@@ -30,83 +30,79 @@ const growthCards = {
 
 export default function GrowthSection() {
   return (
-    <section className="growth-section">
-      <div className="growth-bg-text">Clinics Grow</div>
+    <section className="relative py-16 bg-gray-50">
+      <div className="who-bg-text">Clinics</div>
 
-      <div className="container growth-container">
-        <p className="growth-subtitle">Clinics Grow with Technology</p>
-        <h2 className="growth-title">Helping Clinics Grow With Technology</h2>
-        <div className="growth-line" />
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <p className="who-subtitle">Clinics Grow with Technology</p>
+        <h2 className="who-title">Helping Clinics Grow With Technology</h2>
+        <div className="who-line" />
 
-        <div className="growth-layout">
-          <div className="growth-side-column">
-            <article className="growth-card">
-              <div className="growth-icon">{growthCards.leftTop.icon}</div>
-              <h3 className="growth-card-title">
+        <div className="relative md:flex md:items-center md:justify-between md:space-x-6 mt-6">
+          {/* left column - vertical stack */}
+          <div className="flex flex-col space-y-6 md:w-1/4 z-10">
+            <article className="bg-white p-6 rounded shadow">
+              <div className="text-3xl mb-2">{growthCards.leftTop.icon}</div>
+              <h3 className="text-xl font-semibold">
                 More Online Patient
                 <br />
                 Bookings
               </h3>
-              <p className="growth-card-text">
-                {growthCards.leftTop.description}
-              </p>
-              <a href="#" className="growth-readmore">
+              <p className="mt-2">{growthCards.leftTop.description}</p>
+              <a href="#" className="text-pink-500 mt-4 inline-block">
                 Read More »
               </a>
             </article>
 
-            <article className="growth-card">
-              <div className="growth-icon">{growthCards.leftBottom.icon}</div>
-              <h3 className="growth-card-title">
+            <article className="bg-white p-6 rounded shadow md:ml-8 md:mt-8 md:relative left-8">
+              <div className="text-3xl mb-2">{growthCards.leftBottom.icon}</div>
+              <h3 className="text-xl font-semibold">
                 Better Internal
                 <br />
                 Efficiency
               </h3>
-              <p className="growth-card-text">
-                {growthCards.leftBottom.description}
-              </p>
-              <a href="#" className="growth-readmore">
+              <p className="mt-2">{growthCards.leftBottom.description}</p>
+              <a href="#" className="text-pink-500 mt-4 inline-block">
                 Read More »
               </a>
             </article>
           </div>
 
-          <div className="growth-center-container">
-            <div className="growth-center-shape" />
+          {/* center image, absolute on md+ */}
+          <div className="md:absolute md:inset-0 md:flex md:justify-center md:items-center relative z-0">
             <Image
               src={Img1}
               alt="Healthcare professional placeholder"
-              className="growth-center-image"
+              className="w-[50%] mx-auto"
             />
           </div>
 
-          <div className="growth-side-column">
-            <article className="growth-card">
-              <div className="growth-icon">{growthCards.rightTop.icon}</div>
-              <h3 className="growth-card-title">
+          {/* right column - vertical stack */}
+          <div className="flex flex-col space-y-6 md:w-1/4 z-10">
+            <article className="bg-white p-6 rounded shadow">
+              <div className="text-3xl mb-2">{growthCards.rightTop.icon}</div>
+              <h3 className="text-xl font-semibold">
                 Higher Google
                 <br />
                 Visibility
               </h3>
-              <p className="growth-card-text">
-                {growthCards.rightTop.description}
-              </p>
-              <a href="#" className="growth-readmore">
+              <p className="mt-2">{growthCards.rightTop.description}</p>
+              <a href="#" className="text-pink-500 mt-4 inline-block">
                 Read More »
               </a>
             </article>
 
-            <article className="growth-card">
-              <div className="growth-icon">{growthCards.rightBottom.icon}</div>
-              <h3 className="growth-card-title">
+            <article className="bg-white p-6 rounded shadow md:mr-8 md:mt-8 md:relative right-8">
+              <div className="text-3xl mb-2">
+                {growthCards.rightBottom.icon}
+              </div>
+              <h3 className="text-xl font-semibold">
                 Stronger Online
                 <br />
                 Reputation
               </h3>
-              <p className="growth-card-text">
-                {growthCards.rightBottom.description}
-              </p>
-              <a href="#" className="growth-readmore">
+              <p className="mt-2">{growthCards.rightBottom.description}</p>
+              <a href="#" className="text-pink-500 mt-4 inline-block">
                 Read More »
               </a>
             </article>

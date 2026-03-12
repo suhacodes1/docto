@@ -43,7 +43,7 @@ export default function ClinicChallenges() {
           <div className="clinic-challenges-cards">
             {challenges.map((item, index) => (
               <div key={index} className="challenge-card">
-                <div className="challenge-icon">✓</div>
+                <div className="challenge-icon shrink-0">✓</div>
 
                 <div>
                   <h4 className="challenge-title">{item.title}</h4>
