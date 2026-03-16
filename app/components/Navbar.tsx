@@ -17,48 +17,48 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container navbar-wrap">
-        <Link href="/" className="navbar-logo">
+        <a href="/" className="navbar-logo">
           <Image src={Logo} alt="Healthcare Logo" className="h-10 w-auto" />
-        </Link>
+        </a>
 
         <nav className="navbar-links">
-          <Link
+          <a
             href="/"
             className={`nav-link ${isActive("/") ? "active" : ""}`}
           >
             Home
-          </Link>
+          </a>
 
-          <Link
+          <a
             href="/services"
             className={`nav-link ${isActive("/services") ? "active" : ""}`}
           >
             Services
-          </Link>
+          </a>
 
-          <Link
+          <a
             href="/about"
             className={`nav-link ${isActive("/about") ? "active" : ""}`}
           >
             About
-          </Link>
+          </a>
 
-          {/* <Link href="/" className={`nav-link`}>
+          {/* <a href="/" className={`nav-link`}>
             Blog
-          </Link> */}
+          </a> */}
 
-          <Link
+          <a
             href="/contact"
             className={`nav-link ${isActive("/contact") ? "active" : ""}`}
           >
             Contact
-          </Link>
+          </a>
         </nav>
 
         <div className="navbar-actions">
-          <Link href="/contact" className="contact-button">
+          <a href="/contact" className="contact-button">
             Contact Us
-          </Link>
+          </a>
 
           <button
             className="mobile-hamburger"
@@ -88,18 +88,18 @@ export default function Header() {
             </div>
 
             <nav className="mobile-nav">
-              <Link href="/" onClick={closeMenu}>
+              <a href="/" onClick={closeMenu}>
                 Home
-              </Link>
-              <Link href="/about" onClick={closeMenu}>
+              </a>
+              <a href="/about" onClick={closeMenu}>
                 About
-              </Link>
-              <Link href="/services" onClick={closeMenu}>
+              </a>
+              <a href="/services" onClick={closeMenu}>
                 Services
-              </Link>
-              <Link href="/contact" onClick={closeMenu}>
+              </a>
+              <a href="/contact" onClick={closeMenu}>
                 Contact
-              </Link>
+              </a>
             </nav>
           </aside>
         </>
