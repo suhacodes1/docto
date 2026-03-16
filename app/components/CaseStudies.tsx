@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import React, { useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-fade";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Images
 import Img1 from "../../public/assets/img/casestudyrevamp-pages/preview-banners/synapse.webp";
@@ -52,6 +56,13 @@ import Img22 from "../../public/assets/img/casestudyrevamp-pages/preview-banners
 import Img22mobile from "../../public/assets/img/casestudyrevamp-pages/preview-banners/mobile/gatemint.webp";
 
 export default function CaseStudies() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const bgTextRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const subtitleRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
+
   const projects = [
     {
       id: 1,
@@ -319,38 +330,82 @@ export default function CaseStudies() {
     },
   ];
 
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    // Background text animation
+    gsap.to(bgTextRef.current, {
+      y: isMobile ? 20 : 40,
+      opacity: 0.15,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    // Timeline for animations
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top center",
+      },
+      defaults: { ease: "power3.out" },
+    });
+
+    tl.from(
+      subtitleRef.current,
+      {
+        opacity: 0,
+        y: isMobile ? 15 : 20,
+        duration: 0.6,
+      },
+      0,
+    )
+      .from(
+        titleRef.current,
+        {
+          opacity: 0,
+          y: isMobile ? 20 : 40,
+          duration: 0.8,
+        },
+        0.1,
+      )
+      .from(
+        lineRef.current,
+        {
+          opacity: 0,
+          width: 0,
+          duration: 0.6,
+        },
+        0.2,
+      );
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
-    <section className="case-studies-section">
-      <div className="case-studies-bg-text">Case Studies</div>
+    <section className="relative py-16 md:py-20">
+      <div className="case-studies-bg-text" ref={bgTextRef}>Case Studies</div>
 
-      <div className="container case-studies-container">
-        <div className="case-studies-header">
-          <div className="case-studies-heading-block">
-            <p className="case-studies-subtitle">Case Studies</p>
-            <h2 className="case-studies-title">
-              Real Results For
-              <br />
-              Healthcare Clients
-            </h2>
-            <div className="case-studies-line mb-4" />
-          </div>
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        <div className="text-center">
+          <p
+            className="text-base md:text-lg mb-2 text-[#ef2f6b] font-semibold"
+            ref={subtitleRef}
+          >
+            Case Studies
+          </p>
 
-          {/* <div className="case-studies-controls">
-            <button
-              className="case-studies-arrow"
-              onClick={handlePrev}
-              aria-label="Previous case study"
-            >
-              ←
-            </button>
-            <button
-              className="case-studies-arrow"
-              onClick={handleNext}
-              aria-label="Next case study"
-            >
-              →
-            </button>
-          </div> */}
+          <h2
+            className="text-black md:text-5xl text-3xl font-extrabold mb-6 relative z-10"
+            ref={titleRef}
+          >
+            Real Results For Healthcare Clients
+          </h2>
+
+          <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" />
         </div>
 
         {/* 🔹 Swiper Slider */}
@@ -449,7 +504,7 @@ export default function CaseStudies() {
                     <div className="flex flex-col gap-4 sm:flex-row">
                       <a
                         href="/contact"
-                        className="bg-[#ff7a3d] hover:bg-[#ff4d2d] md:text-white text-black px-10 py-3 rounded-md font-medium transition text-sm text-center"
+                        className="bg-[#ef2f6b] hover:bg-[#d92a5a] text-white px-10 py-3 rounded-md font-medium transition text-sm text-center"
                       >
                         Get a quote now
                       </a>
@@ -461,7 +516,6 @@ export default function CaseStudies() {
                         View Case Studies
                       </a> */}
                     </div>
-                    
                   </div>
                 </div>
               </div>
