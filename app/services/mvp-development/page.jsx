@@ -61,9 +61,9 @@ export default function MVPDevelopment() {
               custom={0.3}
               className="service-detail-actions"
             >
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Start Your MVP
-              </Link>
+              </a>
 
               <button className="btn-secondary">
                 Learn More
@@ -218,9 +218,9 @@ export default function MVPDevelopment() {
             </h2>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Discuss Your Product
-          </Link>
+          </a>
 
         </motion.div>
 

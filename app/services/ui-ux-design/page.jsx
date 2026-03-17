@@ -57,9 +57,9 @@ export default function UIUXDesign() {
               custom={0.3}
               className="service-detail-actions"
             >
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Start Your Design
-              </Link>
+              </a>
 
               <a href="#uiux-process" className="btn-secondary">
                 See Process
@@ -285,9 +285,9 @@ export default function UIUXDesign() {
             </p>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Talk To Our Team
-          </Link>
+          </a>
         </motion.div>
       </section>
     </main>

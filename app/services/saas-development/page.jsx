@@ -56,9 +56,9 @@ export default function SaaSDevelopment() {
               custom={0.3}
               className="service-detail-actions"
             >
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Build Your SaaS
-              </Link>
+              </a>
 
               <a href="#saas-process" className="btn-secondary">
                 See Process
@@ -285,9 +285,9 @@ export default function SaaSDevelopment() {
             </p>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Talk To Our Team
-          </Link>
+          </a>
         </motion.div>
       </section>
     </main>

@@ -57,9 +57,9 @@ export default function SocialMediaMarketing() {
               custom={0.3}
               className="service-detail-actions"
             >
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Grow Your Brand
-              </Link>
+              </a>
 
               <a href="#social-process" className="btn-secondary">
                 See Process
@@ -292,9 +292,9 @@ export default function SocialMediaMarketing() {
             </p>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Talk To Our Team
-          </Link>
+          </a>
         </motion.div>
       </section>
     </main>
