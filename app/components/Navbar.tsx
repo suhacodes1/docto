@@ -57,7 +57,7 @@ export default function Header() {
 
         <div className="navbar-actions">
           <a href="/contact" className="contact-button">
-            Contact Us
+            Get in Touch
           </a>
 
           <button

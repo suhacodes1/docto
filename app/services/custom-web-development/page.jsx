@@ -73,9 +73,9 @@ export default function CustomWebDevelopment() {
               variants={fadeUp}
               className="cwd-actions"
             >
-              <Link href="/contact" className="cwd-btn cwd-btn-primary">
+              <a href="/contact" className="cwd-btn cwd-btn-primary">
                 Book a Consultation
-              </Link>
+              </a>
 
               <a href="#process" className="cwd-btn cwd-btn-secondary">
                 Explore Process
@@ -309,9 +309,9 @@ export default function CustomWebDevelopment() {
               </p>
             </div>
 
-            <Link href="/contact" className="cwd-btn cwd-btn-primary cwd-cta-btn">
+            <a href="/contact" className="cwd-btn cwd-btn-primary cwd-cta-btn">
               Book a Consultation
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>

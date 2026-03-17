@@ -57,9 +57,9 @@ export default function SearchEngineOptimization() {
               custom={0.3}
               className="service-detail-actions"
             >
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Grow With SEO
-              </Link>
+              </a>
 
               <a href="#seo-process" className="btn-secondary">
                 See Process
@@ -292,9 +292,9 @@ export default function SearchEngineOptimization() {
             </p>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Talk To Our Team
-          </Link>
+          </a>
         </motion.div>
       </section>
     </main>

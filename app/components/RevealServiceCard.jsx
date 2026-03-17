@@ -8,6 +8,7 @@ export default function RevealServiceCard({
   title,
   description,
   delay = 0,
+  icon: Icon,
 }) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -32,14 +33,14 @@ export default function RevealServiceCard({
   }, []);
 
   return (
-    <Link
+    <a
       ref={ref}
       href={href}
       className={`service-card service-reveal ${isVisible ? "is-visible" : ""}`}
       style={{ transitionDelay: `${delay}s` }}
     >
       <div className="service-card-icon-wrap">
-        <div className="service-card-icon" />
+        {Icon && <Icon size={32} className="text-pink-500" />}
       </div>
 
       <h3 className="service-card-title">{title}</h3>
@@ -49,6 +50,6 @@ export default function RevealServiceCard({
         <span>Read More</span>
         <span className="service-card-arrow">↗</span>
       </div>
-    </Link>
+    </a>
   );
 }

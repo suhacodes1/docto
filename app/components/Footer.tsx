@@ -29,9 +29,9 @@ export default function Footer() {
       <div className="container footer-main justify-between">
         <div className="footer-column">
           <div className="footer-brand mb-6">
-            <Link href="/" className="footer-logo">
+            <a href="/" className="footer-logo">
               <Image src={Logo} alt="Healthcare Logo" className="h-8 w-auto" />
-            </Link>
+            </a>
           </div>
 
           <p className="footer-about-text">

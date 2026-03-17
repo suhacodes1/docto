@@ -37,7 +37,7 @@ export default function AboutPage() {
             <motion.h1
               variants={fadeUp}
               custom={0.1}
-              className="about-hero-title"
+              className="about-hero-title font-bold"
             >
               Helping healthcare brands grow with clarity, trust, and strategy
             </motion.h1>
@@ -57,13 +57,13 @@ export default function AboutPage() {
               custom={0.3}
               className="about-hero-actions"
             >
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Work With Us
-              </Link>
+              </a>
 
-              <Link href="/services" className="btn-secondary">
+              <a href="/services" className="btn-secondary">
                 Our Services
-              </Link>
+              </a>
             </motion.div>
 
             <motion.div
@@ -334,9 +334,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <a href="/contact" className="btn-primary">
             Get In Touch
-          </Link>
+          </a>
         </motion.div>
       </section>
     </main>
