@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
+import AOSProvider from "./components/AOSProvider";
+import "aos/dist/aos.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -23,10 +25,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jakarta.className}>
-        <TopBar />
-        <Navbar />
-        {children}
-        <Footer />
+        <AOSProvider>
+          <TopBar />
+          <Navbar />
+          {children}
+          <Footer />
+        </AOSProvider>
       </body>
     </html>
   );

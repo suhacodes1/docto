@@ -1,296 +1,141 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import ServicePageLayout from "@/app/components/ServicePageLayout";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      delay,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
+const faqs = [
+  {
+    q: "What is PPC advertising?",
+    a: "Pay-Per-Click (PPC) advertising is a model where you pay each time someone clicks on your ad. It allows businesses to appear in front of high-intent users quickly.",
+  },
+  {
+    q: "Which platforms do you run PPC campaigns on?",
+    a: "We manage campaigns across Google Ads, Bing, YouTube, and social platforms like Facebook and Instagram depending on your audience.",
+  },
+  {
+    q: "How quickly can PPC generate results?",
+    a: "PPC can drive traffic almost immediately after launch, making it one of the fastest ways to generate visibility and leads.",
+  },
+  {
+    q: "Do you optimise campaigns over time?",
+    a: "Yes. We continuously monitor performance, adjust targeting, refine ads, and optimise budgets to improve results.",
+  },
+  {
+    q: "How do you measure PPC success?",
+    a: "We track key metrics such as clicks, conversions, cost-per-click, return on ad spend, and overall campaign performance.",
+  },
+  {
+    q: "Can PPC work alongside SEO?",
+    a: "Absolutely. PPC provides immediate traffic while SEO builds long-term visibility — together they create a strong marketing strategy.",
+  },
+];
 
 export default function PayPerClick() {
   return (
-    <main className="service-detail-page ppc-page">
-      <section className="service-detail-hero ppc-hero">
-        <div className="service-detail-bg-text">PPC</div>
-        <div className="ppc-orb ppc-orb-one" />
-        <div className="ppc-orb ppc-orb-two" />
+    <ServicePageLayout
+      category="Paid Advertising & Digital Growth"
+      titleTop="Your"
+      titleMain="Pay-Per-Click"
+      titleBottom="Campaigns"
+      intro="Reach high-intent audiences faster with strategic PPC campaigns designed to drive clicks, conversions, and measurable business results."
+      primaryCtaText="Launch Campaigns"
+      primaryCtaLink="/contact"
 
-        <div className="container service-detail-hero-grid">
-          <motion.div initial="hidden" animate="show">
-            <motion.p
-              variants={fadeUp}
-              custom={0}
-              className="service-detail-category"
-            >
-              Paid Advertising &amp; Digital Growth
-            </motion.p>
+      heroImage="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop"
+      heroImageAlt="PPC campaign performance dashboard"
 
-            <motion.h1
-              variants={fadeUp}
-              custom={0.1}
-              className="service-detail-title"
-            >
-              Pay-Per-Click (PPC)
-            </motion.h1>
+      sectionTwoTitle="Get in front of the right audience faster"
+      sectionTwoTextOne="PPC advertising allows your business to appear exactly when people are searching for your products or services. This means higher intent, better targeting, and faster results."
+      sectionTwoTextTwo="We build campaigns around strategy, keywords, and user behaviour to ensure your ads reach the right people at the right time."
+      sectionTwoImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+      sectionTwoImageAlt="Digital marketing analytics dashboard"
 
-            <motion.p
-              variants={fadeUp}
-              custom={0.2}
-              className="service-detail-intro"
-            >
-              Reach high-intent audiences faster with strategic PPC campaigns
-              designed to drive clicks, conversions, and measurable business
-              results.
-            </motion.p>
+      featureCards={[
+        {
+          icon: "⚡",
+          title: "Immediate Visibility",
+          text: "Appear in front of potential customers instantly with well-targeted paid campaigns.",
+        },
+        {
+          icon: "🎯",
+          title: "Precise Targeting",
+          text: "Reach specific audiences based on intent, location, and behaviour.",
+        },
+        {
+          icon: "📊",
+          title: "Measurable Results",
+          text: "Track performance clearly and optimise campaigns for better returns.",
+        },
+      ]}
 
-            <motion.div
-              variants={fadeUp}
-              custom={0.3}
-              className="service-detail-actions"
-            >
-              <a href="/contact" className="btn-primary">
-                Launch Campaigns
-              </a>
+      valueTitle="Turn clicks into real business results"
+      valueTextOne="PPC is not just about traffic — it’s about attracting the right users who are ready to take action. With the right strategy, campaigns can generate leads, sales, and measurable growth."
+      valueTextTwo="We focus on optimising every part of the funnel, from ad copy to landing pages, to ensure your campaigns perform efficiently."
+      valueImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+      valueImageAlt="Marketing team analysing campaign data"
 
-              <a href="#ppc-process" className="btn-secondary">
-                See Process
-              </a>
-            </motion.div>
+      consultationText="Ready to run high-performing PPC campaigns?"
 
-            <motion.div
-              variants={fadeUp}
-              custom={0.4}
-              className="ppc-metrics"
-            >
-              <div className="ppc-metric-card">
-                <span className="ppc-metric-value">Fast</span>
-                <span className="ppc-metric-label">Immediate visibility</span>
-              </div>
+      buildTitle="What we handle in PPC campaigns"
+      buildItems={[
+        "Keyword research and targeting strategy",
+        "Ad copy creation and testing",
+        "Landing page alignment and optimisation",
+        "Campaign setup and management",
+        "Budget management and performance tracking",
+        "Ongoing optimisation and reporting",
+      ]}
+      buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+      buildImageAlt="Campaign analytics interface"
 
-              <div className="ppc-metric-card">
-                <span className="ppc-metric-value">Measurable</span>
-                <span className="ppc-metric-label">Trackable campaign results</span>
-              </div>
+      processTitle="How we build PPC campaigns"
+      processSteps={[
+        {
+          step: "01",
+          title: "Campaign Planning",
+          text: "We define your goals, audience, budget, and targeting strategy.",
+        },
+        {
+          step: "02",
+          title: "Ad Development",
+          text: "We create high-performing ad copy and structure campaigns for success.",
+        },
+        {
+          step: "03",
+          title: "Campaign Launch",
+          text: "We deploy campaigns with tracking and performance optimisation in place.",
+        },
+        {
+          step: "04",
+          title: "Optimisation & Reporting",
+          text: "We refine campaigns continuously to improve ROI and performance.",
+        },
+      ]}
 
-              <div className="ppc-metric-card">
-                <span className="ppc-metric-value">Focused</span>
-                <span className="ppc-metric-label">Target the right audience</span>
-              </div>
-            </motion.div>
-          </motion.div>
+      quoteText="The most effective PPC campaigns don’t just drive clicks — they drive meaningful actions and measurable growth."
 
-          <motion.div
-            initial={{ opacity: 0, x: 80, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.9 }}
-            className="ppc-image-wrap"
-          >
-            <div className="ppc-image-frame">
-              <img
-                src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop"
-                className="service-detail-image ppc-image"
-                alt="PPC campaign performance dashboard"
-              />
-            </div>
+      relatedServices={[
+        {
+          icon: "📈",
+          title: "SEO Services",
+          text: "Build long-term organic visibility alongside your paid campaigns.",
+        },
+        {
+          icon: "📱",
+          title: "Social Media Marketing",
+          text: "Expand reach and engagement across key digital platforms.",
+        },
+        {
+          icon: "🎯",
+          title: "Digital Strategy",
+          text: "Plan integrated campaigns that align with your business goals.",
+        },
+      ]}
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.7 }}
-              className="ppc-floating-panel"
-            >
-              <p className="ppc-floating-label">PPC Focus</p>
-              <p className="ppc-floating-text">
-                Paid search strategy, targeted ads, landing page alignment, and
-                performance-driven campaign optimisation.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      faqs={faqs}
 
-      <section className="service-detail-section ppc-overview-section">
-        <div className="container service-detail-content-grid">
-          <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <p className="service-detail-subtitle">Paid Search Growth</p>
-
-            <h2 className="service-detail-heading">
-              Get in front of the right audience faster
-            </h2>
-
-            <p className="service-text">
-              PPC advertising helps your business appear at the right time for
-              people actively searching or ready to take action. We create
-              campaigns built around targeting, performance, and measurable
-              results.
-            </p>
-          </motion.div>
-
-          <div className="service-detail-points">
-            {[
-              "Targeted ad campaigns for relevant audiences",
-              "Keyword-focused paid search strategy",
-              "Landing page alignment for stronger conversions",
-              "Campaign monitoring and optimisation",
-            ].map((text, i) => (
-              <motion.div
-                key={text}
-                className="service-point-card ppc-point-card"
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <span className="service-point-dot" />
-                <p>{text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="ppc-feature-section">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="ppc-heading-center"
-          >
-            <p className="service-detail-subtitle">Why PPC matters</p>
-            <h2 className="service-detail-heading">
-              Faster traffic, stronger targeting, clearer results
-            </h2>
-          </motion.div>
-
-          <div className="ppc-feature-grid">
-            {[
-              {
-                title: "Immediate visibility",
-                text: "PPC helps your business appear quickly in front of people who are actively searching.",
-              },
-              {
-                title: "Precise targeting",
-                text: "Reach specific locations, search intent, and audiences with more control over your campaign direction.",
-              },
-              {
-                title: "Performance tracking",
-                text: "Measure results clearly and refine campaigns based on what drives stronger outcomes.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="ppc-feature-card"
-                initial={{ opacity: 0, y: 34 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <div className="ppc-feature-icon" />
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="ppc-process" className="service-process ppc-process">
-        <div className="container">
-          <motion.p
-            className="service-detail-subtitle"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            PPC Process
-          </motion.p>
-
-          <motion.h2
-            className="service-detail-heading"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08 }}
-            viewport={{ once: true }}
-          >
-            Building high-performing paid campaigns
-          </motion.h2>
-
-          <div className="process-grid">
-            {[
-              {
-                title: "Campaign Planning",
-                text: "Define objectives, audience targeting, budget priorities, and platform strategy.",
-              },
-              {
-                title: "Ad Development",
-                text: "Create strong ad messaging, keyword targeting, and aligned landing page direction.",
-              },
-              {
-                title: "Campaign Launch",
-                text: "Deploy the campaign with a structured setup designed for performance and control.",
-              },
-              {
-                title: "Optimisation & Reporting",
-                text: "Review results, improve efficiency, and refine campaigns for stronger returns.",
-              },
-            ].map((step, i) => (
-              <motion.div
-                key={step.title}
-                className="process-card ppc-process-card"
-                initial={{ opacity: 0, y: 36 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.14, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <span className="ppc-process-step">0{i + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="service-cta-section ppc-cta-section">
-        <motion.div
-          className="container service-cta-box ppc-cta-box"
-          initial={{ opacity: 0, scale: 0.97, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.65 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <p className="ppc-cta-tag">Drive results</p>
-            <h2 className="service-cta-title">
-              Ready to launch a smarter PPC campaign?
-            </h2>
-            <p className="ppc-cta-text">
-              Let’s create paid campaigns that put your business in front of the
-              right people and turn clicks into action.
-            </p>
-          </div>
-
-          <a href="/contact" className="btn-primary">
-            Talk To Our Team
-          </a>
-        </motion.div>
-      </section>
-    </main>
+      finalCtaText="We design PPC campaigns that are focused, measurable, and built to deliver real results — helping your business grow faster with smarter advertising."
+      finalCtaButtonText="Book Your Free PPC Consultation"
+      finalCtaButtonLink="/contact"
+    />
   );
 }

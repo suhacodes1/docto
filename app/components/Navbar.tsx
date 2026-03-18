@@ -22,10 +22,7 @@ export default function Header() {
         </a>
 
         <nav className="navbar-links">
-          <a
-            href="/"
-            className={`nav-link ${isActive("/") ? "active" : ""}`}
-          >
+          <a href="/" className={`nav-link ${isActive("/") ? "active" : ""}`}>
             Home
           </a>
 

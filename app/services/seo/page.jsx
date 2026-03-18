@@ -1,302 +1,141 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import ServicePageLayout from "@/app/components/ServicePageLayout";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      delay,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
+const faqs = [
+  {
+    q: "What is SEO?",
+    a: "Search Engine Optimization (SEO) is the process of improving your website’s visibility on search engines like Google to attract more organic traffic.",
+  },
+  {
+    q: "How long does SEO take to show results?",
+    a: "SEO is a long-term strategy. You may start seeing improvements within a few months, but strong results typically build over time.",
+  },
+  {
+    q: "What does SEO include?",
+    a: "SEO includes keyword research, on-page optimisation, technical improvements, content strategy, and ongoing performance tracking.",
+  },
+  {
+    q: "Can SEO help my business grow?",
+    a: "Yes. SEO helps attract high-intent users who are actively searching for your services, leading to more qualified traffic and conversions.",
+  },
+  {
+    q: "Do you provide ongoing SEO support?",
+    a: "Yes. We continuously monitor, optimise, and refine your strategy to improve performance over time.",
+  },
+  {
+    q: "Is SEO better than paid ads?",
+    a: "Both are valuable. SEO builds long-term organic growth, while paid ads provide immediate visibility. Together, they create a strong strategy.",
+  },
+];
 
 export default function SearchEngineOptimization() {
   return (
-    <main className="service-detail-page seo-page">
-      <section className="service-detail-hero seo-hero">
-        <div className="service-detail-bg-text">SEO</div>
-        <div className="seo-orb seo-orb-one" />
-        <div className="seo-orb seo-orb-two" />
+    <ServicePageLayout
+      category="Digital Marketing & Growth"
+      titleTop="Search Engine"
+      titleMain="Optimization"
+      titleBottom="(SEO)"
+      intro="Improve your search visibility and attract more qualified traffic with SEO strategies designed to strengthen your rankings and grow your online presence."
+      primaryCtaText="Grow With SEO"
+      primaryCtaLink="/contact"
 
-        <div className="container service-detail-hero-grid">
-          <motion.div initial="hidden" animate="show">
-            <motion.p
-              variants={fadeUp}
-              custom={0}
-              className="service-detail-category"
-            >
-              Digital Marketing &amp; Growth
-            </motion.p>
+      heroImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+      heroImageAlt="SEO analytics dashboard"
 
-            <motion.h1
-              variants={fadeUp}
-              custom={0.1}
-              className="service-detail-title"
-            >
-              Search Engine Optimization (SEO)
-            </motion.h1>
+      sectionTwoTitle="Get discovered where people are searching"
+      sectionTwoTextOne="SEO helps your business appear in front of people actively searching for your services. This means more relevant traffic and better opportunities for growth."
+      sectionTwoTextTwo="We build strategies that improve rankings, strengthen your website structure, and support consistent, long-term visibility."
+      sectionTwoImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+      sectionTwoImageAlt="SEO performance analytics"
 
-            <motion.p
-              variants={fadeUp}
-              custom={0.2}
-              className="service-detail-intro"
-            >
-              Improve your search visibility and attract more qualified traffic
-              with SEO strategies designed to strengthen your rankings and grow
-              your online presence.
-            </motion.p>
+      featureCards={[
+        {
+          icon: "🔍",
+          title: "Better Visibility",
+          text: "Improve your rankings and appear more often in search results.",
+        },
+        {
+          icon: "🎯",
+          title: "Targeted Traffic",
+          text: "Attract users actively searching for your services.",
+        },
+        {
+          icon: "📈",
+          title: "Sustainable Growth",
+          text: "Build long-term visibility that continues to grow over time.",
+        },
+      ]}
 
-            <motion.div
-              variants={fadeUp}
-              custom={0.3}
-              className="service-detail-actions"
-            >
-              <a href="/contact" className="btn-primary">
-                Grow With SEO
-              </a>
+      valueTitle="Build a strong digital foundation"
+      valueTextOne="SEO is more than rankings — it’s about building a website that performs well, provides value, and supports your business goals."
+      valueTextTwo="We optimise structure, content, and performance to create a foundation that supports long-term growth."
+      valueImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
+      valueImageAlt="Team analysing SEO data"
 
-              <a href="#seo-process" className="btn-secondary">
-                See Process
-              </a>
-            </motion.div>
+      consultationText="Ready to improve your search rankings?"
 
-            <motion.div
-              variants={fadeUp}
-              custom={0.4}
-              className="seo-metrics"
-            >
-              <div className="seo-metric-card">
-                <span className="seo-metric-value">Visible</span>
-                <span className="seo-metric-label">
-                  Better search presence
-                </span>
-              </div>
+      buildTitle="What we handle in SEO"
+      buildItems={[
+        "Keyword research and search intent analysis",
+        "On-page optimisation and content structure",
+        "Technical SEO and site performance improvements",
+        "Content strategy for better rankings",
+        "Website audits and performance reviews",
+        "Ongoing optimisation and reporting",
+      ]}
+      buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+      buildImageAlt="SEO dashboard"
 
-              <div className="seo-metric-card">
-                <span className="seo-metric-value">Targeted</span>
-                <span className="seo-metric-label">
-                  Reach the right audience
-                </span>
-              </div>
+      processTitle="Our SEO process"
+      processSteps={[
+        {
+          step: "01",
+          title: "SEO Audit",
+          text: "Analyse your website performance, technical issues, and search visibility.",
+        },
+        {
+          step: "02",
+          title: "Strategy Planning",
+          text: "Define keywords, opportunities, and optimisation priorities.",
+        },
+        {
+          step: "03",
+          title: "Implementation",
+          text: "Apply technical, on-page, and content improvements.",
+        },
+        {
+          step: "04",
+          title: "Monitoring & Growth",
+          text: "Track results, refine strategy, and improve performance over time.",
+        },
+      ]}
 
-              <div className="seo-metric-card">
-                <span className="seo-metric-value">Sustainable</span>
-                <span className="seo-metric-label">
-                  Long-term digital growth
-                </span>
-              </div>
-            </motion.div>
-          </motion.div>
+      quoteText="SEO is not just about ranking higher — it’s about being found by the right people at the right time."
 
-          <motion.div
-            initial={{ opacity: 0, x: 80, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.9 }}
-            className="seo-image-wrap"
-          >
-            <div className="seo-image-frame">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
-                className="service-detail-image seo-image"
-                alt="SEO analytics dashboard"
-              />
-            </div>
+      relatedServices={[
+        {
+          icon: "📊",
+          title: "PPC Advertising",
+          text: "Drive immediate traffic alongside your long-term SEO strategy.",
+        },
+        {
+          icon: "📱",
+          title: "Social Media Marketing",
+          text: "Expand reach and engagement across digital platforms.",
+        },
+        {
+          icon: "💻",
+          title: "Web Development",
+          text: "Build fast, optimised websites that support SEO performance.",
+        },
+      ]}
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.7 }}
-              className="seo-floating-panel"
-            >
-              <p className="seo-floating-label">SEO Focus</p>
-              <p className="seo-floating-text">
-                Keyword strategy, technical improvements, content optimisation,
-                and visibility growth built for stronger search performance.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      faqs={faqs}
 
-      <section className="service-detail-section seo-overview-section">
-        <div className="container service-detail-content-grid">
-          <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <p className="service-detail-subtitle">Organic Growth</p>
-
-            <h2 className="service-detail-heading">
-              Get discovered where people are searching
-            </h2>
-
-            <p className="service-text">
-              SEO helps your business appear in front of people actively looking
-              for your services. We build strategies that improve rankings,
-              strengthen your website structure, and support steady online
-              growth.
-            </p>
-          </motion.div>
-
-          <div className="service-detail-points">
-            {[
-              "Keyword research and search strategy",
-              "On-page optimisation for stronger visibility",
-              "Technical SEO improvements and site health",
-              "Content structure designed for better rankings",
-            ].map((text, i) => (
-              <motion.div
-                key={text}
-                className="service-point-card seo-point-card"
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <span className="service-point-dot" />
-                <p>{text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="seo-feature-section">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="seo-heading-center"
-          >
-            <p className="service-detail-subtitle">Why SEO matters</p>
-            <h2 className="service-detail-heading">
-              Visibility that supports long-term growth
-            </h2>
-          </motion.div>
-
-          <div className="seo-feature-grid">
-            {[
-              {
-                title: "Higher search visibility",
-                text: "Appear more often when potential customers search for relevant services and solutions.",
-              },
-              {
-                title: "Qualified website traffic",
-                text: "SEO helps attract people already interested in what your business offers.",
-              },
-              {
-                title: "Stronger digital foundation",
-                text: "A well-optimised website supports content, usability, and long-term brand growth.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="seo-feature-card"
-                initial={{ opacity: 0, y: 34 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <div className="seo-feature-icon" />
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="seo-process" className="service-process seo-process">
-        <div className="container">
-          <motion.p
-            className="service-detail-subtitle"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            SEO Process
-          </motion.p>
-
-          <motion.h2
-            className="service-detail-heading"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08 }}
-            viewport={{ once: true }}
-          >
-            Building stronger search performance
-          </motion.h2>
-
-          <div className="process-grid">
-            {[
-              {
-                title: "SEO Audit",
-                text: "Review website performance, technical issues, search visibility, and existing content structure.",
-              },
-              {
-                title: "Strategy Planning",
-                text: "Define target keywords, search opportunities, and page-level optimisation priorities.",
-              },
-              {
-                title: "Implementation",
-                text: "Apply on-page, technical, and content improvements to strengthen rankings and relevance.",
-              },
-              {
-                title: "Monitoring & Growth",
-                text: "Track visibility, refine the strategy, and continue improving results over time.",
-              },
-            ].map((step, i) => (
-              <motion.div
-                key={step.title}
-                className="process-card seo-process-card"
-                initial={{ opacity: 0, y: 36 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.14, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <span className="seo-process-step">0{i + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="service-cta-section seo-cta-section">
-        <motion.div
-          className="container service-cta-box seo-cta-box"
-          initial={{ opacity: 0, scale: 0.97, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.65 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <p className="seo-cta-tag">Build visibility</p>
-            <h2 className="service-cta-title">
-              Ready to improve your search rankings?
-            </h2>
-            <p className="seo-cta-text">
-              Let’s build an SEO strategy that helps your business get found by
-              the right people at the right time.
-            </p>
-          </div>
-
-          <a href="/contact" className="btn-primary">
-            Talk To Our Team
-          </a>
-        </motion.div>
-      </section>
-    </main>
+      finalCtaText="We create SEO strategies that improve visibility, attract the right audience, and support sustainable business growth over time."
+      finalCtaButtonText="Book Your Free SEO Consultation"
+      finalCtaButtonLink="/contact"
+    />
   );
 }

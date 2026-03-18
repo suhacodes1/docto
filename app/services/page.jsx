@@ -5,6 +5,7 @@ import ServicesAbout from "../components/ServicesAbout";
 import CaseStudies from "../components/CaseStudies";
 import CTASection from "../components/CTASection";
 import StatsSection from "../components/StatsSection";
+import ProcessSectionServices from "../components/ProcessSectionServices";
 
 export default function ServicesPage() {
   return (
@@ -12,6 +13,7 @@ export default function ServicesPage() {
       <ServicesHeroSection />
       <ServicesMarquee />
       <CaseStudies />
+      <ProcessSectionServices />
       <ServicesAbout />
       <ServicesListSection />
       <CTASection />

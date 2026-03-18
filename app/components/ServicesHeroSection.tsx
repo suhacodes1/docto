@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import { ArrowRight, Code, Palette, Zap } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,18 +31,30 @@ const ServicesHeroSection = () => {
         opacity: 0,
         y: -30,
       })
-        .from(titleRef.current, {
-          opacity: 0,
-          y: 40,
-        }, "-=0.4")
-        .from(descRef.current, {
-          opacity: 0,
-          y: 30,
-        }, "-=0.5")
-        .from(btnRef.current, {
-          opacity: 0,
-          scale: 0.9,
-        }, "-=0.3");
+        .from(
+          titleRef.current,
+          {
+            opacity: 0,
+            y: 40,
+          },
+          "-=0.4"
+        )
+        .from(
+          descRef.current,
+          {
+            opacity: 0,
+            y: 30,
+          },
+          "-=0.5"
+        )
+        .from(
+          btnRef.current,
+          {
+            opacity: 0,
+            scale: 0.9,
+          },
+          "-=0.3"
+        );
 
       // Floating icons animation
       gsap.from([icon1Ref.current, icon2Ref.current, icon3Ref.current], {
@@ -97,7 +108,8 @@ const ServicesHeroSection = () => {
             ref={titleRef}
             className="mb-4 text-4xl font-bold leading-tight text-black md:text-5xl"
           >
-            <span className="text-[#ef2f6b]">AI-Powered</span> Web Design and Development For Your Business Growth 
+            <span className="text-[#ef2f6b]">AI-Powered</span> Web Design and
+            Development For Your Business Growth
           </h1>
 
           {/* Description */}
@@ -105,12 +117,19 @@ const ServicesHeroSection = () => {
             ref={descRef}
             className="max-w-lg mx-auto mb-8 text-base text-black"
           >
-           Creating modern and easy-to-use websites and applications through top-notch IT services. Helping you scale and succeed online.
+            Creating modern and easy-to-use websites and applications through
+            top-notch IT services. Helping you scale and succeed online.
           </p>
 
           {/* Buttons */}
-          <div ref={btnRef} className="flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/contact" className="w-max mx-auto px-6 py-3 bg-transparent text-black hover:text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2">
+          <div
+            ref={btnRef}
+            className="flex flex-col justify-center gap-4 sm:flex-row"
+          >
+            <a
+              href="/contact"
+              className="w-max mx-auto px-6 py-3 bg-transparent text-black hover:text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
               <span>Get in Touch</span>
               <span className="hero-services-divider">|</span>
               <span>+</span>

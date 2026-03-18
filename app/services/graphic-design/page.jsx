@@ -1,295 +1,130 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import ServicePageLayout from "@/app/components/ServicePageLayout";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      delay,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
+const faqs = [
+  {
+    q: "What graphic design services do you offer?",
+    a: "We create brand visuals, social media graphics, marketing collateral, digital assets, promotional materials, presentation designs, and print-ready creative work tailored to your business.",
+  },
+  {
+    q: "Can you design assets that match our brand identity?",
+    a: "Yes. We design with your brand colours, typography, tone, and visual direction in mind so every asset feels consistent and recognisable across platforms.",
+  },
+  {
+    q: "Do you create graphics for both digital and print?",
+    a: "Absolutely. We design assets optimised for websites, social media, email campaigns, ads, presentations, brochures, flyers, and other print materials.",
+  },
+  {
+    q: "Can you help if we do not have a strong brand style yet?",
+    a: "Yes. We can help shape a stronger visual direction through design choices that improve consistency, clarity, and overall brand presentation.",
+  },
+  {
+    q: "How long does a graphic design project take?",
+    a: "Timelines depend on the type and quantity of assets needed. A single design task may take a few days, while a broader creative package or campaign may take longer depending on revisions and scope.",
+  },
+  {
+    q: "Do you provide ongoing design support?",
+    a: "Yes. We can support ongoing creative needs for campaigns, content, promotions, branded materials, and new business initiatives as your brand grows.",
+  },
+];
 
 export default function GraphicDesign() {
   return (
-    <main className="service-detail-page graphic-page">
-      <section className="service-detail-hero graphic-hero">
-        <div className="service-detail-bg-text">Design</div>
-        <div className="graphic-orb graphic-orb-one" />
-        <div className="graphic-orb graphic-orb-two" />
-
-        <div className="container service-detail-hero-grid">
-          <motion.div initial="hidden" animate="show">
-            <motion.p
-              variants={fadeUp}
-              custom={0}
-              className="service-detail-category"
-            >
-              Branding &amp; Creative Services
-            </motion.p>
-
-            <motion.h1
-              variants={fadeUp}
-              custom={0.1}
-              className="service-detail-title"
-            >
-              Graphic Design
-            </motion.h1>
-
-            <motion.p
-              variants={fadeUp}
-              custom={0.2}
-              className="service-detail-intro"
-            >
-              We craft impactful visual designs that communicate your message,
-              strengthen your brand identity, and leave a lasting impression
-              across digital and print platforms.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              custom={0.3}
-              className="service-detail-actions"
-            >
-              <a href="/contact" className="btn-primary">
-                Start Your Project
-              </a>
-
-              <a href="#graphic-process" className="btn-secondary">
-                See Process
-              </a>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              custom={0.4}
-              className="graphic-metrics"
-            >
-              <div className="graphic-metric-card">
-                <span className="graphic-metric-value">Bold</span>
-                <span className="graphic-metric-label">Strong visual identity</span>
-              </div>
-
-              <div className="graphic-metric-card">
-                <span className="graphic-metric-value">Creative</span>
-                <span className="graphic-metric-label">Eye-catching brand assets</span>
-              </div>
-
-              <div className="graphic-metric-card">
-                <span className="graphic-metric-value">Memorable</span>
-                <span className="graphic-metric-label">Designs that leave impact</span>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 80, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.9 }}
-            className="graphic-image-wrap"
-          >
-            <div className="graphic-image-frame">
-              <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
-                className="service-detail-image graphic-image"
-                alt="Creative graphic design workspace"
-              />
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.7 }}
-              className="graphic-floating-panel"
-            >
-              <p className="graphic-floating-label">Creative Focus</p>
-              <p className="graphic-floating-text">
-                Brand visuals, social assets, promotional graphics, and creative
-                designs tailored to your business identity.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="service-detail-section graphic-overview-section">
-        <div className="container service-detail-content-grid">
-          <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <p className="service-detail-subtitle">Creative Brand Visuals</p>
-
-            <h2 className="service-detail-heading">
-              Design that captures attention
-            </h2>
-
-            <p className="service-text">
-              Strong graphic design helps businesses present themselves with
-              confidence. We create visuals that align with your brand, support
-              your message, and make your content more engaging and professional.
-            </p>
-          </motion.div>
-
-          <div className="service-detail-points">
-            {[
-              "Custom graphics for digital and print media",
-              "Brand-aligned visuals with strong creative direction",
-              "Promotional designs for marketing campaigns",
-              "Consistent assets for social, web, and business use",
-            ].map((text, i) => (
-              <motion.div
-                key={text}
-                className="service-point-card graphic-point-card"
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <span className="service-point-dot" />
-                <p>{text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="graphic-feature-section">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="graphic-heading-center"
-          >
-            <p className="service-detail-subtitle">Why graphic design matters</p>
-            <h2 className="service-detail-heading">
-              Visuals that strengthen your brand presence
-            </h2>
-          </motion.div>
-
-          <div className="graphic-feature-grid">
-            {[
-              {
-                title: "Stronger brand recognition",
-                text: "Consistent and attractive visuals help people remember your business and understand your style instantly.",
-              },
-              {
-                title: "More engaging content",
-                text: "Creative design makes your marketing materials, social media, and website content more appealing.",
-              },
-              {
-                title: "Professional presentation",
-                text: "Polished graphics help your business appear more credible, premium, and ready to grow.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="graphic-feature-card"
-                initial={{ opacity: 0, y: 34 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <div className="graphic-feature-icon" />
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="graphic-process" className="service-process graphic-process">
-        <div className="container">
-          <motion.p
-            className="service-detail-subtitle"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Creative Process
-          </motion.p>
-
-          <motion.h2
-            className="service-detail-heading"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08 }}
-            viewport={{ once: true }}
-          >
-            Turning ideas into strong visual assets
-          </motion.h2>
-
-          <div className="process-grid">
-            {[
-              {
-                title: "Creative Brief",
-                text: "Understand your brand, audience, goals, and the message each design needs to communicate.",
-              },
-              {
-                title: "Concept Design",
-                text: "Explore visual directions, layouts, and creative ideas that align with your identity.",
-              },
-              {
-                title: "Design Development",
-                text: "Refine chosen concepts into polished, high-quality graphics ready for use across platforms.",
-              },
-              {
-                title: "Delivery & Support",
-                text: "Provide final assets optimised for digital, print, marketing, and ongoing brand consistency.",
-              },
-            ].map((step, i) => (
-              <motion.div
-                key={step.title}
-                className="process-card graphic-process-card"
-                initial={{ opacity: 0, y: 36 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.14, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <span className="graphic-process-step">0{i + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="service-cta-section graphic-cta-section">
-        <motion.div
-          className="container service-cta-box graphic-cta-box"
-          initial={{ opacity: 0, scale: 0.97, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.65 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <p className="graphic-cta-tag">Bring your visuals to life</p>
-            <h2 className="service-cta-title">
-              Ready to elevate your brand with better design?
-            </h2>
-            <p className="graphic-cta-text">
-              Let’s create professional and memorable visuals that make your
-              business stand out across every platform.
-            </p>
-          </div>
-
-          <a href="/contact" className="btn-primary">
-            Talk To Our Team
-          </a>
-        </motion.div>
-      </section>
-    </main>
+    <ServicePageLayout
+      category="Branding & Creative Services"
+      titleTop="Your"
+      titleMain="Graphic"
+      titleBottom="Design"
+      intro="We craft impactful visual designs that communicate your message, strengthen your brand identity, and leave a lasting impression across digital and print platforms."
+      primaryCtaText="Start Your Project"
+      primaryCtaLink="/contact"
+      heroImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
+      heroImageAlt="Creative graphic design workspace"
+      sectionTwoTitle="Design that captures attention"
+      sectionTwoTextOne="Strong graphic design helps businesses present themselves with confidence. The right visuals make your message clearer, your brand more recognisable, and your marketing more engaging."
+      sectionTwoTextTwo="We create designs that align with your identity, support your goals, and help your business look polished across every touchpoint — from social content to campaign assets and promotional materials."
+      sectionTwoImage="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
+      sectionTwoImageAlt="Creative team working on visual design"
+      featureCards={[
+        {
+          icon: "🎨",
+          title: "Brand-Aligned Visuals",
+          text: "Every design is created to reflect your brand identity clearly and consistently across digital and print platforms.",
+        },
+        {
+          icon: "📣",
+          title: "Marketing-Ready Assets",
+          text: "We design creative materials that support campaigns, promotions, launches, and everyday brand communication.",
+        },
+        {
+          icon: "✨",
+          title: "Memorable Presentation",
+          text: "Professional design helps your business stand out, look more credible, and leave a stronger impression.",
+        },
+      ]}
+      valueTitle="Better visuals create stronger brand impact"
+      valueTextOne="Graphic design is not just about making things look good — it shapes how people perceive your business. Strong visuals can build trust, improve recognition, and help your message land more effectively."
+      valueTextTwo="From digital campaigns to brand assets and promotional materials, we focus on creating designs that are clear, professional, and built to support real business growth."
+      valueImage="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop"
+      valueImageAlt="Graphic design work and creative assets"
+      consultationText="Looking for professional graphic design support?"
+      buildTitle="We create visual assets for every brand touchpoint"
+      buildItems={[
+        "Social media graphics and campaign visuals",
+        "Branded promotional materials and marketing assets",
+        "Presentation design and business collateral",
+        "Digital ads, banners, and creative content",
+        "Print-ready brochures, flyers, and posters",
+        "Consistent visual assets for web and business use",
+      ]}
+      buildImage="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop"
+      buildImageAlt="Graphic design tools and creative workspace"
+      processTitle="How we turn ideas into strong visual assets"
+      processSteps={[
+        {
+          step: "01",
+          title: "Creative Brief",
+          text: "We understand your brand, audience, goals, and the purpose behind each design deliverable.",
+        },
+        {
+          step: "02",
+          title: "Concept Design",
+          text: "We explore layouts, visual directions, and creative ideas that align with your brand identity.",
+        },
+        {
+          step: "03",
+          title: "Design Development",
+          text: "Chosen concepts are refined into polished, professional assets ready for real-world use.",
+        },
+        {
+          step: "04",
+          title: "Delivery & Support",
+          text: "Final files are prepared for digital or print use, with support for consistency across future materials.",
+        },
+      ]}
+      quoteText="Great design does more than look impressive — it helps your brand communicate clearly, feel more professional, and stay memorable in a crowded market."
+      relatedServices={[
+        {
+          icon: "🖌️",
+          title: "Brand Identity Design",
+          text: "Visual identity work that strengthens consistency across logos, brand assets, and presentation materials.",
+        },
+        {
+          icon: "📱",
+          title: "Social Media Design",
+          text: "Creative social assets designed to improve engagement, consistency, and campaign performance online.",
+        },
+        {
+          icon: "💻",
+          title: "UI/UX Design",
+          text: "User-focused interface design that combines visual quality with usability across websites and platforms.",
+        },
+      ]}
+      faqs={faqs}
+      finalCtaText="Our team creates thoughtful, brand-aligned visuals that help your business stand out with more clarity, consistency, and impact across every platform."
+      finalCtaButtonText="Book Your Free Design Consultation"
+      finalCtaButtonLink="/contact"
+    />
   );
 }

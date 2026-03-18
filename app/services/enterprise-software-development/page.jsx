@@ -1,303 +1,130 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
+import ServicePageLayout from "@/app/components/ServicePageLayout";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: (delay = 0) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      delay,
-      ease: [0.22, 1, 0.36, 1],
-    },
-  }),
-};
+const faqs = [
+  {
+    q: "What kind of enterprise software do you build?",
+    a: "We build internal business systems, workflow automation platforms, staff portals, admin dashboards, reporting tools, and custom enterprise applications tailored to your organisation’s operations.",
+  },
+  {
+    q: "Can you integrate enterprise software with our existing systems?",
+    a: "Yes. We regularly integrate enterprise platforms with CRMs, ERPs, payment systems, databases, third-party APIs, and other internal tools so your software works as part of a connected ecosystem.",
+  },
+  {
+    q: "Is enterprise software scalable for growing teams?",
+    a: "Absolutely. We design enterprise systems with scalability in mind so they can support more users, departments, workflows, and business requirements as your organisation grows.",
+  },
+  {
+    q: "How do you handle security and permissions?",
+    a: "Security is built into the development process from the start. We implement role-based permissions, secure authentication flows, protected data handling, and access controls suited to enterprise environments.",
+  },
+  {
+    q: "How long does enterprise software development take?",
+    a: "Timelines depend on complexity, integrations, and workflow requirements. Smaller systems may take several weeks, while larger enterprise platforms can take several months. We provide a clear roadmap after discovery.",
+  },
+  {
+    q: "Do you provide support after launch?",
+    a: "Yes. We offer ongoing support, maintenance, optimisation, and future feature development so your enterprise platform continues to perform as your business evolves.",
+  },
+];
 
 export default function EnterpriseSoftwareDevelopment() {
   return (
-    <main className="service-detail-page enterprise-page">
-      <section className="service-detail-hero enterprise-hero">
-        <div className="service-detail-bg-text">Enterprise</div>
-        <div className="enterprise-orb enterprise-orb-one" />
-        <div className="enterprise-orb enterprise-orb-two" />
-
-        <div className="container service-detail-hero-grid">
-          <motion.div initial="hidden" animate="show">
-            <motion.p
-              variants={fadeUp}
-              custom={0}
-              className="service-detail-category"
-            >
-              Web &amp; Software Solutions
-            </motion.p>
-
-            <motion.h1
-              variants={fadeUp}
-              custom={0.1}
-              className="service-detail-title"
-            >
-              Enterprise Software Development
-            </motion.h1>
-
-            <motion.p
-              variants={fadeUp}
-              custom={0.2}
-              className="service-detail-intro"
-            >
-              We build robust enterprise software solutions that streamline
-              operations, support complex workflows, and help organisations work
-              more efficiently at scale.
-            </motion.p>
-
-            <motion.div
-              variants={fadeUp}
-              custom={0.3}
-              className="service-detail-actions"
-            >
-              <a href="/contact" className="btn-primary">
-                Start Your Project
-              </a>
-
-              <a href="#enterprise-process" className="btn-secondary">
-                See Process
-              </a>
-            </motion.div>
-
-            <motion.div
-              variants={fadeUp}
-              custom={0.4}
-              className="enterprise-metrics"
-            >
-              <div className="enterprise-metric-card">
-                <span className="enterprise-metric-value">Efficient</span>
-                <span className="enterprise-metric-label">
-                  Workflow-driven systems
-                </span>
-              </div>
-
-              <div className="enterprise-metric-card">
-                <span className="enterprise-metric-value">Secure</span>
-                <span className="enterprise-metric-label">
-                  Enterprise-grade access control
-                </span>
-              </div>
-
-              <div className="enterprise-metric-card">
-                <span className="enterprise-metric-value">Scalable</span>
-                <span className="enterprise-metric-label">
-                  Built for teams and growth
-                </span>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 80, scale: 0.95 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.9 }}
-            className="enterprise-image-wrap"
-          >
-            <div className="enterprise-image-frame">
-              <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop"
-                className="service-detail-image enterprise-image"
-                alt="Enterprise software dashboard"
-              />
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55, duration: 0.7 }}
-              className="enterprise-floating-panel"
-            >
-              <p className="enterprise-floating-label">Core Focus</p>
-              <p className="enterprise-floating-text">
-                Internal tools, workflow automation, role-based systems, data
-                flows, and software that supports complex business operations.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="service-detail-section enterprise-overview-section">
-        <div className="container service-detail-content-grid">
-          <motion.div
-            initial={{ opacity: 0, y: 36 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <p className="service-detail-subtitle">Operational systems</p>
-
-            <h2 className="service-detail-heading">
-              Software designed for complex business needs
-            </h2>
-
-            <p className="service-text">
-              Enterprise software requires more than just functionality. It
-              needs to fit business operations, support departments, improve
-              efficiency, and scale as internal requirements grow. We create
-              robust platforms tailored to your organisation’s workflows,
-              processes, and long-term digital strategy.
-            </p>
-          </motion.div>
-
-          <div className="service-detail-points">
-            {[
-              "Workflow automation and internal business tools",
-              "Secure role-based access and user permissions",
-              "Cross-platform integrations and data sync",
-              "Scalable systems for growing teams and operations",
-            ].map((text, i) => (
-              <motion.div
-                key={text}
-                className="service-point-card enterprise-point-card"
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <span className="service-point-dot" />
-                <p>{text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="enterprise-feature-section">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="enterprise-heading-center"
-          >
-            <p className="service-detail-subtitle">Why enterprise systems matter</p>
-            <h2 className="service-detail-heading">
-              Built for reliability, control, and long-term performance
-            </h2>
-          </motion.div>
-
-          <div className="enterprise-feature-grid">
-            {[
-              {
-                title: "Business-specific architecture",
-                text: "We design systems around your actual operational structure instead of forcing generic tools into your workflow.",
-              },
-              {
-                title: "Better internal efficiency",
-                text: "Software can reduce manual handling, improve visibility, and help teams work more consistently.",
-              },
-              {
-                title: "Long-term scalability",
-                text: "Your system is built so it can grow with new departments, users, permissions, and processes.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="enterprise-feature-card"
-                initial={{ opacity: 0, y: 34 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <div className="enterprise-feature-icon" />
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="enterprise-process" className="service-process enterprise-process">
-        <div className="container">
-          <motion.p
-            className="service-detail-subtitle"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            Development Process
-          </motion.p>
-
-          <motion.h2
-            className="service-detail-heading"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.08 }}
-            viewport={{ once: true }}
-          >
-            How we develop enterprise platforms
-          </motion.h2>
-
-          <div className="process-grid">
-            {[
-              {
-                title: "Business Analysis",
-                text: "We map workflows, users, departments, and system requirements before scoping the build.",
-              },
-              {
-                title: "System Design",
-                text: "Architecture, permissions, integrations, and platform structure are planned around operations.",
-              },
-              {
-                title: "Software Development",
-                text: "We build secure, scalable systems with clean logic and structured implementation.",
-              },
-              {
-                title: "Deployment & Support",
-                text: "Testing, rollout, optimisation, and long-term improvements support ongoing business use.",
-              },
-            ].map((step, i) => (
-              <motion.div
-                key={step.title}
-                className="process-card enterprise-process-card"
-                initial={{ opacity: 0, y: 36 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.14, duration: 0.65 }}
-                viewport={{ once: true }}
-              >
-                <span className="enterprise-process-step">0{i + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="service-cta-section enterprise-cta-section">
-        <motion.div
-          className="container service-cta-box enterprise-cta-box"
-          initial={{ opacity: 0, scale: 0.97, y: 20 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.65 }}
-          viewport={{ once: true }}
-        >
-          <div>
-            <p className="enterprise-cta-tag">Ready to optimise?</p>
-            <h2 className="service-cta-title">
-              Need software built around your operations?
-            </h2>
-            <p className="enterprise-cta-text">
-              Let’s design a tailored enterprise solution that improves
-              efficiency, supports your teams, and scales with your business.
-            </p>
-          </div>
-
-          <a href="/contact" className="btn-primary">
-            Talk To Our Team
-          </a>
-        </motion.div>
-      </section>
-    </main>
+    <ServicePageLayout
+      category="Web & Software Solutions"
+      titleTop="Your"
+      titleMain="Enterprise Software"
+      titleBottom="Development"
+      intro="We build robust enterprise software solutions that streamline operations, support complex workflows, and help organisations work more efficiently at scale."
+      primaryCtaText="Start Your Project"
+      primaryCtaLink="/contact"
+      heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop"
+      heroImageAlt="Enterprise software dashboard"
+      sectionTwoTitle="Software designed for complex business operations"
+      sectionTwoTextOne="Enterprise software needs to do more than function well — it must support departments, connect business processes, and improve how teams work every day. Generic tools often create friction instead of solving it."
+      sectionTwoTextTwo="We create enterprise platforms tailored to your organisation’s workflows, permissions, reporting needs, and long-term digital strategy, so your software fits the way your business actually operates."
+      sectionTwoImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+      sectionTwoImageAlt="Enterprise operations and collaboration"
+      featureCards={[
+        {
+          icon: "⚙️",
+          title: "Workflow-Driven Systems",
+          text: "We build software around the real processes your teams follow, improving efficiency across departments and day-to-day operations.",
+        },
+        {
+          icon: "🔐",
+          title: "Secure Access Control",
+          text: "Role-based permissions, protected data flows, and structured access levels help your organisation stay secure and well governed.",
+        },
+        {
+          icon: "📈",
+          title: "Built To Scale",
+          text: "Our enterprise platforms are designed to support growing teams, more complex workflows, and future system expansion.",
+        },
+      ]}
+      valueTitle="Better efficiency with software built around your organisation"
+      valueTextOne="When teams rely on disconnected tools and manual workarounds, operations become slower, more error-prone, and harder to scale. Enterprise software solves this by centralising workflows and giving your teams the tools they actually need."
+      valueTextTwo="From internal dashboards to process automation and reporting systems, we focus on building platforms that create measurable efficiency, visibility, and long-term business value."
+      valueImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+      valueImageAlt="Enterprise data and operations"
+      consultationText="Looking for a tailored enterprise software solution?"
+      buildTitle="We build enterprise platforms for complex business needs"
+      buildItems={[
+        "Internal business systems and admin portals",
+        "Workflow automation and operational dashboards",
+        "Role-based platforms with secure permissions",
+        "Custom reporting and analytics interfaces",
+        "Cross-system integrations and data syncing",
+        "Scalable enterprise applications for growing teams",
+      ]}
+      buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+      buildImageAlt="Enterprise platform development"
+      processTitle="How we develop enterprise software"
+      processSteps={[
+        {
+          step: "01",
+          title: "Business Analysis",
+          text: "We map your workflows, users, teams, and operational requirements before defining the software structure.",
+        },
+        {
+          step: "02",
+          title: "System Design",
+          text: "Architecture, permissions, interfaces, and integrations are planned around how your organisation actually works.",
+        },
+        {
+          step: "03",
+          title: "Development",
+          text: "We build secure, scalable enterprise software using modern technologies and clean implementation practices.",
+        },
+        {
+          step: "04",
+          title: "Deployment & Support",
+          text: "Testing, rollout, optimisation, and ongoing support ensure the platform performs reliably over time.",
+        },
+      ]}
+      quoteText="The best enterprise software doesn’t just support operations — it improves visibility, reduces friction, and helps the entire organisation work more effectively."
+      relatedServices={[
+        {
+          icon: "🧩",
+          title: "Custom Web Development",
+          text: "Tailored web platforms and digital experiences built around your workflows, users, and growth goals.",
+        },
+        {
+          icon: "📊",
+          title: "Web Portal Development",
+          text: "Secure portals for staff, clients, or stakeholders with structured access and streamlined user journeys.",
+        },
+        {
+          icon: "🔄",
+          title: "Workflow Automation",
+          text: "Automated processes and integrated systems that reduce manual admin and improve operational efficiency.",
+        },
+      ]}
+      faqs={faqs}
+      finalCtaText="Our team builds enterprise software with strategy, structure, and a focus on long-term operational value — giving you a solution that supports your teams now and scales with your business later."
+      finalCtaButtonText="Book Your Free Enterprise Consultation"
+      finalCtaButtonLink="/contact"
+    />
   );
 }

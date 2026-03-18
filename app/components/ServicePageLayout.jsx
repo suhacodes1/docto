@@ -1,0 +1,463 @@
+"use client";
+
+import { useState } from "react";
+import PropTypes from "prop-types";
+
+/* =========================
+   SERVICE PAGE LAYOUT - ALL SERVICES in global.css
+========================= */
+
+export default function ServicePageLayout({
+  category,
+  titleTop,
+  titleMain,
+  titleBottom,
+  intro,
+  primaryCtaText = "Book a Consultation",
+  primaryCtaLink = "/contact",
+
+  heroImage,
+  heroImageAlt,
+
+  sectionTwoTitle,
+  sectionTwoTextOne,
+  sectionTwoTextTwo,
+  sectionTwoImage,
+  sectionTwoImageAlt,
+
+  featureCards = [],
+
+  valueTitle,
+  valueTextOne,
+  valueTextTwo,
+  valueImage,
+  valueImageAlt,
+
+  consultationText,
+
+  buildTitle,
+  buildItems = [],
+
+  buildImage,
+  buildImageAlt,
+
+  processTitle,
+  processSteps = [],
+
+  quoteText,
+
+  relatedServices = [],
+
+  faqs = [],
+
+  finalCtaText,
+  finalCtaButtonText = "Book Your Free Consultation",
+  finalCtaButtonLink = "/contact",
+}) {
+  const [openFaq, setOpenFaq] = useState(null);
+
+  return (
+    <main className="service-page">
+      {/* HERO */}
+      <section className="service-hero">
+        <svg
+          className="service-hero-circle"
+          width="160"
+          height="160"
+          viewBox="0 0 160 160"
+          aria-hidden="true"
+        >
+          <circle
+            cx="80"
+            cy="80"
+            r="70"
+            fill="none"
+            stroke="#243847"
+            strokeWidth="1.5"
+            strokeDasharray="6 7"
+          />
+        </svg>
+
+        <div className="container service-grid service-grid-2 service-grid-hero">
+          <div data-aos="fade-right">
+            <p className="service-category">{category}</p>
+
+            <h1 className="service-hero-title">
+              {titleTop && (
+                <>
+                  <span className="service-hero-title-accent">{titleTop}</span>
+                  <br />
+                </>
+              )}
+              {titleMain}
+              <br />
+              {titleBottom}
+            </h1>
+
+            <div className="service-divider" />
+
+            <p className="service-intro">{intro}</p>
+
+            <a href={primaryCtaLink} className="service-btn service-btn-primary">
+              {primaryCtaText}
+            </a>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-delay="150"
+            className="service-image-wrap"
+          >
+            <img
+              src={heroImage}
+              alt={heroImageAlt}
+              className="service-image service-image-hero"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION TWO */}
+      <section className="service-section">
+        <div className="container service-grid service-grid-2 service-grid-center">
+          <div data-aos="fade-right" className="service-image-bubble-wrap">
+            <div className="service-bubble service-bubble-pink" />
+            <img
+              src={sectionTwoImage}
+              alt={sectionTwoImageAlt}
+              className="service-image service-image-side service-image-side-narrow"
+            />
+          </div>
+
+          <div data-aos="fade-left" data-aos-delay="100">
+            <h2 className="service-heading">{sectionTwoTitle}</h2>
+            <div className="service-divider" />
+            <p className="service-text service-text-spaced">
+              {sectionTwoTextOne}
+            </p>
+            <p className="service-text">{sectionTwoTextTwo}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURE STRIP */}
+      <section className="service-strip">
+        <div className="container service-grid service-grid-3">
+          {featureCards.map((item, i) => (
+            <div
+              key={item.title}
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+              className="service-feature-card"
+            >
+              <div className="service-feature-icon">{item.icon}</div>
+              <h3 className="service-feature-title">{item.title}</h3>
+              <p className="service-feature-text">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* VALUE SECTION */}
+      <section className="service-section">
+        <div className="container service-grid service-grid-2 service-grid-center">
+          <div data-aos="fade-right">
+            <h2 className="service-heading">{valueTitle}</h2>
+            <div className="service-divider" />
+            <p className="service-text service-text-spaced">{valueTextOne}</p>
+            <p className="service-text">{valueTextTwo}</p>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-delay="100"
+            className="service-image-wrap"
+          >
+            <div className="service-bubble service-bubble-green service-bubble-bottom-right" />
+            <img
+              src={valueImage}
+              alt={valueImageAlt}
+              className="service-image service-image-mid"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA BAR */}
+      <section className="service-cta-bar">
+        <div className="container">
+          <p data-aos="fade-up" className="service-cta-bar-text">
+            {consultationText}
+          </p>
+
+          <a
+            data-aos="fade-up"
+            data-aos-delay="100"
+            href="/contact"
+            className="service-btn service-btn-white"
+          >
+            Book Now
+          </a>
+        </div>
+      </section>
+
+      {/* WHAT WE BUILD */}
+      <section className="service-section">
+        <div className="container service-grid service-grid-2 service-grid-start">
+          <div data-aos="fade-right">
+            <h2 className="service-heading">{buildTitle}</h2>
+            <div className="service-divider service-divider-green" />
+
+            <div className="service-list">
+              {buildItems.map((item, i) => (
+                <div
+                  key={item}
+                  data-aos="fade-right"
+                  data-aos-delay={i * 60}
+                  className="service-list-item"
+                >
+                  <span className="service-list-dot" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-delay="150"
+            className="service-image-wrap"
+          >
+            <svg
+              className="service-arc"
+              width="120"
+              height="120"
+              viewBox="0 0 120 120"
+              aria-hidden="true"
+            >
+              <path
+                d="M 10 110 Q 110 110 110 10"
+                fill="none"
+                stroke="#243847"
+                strokeWidth="1.5"
+                strokeDasharray="5 6"
+              />
+            </svg>
+
+            <img
+              src={buildImage}
+              alt={buildImageAlt}
+              className="service-image service-image-tall"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="service-process">
+        <div className="container">
+          <div data-aos="fade-up" className="service-process-heading">
+            <p className="service-subtitle">Our Process</p>
+            <h2 className="service-heading service-heading-center">
+              {processTitle}
+            </h2>
+            <div className="service-divider service-divider-center" />
+          </div>
+
+          <div className="service-grid service-grid-4">
+            {processSteps.map((item, i) => (
+              <div
+                key={item.step}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+                className="service-process-card"
+              >
+                <div className="service-process-step">{item.step}</div>
+                <h3 className="service-process-title">{item.title}</h3>
+                <p className="service-process-text">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* QUOTE */}
+      <section className="service-quote">
+        <div className="container service-quote-inner">
+          <p data-aos="fade-up" className="service-quote-text">
+            {quoteText}
+          </p>
+
+          <a
+            data-aos="fade-up"
+            data-aos-delay="100"
+            href="/contact"
+            className="service-btn service-btn-primary"
+          >
+            Book Your Free Consultation
+          </a>
+        </div>
+      </section>
+
+      {/* RELATED SERVICES */}
+      <section className="service-section">
+        <div className="container">
+          <div data-aos="fade-up" className="service-related-heading">
+            <h2 className="service-heading service-heading-center">
+              <span className="service-heading-soft">Our</span> Related Services
+            </h2>
+            <div className="service-divider service-divider-center" />
+          </div>
+
+          <div className="service-grid service-grid-3">
+            {relatedServices.map((item, i) => (
+              <div
+                key={item.title}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
+                className="service-related-card"
+              >
+                <div className="service-related-icon">{item.icon}</div>
+                <h3 className="service-related-title">{item.title}</h3>
+                <div className="service-related-line" />
+                <p className="service-related-text">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="service-faq-section">
+        <div className="container">
+          <div data-aos="fade-up" className="service-faq-heading">
+            <h2 className="service-heading service-heading-center">
+              <span className="service-heading-soft-light">Frequently</span>{" "}
+              Asked Questions
+            </h2>
+            <div className="service-divider service-divider-center" />
+          </div>
+
+          <div className="service-grid service-grid-faq">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                data-aos="fade-up"
+                data-aos-delay={(i % 2) * 80}
+                className="service-faq-item"
+              >
+                <button
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  className="service-faq-button"
+                >
+                  <span className="service-faq-icon">
+                    {openFaq === i ? "−" : "›"}
+                  </span>
+                  <span className="service-faq-question">{faq.q}</span>
+                </button>
+
+                {openFaq === i && (
+                  <p className="service-faq-answer">{faq.a}</p>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div data-aos="fade-up" className="service-faq-footer">
+            <a href="/contact" className="service-btn service-btn-dark">
+              Book Your <u>Free</u> Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="service-final-cta">
+        <div className="container service-final-cta-inner">
+          <p data-aos="fade-up" className="service-final-cta-text">
+            {finalCtaText}
+          </p>
+
+          <a
+            data-aos="fade-up"
+            data-aos-delay="100"
+            href={finalCtaButtonLink}
+            className="service-btn service-btn-white"
+          >
+            {finalCtaButtonText}
+          </a>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+ServicePageLayout.propTypes = {
+  category: PropTypes.string,
+  titleTop: PropTypes.string,
+  titleMain: PropTypes.string,
+  titleBottom: PropTypes.string,
+  intro: PropTypes.string,
+  primaryCtaText: PropTypes.string,
+  primaryCtaLink: PropTypes.string,
+
+  heroImage: PropTypes.string,
+  heroImageAlt: PropTypes.string,
+
+  sectionTwoTitle: PropTypes.string,
+  sectionTwoTextOne: PropTypes.string,
+  sectionTwoTextTwo: PropTypes.string,
+  sectionTwoImage: PropTypes.string,
+  sectionTwoImageAlt: PropTypes.string,
+
+  featureCards: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.string,
+      title: PropTypes.string,
+      text: PropTypes.string,
+    })
+  ),
+
+  valueTitle: PropTypes.string,
+  valueTextOne: PropTypes.string,
+  valueTextTwo: PropTypes.string,
+  valueImage: PropTypes.string,
+  valueImageAlt: PropTypes.string,
+
+  consultationText: PropTypes.string,
+
+  buildTitle: PropTypes.string,
+  buildItems: PropTypes.arrayOf(PropTypes.string),
+  buildImage: PropTypes.string,
+  buildImageAlt: PropTypes.string,
+
+  processTitle: PropTypes.string,
+  processSteps: PropTypes.arrayOf(
+    PropTypes.shape({
+      step: PropTypes.string,
+      title: PropTypes.string,
+      text: PropTypes.string,
+    })
+  ),
+
+  quoteText: PropTypes.string,
+
+  relatedServices: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.string,
+      title: PropTypes.string,
+      text: PropTypes.string,
+    })
+  ),
+
+  faqs: PropTypes.arrayOf(
+    PropTypes.shape({
+      q: PropTypes.string,
+      a: PropTypes.string,
+    })
+  ),
+
+  finalCtaText: PropTypes.string,
+  finalCtaButtonText: PropTypes.string,
+  finalCtaButtonLink: PropTypes.string,
+};

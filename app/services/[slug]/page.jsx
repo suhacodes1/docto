@@ -1,5 +1,5 @@
-import { allServices } from "../../data/services";
 import { notFound } from "next/navigation";
+import { allServices } from "../../data/services";
 
 export function generateStaticParams() {
   return allServices.map((service) => ({
@@ -16,6 +16,7 @@ export default function ServiceDetailPage({ params }) {
 
   return (
     <main className="service-detail-page">
+      {/* Hero */}
       <section className="service-detail-hero">
         <div className="service-detail-bg-text">{service.title}</div>
 
@@ -47,6 +48,7 @@ export default function ServiceDetailPage({ params }) {
         </div>
       </section>
 
+      {/* What's included */}
       <section className="service-detail-section">
         <div className="container">
           <div className="service-detail-content-grid">
@@ -69,6 +71,9 @@ export default function ServiceDetailPage({ params }) {
         </div>
       </section>
 
+
+
+      {/* CTA */}
       <section className="service-cta-section">
         <div className="container service-cta-box">
           <div>
