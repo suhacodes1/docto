@@ -30,7 +30,7 @@ export default function ContactPage() {
             className="contact-left"
           >
             <motion.p custom={0} variants={fadeUp} className="contact-eyebrow">
-              Let’s talks
+              Let’s talk
             </motion.p>
 
             <motion.h1 custom={0.1} variants={fadeUp} className="contact-title">
@@ -43,7 +43,11 @@ export default function ContactPage() {
               solution.
             </motion.p>
 
-            <motion.div custom={0.3} variants={fadeUp} className="contact-info-grid">
+            <motion.div
+              custom={0.3}
+              variants={fadeUp}
+              className="contact-info-grid"
+            >
               <div className="contact-info-card">
                 <h3>Email</h3>
                 <a href="mailto:info@digitalparadigm.com.au" className="group">
@@ -130,7 +134,7 @@ export default function ContactPage() {
                 <label htmlFor="message">Project Details</label>
                 <textarea
                   id="message"
-                  rows="6"
+                  rows={6}
                   placeholder="Tell us about your project, goals, and any specific features you need..."
                 />
               </div>
