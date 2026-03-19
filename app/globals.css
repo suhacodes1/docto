@@ -21,6 +21,27 @@
   --btn-min-height: 52px;
 }
 
+:root {
+  /* Colours */
+  --clr-bg: #ffffff;
+  --clr-text: #1e293b;
+  --clr-primary: #ef2f6b;
+  --clr-green: #99c36b;
+
+  /* Typography scales (compact) */
+  /* Reduced title sizes so headings fit better on desktop screens */
+  --title-min: 1.25rem; /* ~29px */
+  --title-vw: 3.9vw; /* reduced viewport scale */
+  --title-max: 3.3rem; /* reduced max for large screens */
+
+  --subtitle-min: 0.75rem;
+  --subtitle-vw: 1.5vw;
+  --subtitle-max: 0.85rem; /* tighter body text on big screens */
+
+  /* slightly shorter buttons for better fit */
+  --btn-min-height: 52px;
+}
+
 html,
 body {
   background: #ffffff;
@@ -48,6 +69,7 @@ button {
 }
 
 
+
 img {
   max-width: 100%;
   display: block;
@@ -64,6 +86,7 @@ img {
 
 .hero-heading {
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   font-weight: 800;
   line-height: 0.95;
   color: #243847;
@@ -72,6 +95,11 @@ img {
 }
 
 .hero-subtext {
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -88,6 +116,11 @@ img {
     var(--subtitle-vw),
     var(--subtitle-max)
   );
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   color: #6b7b85;
   margin-bottom: 20px;
   font-weight: 500;
@@ -97,11 +130,13 @@ img {
   position: relative;
   background: #edf3f8;
   padding: 50px 0 0 0;
+  padding: 50px 0 0 0;
   overflow: hidden;
 }
 
 .hero-grid {
   display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
   grid-template-columns: 0.8fr 1.2fr;
   align-items: center;
   gap: 40px;
@@ -111,6 +146,7 @@ img {
 
 .hero-buttons {
   display: flex;
+  align-items: center;
   align-items: center;
   gap: 20px;
   margin-top: 32px;
@@ -203,6 +239,7 @@ img {
 .hero-image {
   width: 100%;
   max-width: 700px;
+  max-width: 700px;
 }
 
 .hero-bg-text {
@@ -218,6 +255,7 @@ img {
 
   color: #ffffff;
   opacity: 0.75;
+  opacity: 0.75;
 
   pointer-events: none;
   z-index: 1;
@@ -228,6 +266,7 @@ img {
 }
 
 .section-title {
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   font-weight: 800;
   line-height: 1.1;
@@ -294,6 +333,7 @@ img {
   background: #1f3a4d;
   color: #ffffff;
   font-size: 14px;
+  border-top: 1px solid #ef2f6b;
   border-top: 1px solid #ef2f6b;
 }
 
@@ -458,6 +498,9 @@ img {
   transition:
     background 0.2s ease,
     color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .dropdown-link:last-child {
@@ -588,6 +631,7 @@ img {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: start;
   gap: 20px;
+  gap: 20px;
   max-width: 1100px;
 }
 
@@ -596,6 +640,51 @@ img {
   padding-top: 10px;
 }
 
+.clinic-challenges-cards {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.challenge-card {
+  display: flex;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #f8fbfd;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.challenge-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+}
+
+.challenge-icon {
+  width: 34px;
+  height: 34px;
+  background: #99c36b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.challenge-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #243847;
+}
+
+.challenge-text {
+  font-size: 15px;
+  color: #6b7b85;
+  margin-top: 4px;
 .clinic-challenges-cards {
   margin-top: 40px;
   display: flex;
@@ -653,6 +742,11 @@ img {
 
 .clinic-challenges-text {
   margin-top: 54px;
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -781,6 +875,7 @@ img {
   margin: 22px auto 0;
   max-width: 1300px;
   text-align: center;
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
@@ -1012,6 +1107,7 @@ img {
 .about-dp-title {
   margin-top: 20px;
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
@@ -1032,6 +1128,11 @@ img {
   flex-direction: column;
   gap: 26px;
   color: #687587;
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -1097,6 +1198,7 @@ img {
 
 @media (max-width: 1500px) {
   .about-dp-title {
+    font-size: 48px;
     font-size: 48px;
   }
 
@@ -1277,6 +1379,7 @@ img {
   margin: 20px auto 0;
   max-width: 1200px;
   text-align: center;
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
@@ -1525,6 +1628,7 @@ img {
   margin-top: 18px;
   text-align: center;
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
@@ -1556,6 +1660,9 @@ img {
   font-size: 24px;
   font-weight: 700;
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
   transition:
     transform 0.2s ease,
     background 0.2s ease;
@@ -1757,6 +1864,7 @@ img {
 .case-studies-title {
   margin-top: 22px;
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
@@ -1787,6 +1895,9 @@ img {
   font-size: 30px;
   font-weight: 700;
   cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
   transition:
     transform 0.2s ease,
     background 0.2s ease;
@@ -1832,6 +1943,11 @@ img {
 
 .case-study-description {
   margin-top: 28px;
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -1986,6 +2102,7 @@ img {
 .cta-title {
   margin-top: 34px;
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
@@ -1994,6 +2111,11 @@ img {
 
 .cta-text {
   margin-top: 34px;
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -2016,6 +2138,11 @@ img {
   border: none;
   border-radius: 999px;
 
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2025,7 +2152,17 @@ img {
   padding: 16px 28px;
 
   font-size: 16px;
+  gap: 12px;
+
+  min-height: 58px;
+  padding: 16px 28px;
+
+  font-size: 16px;
   font-weight: 700;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 
   transition:
     transform 0.25s ease,
@@ -2203,6 +2340,7 @@ img {
 
 .stats-title {
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -1.5px;
@@ -2211,6 +2349,11 @@ img {
 
 .stats-description {
   margin-top: 30px;
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -2278,6 +2421,7 @@ img {
   right: -10px;
   bottom: -40px;
   font-size: clamp(100px, 10vw, 130px);
+  font-size: clamp(100px, 10vw, 130px);
   opacity: 0.08;
   line-height: 1;
   pointer-events: none;
@@ -2287,6 +2431,7 @@ img {
   position: relative;
   z-index: 2;
   font-size: 20px;
+  font-size: 20px;
   font-weight: 700;
   color: #ffffff;
 }
@@ -2295,6 +2440,10 @@ img {
   position: relative;
   z-index: 2;
   margin-top: 10px;
+  font-size: clamp(50px, 2.5vw, 40px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.5px;
   font-size: clamp(50px, 2.5vw, 40px);
   line-height: 1.1;
   font-weight: 600;
@@ -2331,6 +2480,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 18px;
+  min-height: var(--btn-min-height);
   min-height: var(--btn-min-height);
   padding: 18px 38px;
   border-radius: 999px;
@@ -2469,6 +2619,7 @@ img {
   max-width: 1280px;
   text-align: center;
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
@@ -2493,6 +2644,7 @@ img {
 
 .process-card {
   background: #ffffff;
+  /* min-height: 420px; */
   /* min-height: 420px; */
   padding: 56px 44px 42px;
   box-shadow: 0 18px 40px rgba(15, 23, 42, 0.05);
@@ -2622,6 +2774,7 @@ img {
   margin: 22px auto 0;
   max-width: 1300px;
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
+  font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -2px;
@@ -2642,6 +2795,11 @@ img {
   flex-direction: column;
   gap: 12px;
   color: #7b838d;
+  font-size: clamp(
+    var(--subtitle-min),
+    var(--subtitle-vw),
+    var(--subtitle-max)
+  );
   font-size: clamp(
     var(--subtitle-min),
     var(--subtitle-vw),
@@ -2704,6 +2862,7 @@ img {
   background: #08233a;
   color: #ffffff;
   padding: 40px 0 24px;
+  padding: 40px 0 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
@@ -2744,15 +2903,19 @@ img {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .footer-stats-number {
+  font-size: 24px;
   font-size: 24px;
   font-weight: 800;
   color: #97bb67;
 }
 
 .footer-stats-text {
+  font-size: 16px;
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
@@ -2766,6 +2929,7 @@ img {
 
 .footer-divider {
   margin-top: 30px;
+  margin-top: 30px;
 }
 
 .footer-main {
@@ -2773,9 +2937,13 @@ img {
   grid-template-columns: 1.2fr 1fr 1.9fr;
   gap: 30px;
   padding: 40px 0 40px;
+  grid-template-columns: 1.2fr 1fr 1.9fr;
+  gap: 30px;
+  padding: 40px 0 40px;
 }
 
 .footer-heading {
+  font-size: 22px;
   font-size: 22px;
   font-weight: 800;
   color: #ffffff;
@@ -2783,7 +2951,10 @@ img {
 
 .footer-about-text {
   margin-top: 16px;
+  margin-top: 16px;
   max-width: 420px;
+  font-size: 16px;
+  line-height: 1.6;
   font-size: 16px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.72);
@@ -2817,18 +2988,22 @@ img {
 
 .footer-links {
   margin-top: 16px;
+  margin-top: 16px;
   list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 12px;
   gap: 12px;
   padding: 0;
 }
 
 .footer-links li a {
   font-size: 16px;
+  font-size: 16px;
   position: relative;
   padding-left: 22px;
 }
+
 
 
 .footer-links li a::before {
@@ -2876,9 +3051,11 @@ img {
 
 .footer-contact-list {
   margin-top: 16px;
+  margin-top: 16px;
   list-style: none;
   display: flex;
   flex-direction: column;
+  gap: 12px;
   gap: 12px;
   padding: 0;
 }
@@ -2887,6 +3064,8 @@ img {
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  font-size: 16px;
+  line-height: 1.5;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.78);
@@ -2908,11 +3087,21 @@ img {
   flex: 1;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-column {
+  flex: 1;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  padding-top: 16px;
   padding-top: 16px;
   flex-wrap: wrap;
 }
@@ -2937,11 +3126,14 @@ img {
 
 @media (max-width: 900px) {
   .footer-main {
+  .footer-main {
     grid-template-columns: 1fr;
+    padding: 40px 0 40px;
     padding: 40px 0 40px;
   }
 
   .footer-stats {
+    justify-content: center;
     justify-content: center;
   }
 }
@@ -3149,7 +3341,51 @@ a {
     font-size: 120px;
   }
 }
+  }
+}
 
+.cta-play-button {
+  color: #fff;
+  cursor: pointer;
+  background: #ef2f6b;
+  border: none;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  font-size: 58px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 0 0 0 rgba(239, 47, 107, 0.35);
+  animation: ctaPulse 1.8s infinite ease-in-out;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.cta-play-button:hover {
+  transform: scale(1.06);
+  background: #db255f;
+}
+
+@keyframes ctaPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 47, 107, 0.35);
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 24px rgba(239, 47, 107, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 47, 107, 0);
 .cta-play-button {
   color: #fff;
   cursor: pointer;
@@ -3195,6 +3431,13 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .cta-play-button {
+    width: 100px;
+    height: 100px;
+    font-size: 36px;
+  }
+}
 @media (max-width: 768px) {
   .cta-play-button {
     width: 100px;
@@ -3386,6 +3629,7 @@ a {
   .process-section,
   .focus-section {
     padding-top: 50px;
+    padding-top: 50px;
     padding-bottom: 82px;
   }
 
@@ -3484,6 +3728,7 @@ a {
 
   .about-dp-actions {
     margin-top: 28px;
+    align-items: center;
     align-items: center;
   }
 
@@ -4120,6 +4365,11 @@ a {
     box-shadow 0.25s ease,
     background 0.25s ease,
     color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 .cwd-btn:hover {
@@ -4154,6 +4404,9 @@ a {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid #e4edf2;
   backdrop-filter: blur(8px);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -4280,6 +4533,9 @@ a {
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
 
@@ -4327,6 +4583,9 @@ a {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
   border: 1px solid #e3eaf0;
   box-shadow: 0 10px 28px rgba(36, 56, 71, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -4391,6 +4650,9 @@ a {
   border-radius: 26px;
   background: #f8fbfd;
   border: 1px solid #e4edf2;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -4571,6 +4833,9 @@ a {
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .contact-info-card:hover {
@@ -4635,6 +4900,9 @@ a {
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease,
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
     transform 0.25s ease;
 }
 
@@ -4660,6 +4928,9 @@ a {
   font-size: 16px;
   font-weight: 800;
   cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -4717,6 +4988,9 @@ a {
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid #e4edf2;
   backdrop-filter: blur(8px);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -4794,6 +5068,10 @@ a {
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .portal-point-card:hover {
@@ -4826,6 +5104,10 @@ a {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbfd 100%);
   border: 1px solid #e3eaf0;
   box-shadow: 0 10px 28px rgba(36, 56, 71, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
@@ -5195,6 +5477,9 @@ a {
   background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(207, 218, 226, 0.95);
   box-shadow: 0 14px 32px rgba(31, 53, 71, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;

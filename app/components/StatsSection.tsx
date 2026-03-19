@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -14,7 +15,7 @@ type CountUpProps = {
 function CountUp({ end, suffix = "" }: CountUpProps) {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLSpanElement>(null);
+  const ref = useRef(null);
 
   useEffect(() => {
     const node = ref.current;
@@ -69,19 +70,6 @@ export default function StatsSection() {
   const leftRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    service: "",
-    budget: "",
-    message: "",
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [statusMessage, setStatusMessage] = useState("");
-  const [isError, setIsError] = useState(false);
-
   const stats = [
     {
       icon: "1",
@@ -109,66 +97,10 @@ export default function StatsSection() {
     },
   ];
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    const { id, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [id]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    setIsSubmitting(true);
-    setStatusMessage("");
-    setIsError(false);
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || "Failed to send enquiry");
-      }
-
-      setStatusMessage("Your enquiry has been sent successfully.");
-      setIsError(false);
-
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        service: "",
-        budget: "",
-        message: "",
-      });
-    } catch (error) {
-      setStatusMessage(
-        error instanceof Error
-          ? error.message
-          : "Something went wrong. Please try again."
-      );
-      setIsError(true);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
 
+    // Background text animation
     gsap.to(bgTextRef.current, {
       y: isMobile ? 20 : 40,
       opacity: 0.15,
@@ -178,6 +110,7 @@ export default function StatsSection() {
       ease: "sine.inOut",
     });
 
+    // Timeline for animations
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
@@ -216,76 +149,58 @@ export default function StatsSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-gray-50 py-16 md:py-20"
+      className="relative bg-gray-50 py-16 md:py-20 overflow-hidden"
       ref={sectionRef}
     >
       <div
-        className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 whitespace-nowrap text-6xl font-extrabold text-gray-200 opacity-10 md:top-20 md:text-9xl"
+        className="absolute top-10 md:top-20 left-1/2 transform -translate-x-1/2 text-6xl md:text-9xl font-extrabold text-gray-200 opacity-10 whitespace-nowrap pointer-events-none"
         ref={bgTextRef}
       >
         Statistics
       </div>
 
-      <div className="container relative z-10 mx-auto max-w-7xl px-4">
-        <div className="grid items-start gap-12 md:grid-cols-2">
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8" ref={leftRef}>
             <div>
-              <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-pink-600">
-                Let&apos;s talk
+              <p className="text-sm uppercase text-pink-600 font-semibold tracking-wider mb-2">
+                Let's talk
               </p>
-              <h2 className="mb-6 text-3xl font-extrabold text-gray-900 md:text-5xl">
-                Let&apos;s discuss your next digital project
+              <h2 className="text-gray-900 md:text-5xl text-3xl font-extrabold mb-6">
+                Let's discuss your next digital project
               </h2>
-              <p className="text-base text-gray-700 md:text-lg">
-                Tell us what you&apos;re building, what challenges you&apos;re
-                facing, and what kind of support you need. We&apos;ll help shape
-                the right solution.
+              <p className="text-base md:text-lg text-gray-700">
+                Tell us what you're building, what challenges you're facing, and
+                what kind of support you need. We'll help shape the right
+                solution.
               </p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-lg bg-white p-5 shadow-lg"
-                >
-                  <div className="mb-2 text-sm font-semibold text-pink-600">
-                    {stat.icon}
-                  </div>
-                  <div className="text-3xl font-extrabold text-gray-900">
-                    <CountUp end={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <p className="mt-2 text-sm text-gray-600">{stat.label}</p>
-                </div>
-              ))}
             </div>
 
             <div className="grid grid-cols-1 gap-6">
               <a
                 href="mailto:info@digitalparadigm.com.au"
-                className="group rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
               >
-                <span className="flex flex-col gap-2 transition-colors group-hover:text-[#ef2f6b]">
-                  <strong>Email:</strong>
+                <span className="group-hover:text-[#ef2f6b] transition-colors flex flex-col gap-2">
+                  <strong>Email:</strong>{" "}
                   <span>info@digitalparadigm.com.au</span>
                 </span>
               </a>
 
               <a
                 href="tel:61251194369"
-                className="group rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+                className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
               >
-                <span className="flex flex-col gap-2 transition-colors group-hover:text-[#ef2f6b]">
-                  <strong>Phone:</strong>
-                  <span>+612 5119 4369</span>
+                <span className="group-hover:text-[#ef2f6b] transition-colors flex flex-col gap-2">
+                  <strong>Phone:</strong> <span>+612 5119 4369</span>
                 </span>
               </a>
 
-              <div className="rounded-lg bg-white p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl">
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">
+              <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <h3 className="font-semibold text-gray-900 text-lg mb-2">
                   Response Time
                 </h3>
-                <p className="text-base text-gray-600">
+                <p className="text-gray-600 text-base">
                   Usually within 1 business day
                 </p>
               </div>
@@ -293,22 +208,22 @@ export default function StatsSection() {
           </div>
 
           <div
-            className="rounded-lg bg-white p-6 shadow-xl md:p-8"
+            className="bg-white shadow-xl rounded-lg p-6 md:p-8"
             ref={formRef}
           >
-            <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-gray-600 md:text-base">
+            <p className="text-sm text-gray-600 md:text-base uppercase font-semibold tracking-wider mb-2">
               Make an
             </p>
-            <h3 className="mb-8 text-2xl font-semibold text-gray-900 md:text-3xl">
+            <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
               Appointment
             </h3>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     Full Name
                   </label>
@@ -316,16 +231,14 @@ export default function StatsSection() {
                     id="name"
                     type="text"
                     placeholder="Your full name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     Email
                   </label>
@@ -333,18 +246,16 @@ export default function StatsSection() {
                     id="email"
                     type="email"
                     placeholder="Your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="company"
-                    className="mb-2 block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     Company
                   </label>
@@ -352,24 +263,21 @@ export default function StatsSection() {
                     id="company"
                     type="text"
                     placeholder="Your company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="service"
-                    className="mb-2 block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 mb-2"
                   >
                     Service Needed
                   </label>
                   <select
                     id="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600"
+                    defaultValue=""
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
                   >
                     <option value="" disabled>
                       Select a service
@@ -393,7 +301,7 @@ export default function StatsSection() {
               <div>
                 <label
                   htmlFor="budget"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Budget Range
                 </label>
@@ -401,16 +309,14 @@ export default function StatsSection() {
                   id="budget"
                   type="text"
                   placeholder="e.g. $5k - $15k"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
                 />
               </div>
 
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium text-gray-700 mb-2"
                 >
                   Project Details
                 </label>
@@ -418,36 +324,22 @@ export default function StatsSection() {
                   id="message"
                   rows={6}
                   placeholder="Tell us about your project, goals, and any specific features you need..."
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full resize-none rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600"
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent resize-none"
                 />
               </div>
-
-              {statusMessage && (
-                <p
-                  className={`text-sm ${
-                    isError ? "text-red-600" : "text-green-600"
-                  }`}
-                >
-                  {statusMessage}
-                </p>
-              )}
 
               <div className="flex flex-col gap-3 pt-4">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="w-full rounded-lg bg-pink-600 px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-pink-700 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                 >
-                  {isSubmitting ? "Sending..." : "Send Enquiry"}
+                  Send Enquiry
                 </button>
-
                 <a
                   href="https://calendly.com/digitalparadigm/product-strategy-call"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center rounded-lg bg-gray-200 px-6 py-3 font-semibold text-gray-900 transition-colors duration-300 hover:bg-gray-300"
+                  className="w-full inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
                 >
                   Book a Free Audit
                 </a>

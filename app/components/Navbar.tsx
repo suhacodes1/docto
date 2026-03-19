@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "../../public/assets/img/Logos/LogoDark.webp";
 import Image from "next/image";
