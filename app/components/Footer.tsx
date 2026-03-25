@@ -29,9 +29,9 @@ export default function Footer() {
       <div className="container footer-main justify-between">
         <div className="footer-column">
           <div className="footer-brand mb-6">
-            <a href="/" className="footer-logo">
+            <Link href="/" className="footer-logo">
               <Image src={Logo} alt="Healthcare Logo" className="h-8 w-auto" />
-            </a>
+            </Link>
           </div>
 
           <p className="footer-about-text">
@@ -45,13 +45,13 @@ export default function Footer() {
           <ul className="space-y-2 mt-4 md:mt-6">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   className={linkClass(link.href)}
                   style={linkStyle(link.href)}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -98,3 +98,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

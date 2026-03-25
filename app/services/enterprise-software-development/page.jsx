@@ -1,6 +1,7 @@
 "use client";
 
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import { Settings, Lock, TrendingUp, Puzzle, BarChart, RefreshCw } from 'lucide-react';
 
 const faqs = [
   {
@@ -31,100 +32,102 @@ const faqs = [
 
 export default function EnterpriseSoftwareDevelopment() {
   return (
-    <ServicePageLayout
-      category="Web & Software Solutions"
-      titleTop="Your"
-      titleMain="Enterprise Software"
-      titleBottom="Development"
-      intro="We build robust enterprise software solutions that streamline operations, support complex workflows, and help organisations work more efficiently at scale."
-      primaryCtaText="Start Your Project"
-      primaryCtaLink="/contact"
-      heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop"
-      heroImageAlt="Enterprise software dashboard"
-      sectionTwoTitle="Software designed for complex business operations"
-      sectionTwoTextOne="Enterprise software needs to do more than function well — it must support departments, connect business processes, and improve how teams work every day. Generic tools often create friction instead of solving it."
-      sectionTwoTextTwo="We create enterprise platforms tailored to your organisation’s workflows, permissions, reporting needs, and long-term digital strategy, so your software fits the way your business actually operates."
-      sectionTwoImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
-      sectionTwoImageAlt="Enterprise operations and collaboration"
-      featureCards={[
-        {
-          icon: "⚙️",
-          title: "Workflow-Driven Systems",
-          text: "We build software around the real processes your teams follow, improving efficiency across departments and day-to-day operations.",
-        },
-        {
-          icon: "🔐",
-          title: "Secure Access Control",
-          text: "Role-based permissions, protected data flows, and structured access levels help your organisation stay secure and well governed.",
-        },
-        {
-          icon: "📈",
-          title: "Built To Scale",
-          text: "Our enterprise platforms are designed to support growing teams, more complex workflows, and future system expansion.",
-        },
-      ]}
-      valueTitle="Better efficiency with software built around your organisation"
-      valueTextOne="When teams rely on disconnected tools and manual workarounds, operations become slower, more error-prone, and harder to scale. Enterprise software solves this by centralising workflows and giving your teams the tools they actually need."
-      valueTextTwo="From internal dashboards to process automation and reporting systems, we focus on building platforms that create measurable efficiency, visibility, and long-term business value."
-      valueImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-      valueImageAlt="Enterprise data and operations"
-      consultationText="Looking for a tailored enterprise software solution?"
-      buildTitle="We build enterprise platforms for complex business needs"
-      buildItems={[
-        "Internal business systems and admin portals",
-        "Workflow automation and operational dashboards",
-        "Role-based platforms with secure permissions",
-        "Custom reporting and analytics interfaces",
-        "Cross-system integrations and data syncing",
-        "Scalable enterprise applications for growing teams",
-      ]}
-      buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
-      buildImageAlt="Enterprise platform development"
-      processTitle="How we develop enterprise software"
-      processSteps={[
-        {
-          step: "01",
-          title: "Business Analysis",
-          text: "We map your workflows, users, teams, and operational requirements before defining the software structure.",
-        },
-        {
-          step: "02",
-          title: "System Design",
-          text: "Architecture, permissions, interfaces, and integrations are planned around how your organisation actually works.",
-        },
-        {
-          step: "03",
-          title: "Development",
-          text: "We build secure, scalable enterprise software using modern technologies and clean implementation practices.",
-        },
-        {
-          step: "04",
-          title: "Deployment & Support",
-          text: "Testing, rollout, optimisation, and ongoing support ensure the platform performs reliably over time.",
-        },
-      ]}
-      quoteText="The best enterprise software doesn’t just support operations — it improves visibility, reduces friction, and helps the entire organisation work more effectively."
-      relatedServices={[
-        {
-          icon: "🧩",
-          title: "Custom Web Development",
-          text: "Tailored web platforms and digital experiences built around your workflows, users, and growth goals.",
-        },
-        {
-          icon: "📊",
-          title: "Web Portal Development",
-          text: "Secure portals for staff, clients, or stakeholders with structured access and streamlined user journeys.",
-        },
-        {
-          icon: "🔄",
-          title: "Workflow Automation",
-          text: "Automated processes and integrated systems that reduce manual admin and improve operational efficiency.",
-        },
-      ]}
-      faqs={faqs}
-      finalCtaText="Our team builds enterprise software with strategy, structure, and a focus on long-term operational value — giving you a solution that supports your teams now and scales with your business later."
-      finalCtaButtonText="Book Your Free Enterprise Consultation"
-      finalCtaButtonLink="/contact"
-    />
+    <><ServicePageLayout
+        category="Web & Software Solutions"
+        titleTop="Your"
+        titleMain="Enterprise Software"
+        titleBottom="Development"
+        intro="We build robust enterprise software solutions that streamline operations, support complex workflows, and help organisations work more efficiently at scale."
+        primaryCtaText="Start Your Project"
+        primaryCtaLink="/contact"
+        heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop"
+        heroImageAlt="Enterprise software dashboard"
+        sectionTwoTitle="Software designed for complex business operations"
+        sectionTwoTextOne="Enterprise software needs to do more than function well — it must support departments, connect business processes, and improve how teams work every day. Generic tools often create friction instead of solving it."
+        sectionTwoTextTwo="We create enterprise platforms tailored to your organisation’s workflows, permissions, reporting needs, and long-term digital strategy, so your software fits the way your business actually operates."
+        sectionTwoImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+        sectionTwoImageAlt="Enterprise operations and collaboration"
+        featureCards={[
+          {
+            icon: <Settings size={38} />,
+            title: "Workflow-Driven Systems",
+            text: "We build software around the real processes your teams follow, improving efficiency across departments and day-to-day operations.",
+          },
+          {
+            icon: <Lock size={38} />,
+            title: "Secure Access Control",
+            text: "Role-based permissions, protected data flows, and structured access levels help your organisation stay secure and well governed.",
+          },
+          {
+            icon: <TrendingUp size={38} />,
+            title: "Built To Scale",
+            text: "Our enterprise platforms are designed to support growing teams, more complex workflows, and future system expansion.",
+          },
+        ]}
+        valueTitle="Better efficiency with software built around your organisation"
+        valueTextOne="When teams rely on disconnected tools and manual workarounds, operations become slower, more error-prone, and harder to scale. Enterprise software solves this by centralising workflows and giving your teams the tools they actually need."
+        valueTextTwo="From internal dashboards to process automation and reporting systems, we focus on building platforms that create measurable efficiency, visibility, and long-term business value."
+        valueImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+        valueImageAlt="Enterprise data and operations"
+        consultationText="Looking for a tailored enterprise software solution?"
+        buildTitle="We build enterprise platforms for complex business needs"
+        buildItems={[
+          "Internal business systems and admin portals",
+          "Workflow automation and operational dashboards",
+          "Role-based platforms with secure permissions",
+          "Custom reporting and analytics interfaces",
+          "Cross-system integrations and data syncing",
+          "Scalable enterprise applications for growing teams",
+        ]}
+        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImageAlt="Enterprise platform development"
+        processTitle="How we develop enterprise software"
+        processSteps={[
+          {
+            step: "01",
+            title: "Business Analysis",
+            text: "We map your workflows, users, teams, and operational requirements before defining the software structure.",
+          },
+          {
+            step: "02",
+            title: "System Design",
+            text: "Architecture, permissions, interfaces, and integrations are planned around how your organisation actually works.",
+          },
+          {
+            step: "03",
+            title: "Development",
+            text: "We build secure, scalable enterprise software using modern technologies and clean implementation practices.",
+          },
+          {
+            step: "04",
+            title: "Deployment & Support",
+            text: "Testing, rollout, optimisation, and ongoing support ensure the platform performs reliably over time.",
+          },
+        ]}
+        quoteText="The best enterprise software doesn’t just support operations — it improves visibility, reduces friction, and helps the entire organisation work more effectively."
+        relatedServices={[
+          {
+            icon: <Puzzle size={38} />,
+            title: "Custom Web Development",
+            text: "Tailored web platforms and digital experiences built around your workflows, users, and growth goals.",
+          },
+          {
+            icon: <BarChart size={38} />,
+            title: "Web Portal Development",
+            text: "Secure portals for staff, clients, or stakeholders with structured access and streamlined user journeys.",
+          },
+          {
+            icon: <RefreshCw size={38} />,
+            title: "Workflow Automation",
+            text: "Automated processes and integrated systems that reduce manual admin and improve operational efficiency.",
+          },
+        ]}
+        faqs={faqs}
+        finalCtaText="Our team builds enterprise software with strategy, structure, and a focus on long-term operational value — giving you a solution that supports your teams now and scales with your business later."
+        finalCtaButtonText="Book Your Free Enterprise Consultation"
+        finalCtaButtonLink="/contact"
+      />
+    </>
   );
 }
+

@@ -2,21 +2,9 @@
 
 import Image from "next/image";
 import Img1 from "../../public/assets/img/homepage/2.webp";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Check } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function ClinicChallenges() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const bgTextRef = useRef<HTMLDivElement>(null);
-  const subtitleRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const descriptionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement>(null);
-
   const challenges = [
     {
       title: "Low appointment conversions",
@@ -36,66 +24,9 @@ export default function ClinicChallenges() {
     },
   ];
 
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    // Background text animation
-    gsap.to(bgTextRef.current, {
-      y: isMobile ? 20 : 40,
-      opacity: 0.15,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    // Timeline for text animations
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top center",
-        markers: false,
-      },
-      defaults: { ease: "power3.out" },
-    });
-
-    tl.from(titleRef.current, {
-      opacity: 0,
-      y: isMobile ? 20 : 40,
-      duration: 0.8,
-      immediateRender: false,
-    }, 0)
-      .from(descriptionRef.current, {
-        opacity: 0,
-        y: isMobile ? 20 : 30,
-        duration: 0.8,
-        immediateRender: false,
-      }, 0.2);
-
-    if (cardsRef.current) {
-      tl.from(cardsRef.current.children, {
-        opacity: 0,
-        y: isMobile ? 15 : 20,
-        duration: 0.6,
-        stagger: 0.1,
-        immediateRender: false,
-      }, 0.4);
-    }
-
-    // Refresh after a short delay to ensure DOM is ready
-    const refreshTimer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100);
-
-    return () => {
-      clearTimeout(refreshTimer);
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
-    <section className="relative py-16 md:py-20" ref={sectionRef}>
-      <div className="clinic-challenges-bg-text" ref={bgTextRef}>
+    <section className="relative py-16 md:py-20">
+      <div className="clinic-challenges-bg-text">
         Problem?
       </div>
 
@@ -104,7 +35,8 @@ export default function ClinicChallenges() {
           <div>
             <h2 
               className="text-black md:text-5xl text-3xl font-extrabold mb-6"
-              ref={titleRef}
+              data-aos="fade-up"
+              data-aos-delay="100"
             >
               Running A Clinic Is
               <br />
@@ -113,14 +45,14 @@ export default function ClinicChallenges() {
 
             <div className="w-24 h-1.5 bg-[#97bb67] mb-6" />
 
-            <p className="text-base md:text-lg mb-8 text-gray-700" ref={descriptionRef}>
+            <p className="text-base md:text-lg mb-8 text-gray-700" data-aos="fade-up" data-aos-delay="200">
               Healthcare providers today face growing digital challenges. If these
               problems sound familiar, you're not alone.
             </p>
 
-            <div className="space-y-4" ref={cardsRef}>
+            <div className="space-y-4" data-aos="fade-up" data-aos-delay="300">
               {challenges.map((item, index) => (
-                <div key={index} className="flex gap-4 bg-slate-50 border border-transparent hover:border-[#ef2f6b] p-4 rounded-xl hover:shadow-lg shadow-md transition-all duration-300">
+                <div key={index} className="flex gap-4 bg-slate-50 border border-transparent hover:border-[#ef2f6b] p-4 rounded-xl hover:shadow-lg shadow-md transition-all duration-300" data-aos="fade-right" data-aos-delay={400 + index * 100}>
                   <Check className="text-green-600 mt-2" size={18} />
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">{item.title}</h4>
@@ -131,7 +63,7 @@ export default function ClinicChallenges() {
             </div>
           </div>
 
-          <div className="flex items-end">
+          <div className="flex items-end" data-aos="fade-left" data-aos-delay="500">
             <Image
               src={Img1}
               alt="Doctor holding clipboard"
@@ -143,3 +75,5 @@ export default function ClinicChallenges() {
     </section>
   );
 }
+
+

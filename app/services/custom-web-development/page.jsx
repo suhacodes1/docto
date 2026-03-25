@@ -1,6 +1,7 @@
 "use client";
 
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import { Zap, Ruler, Link, Palette, Smartphone, Building } from 'lucide-react';
 
 const faqs = [
   {
@@ -31,7 +32,7 @@ const faqs = [
 
 export default function CustomWebDevelopment() {
   return (
-    <ServicePageLayout
+    <><ServicePageLayout
       category="Web & Software Solutions"
       titleTop="Your"
       titleMain="Custom Web"
@@ -48,17 +49,17 @@ export default function CustomWebDevelopment() {
       sectionTwoImageAlt="Competitor landscape"
       featureCards={[
         {
-          icon: "⚡",
+          icon: <Zap size={38} />,
           title: "Performance-First Builds",
           text: "Every project is optimised for Core Web Vitals, fast load times, and smooth interactions from day one.",
         },
         {
-          icon: "📐",
+          icon: <Ruler size={38} />,
           title: "Strategy-Led Design",
           text: "We start with your business goals, user journeys, and conversion targets — then design around them.",
         },
         {
-          icon: "🔗",
+          icon: <Link size={38} />,
           title: "Deep Integrations",
           text: "CRMs, booking systems, payment gateways, APIs — we connect your web platform to your entire business stack.",
         },
@@ -106,17 +107,17 @@ export default function CustomWebDevelopment() {
       quoteText="Our team builds platforms with strategy, precision, and a focus on real business outcomes — not just pixel-perfect designs that don't convert."
       relatedServices={[
         {
-          icon: "🎨",
+          icon: <Palette size={38} />,
           title: "UI/UX Design",
           text: "User-centred interface design that turns complex workflows into simple, intuitive digital experiences.",
         },
         {
-          icon: "📱",
+          icon: <Smartphone size={38} />,
           title: "Responsive Web Design",
           text: "Every platform we build is optimised for all screen sizes — desktop, tablet, and mobile.",
         },
         {
-          icon: "🏢",
+          icon: <Building size={38} />,
           title: "Enterprise Solutions",
           text: "Large-scale platforms built for complex organisational needs, multiple users, and deep integrations.",
         },
@@ -126,5 +127,7 @@ export default function CustomWebDevelopment() {
       finalCtaButtonText="Book Your Free Web Consultation"
       finalCtaButtonLink="/contact"
     />
+    </>
   );
 }
+

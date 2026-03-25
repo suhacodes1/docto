@@ -21,7 +21,7 @@ const logos = [
 
 const ServicesMarquee = () => {
   return (
-    <section className="bg-[#99c36b] py-3">
+    <section className="bg-[#ef2f6b] py-3">
       <Splide
         options={{
           type: "loop",
@@ -44,7 +44,7 @@ const ServicesMarquee = () => {
         {logos.map((logo, index) => (
           <SplideSlide key={index}>
             <div>
-              <span className="text-[#20384c] font-bold text-lg">{logo}</span>
+              <span className="text-white font-bold text-lg">{logo}</span>
             </div>
           </SplideSlide>
         ))}
@@ -54,3 +54,4 @@ const ServicesMarquee = () => {
 };
 
 export default ServicesMarquee;
+

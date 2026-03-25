@@ -77,7 +77,7 @@ const ServicesHeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="pt-24 md:pt-20 pb-20 bg-[#ebebeb] relative flex items-center justify-center overflow-hidden"
+      className="pt-24 md:pt-32 pb-20 bg-[#ebebeb] relative flex items-center justify-center overflow-hidden"
     >
       {/* Glow background */}
       <div
@@ -127,14 +127,14 @@ const ServicesHeroSection = () => {
             ref={btnRef}
             className="flex flex-col justify-center gap-4 sm:flex-row"
           >
-            <a
+            <Link
               href="/contact"
               className="w-max mx-auto px-6 py-3 bg-transparent text-black hover:text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               <span>Get in Touch</span>
               <span className="hero-services-divider">|</span>
               <span>+</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

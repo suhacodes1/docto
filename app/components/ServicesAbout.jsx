@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Img1 from "../../public/assets/img/services-page/1.png";
 import Img2 from "../../public/assets/img/services-page/2.png";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,14 +105,14 @@ const ServicesAbout = () => {
                   company needs and decide if you'd like to pay yearly,
                   quarterly, or monthly.
                 </p>
-                <a
+                <Link
                   href="/contact"
                   className="px-6 py-3 w-max bg-[#ef2f6b] text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
                 >
                   <span>Get in Touch</span>
                   <span className="hero-services-divider">|</span>
                   <span>+</span>
-                </a>
+                </Link>
               </div>
               <div className="md:w-1/2 w-full">
                 <Image
@@ -135,14 +136,14 @@ const ServicesAbout = () => {
                   Customers today face a huge choice of products, services, and
                   brands.
                 </p>
-                <a
+                <Link
                   href="/contact"
                   className="px-6 py-3 w-max bg-[#ef2f6b] text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
                 >
                   <span>Get in Touch</span>
                   <span className="hero-services-divider">|</span>
                   <span>+</span>
-                </a>
+                </Link>
               </div>
               <div className="md:w-1/2 w-full">
                 <Image
@@ -160,3 +161,5 @@ const ServicesAbout = () => {
 };
 
 export default ServicesAbout;
+
+

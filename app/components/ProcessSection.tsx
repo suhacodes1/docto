@@ -1,11 +1,5 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 const processSteps = [
   {
     title: "Discovery &\nStrategy",
@@ -30,75 +24,11 @@ const processSteps = [
 ];
 
 export default function ProcessSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const bgTextRef = useRef<HTMLDivElement>(null);
-  const subtitleRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    // Background text animation
-    gsap.to(bgTextRef.current, {
-      y: isMobile ? 20 : 40,
-      opacity: 0.15,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    // Timeline for animations
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top center",
-      },
-      defaults: { ease: "power3.out" },
-    });
-
-    tl.from(
-      subtitleRef.current,
-      {
-        opacity: 0,
-        y: isMobile ? 15 : 20,
-        duration: 0.6,
-      },
-      0,
-    ).from(
-      titleRef.current,
-      {
-        opacity: 0,
-        y: isMobile ? 20 : 40,
-        duration: 0.8,
-      },
-      0.1,
-    );
-
-    if (gridRef.current) {
-      tl.from(
-        gridRef.current.children,
-        {
-          opacity: 0,
-          y: isMobile ? 20 : 30,
-          duration: 0.6,
-          stagger: 0.15,
-        },
-        0.3,
-      );
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
 
   return (
-    <section className="relative py-16 md:py-20" ref={sectionRef}>
+    <section className="relative py-16 md:py-20">
       <div
         className="process-bg-text"
-        ref={bgTextRef}
       >
         Process
       </div>
@@ -107,24 +37,26 @@ export default function ProcessSection() {
         <div className="text-center">
           <p
             className="text-base md:text-lg mb-2 text-[#ef2f6b] font-semibold"
-            ref={subtitleRef}
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             Our Process
           </p>
 
           <h2
             className="text-black md:text-5xl text-3xl font-extrabold mb-6"
-            ref={titleRef}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             A Simple Process Designed For Healthcare
             <br />
             Businesses
           </h2>
 
-          <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" />
+          <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" data-aos="fade-up" data-aos-delay="300" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" ref={gridRef}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="400">
           {processSteps.map((step) => (
             <div
               key={step.title}
@@ -151,3 +83,5 @@ export default function ProcessSection() {
     </section>
   );
 }
+
+

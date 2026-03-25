@@ -2,10 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import ContactForm from "./ContactForm";
 
 type CountUpProps = {
   end: number;
@@ -97,56 +94,6 @@ export default function StatsSection() {
     },
   ];
 
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    // Background text animation
-    gsap.to(bgTextRef.current, {
-      y: isMobile ? 20 : 40,
-      opacity: 0.15,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    // Timeline for animations
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top center",
-      },
-      defaults: { ease: "power3.out" },
-    });
-
-    if (leftRef.current) {
-      tl.from(
-        leftRef.current.children,
-        {
-          opacity: 0,
-          y: isMobile ? 20 : 30,
-          duration: 0.6,
-          stagger: 0.1,
-        },
-        0
-      );
-    }
-
-    tl.from(
-      formRef.current,
-      {
-        opacity: 0,
-        y: isMobile ? 20 : 30,
-        duration: 0.8,
-      },
-      0.2
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
     <section
       className="relative bg-gray-50 py-16 md:py-20 overflow-hidden"
@@ -155,6 +102,8 @@ export default function StatsSection() {
       <div
         className="absolute top-10 md:top-20 left-1/2 transform -translate-x-1/2 text-6xl md:text-9xl font-extrabold text-gray-200 opacity-10 whitespace-nowrap pointer-events-none"
         ref={bgTextRef}
+        data-aos="zoom-out"
+        data-aos-duration="1000"
       >
         Statistics
       </div>
@@ -162,7 +111,7 @@ export default function StatsSection() {
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-8" ref={leftRef}>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="100">
               <p className="text-sm uppercase text-pink-600 font-semibold tracking-wider mb-2">
                 Let's talk
               </p>
@@ -180,6 +129,8 @@ export default function StatsSection() {
               <a
                 href="mailto:info@digitalparadigm.com.au"
                 className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                data-aos="fade-up"
+                data-aos-delay="200"
               >
                 <span className="group-hover:text-[#ef2f6b] transition-colors flex flex-col gap-2">
                   <strong>Email:</strong>{" "}
@@ -190,13 +141,19 @@ export default function StatsSection() {
               <a
                 href="tel:61251194369"
                 className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                data-aos="fade-up"
+                data-aos-delay="300"
               >
                 <span className="group-hover:text-[#ef2f6b] transition-colors flex flex-col gap-2">
                   <strong>Phone:</strong> <span>+612 5119 4369</span>
                 </span>
               </a>
 
-              <div className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div
+                className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
                 <h3 className="font-semibold text-gray-900 text-lg mb-2">
                   Response Time
                 </h3>
@@ -207,144 +164,12 @@ export default function StatsSection() {
             </div>
           </div>
 
-          <div
-            className="bg-white shadow-xl rounded-lg p-6 md:p-8"
-            ref={formRef}
-          >
-            <p className="text-sm text-gray-600 md:text-base uppercase font-semibold tracking-wider mb-2">
-              Make an
-            </p>
-            <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-8">
-              Appointment
-            </h3>
-
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    id="name"
-                    type="text"
-                    placeholder="Your full name"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    type="email"
-                    placeholder="Your email"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Company
-                  </label>
-                  <input
-                    id="company"
-                    type="text"
-                    placeholder="Your company"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Service Needed
-                  </label>
-                  <select
-                    id="service"
-                    defaultValue=""
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
-                  >
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    <option>Custom Web Development</option>
-                    <option>MVP Development</option>
-                    <option>SaaS Development</option>
-                    <option>Enterprise Software Development</option>
-                    <option>Web Portal Development</option>
-                    <option>UI/UX Design</option>
-                    <option>Responsive Web Design</option>
-                    <option>Graphic Design</option>
-                    <option>SEO</option>
-                    <option>Social Media Marketing</option>
-                    <option>Influencer Marketing</option>
-                    <option>PPC</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="budget"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Budget Range
-                </label>
-                <input
-                  id="budget"
-                  type="text"
-                  placeholder="e.g. $5k - $15k"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Project Details
-                </label>
-                <textarea
-                  id="message"
-                  rows={6}
-                  placeholder="Tell us about your project, goals, and any specific features you need..."
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent resize-none"
-                />
-              </div>
-
-              <div className="flex flex-col gap-3 pt-4">
-                <button
-                  type="submit"
-                  className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-                >
-                  Send Enquiry
-                </button>
-                <a
-                  href="https://calendly.com/digitalparadigm/product-strategy-call"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-                >
-                  Book a Free Audit
-                </a>
-              </div>
-            </form>
+          <div ref={formRef} data-aos="fade-up" data-aos-delay="300">
+            <ContactForm
+              title="Appointment"
+              subtitle="Make an"
+              showBookAuditButton={true}
+            />
           </div>
         </div>
       </div>

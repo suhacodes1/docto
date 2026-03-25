@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /health/
+  
+  # Don't rewrite if it's a real file
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # Don't rewrite if it's a real directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Rewrite all requests to index.html for client-side routing
+  RewriteRule ^(.*)$ /health/index.html [QSA,L]
+</IfModule>
+
+# Gzip compression for better performance
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Cache control headers for static files
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/json "access plus 1 month"
+  ExpiresDefault "access plus 1 month"
+</IfModule>

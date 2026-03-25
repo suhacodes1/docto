@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import PropTypes from "prop-types";
+import ProcessSectionServices from "@/app/components/ProcessSectionServices";
+import CTASection from "@/app/components/CTASection";
 
 /* =========================
    SERVICE PAGE LAYOUT - ALL SERVICES in global.css
@@ -57,7 +60,7 @@ export default function ServicePageLayout({
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
-    <main className="service-page">
+    <main className="service-page overflow-x-clip">
       {/* HERO */}
       <section className="service-hero">
         <svg
@@ -98,9 +101,12 @@ export default function ServicePageLayout({
 
             <p className="service-intro">{intro}</p>
 
-            <a href={primaryCtaLink} className="service-btn service-btn-primary">
+            <Link
+              href={primaryCtaLink}
+              className="service-btn service-btn-primary"
+            >
               {primaryCtaText}
-            </a>
+            </Link>
           </div>
 
           <div
@@ -150,7 +156,9 @@ export default function ServicePageLayout({
               data-aos-delay={i * 100}
               className="service-feature-card"
             >
-              <div className="service-feature-icon">{item.icon}</div>
+              <div className="service-feature-icon justify-center flex items-center">
+                {item.icon}
+              </div>
               <h3 className="service-feature-title">{item.title}</h3>
               <p className="service-feature-text">{item.text}</p>
             </div>
@@ -190,14 +198,14 @@ export default function ServicePageLayout({
             {consultationText}
           </p>
 
-          <a
+          <Link
             data-aos="fade-up"
             data-aos-delay="100"
             href="/contact"
             className="service-btn service-btn-white"
           >
             Book Now
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -254,7 +262,7 @@ export default function ServicePageLayout({
       </section>
 
       {/* PROCESS */}
-      <section className="service-process">
+      {/* <section className="service-process">
         <div className="container">
           <div data-aos="fade-up" className="service-process-heading">
             <p className="service-subtitle">Our Process</p>
@@ -279,8 +287,10 @@ export default function ServicePageLayout({
             ))}
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <div className="pb-8">
+        <ProcessSectionServices />
+      </div>
       {/* QUOTE */}
       <section className="service-quote">
         <div className="container service-quote-inner">
@@ -288,14 +298,14 @@ export default function ServicePageLayout({
             {quoteText}
           </p>
 
-          <a
+          <Link
             data-aos="fade-up"
             data-aos-delay="100"
             href="/contact"
             className="service-btn service-btn-primary"
           >
             Book Your Free Consultation
-          </a>
+          </Link>
         </div>
       </section>
 
@@ -304,7 +314,8 @@ export default function ServicePageLayout({
         <div className="container">
           <div data-aos="fade-up" className="service-related-heading">
             <h2 className="service-heading service-heading-center">
-              <span className="service-heading-soft">Our</span> Related Services
+              <span className="service-heading-soft mr-1"> Our </span> Related
+              Services
             </h2>
             <div className="service-divider service-divider-center" />
           </div>
@@ -317,7 +328,9 @@ export default function ServicePageLayout({
                 data-aos-delay={i * 100}
                 className="service-related-card"
               >
-                <div className="service-related-icon">{item.icon}</div>
+                <div className="service-related-icon flex items-center justify-center">
+                  {item.icon}
+                </div>
                 <h3 className="service-related-title">{item.title}</h3>
                 <div className="service-related-line" />
                 <p className="service-related-text">{item.text}</p>
@@ -356,38 +369,37 @@ export default function ServicePageLayout({
                   <span className="service-faq-question">{faq.q}</span>
                 </button>
 
-                {openFaq === i && (
-                  <p className="service-faq-answer">{faq.a}</p>
-                )}
+                {openFaq === i && <p className="service-faq-answer">{faq.a}</p>}
               </div>
             ))}
           </div>
 
-          <div data-aos="fade-up" className="service-faq-footer">
-            <a href="/contact" className="service-btn service-btn-dark">
+          {/* <div data-aos="fade-up" className="service-faq-footer">
+            <Link href="/contact" className="service-btn service-btn-dark">
               Book Your <u>Free</u> Consultation
-            </a>
-          </div>
+            </Link>
+          </div> */}
         </div>
       </section>
 
       {/* FINAL CTA */}
-      <section className="service-final-cta">
+      {/* <section className="service-final-cta">
         <div className="container service-final-cta-inner">
           <p data-aos="fade-up" className="service-final-cta-text">
             {finalCtaText}
           </p>
 
-          <a
+          <Link
             data-aos="fade-up"
             data-aos-delay="100"
             href={finalCtaButtonLink}
             className="service-btn service-btn-white"
           >
             {finalCtaButtonText}
-          </a>
+          </Link>
         </div>
-      </section>
+      </section> */}
+      <CTASection />
     </main>
   );
 }
@@ -415,7 +427,7 @@ ServicePageLayout.propTypes = {
       icon: PropTypes.string,
       title: PropTypes.string,
       text: PropTypes.string,
-    })
+    }),
   ),
 
   valueTitle: PropTypes.string,
@@ -437,7 +449,7 @@ ServicePageLayout.propTypes = {
       step: PropTypes.string,
       title: PropTypes.string,
       text: PropTypes.string,
-    })
+    }),
   ),
 
   quoteText: PropTypes.string,
@@ -447,17 +459,19 @@ ServicePageLayout.propTypes = {
       icon: PropTypes.string,
       title: PropTypes.string,
       text: PropTypes.string,
-    })
+    }),
   ),
 
   faqs: PropTypes.arrayOf(
     PropTypes.shape({
       q: PropTypes.string,
       a: PropTypes.string,
-    })
+    }),
   ),
 
   finalCtaText: PropTypes.string,
   finalCtaButtonText: PropTypes.string,
   finalCtaButtonLink: PropTypes.string,
 };
+
+

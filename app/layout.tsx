@@ -10,6 +10,8 @@ import "aos/dist/aos.css";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -35,3 +37,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+

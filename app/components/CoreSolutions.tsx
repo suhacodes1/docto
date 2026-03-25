@@ -2,14 +2,9 @@
 
 import Image from "next/image";
 import Img1 from "../../public/assets/img/homepage/4.webp";
-import Img2 from "../../public/assets/img/homepage/5.webp";
-import Img3 from "../../public/assets/img/homepage/6.webp";
+import Img2 from "../../public/assets/img/homepage/6.webp";
+import Img3 from "../../public/assets/img/homepage/5.webp";
 import Img4 from "../../public/assets/img/homepage/7.webp";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const solutions = [
   {
@@ -42,73 +37,9 @@ const solutions = [
 ];
 
 export default function CoreSolutions() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const bgTextRef = useRef<HTMLDivElement>(null);
-  const subtitleRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLDivElement>(null);
-  const gridRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    // Background text animation
-    gsap.to(bgTextRef.current, {
-      y: isMobile ? 20 : 40,
-      opacity: 0.15,
-      duration: 3,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    // Timeline for animations
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top center",
-      },
-      defaults: { ease: "power3.out" },
-    });
-
-    tl.from(
-      subtitleRef.current,
-      {
-        opacity: 0,
-        y: isMobile ? 15 : 20,
-        duration: 0.6,
-      },
-      0,
-    ).from(
-      titleRef.current,
-      {
-        opacity: 0,
-        y: isMobile ? 20 : 40,
-        duration: 0.8,
-      },
-      0.1,
-    );
-
-    if (gridRef.current) {
-      tl.from(
-        gridRef.current.children,
-        {
-          opacity: 0,
-          y: isMobile ? 20 : 30,
-          duration: 0.6,
-          stagger: 0.15,
-        },
-        0.3,
-      );
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
-    <section className="relative py-16 md:py-20" ref={sectionRef}>
-      <div className="core-solutions-bg-text" ref={bgTextRef}>
+    <section className="relative py-16 md:py-20">
+      <div className="core-solutions-bg-text">
         Core Solutions
       </div>
 
@@ -116,14 +47,16 @@ export default function CoreSolutions() {
         <div className="text-center">
           <p
             className="text-base md:text-lg mb-2 text-[#ef2f6b] font-semibold"
-            ref={subtitleRef}
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             Our Core Solutions
           </p>
 
           <h2
             className="text-black md:text-5xl text-3xl font-extrabold mb-6"
-            ref={titleRef}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             Technology &amp; Growth Solutions For Healthcare
           </h2>
@@ -131,11 +64,13 @@ export default function CoreSolutions() {
           <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" ref={gridRef}>
-          {solutions.map((solution) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => (
             <article
               key={solution.title}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              data-aos="fade-up"
+              data-aos-delay={300 + index * 100}
             >
               <div className="relative h-48 bg-gray-200">
                 {solution.placeholder ? (
@@ -175,3 +110,5 @@ export default function CoreSolutions() {
     </section>
   );
 }
+
+

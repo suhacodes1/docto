@@ -2,6 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Img1 from "../../public/assets/img/aboutpage/1.webp";
+import Img2 from "../../public/assets/img/aboutpage/2.webp";
+import Img3 from "../../public/assets/img/aboutpage/3.webp";
+import Img4 from "../../public/assets/img/aboutpage/4.webp";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 34 },
@@ -26,11 +31,7 @@ export default function AboutPage() {
 
         <div className="container about-hero-grid">
           <motion.div initial="hidden" animate="show">
-            <motion.p
-              variants={fadeUp}
-              custom={0}
-              className="about-hero-label"
-            >
+            <motion.p variants={fadeUp} custom={0} className="about-hero-label">
               Modern Digital Growth for Healthcare
             </motion.p>
 
@@ -57,13 +58,13 @@ export default function AboutPage() {
               custom={0.3}
               className="about-hero-actions"
             >
-              <a href="/contact" className="btn-primary">
+              <Link href="/health/contact" className="btn-primary">
                 Work With Us
-              </a>
+              </Link>
 
-              <a href="/services" className="btn-secondary">
-                Our Services
-              </a>
+              <Link href="/health/services" className="btn-secondary">
+                View Services
+              </Link>
             </motion.div>
 
             <motion.div
@@ -189,18 +190,22 @@ export default function AboutPage() {
               {
                 title: "Clarity",
                 text: "We create digital strategies and experiences that feel simple, structured, and easy for your audience to trust.",
+                icon: Img1,
               },
               {
                 title: "Care",
                 text: "Healthcare communication should feel thoughtful and human. We build with empathy, professionalism, and purpose.",
+                icon: Img2,
               },
               {
                 title: "Consistency",
                 text: "Strong brands grow through consistency across website design, content, search presence, and advertising.",
+                icon: Img3,
               },
               {
                 title: "Growth",
                 text: "Everything we do is designed to support stronger visibility, better positioning, and long-term business results.",
+                icon: Img4,
               },
             ].map((item, i) => (
               <motion.div
@@ -211,8 +216,16 @@ export default function AboutPage() {
                 transition={{ delay: i * 0.12, duration: 0.65 }}
                 viewport={{ once: true }}
               >
-                <div className="about-value-icon" />
-                <h3>{item.title}</h3>
+                <div className="mb-3">
+                  <Image
+                    className="object-contain"
+                    src={item.icon}
+                    alt={`${item.title} icon`}
+                    width={48}
+                    height={48}
+                  />
+                </div>
+                <h3 className="font-bold">{item.title}</h3>
                 <p>{item.text}</p>
               </motion.div>
             ))}
@@ -334,9 +347,9 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <a href="/contact" className="btn-primary">
+          <Link href="/contact" className="btn-primary">
             Get In Touch
-          </a>
+          </Link>
         </motion.div>
       </section>
     </main>

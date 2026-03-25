@@ -1,6 +1,7 @@
 "use client";
 
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import { Zap, Target, TrendingUp, Monitor, Rocket, BarChart } from 'lucide-react';
 
 const faqs = [
   {
@@ -31,7 +32,7 @@ const faqs = [
 
 export default function MVPDevelopment() {
   return (
-    <ServicePageLayout
+    <><ServicePageLayout
       category="Web & Software Solutions"
       titleTop="Your"
       titleMain="MVP"
@@ -50,17 +51,17 @@ export default function MVPDevelopment() {
 
       featureCards={[
         {
-          icon: "⚡",
+          icon: <Zap size={38} />,
           title: "Fast Launch",
           text: "We prioritise speed so your product can reach users quickly and start generating feedback.",
         },
         {
-          icon: "🎯",
+          icon: <Target size={38} />,
           title: "Focused Features",
           text: "Only the essential features are built to reduce cost, complexity, and time to market.",
         },
         {
-          icon: "📈",
+          icon: <TrendingUp size={38} />,
           title: "Scalable Foundation",
           text: "Your MVP is built with future growth in mind, allowing seamless expansion later.",
         },
@@ -114,17 +115,17 @@ export default function MVPDevelopment() {
 
       relatedServices={[
         {
-          icon: "💻",
+          icon: <Monitor size={38} />,
           title: "Custom Web Development",
           text: "Build scalable platforms and applications tailored to your product idea.",
         },
         {
-          icon: "🚀",
+          icon: <Rocket size={38} />,
           title: "Startup Product Development",
           text: "End-to-end support for building and launching digital products.",
         },
         {
-          icon: "📊",
+          icon: <BarChart size={38} />,
           title: "Data & Analytics",
           text: "Track user behaviour and make informed decisions as your product grows.",
         },
@@ -136,5 +137,7 @@ export default function MVPDevelopment() {
       finalCtaButtonText="Book Your Free MVP Consultation"
       finalCtaButtonLink="/contact"
     />
+    </>
   );
 }
+

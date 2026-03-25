@@ -33,7 +33,7 @@ export default function RevealServiceCard({
   }, []);
 
   return (
-    <a
+    <Link
       ref={ref}
       href={href}
       className={`service-card service-reveal ${isVisible ? "is-visible" : ""}`}
@@ -50,6 +50,7 @@ export default function RevealServiceCard({
         <span>Read More</span>
         <span className="service-card-arrow">↗</span>
       </div>
-    </a>
+    </Link>
   );
 }
+
