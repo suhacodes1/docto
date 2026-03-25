@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "app/services/custom-web-development/page.jsx"  ],
+    "**/*.mts",
+    "app/services/custom-web-development/page.jsx",
+    "app/components/AOSProvider.jsx"
+  ],
   "exclude": ["node_modules"]
 }
