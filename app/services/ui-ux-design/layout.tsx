@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "UI/UX Design | Digital Paradigm - Intuitive User Experiences",
     description:
       "Health - Digital Paradigm: Thoughtful user interface and experience design that improves usability, engagement, and product clarity.",
-    url: "https://digitalparadigm.com/health/services/ui-ux-design",
+    url: "https://health.digitalparadigm.com/services/ui-ux-design",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Thoughtful user interface and experience design that improves usability, engagement, and product clarity.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/ui-ux-design",
+    canonical: "https://health.digitalparadigm.com/services/ui-ux-design",
   },
 };
 

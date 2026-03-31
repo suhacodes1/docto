@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Enterprise Software Development | Digital Paradigm - Robust Business Systems",
     description:
       "Health - Digital Paradigm: Enterprise-grade software solutions designed to streamline operations and support complex business needs.",
-    url: "https://digitalparadigm.com/health/services/enterprise-software-development",
+    url: "https://health.digitalparadigm.com/services/enterprise-software-development",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://digitalparadigm.com/health/services/enterprise-software-development",
+      "https://health.digitalparadigm.com/services/enterprise-software-development",
   },
 };
 

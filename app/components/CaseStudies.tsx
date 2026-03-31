@@ -285,7 +285,7 @@ export default function CaseStudies() {
       services: "UX/UI Design, Mobile App Development, Mental Health",
       image: "/assets/img/casestudyrevamp-pages/preview-banners/1.webp",
       imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/1.webp",
-      link: "/growth",
+      link: "/casestudies/growth",
       positioning: "left",
     },
     {
@@ -296,18 +296,18 @@ export default function CaseStudies() {
       services: "UI/UX Design, Dashboard Design, SaaS Development",
       image: "/assets/img/casestudyrevamp-pages/preview-banners/2.webp",
       imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/2.webp",
-      link: "/healthcare-saas",
+      link: "/casestudies/healthcare-saas",
       positioning: "right",
     },
     {
       id: 3,
-      title: "Health Monitoring App",
+      title: "Docsy",
       category: "Health",
       platform: "Mobile App",
       services: "UX/UI Design, Mobile App Development, Health Monitoring",
       image: "/assets/img/casestudyrevamp-pages/preview-banners/3.webp",
       imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/3.webp",
-      link: "/health-monitoring",
+      link: "/casestudies/health-monitoring",
       positioning: "left",
     },
     {
@@ -318,31 +318,120 @@ export default function CaseStudies() {
       services: "UX/UI Design, Web Development, Patient Management",
       image: "/assets/img/casestudyrevamp-pages/preview-banners/4.webp",
       imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/4.webp",
-      link: "/patient-management",
+      link: "/casestudies/patient-management",
       positioning: "right",
     },
     {
       id: 5,
-      title: "Sendrica Dental",
+      title: "Sedrica Dental",
       category: "Health",
       platform: "Web App",
       services: "UX/UI Design, Web Development, Dental",
       image: "/assets/img/casestudyrevamp-pages/preview-banners/5.webp",
       imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/5.webp",
-      link: "/sendrica-dental",
+      link: "/casestudies/sedrica-dental",
       positioning: "left",
     },
     {
       id: 6,
-      title: "Health Monitoring App",
+      title: "OneraQ Care",
       category: "Health",
       platform: "Mobile App",
       services: "UX/UI Design, Mobile App Development, Health Monitoring",
       image: "/assets/img/casestudyrevamp-pages/preview-banners/6.webp",
       imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/6.webp",
-      link: "/health-monitoring-2",
+      link: "/casestudies/health-monitoring-2",
       positioning: "left",
     },
+    {
+      id: 7,
+      title: "AI-Powered Healthcare Chatbots",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, AI Integration",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/7.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/7.webp",
+      link: "/casestudies/ai-health-chatbot",
+      positioning: "left",
+    },
+    {
+      id: 8,
+      title: "Digital Health Platform",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, Health Management",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/8.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/8.webp",
+      link: "/casestudies/digital-health-platform",
+      positioning: "right",
+    },
+    
+    {
+      id: 9,
+      title: "Healthcare SAAS Platform and Web Design",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, Health Management",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/9.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/9.webp",
+      link: "/casestudies/healthcare-saas-2",
+      positioning: "left",
+    },
+    {
+      id: 10,
+      title: "LifeOS – Personal AI Agents App & UX UI Design",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, AI Integration",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/10.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/10.webp",
+      link: "/casestudies/lifeos-ai-agents",
+      positioning: "right",
+    },
+    {
+      id: 11,
+      title: "Medico Clinic",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, Clinic Management",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/11.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/11.webp",
+      link: "/casestudies/medico-clinic",
+      positioning: "right",
+    },
+    {
+      id: 12,
+      title: "Modo – AI-Enhanced CRM Platform for Manufacturing",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, AI Integration",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/13.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/13.webp",
+      link: "/casestudies/modo-ai-crm",
+      positioning: "left",
+    },
+    {
+      id: 13,
+      title: "Sentos — AI Ophthalmology Clinic",
+      category: "Health",
+      platform: "Mobile App",
+      services: "UX/UI Design, Mobile App Development, AI Integration",
+      image: "/assets/img/casestudyrevamp-pages/preview-banners/14.webp",
+      imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/14.webp",
+      link: "/casestudies/sentos-ai",
+      positioning: "left",
+    },
+    // {
+    //   id: 14,
+    //   title: "Haigeia",
+    //   category: "Health",
+    //   platform: "Mobile App",
+    //   services: "UX/UI Design, Mobile App Development, Health Management",
+    //   image: "/assets/img/casestudyrevamp-pages/preview-banners/9.webp",
+    //   imageMobile: "/assets/img/casestudyrevamp-pages/preview-banners/mobile/9.webp",
+    //   link: "/casestudies/haigeia",
+    //   positioning: "left",
+    // },
   ];
 
   return (
@@ -382,6 +471,7 @@ export default function CaseStudies() {
           autoplay={{
             delay: 4000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
           }}
           className="mx-auto max-w-7xl"
           data-aos="fade-up"
@@ -405,7 +495,7 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Content Overlay */}
-                <div className="flex flex-col justify-between p-4 md:pt-14  text-black md:absolute md:inset-0 md:p-10">
+                <div className="flex flex-col justify-between p-4 md:pt-14 md:pb-10  text-black md:absolute md:inset-0 md:p-10">
                   <div
                     className={`${p.positioning === "right" ? "md:ml-auto md:w-1/2 md:pr-10 md:pl-16" : ""} ${p.positioning === "left" ? "md:w-1/2 md:pl-16" : ""} ${p.positioning === "full" ? "md:w-2/3 md:pl-20" : ""}`}
                   >
@@ -415,19 +505,19 @@ export default function CaseStudies() {
                     </span>
 
                     {/* Title */}
-                    <h3 className="mb-2 text-2xl font-bold  text-black md:text-4xl">
+                    <h3 className="mb-2 text-2xl font-bold text-black md:text-3xl">
                       {p.title}
                     </h3>
 
                     {/* Meta */}
                     <div className="flex flex-col gap-4 mb-7 md:mb-10 mt-4 text-sm md:text-base">
                       <div className="flex flex-col gap-4 md:flex-row md:gap-10">
-                        <div className="flex flex-row gap-1 md:gap-0 md:flex-col">
+                        {/* <div className="flex flex-row gap-1 md:gap-0 md:flex-col">
                           <span className="text-sm font-medium text-slate-700">
                             Category:
                           </span>
                           <span className="font-semibold">{p.category}</span>
-                        </div>
+                        </div> */}
                         <div className="flex flex-row gap-1 md:gap-0 md:flex-col">
                           <span className="text-sm font-medium text-slate-700">
                             Platform:
@@ -455,12 +545,12 @@ export default function CaseStudies() {
                         Get a quote now
                       </Link>
 
-                      {/* <Link
+                      <Link
                         href={p.link}
-                        className="border justify-center border-[#ff7a3d] hover:bg-[#ff4d2d] md:text-white text-black px-6 py-3 rounded-md font-medium transition flex items-center gap-2 text-sm"
+                        className="justify-center border-[#ef2f6b] border-2 hover:bg-[#ef2f6b] text-black hover:text-white px-6 py-3 rounded-md font-medium transition flex items-center gap-2 text-sm"
                       >
-                        View Case Studies
-                      </Link> */}
+                        View Case Study
+                      </Link>
                     </div>
                   </div>
                 </div>

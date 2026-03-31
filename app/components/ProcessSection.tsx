@@ -2,24 +2,19 @@
 
 const processSteps = [
   {
-    title: "Discovery &\nStrategy",
+    title: "Audit & Strategy",
     description:
-      "We understand your clinic's goals, operations, and patient journey.",
+      "We analyse your clinic, competitors, and growth gaps.",
   },
   {
-    title: "Design &\nDevelopment",
+    title: "Build Your Growth System",
     description:
-      "We build modern digital platforms designed for healthcare businesses.",
+      "We implement marketing + automation + tracking.",
   },
   {
-    title: "Launch & Marketing",
+    title: "Scale Patient Flow",
     description:
       "We implement SEO, paid ads, and growth strategies to attract patients.",
-  },
-  {
-    title: "Optimization &\nGrowth",
-    description:
-      "We continuously improve performance and scale your digital systems.",
   },
 ];
 
@@ -40,7 +35,7 @@ export default function ProcessSection() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Our Process
+            How It Works
           </p>
 
           <h2
@@ -56,7 +51,7 @@ export default function ProcessSection() {
           <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" data-aos="fade-up" data-aos-delay="300" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="400">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="400">
           {processSteps.map((step) => (
             <div
               key={step.title}

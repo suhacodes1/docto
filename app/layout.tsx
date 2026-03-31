@@ -28,10 +28,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={jakarta.className}>
         <AOSProvider>
-          <TopBar />
-          <Navbar />
-          {children}
-          <Footer />
+          <main className="overflow-x-clip">
+            <TopBar />
+            <Navbar />
+            {children}
+            <Footer />
+          </main>
         </AOSProvider>
       </body>
     </html>

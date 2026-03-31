@@ -41,14 +41,14 @@ export default function EnterpriseSoftwareDevelopment() {
         primaryCtaText="Start Your Project"
         primaryCtaLink="/contact"
 
-        heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/web-portal-development/001.webp"
         heroImageAlt="Enterprise software dashboard"
 
         sectionTwoTitle="Software designed for complex business needs"
         sectionTwoTextOne="Enterprise software requires more than just functionality — it must align with business operations, support teams, and improve efficiency across departments."
         sectionTwoTextTwo="We build tailored platforms that integrate workflows, systems, and processes into a scalable and structured solution."
-        sectionTwoImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="Enterprise analytics system"
+        sectionTwoImage="/assets/img/services-page/web-portal-development/002.webp"
+        sectionTwoImageAlt="Service page image 2"
 
         featureCards={[
           {
@@ -71,8 +71,8 @@ export default function EnterpriseSoftwareDevelopment() {
         valueTitle="Built for reliability and long-term performance"
         valueTextOne="Enterprise systems must be stable, scalable, and aligned with real business operations. We design solutions that support teams, workflows, and long-term growth."
         valueTextTwo="Our approach focuses on performance, structure, and adaptability to ensure your system continues delivering value as your organisation evolves."
-        valueImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Business team using software"
+        valueImage="/assets/img/services-page/web-portal-development/003.webp"
+        valueImageAlt="Service page image 3"
 
         consultationText="Need software tailored to your business operations?"
 
@@ -85,7 +85,7 @@ export default function EnterpriseSoftwareDevelopment() {
           "Scalable infrastructure for growth",
           "Custom dashboards and operational tools",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/web-portal-development/004.webp"
         buildImageAlt="Enterprise dashboard"
 
         processTitle="How we develop enterprise platforms"

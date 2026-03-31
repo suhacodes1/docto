@@ -41,14 +41,14 @@ export default function PayPerClick() {
         primaryCtaText="Launch Campaigns"
         primaryCtaLink="/contact"
 
-        heroImage="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/ppc/001.webp"
         heroImageAlt="PPC campaign performance dashboard"
 
         sectionTwoTitle="Get in front of the right audience faster"
         sectionTwoTextOne="PPC advertising allows your business to appear exactly when people are searching for your products or services. This means higher intent, better targeting, and faster results."
         sectionTwoTextTwo="We build campaigns around strategy, keywords, and user behaviour to ensure your ads reach the right people at the right time."
-        sectionTwoImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="Digital marketing analytics dashboard"
+        sectionTwoImage="/assets/img/services-page/ppc/002.webp"
+        sectionTwoImageAlt="Service page image 2"
 
         featureCards={[
           {
@@ -71,8 +71,8 @@ export default function PayPerClick() {
         valueTitle="Turn clicks into real business results"
         valueTextOne="PPC is not just about traffic — it’s about attracting the right users who are ready to take action. With the right strategy, campaigns can generate leads, sales, and measurable growth."
         valueTextTwo="We focus on optimising every part of the funnel, from ad copy to landing pages, to ensure your campaigns perform efficiently."
-        valueImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Marketing team analysing campaign data"
+        valueImage="/assets/img/services-page/ppc/003.webp"
+        valueImageAlt="Service page image 3"
 
         consultationText="Ready to run high-performing PPC campaigns?"
 
@@ -85,7 +85,7 @@ export default function PayPerClick() {
           "Budget management and performance tracking",
           "Ongoing optimisation and reporting",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/ppc/004.webp"
         buildImageAlt="Campaign analytics interface"
 
         processTitle="How we build PPC campaigns"

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Search Engine Optimization | Digital Paradigm - Strategic SEO Solutions",
     description:
       "Health - Digital Paradigm: Strategic SEO solutions that improve search visibility, drive organic traffic, and attract the right audience.",
-    url: "https://digitalparadigm.com/health/services/seo",
+    url: "https://health.digitalparadigm.com/services/seo",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Strategic SEO solutions that improve search visibility, drive organic traffic, and attract the right audience.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/seo",
+    canonical: "https://health.digitalparadigm.com/services/seo",
   },
 };
 

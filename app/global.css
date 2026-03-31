@@ -214,6 +214,57 @@ img {
   mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
 }
 
+/* Swiper Hero Styles */
+.hero-swiper {
+  width: 100%;
+}
+
+.hero-swiper .swiper-slide {
+  padding: 0;
+}
+
+.hero-swiper .swiper-pagination {
+  bottom: 20px;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  background: #ef2f6b;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #ef2f6b;
+  opacity: 1;
+}
+
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  color: #ef2f6b;
+  background: #edf3f8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 .section-title {
   font-size: clamp(var(--title-min), var(--title-vw), var(--title-max));
   font-weight: 800;
@@ -257,22 +308,56 @@ img {
   .hero-subtext {
     font-size: 19px;
   }
+}
 
-  .section-title {
-    font-size: 36px;
-  }
+.service-detail-gallery {
+  padding: 80px 0;
+}
 
-  .btn-primary,
-  .btn-secondary {
-    font-size: 16px;
-    padding: 15px 24px;
-  }
+.service-detail-gallery .service-detail-heading {
+  margin-bottom: 24px;
+}
 
-  .play-button {
-    width: 72px;
-    height: 72px;
-    font-size: 22px;
+.service-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.service-gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .service-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+@media (max-width: 640px) {
+  .service-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-size: 16px;
+  padding: 15px 24px;
+}
+
+.play-button {
+  width: 72px;
+  height: 72px;
+  font-size: 22px;
 }
 
 .topbar {
@@ -5678,7 +5763,7 @@ a {
   width: 100%;
   border-radius: 4px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .service-image-hero {

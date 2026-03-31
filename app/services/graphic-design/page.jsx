@@ -40,13 +40,13 @@ export default function GraphicDesign() {
         intro="We craft impactful visual designs that communicate your message, strengthen your brand identity, and leave a lasting impression across digital and print platforms."
         primaryCtaText="Start Your Project"
         primaryCtaLink="/contact"
-        heroImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/graphic-design/001.webp"
         heroImageAlt="Creative graphic design workspace"
         sectionTwoTitle="Design that captures attention"
         sectionTwoTextOne="Strong graphic design helps businesses present themselves with confidence. The right visuals make your message clearer, your brand more recognisable, and your marketing more engaging."
         sectionTwoTextTwo="We create designs that align with your identity, support your goals, and help your business look polished across every touchpoint — from social content to campaign assets and promotional materials."
-        sectionTwoImage="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="Creative team working on visual design"
+        sectionTwoImage="/assets/img/services-page/graphic-design/002.webp"
+        sectionTwoImageAlt="Service page image 2"
         featureCards={[
           {
             icon: <Palette size={38} />,
@@ -67,8 +67,8 @@ export default function GraphicDesign() {
         valueTitle="Better visuals create stronger brand impact"
         valueTextOne="Graphic design is not just about making things look good — it shapes how people perceive your business. Strong visuals can build trust, improve recognition, and help your message land more effectively."
         valueTextTwo="From digital campaigns to brand assets and promotional materials, we focus on creating designs that are clear, professional, and built to support real business growth."
-        valueImage="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Graphic design work and creative assets"
+        valueImage="/assets/img/services-page/graphic-design/003.webp"
+        valueImageAlt="Service page image 3"
         consultationText="Looking for professional graphic design support?"
         buildTitle="We create visual assets for every brand touchpoint"
         buildItems={[
@@ -79,7 +79,7 @@ export default function GraphicDesign() {
           "Print-ready brochures, flyers, and posters",
           "Consistent visual assets for web and business use",
         ]}
-        buildImage="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/graphic-design/004.webp"
         buildImageAlt="Graphic design tools and creative workspace"
         processTitle="How we turn ideas into strong visual assets"
         processSteps={[

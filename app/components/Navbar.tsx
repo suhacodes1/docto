@@ -7,14 +7,34 @@ import Logo from "../../public/assets/img/Logos/LogoDark.webp";
 import Image from "next/image";
 import ServicesDropdown from "./ServicesDropdown";
 import { serviceGroups } from "../data/services";
+import { ChevronUp } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [whoWeWorkWithOpen, setWhoWeWorkWithOpen] = useState(false);
+  const [mobileWhoWeWorkWithOpen, setMobileWhoWeWorkWithOpen] = useState(false);
+  const [portfolioOpen, setPortfolioOpen] = useState(false);
+  const [mobilePortfolioOpen, setMobilePortfolioOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const whoWeWorkWithRef = useRef<NodeJS.Timeout | null>(null);
+  const portfolioRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+
+  const clinicTypes = [
+    "Dental Clinics",
+    "Orthodontists",
+    "Cosmetic clinics",
+    "Skin clinics",
+    "Physiotherapy clinics",
+  ];
+
+  const portfolioItems = [
+    { name: "Case Studies", slug: "case-studies" },
+    // { name: "Testimonials", slug: "testimonials" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +62,37 @@ export default function Header() {
     setServicesDropdownOpen(true);
   };
 
-  const isActive = (path: string) => pathname === path;
+  const handleWhoWeWorkWithMouseLeave = () => {
+    whoWeWorkWithRef.current = setTimeout(() => {
+      setWhoWeWorkWithOpen(false);
+    }, 150);
+  };
+
+  const handleWhoWeWorkWithMouseEnter = () => {
+    if (whoWeWorkWithRef.current) {
+      clearTimeout(whoWeWorkWithRef.current);
+    }
+    setWhoWeWorkWithOpen(true);
+  };
+
+  const handlePortfolioMouseLeave = () => {
+    portfolioRef.current = setTimeout(() => {
+      setPortfolioOpen(false);
+    }, 150);
+  };
+
+  const handlePortfolioMouseEnter = () => {
+    if (portfolioRef.current) {
+      clearTimeout(portfolioRef.current);
+    }
+    setPortfolioOpen(true);
+  };
+
+  const isActive = (path: string) => {
+    const normalizedPathname = pathname.replace(/\/$/, "");
+    const normalizedPath = path.replace(/\/$/, "");
+    return normalizedPathname === normalizedPath;
+  };
 
   const isServicesActive = () => pathname.startsWith("/services");
 
@@ -67,9 +117,9 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-6">
             <Link
               href="/"
-              className={`text-base font-bold transition-colors ${
+              className={`text-sm font-bold transition-colors ${
                 isActive("/")
-                  ? "text-[#ef2f6b]"
+                  ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                   : "text-slate-900 hover:text-[#ef2f6b]"
               }`}
             >
@@ -83,45 +133,130 @@ export default function Header() {
             >
               <Link
                 href="/services"
-                className={`text-base font-bold transition-colors ${
+                className={`text-sm font-bold transition-colors ${
                   isServicesActive() || servicesDropdownOpen
-                    ? "text-[#ef2f6b]"
+                    ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                     : "text-slate-900 hover:text-[#ef2f6b]"
                 }`}
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
               >
-                Services
+                Growth Services
               </Link>
+              {servicesDropdownOpen && (
+                <ChevronUp
+                  size={28}
+                  className="absolute top-full left-1/2 z-[60] -translate-x-1/2 mt-1 text-[#ef2f6b]"
+                />
+              )}
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={handleWhoWeWorkWithMouseEnter}
+              onMouseLeave={handleWhoWeWorkWithMouseLeave}
+            >
+              <button
+                className={`text-sm font-bold transition-colors ${
+                  whoWeWorkWithOpen
+                    ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
+                    : "text-slate-900 hover:text-[#ef2f6b]"
+                }`}
+                onClick={() => setWhoWeWorkWithOpen(!whoWeWorkWithOpen)}
+              >
+                Who We Work With
+              </button>
+              {whoWeWorkWithOpen && (
+                <ChevronUp
+                  size={28}
+                  className="absolute top-full left-1/2 z-[60] -translate-x-1/2 mt-1 text-[#ef2f6b]"
+                />
+              )}
+              {whoWeWorkWithOpen && (
+                <div className="absolute top-12 left-0 bg-white rounded-lg shadow-lg p-4 min-w-[200px] z-[55]">
+                  <ul className="flex flex-col gap-2">
+                    {clinicTypes.map((clinic) => {
+                      const slug = clinic.toLowerCase().replace(/\s+/g, "-");
+                      return (
+                        <li key={clinic}>
+                          <Link
+                            // href={`/who-we-work-with/${slug}`}
+                            href=""
+                            className="text-sm text-slate-900 hover:text-[#ef2f6b] transition-colors font-semibold"
+                          >
+                            {clinic}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={handlePortfolioMouseEnter}
+              onMouseLeave={handlePortfolioMouseLeave}
+            >
+              <button
+                className={`text-sm font-bold transition-colors ${
+                  portfolioOpen
+                    ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
+                    : "text-slate-900 hover:text-[#ef2f6b]"
+                }`}
+                onClick={() => setPortfolioOpen(!portfolioOpen)}
+              >
+                Portfolio
+              </button>
+              {portfolioOpen && (
+                <ChevronUp
+                  size={28}
+                  className="absolute top-full left-1/2 z-[60] -translate-x-1/2 mt-1 text-[#ef2f6b]"
+                />
+              )}
+              {portfolioOpen && (
+                <div className="absolute top-12 left-0 bg-white rounded-lg shadow-lg p-4 min-w-[200px] z-[55]">
+                  <ul className="flex flex-col gap-2">
+                    {portfolioItems.map((item) => (
+                      <li key={item.slug}>
+                        <Link
+                          href={`/${item.slug}`}
+                          className="text-sm text-slate-900 hover:text-[#ef2f6b] transition-colors font-semibold"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             <Link
               href="/about"
-              className={`text-base font-bold transition-colors ${
+              className={`text-sm font-bold transition-colors ${
                 isActive("/about")
-                  ? "text-[#ef2f6b]"
+                  ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                   : "text-slate-900 hover:text-[#ef2f6b]"
               }`}
             >
-              About
+              About Us
             </Link>
 
             <Link
-              href="/contact"
-              className={`text-base font-bold transition-colors ${
-                isActive("/contact")
-                  ? "text-[#ef2f6b]"
-                  : "text-slate-900 hover:text-[#ef2f6b]"
-              }`}
+              href=""
+              className="text-slate-900 hover:text-[#ef2f6b] text-sm font-bold transition-colors"
             >
-              Contact
+              Blogs
             </Link>
           </nav>
 
           <Link
-            href="/contact"
-            className="hidden lg:inline-flex items-center justify-center bg-[#ef2f6b] text-white rounded-full px-7 py-3 font-bold hover:bg-pink-600 transition-colors"
+            href="https://calendly.com/digitalparadigm/product-strategy-call"
+            target="_blank"
+            className="hidden lg:inline-flex items-center justify-center bg-[#ef2f6b] text-white rounded-full px-6 py-2.5 font-bold hover:bg-pink-600 transition-colors text-sm"
           >
-            Get in Touch
+            Get Free Growth Audit
           </Link>
 
           <button
@@ -176,20 +311,20 @@ export default function Header() {
                 onClick={closeMenu}
                 className="px-4 py-3 text-white hover:bg-slate-800 rounded transition-colors"
               >
-                About
+                About Us
               </Link>
 
               <div className="my-2">
                 <button
                   className={`w-full flex items-center justify-between px-4 py-3 rounded transition-colors font-semibold ${
                     isServicesActive()
-                      ? "text-[#ef2f6b] bg-slate-800"
+                      ? "text-[#ef2f6b] bg-slate-800 border-b-2 border-[#ef2f6b]"
                       : "text-white hover:bg-slate-800"
                   }`}
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 >
                   <Link href="/services" className="text-white">
-                    Services
+                    Growth Services
                   </Link>
                   <span
                     className={`text-xs transition-transform ${
@@ -211,13 +346,80 @@ export default function Header() {
                           <Link
                             key={service.slug}
                             href={`/services/${service.slug}`}
-                            className="text-sm text-slate-300 hover:text-pink-400 transition-colors"
+                            className="text-sm text-slate-300 hover:text-pink-400 transition-colors font-semibold"
                             onClick={closeMenu}
                           >
                             {service.title}
                           </Link>
                         ))}
                       </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <div className="my-2">
+                <button
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded transition-colors font-semibold text-white hover:bg-slate-800`}
+                  onClick={() =>
+                    setMobileWhoWeWorkWithOpen(!mobileWhoWeWorkWithOpen)
+                  }
+                >
+                  <span>Who We Work With</span>
+                  <span
+                    className={`text-xs transition-transform ${
+                      mobileWhoWeWorkWithOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    ▼
+                  </span>
+                </button>
+
+                {mobileWhoWeWorkWithOpen && (
+                  <div className="flex flex-col gap-2 mt-4 pl-4 border-l-2 border-[#ef2f6b]">
+                    {clinicTypes.map((clinic) => {
+                      const slug = clinic.toLowerCase().replace(/\s+/g, "-");
+                      return (
+                        <Link
+                          key={clinic}
+                          // href={`/who-we-work-with/${slug}`}
+                          href=""
+                          className="text-sm text-slate-300 hover:text-pink-400 transition-colors"
+                        >
+                          {clinic}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              <div className="my-2">
+                <button
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded transition-colors font-semibold text-white hover:bg-slate-800`}
+                  onClick={() => setMobilePortfolioOpen(!mobilePortfolioOpen)}
+                >
+                  <span>Portfolio</span>
+                  <span
+                    className={`text-xs transition-transform ${
+                      mobilePortfolioOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    ▼
+                  </span>
+                </button>
+
+                {mobilePortfolioOpen && (
+                  <div className="flex flex-col gap-2 mt-4 pl-4 border-l-2 border-[#ef2f6b]">
+                    {portfolioItems.map((item) => (
+                      <Link
+                        key={item.slug}
+                        href={`/${item.slug}`}
+                        className="text-sm text-slate-300 hover:text-pink-400 transition-colors"
+                        onClick={closeMenu}
+                      >
+                        {item.name}
+                      </Link>
                     ))}
                   </div>
                 )}

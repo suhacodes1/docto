@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Pay-Per-Click Advertising | Digital Paradigm - Performance-Driven Campaigns",
     description:
       "Health - Digital Paradigm: Performance-focused paid advertising campaigns designed to generate leads and maximise return on ad spend.",
-    url: "https://digitalparadigm.com/health/services/ppc",
+    url: "https://health.digitalparadigm.com/services/ppc",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Performance-focused paid advertising campaigns designed to generate leads and maximise return on ad spend.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/ppc",
+    canonical: "https://health.digitalparadigm.com/services/ppc",
   },
 };
 

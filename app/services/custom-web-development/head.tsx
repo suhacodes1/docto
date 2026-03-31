@@ -22,7 +22,7 @@ export default function Head() {
       />
       <meta
         property="og:url"
-        content="https://digitalparadigm.com/health/services/custom-web-development"
+        content="https://health.digitalparadigm.com/services/custom-web-development"
       />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ export default function Head() {
       />
       <link
         rel="canonical"
-        href="https://digitalparadigm.com/health/services/custom-web-development"
+        href="https://health.digitalparadigm.com/services/custom-web-development"
       />
     </>
   );

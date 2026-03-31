@@ -1,6 +1,8 @@
+// LEGACY SERVICES - COMMENTED OUT
+/*
 export const serviceGroups = [
   {
-    category: "Web and Software Solutions",
+    category: "Software Development",
     services: [
       {
         title: "Custom Web Development",
@@ -90,7 +92,7 @@ export const serviceGroups = [
     ],
   },
   {
-    category: "Design and Branding",
+    category: "Design and UX",
     services: [
       {
         title: "UI/UX Design",
@@ -146,7 +148,7 @@ export const serviceGroups = [
     ],
   },
   {
-    category: "Digital Marketing",
+    category: "Marketing & Growth",
     services: [
       {
         title: "Search Engine Optimization (SEO)",
@@ -219,11 +221,315 @@ export const serviceGroups = [
     ],
   },
 ];
+*/
+
+// FEATURED HEALTHCARE CLINIC SERVICES
+export const serviceGroups = [
+  {
+    category: "Launch System",
+    positioning: "Get your first 50–100 patients in 60 days",
+    heroSubtitle: "Clinic Launch Growth System",
+    whyItWorks: "New clinics struggle most with starting momentum. You solve that.",
+    services: [
+      {
+        title: "Conversion-Focused Website",
+        slug: "conversion-focused-website",
+        description: "A high-performing website designed to turn visitors into booked patients.",
+        highlights: [
+          "Patient-focused design and messaging",
+          "Clear call-to-action for bookings",
+          "Trust-building elements",
+          "Mobile-optimized for patient searches",
+        ],
+      },
+      {
+        title: "Local Visibility Setup",
+        slug: "local-visibility-setup",
+        description: "Optimise your Google presence so patients can easily find and trust you.",
+        highlights: [
+          "Google Business Profile optimization",
+          "Local SEO strategy",
+          "Citation and directory management",
+          "Local search rankings",
+        ],
+      },
+      {
+        title: "Online Booking Integration",
+        slug: "online-booking-integration",
+        description: "Seamless appointment booking that converts interest into instant bookings.",
+        highlights: [
+          "Integrated booking system",
+          "Automated confirmations",
+          "Reduced booking friction",
+          "Real-time availability",
+        ],
+      },
+      {
+        title: "Patient Acquisition Campaigns",
+        slug: "patient-acquisition-campaigns",
+        description: "Targeted ads that bring in high-intent patients from day one.",
+        highlights: [
+          "Geo-targeted advertising",
+          "High-intent patient focus",
+          "Rapid patient acquisition",
+          "Quick ROI measurement",
+        ],
+      },
+      {
+        title: "Reputation Builder System",
+        slug: "reputation-builder-system",
+        description: "Generate your first reviews quickly to build trust and credibility.",
+        highlights: [
+          "Automated review generation",
+          "Trust-building through social proof",
+          "Rapid credibility establishment",
+          "Positive online reputation",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Growth Engine",
+    positioning: "Consistent weekly patient bookings without relying on referrals",
+    services: [
+      {
+        title: "Patient Acquisition (Ads)",
+        slug: "patient-acquisition-ads",
+        description: "Drive a steady flow of high-quality patient enquiries.",
+        highlights: [
+          "Targeted ad strategies",
+          "Consistent patient flow",
+          "Quality lead generation",
+          "Scalable acquisition",
+        ],
+      },
+      {
+        title: "Landing Page Optimisation",
+        slug: "landing-page-optimisation",
+        description: "Service-specific pages built to maximize conversions.",
+        highlights: [
+          "Service-specific optimization",
+          "Conversion rate improvement",
+          "A/B testing and refinement",
+          "High-performing pages",
+        ],
+      },
+      {
+        title: "Conversion Tracking & Analytics",
+        slug: "conversion-tracking-analytics",
+        description: "Track what's working and measure true ROI.",
+        highlights: [
+          "Comprehensive tracking",
+          "Performance insights",
+          "ROI measurement",
+          "Data-driven decisions",
+        ],
+      },
+      {
+        title: "AI Lead Response System",
+        slug: "ai-lead-response-system",
+        description: "Instantly respond to enquiries and capture more bookings.",
+        highlights: [
+          "24/7 automated responses",
+          "Instant enquiry handling",
+          "Increased booking capture",
+          "Better lead response times",
+        ],
+      },
+      {
+        title: "SEO & Content Growth",
+        slug: "seo-content-growth",
+        description: "Increase long-term visibility through search and content.",
+        highlights: [
+          "Long-term organic growth",
+          "Strategic content creation",
+          "Search visibility",
+          "Sustainable traffic",
+        ],
+      },
+      {
+        title: "Reputation Management",
+        slug: "reputation-management",
+        description: "Continuously build and maintain a strong online reputation.",
+        highlights: [
+          "Ongoing reputation building",
+          "Review management",
+          "Brand trust maintenance",
+          "Positive online presence",
+        ],
+      },
+    ],
+  },
+  {
+    category: "PatientFlow AI",
+    positioning: "Turn more inquiries into bookings automatically",
+    whyItWorks: "This is where you stand out from 90% of agencies.",
+    services: [
+      {
+        title: "AI Chatbot (Website + SMS)",
+        slug: "ai-chatbot-website-sms",
+        description: "Engage and respond to patients instantly, 24/7.",
+        highlights: [
+          "24/7 patient engagement",
+          "Instant responses",
+          "Website and SMS integration",
+          "Improved patient experience",
+        ],
+      },
+      {
+        title: "Missed Call Text-Back System",
+        slug: "missed-call-textback-system",
+        description: "Automatically follow up missed calls to recover lost opportunities.",
+        highlights: [
+          "Automated follow-ups",
+          "Lost opportunity recovery",
+          "SMS text-back system",
+          "Higher conversion rates",
+        ],
+      },
+      {
+        title: "Lead Nurturing & Follow-Ups",
+        slug: "lead-nurturing-followups",
+        description: "Stay top-of-mind and guide patients to book.",
+        highlights: [
+          "Automated nurture sequences",
+          "Top-of-mind positioning",
+          "Guided booking path",
+          "Improved conversion",
+        ],
+      },
+      {
+        title: "No-Show Reduction Workflows",
+        slug: "no-show-reduction-workflows",
+        description: "Reduce cancellations with automated reminders and follow-ups.",
+        highlights: [
+          "Automated reminders",
+          "No-show reduction",
+          "Cancellation prevention",
+          "Better attendance rates",
+        ],
+      },
+      {
+        title: "Patient Reactivation Campaigns",
+        slug: "patient-reactivation-campaigns",
+        description: "Bring back past patients and increase lifetime value.",
+        highlights: [
+          "Automated reactivation",
+          "Past patient engagement",
+          "Lifetime value increase",
+          "Revenue recovery",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Authority Builder",
+    positioning: "Become the most trusted clinic in your area",
+    services: [
+      {
+        title: "Review Generation Campaigns",
+        slug: "review-generation-campaigns",
+        description: "Consistently collect positive reviews to build trust.",
+        highlights: [
+          "Systematic review collection",
+          "Continuous trust building",
+          "Positive testimonials",
+          "Increased credibility",
+        ],
+      },
+      {
+        title: "Video Testimonials",
+        slug: "video-testimonials",
+        description: "Showcase real patient experiences to boost credibility.",
+        highlights: [
+          "Authentic patient stories",
+          "Video production",
+          "Credibility boost",
+          "Social proof",
+        ],
+      },
+      {
+        title: "Educational Content (Short-form + Blogs)",
+        slug: "educational-content-short-long",
+        description: "Position your clinic as the go-to expert in your field.",
+        highlights: [
+          "Expert positioning",
+          "Short-form and blog content",
+          "Thought leadership",
+          "SEO benefits",
+        ],
+      },
+      {
+        title: "Personal Brand Building for Doctors",
+        slug: "personal-brand-building-doctors",
+        description: "Build authority and visibility for practitioners.",
+        highlights: [
+          "Doctor brand development",
+          "Personal visibility",
+          "Practitioner authority",
+          "Trust and credibility",
+        ],
+      },
+    ],
+  },
+  {
+    category: "Intelligence Dashboard",
+    positioning: "Know exactly what's working",
+    services: [
+      {
+        title: "Real-Time Performance Dashboard",
+        slug: "realtime-performance-dashboard",
+        description: "Monitor your clinic's growth and performance at a glance.",
+        highlights: [
+          "Real-time insights",
+          "Performance monitoring",
+          "Growth visibility",
+          "Decision-making data",
+        ],
+      },
+      {
+        title: "Lead Tracking & Conversion Insights",
+        slug: "lead-tracking-conversion-insights",
+        description: "Understand where patients come from and what converts.",
+        highlights: [
+          "Patient source tracking",
+          "Conversion analysis",
+          "Journey mapping",
+          "Optimization insights",
+        ],
+      },
+      {
+        title: "ROI & Campaign Attribution",
+        slug: "roi-campaign-attribution",
+        description: "See exactly which channels are driving results.",
+        highlights: [
+          "Channel attribution",
+          "ROI measurement",
+          "Campaign performance",
+          "Budget optimization",
+        ],
+      },
+      {
+        title: "Patient Flow & Staff Insights",
+        slug: "patient-flow-staff-insights",
+        description: "Optimise operations and improve patient experience.",
+        highlights: [
+          "Operational insights",
+          "Staff performance",
+          "Patient experience optimization",
+          "Efficiency improvements",
+        ],
+      },
+    ],
+  },
+];
 
 export const allServices = serviceGroups.flatMap((group) =>
   group.services.map((service) => ({
     ...service,
     category: group.category,
+    positioning: group.positioning,
+    whyItWorks: group.whyItWorks,
   }))
 );
 

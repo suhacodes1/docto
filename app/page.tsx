@@ -2,6 +2,7 @@
 import Hero from "./components/Hero";
 import ClinicChallenges from "./components/ClinicChallenges";
 import CoreSolutions from "./components/CoreSolutions";
+import WhyChooseUs from "./components/WhyChooseUs";
 import AboutSection from "./components/AboutSection";
 import GrowthSection from "./components/GrowthSection";
 import WhoWeWorkWith from "./components/WhoWeWorkWith";
@@ -12,6 +13,7 @@ import ProcessSection from "./components/ProcessSection";
 import FocusSection from "./components/FocusSection";
 import { useGSAPAnimation } from "./hooks/useGSAPAnimation";
 import type { Metadata } from "next";
+import HomeHeroTrustBar from "./components/HomeHeroTrustBar";
 
 export const metadata: Metadata = {
   title: "Digital Paradigm | Smarter Digital Systems for Healthcare",
@@ -39,16 +41,18 @@ export default function Page() {
   return (
     <>
       <Hero />
-      <ClinicChallenges />
+      <HomeHeroTrustBar />
       <CoreSolutions />
+      <CaseStudies />
+      <WhoWeWorkWith />
       <AboutSection />
       <GrowthSection />
-      <WhoWeWorkWith />
-      <CaseStudies />
-      <CTASection />
       <StatsSection />
       <ProcessSection />
+      <WhyChooseUs />
+      <ClinicChallenges />
       <FocusSection />
+      <CTASection />
     </>
   );
 }

@@ -41,14 +41,14 @@ export default function SearchEngineOptimization() {
         primaryCtaText="Grow With SEO"
         primaryCtaLink="/contact"
 
-        heroImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/seo/001.webp"
         heroImageAlt="SEO analytics dashboard"
 
         sectionTwoTitle="Get discovered where people are searching"
         sectionTwoTextOne="SEO helps your business appear in front of people actively searching for your services. This means more relevant traffic and better opportunities for growth."
         sectionTwoTextTwo="We build strategies that improve rankings, strengthen your website structure, and support consistent, long-term visibility."
-        sectionTwoImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="SEO performance analytics"
+        sectionTwoImage="/assets/img/services-page/seo/002.webp"
+        sectionTwoImageAlt="Service page image 2"
 
         featureCards={[
           {
@@ -71,8 +71,8 @@ export default function SearchEngineOptimization() {
         valueTitle="Build a strong digital foundation"
         valueTextOne="SEO is more than rankings — it’s about building a website that performs well, provides value, and supports your business goals."
         valueTextTwo="We optimise structure, content, and performance to create a foundation that supports long-term growth."
-        valueImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Team analysing SEO data"
+        valueImage="/assets/img/services-page/seo/003.webp"
+        valueImageAlt="Service page image 3"
 
         consultationText="Ready to improve your search rankings?"
 
@@ -85,7 +85,7 @@ export default function SearchEngineOptimization() {
           "Website audits and performance reviews",
           "Ongoing optimisation and reporting",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/seo/004.webp"
         buildImageAlt="SEO dashboard"
 
         processTitle="Our SEO process"

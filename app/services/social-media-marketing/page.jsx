@@ -41,14 +41,14 @@ export default function SocialMediaMarketing() {
         primaryCtaText="Grow Your Brand"
         primaryCtaLink="/contact"
 
-        heroImage="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/social-media-marketing/001.webp"
         heroImageAlt="Social media marketing planning"
 
         sectionTwoTitle="Social media designed for engagement and trust"
         sectionTwoTextOne="Social media helps your business stay visible, communicate your message, and build real connections with your audience."
         sectionTwoTextTwo="We create strategies that balance creativity and performance to support awareness, engagement, and long-term growth."
-        sectionTwoImage="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="Social media strategy session"
+        sectionTwoImage="/assets/img/services-page/social-media-marketing/002.webp"
+        sectionTwoImageAlt="Service page image 2"
 
         featureCards={[
           {
@@ -71,8 +71,8 @@ export default function SocialMediaMarketing() {
         valueTitle="Build a stronger brand presence"
         valueTextOne="Social media is more than posting — it’s about creating meaningful interactions that build trust and recognition."
         valueTextTwo="We align your content, messaging, and visuals to create a cohesive and impactful digital presence."
-        valueImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Team planning social media content"
+        valueImage="/assets/img/services-page/social-media-marketing/003.webp"
+        valueImageAlt="Service page image 3"
 
         consultationText="Ready to grow your social media presence?"
 
@@ -85,7 +85,7 @@ export default function SocialMediaMarketing() {
           "Audience engagement and communication",
           "Performance tracking and optimisation",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/social-media-marketing/004.webp"
         buildImageAlt="Social media dashboard"
 
         processTitle="Our social media process"

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "SaaS Development | Digital Paradigm - Scalable Software Platforms",
     description:
       "Health - Digital Paradigm: Robust SaaS platforms built with scalable architecture, intuitive user experiences, and secure infrastructure.",
-    url: "https://digitalparadigm.com/health/services/saas-development",
+    url: "https://health.digitalparadigm.com/services/saas-development",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Robust SaaS platforms built with scalable architecture, intuitive user experiences, and secure infrastructure.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/saas-development",
+    canonical: "https://health.digitalparadigm.com/services/saas-development",
   },
 };
 

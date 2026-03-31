@@ -298,14 +298,15 @@ export default function ServicePageLayout({
             {quoteText}
           </p>
 
-          <Link
+          <a
+            target="_blank"
             data-aos="fade-up"
             data-aos-delay="100"
-            href="/contact"
+            href="https://calendly.com/digitalparadigm/product-strategy-call"
             className="service-btn service-btn-primary"
           >
             Book Your Free Consultation
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -473,5 +474,3 @@ ServicePageLayout.propTypes = {
   finalCtaButtonText: PropTypes.string,
   finalCtaButtonLink: PropTypes.string,
 };
-
-

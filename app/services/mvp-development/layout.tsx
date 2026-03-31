@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "MVP Development | Digital Paradigm - Launch Your Healthcare Product Fast",
     description:
       "Health - Digital Paradigm: Launch your healthcare product faster with our MVP development services. We build lean, scalable MVPs to validate ideas.",
-    url: "https://digitalparadigm.com/health/services/mvp-development",
+    url: "https://health.digitalparadigm.com/services/mvp-development",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Launch your healthcare product faster with our MVP development services. We build lean, scalable MVPs.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/mvp-development",
+    canonical: "https://health.digitalparadigm.com/services/mvp-development",
   },
 };
 

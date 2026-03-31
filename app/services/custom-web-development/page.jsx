@@ -40,13 +40,13 @@ export default function CustomWebDevelopment() {
       intro="We build custom websites and web platforms designed around your workflows, users, and growth goals — not generic templates. Every solution is built to scale with your business."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+      heroImage="/assets/img/services-page/custom-web-development/001.webp"
       heroImageAlt="Custom web development"
       sectionTwoTitle="Your competitors have great websites. Do you?"
       sectionTwoTextOne="The difference between a business that grows online and one that doesn't often comes down to the quality of their digital presence. A generic template won't cut it when your competitors are investing in custom platforms built for conversion."
       sectionTwoTextTwo="We build websites that are fast, scalable, and designed with your specific users and workflows in mind — giving you a platform that works as hard as you do."
-      sectionTwoImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
-      sectionTwoImageAlt="Competitor landscape"
+      sectionTwoImage="/assets/img/services-page/custom-web-development/002.webp"
+      sectionTwoImageAlt="Service page image 2"
       featureCards={[
         {
           icon: <Zap size={38} />,
@@ -67,8 +67,8 @@ export default function CustomWebDevelopment() {
       valueTitle="More leads with a website built for conversion"
       valueTextOne="A beautiful website that doesn't convert is just an expensive business card. We build with conversion architecture in mind — structuring every page, CTA, and user journey to turn visitors into enquiries."
       valueTextTwo="From landing pages to full platforms, we focus on what actually matters: measurable results for your business."
-      valueImage="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
-      valueImageAlt="Conversion analytics"
+      valueImage="/assets/img/services-page/custom-web-development/003.webp"
+      valueImageAlt="Service page image 3"
       consultationText="Looking for a Free Web Development Consultation?"
       buildTitle="We build digital platforms for every use case"
       buildItems={[
@@ -79,7 +79,7 @@ export default function CustomWebDevelopment() {
         "eCommerce & payment integrations",
         "API integrations with third-party tools",
       ]}
-      buildImage="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200&auto=format&fit=crop"
+      buildImage="/assets/img/services-page/custom-web-development/004.webp"
       buildImageAlt="Digital platform development"
       processTitle="How we build your platform"
       processSteps={[

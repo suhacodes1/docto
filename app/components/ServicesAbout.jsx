@@ -78,10 +78,10 @@ const ServicesAbout = () => {
           </p>
 
           <h2
-            className="text-black md:text-5xl text-3xl font-extrabold mb-6 relative z-10"
+            className="text-black md:text-5xl text-3xl leading-tight font-extrabold mb-6 relative z-10"
             ref={titleRef}
           >
-            We Make Things Look Good
+            Building Scalable Software <br className="md:block hidden" /> and Digital Platforms
           </h2>
 
           <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" />

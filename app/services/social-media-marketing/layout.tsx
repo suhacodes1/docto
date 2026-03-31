@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Social Media Marketing | Digital Paradigm - Data-Driven Engagement",
     description:
       "Health - Digital Paradigm: Data-driven social media strategies that increase brand awareness, engagement, and customer loyalty.",
-    url: "https://digitalparadigm.com/health/services/social-media-marketing",
+    url: "https://health.digitalparadigm.com/services/social-media-marketing",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://digitalparadigm.com/health/services/social-media-marketing",
+      "https://health.digitalparadigm.com/services/social-media-marketing",
   },
 };
 

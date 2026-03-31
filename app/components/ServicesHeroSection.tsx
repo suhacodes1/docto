@@ -38,7 +38,7 @@ const ServicesHeroSection = () => {
             opacity: 0,
             y: 40,
           },
-          "-=0.4"
+          "-=0.4",
         )
         .from(
           descRef.current,
@@ -46,7 +46,7 @@ const ServicesHeroSection = () => {
             opacity: 0,
             y: 30,
           },
-          "-=0.5"
+          "-=0.5",
         )
         .from(
           btnRef.current,
@@ -54,7 +54,7 @@ const ServicesHeroSection = () => {
             opacity: 0,
             scale: 0.9,
           },
-          "-=0.3"
+          "-=0.3",
         );
 
       // Floating icons animation
@@ -109,8 +109,8 @@ const ServicesHeroSection = () => {
             ref={titleRef}
             className="mb-4 text-4xl font-bold leading-tight text-black md:text-5xl"
           >
-            <span className="text-[#ef2f6b]">AI-Powered</span> Web Design and
-            Development For Your Business Growth
+            <span className="text-[#ef2f6b]">Digital Systems for Clinics,</span>{" "}
+            Healthcare Providers & Medical Startups
           </h1>
 
           {/* Description */}
@@ -125,16 +125,25 @@ const ServicesHeroSection = () => {
           {/* Buttons */}
           <div
             ref={btnRef}
-            className="flex flex-col justify-center gap-4 sm:flex-row"
+            className="flex justify-center md:flex-row flex-col gap-4"
           >
             <Link
               href="/contact"
-              className="w-max mx-auto px-6 py-3 bg-transparent text-black hover:text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="px-6 py-3 md:justify-start justify-center md:mx-0 mx-4 bg-transparent text-black hover:text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
             >
               <span>Get in Touch</span>
               <span className="hero-services-divider">|</span>
               <span>+</span>
             </Link>
+            <a
+              href="https://calendly.com/digitalparadigm/product-strategy-call"
+              target="_blank"
+              className="px-6 py-3 md:justify-start justify-center md:mx-0 mx-4 bg-[#ef2f6b] text-white border-2 border-[#ef2f6b] font-semibold rounded-full hover:bg-[#d92a5a] hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              <span>Book a Free Consultation</span>
+              <span className="hero-services-divider">|</span>
+              <span>+</span>
+            </a>
           </div>
         </div>
       </div>

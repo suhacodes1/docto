@@ -11,18 +11,34 @@ export default function Footer() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
+    { href: "/services", label: "Growth Services" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
   ];
 
+  const normalizePath = (path: string) => path.replace(/\/$/, "");
+
+  const isActiveFooterLink = (href: string) => {
+    const normalizedPathname = normalizePath(pathname || "");
+    const normalizedHref = normalizePath(href);
+
+    if (normalizedHref === "/services") {
+      return (
+        normalizedPathname === "/services" ||
+        normalizedPathname.startsWith("/services/")
+      );
+    }
+
+    return normalizedPathname === normalizedHref;
+  };
+
   const linkClass = (href: string) =>
-    href === pathname
-      ? "font-semibold"
+    isActiveFooterLink(href)
+      ? "font-semibold text-[#ef2f6b]"
       : "text-white hover:text-pink-500 font-thin";
 
   const linkStyle = (href: string) =>
-    href === pathname ? { color: "#ec4899" } : undefined;
+    isActiveFooterLink(href) ? { color: "#ef2f6b" } : undefined;
 
   return (
     <footer className="bg-[#08233a] text-white pb-4 pt-5">
@@ -30,13 +46,17 @@ export default function Footer() {
         <div className="footer-column">
           <div className="footer-brand mb-6">
             <Link href="/" className="footer-logo">
-              <Image src={Logo} alt="Healthcare Logo" className="h-8 w-auto" />
+              <Image
+                src={Logo}
+                alt="Healthcare Logo"
+                className="h-8 w-auto"
+                // style={{ filter: "brightness(0) invert(1)", mixBlendMode: "screen" }}
+              />
             </Link>
           </div>
 
           <p className="footer-about-text">
-            It is a long established fact that the read will been distracted by
-            there readable an important content.
+            Helping healthcare providers grow with compliant, patient-focused systems.
           </p>
         </div>
 
@@ -91,12 +111,8 @@ export default function Footer() {
         <p className="text-sm">
           Health | Powered by: <strong>Digital Paradigm</strong>
         </p>
-        <p className="text-sm">
-          © Health {currentYear} | All Right Reserved
-        </p>
+        <p className="text-sm">© Health {currentYear} | All Right Reserved</p>
       </div>
     </footer>
   );
 }
-
-

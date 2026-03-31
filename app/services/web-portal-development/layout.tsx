@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Web Portal Development | Digital Paradigm - Secure User Portals",
     description:
       "Health - Digital Paradigm: Secure and user-friendly portals for customers, staff, and partners to access data, services, and workflows.",
-    url: "https://digitalparadigm.com/health/services/web-portal-development",
+    url: "https://health.digitalparadigm.com/services/web-portal-development",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://digitalparadigm.com/health/services/web-portal-development",
+      "https://health.digitalparadigm.com/services/web-portal-development",
   },
 };
 

@@ -40,13 +40,13 @@ export default function EnterpriseSoftwareDevelopment() {
         intro="We build robust enterprise software solutions that streamline operations, support complex workflows, and help organisations work more efficiently at scale."
         primaryCtaText="Start Your Project"
         primaryCtaLink="/contact"
-        heroImage="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/enterprise-software-development/001.webp"
         heroImageAlt="Enterprise software dashboard"
         sectionTwoTitle="Software designed for complex business operations"
         sectionTwoTextOne="Enterprise software needs to do more than function well — it must support departments, connect business processes, and improve how teams work every day. Generic tools often create friction instead of solving it."
         sectionTwoTextTwo="We create enterprise platforms tailored to your organisation’s workflows, permissions, reporting needs, and long-term digital strategy, so your software fits the way your business actually operates."
-        sectionTwoImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="Enterprise operations and collaboration"
+        sectionTwoImage="/assets/img/services-page/enterprise-software-development/002.webp"
+        sectionTwoImageAlt="Service page image 2"
         featureCards={[
           {
             icon: <Settings size={38} />,
@@ -67,8 +67,8 @@ export default function EnterpriseSoftwareDevelopment() {
         valueTitle="Better efficiency with software built around your organisation"
         valueTextOne="When teams rely on disconnected tools and manual workarounds, operations become slower, more error-prone, and harder to scale. Enterprise software solves this by centralising workflows and giving your teams the tools they actually need."
         valueTextTwo="From internal dashboards to process automation and reporting systems, we focus on building platforms that create measurable efficiency, visibility, and long-term business value."
-        valueImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Enterprise data and operations"
+        valueImage="/assets/img/services-page/enterprise-software-development/003.webp"
+        valueImageAlt="Service page image 3"
         consultationText="Looking for a tailored enterprise software solution?"
         buildTitle="We build enterprise platforms for complex business needs"
         buildItems={[
@@ -79,7 +79,7 @@ export default function EnterpriseSoftwareDevelopment() {
           "Cross-system integrations and data syncing",
           "Scalable enterprise applications for growing teams",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/enterprise-software-development/004.webp"
         buildImageAlt="Enterprise platform development"
         processTitle="How we develop enterprise software"
         processSteps={[

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Our Services | Digital Paradigm - Healthcare Digital Solutions",
     description: "Health - Digital Paradigm: Explore our comprehensive digital services for healthcare: custom web development, SaaS platforms, UI/UX design, SEO, PPC, and more.",
-    url: "https://digitalparadigm.com/health/services",
+    url: "https://health.digitalparadigm.com/services",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: "Health - Digital Paradigm: Explore our comprehensive digital services for healthcare: custom web development, SaaS platforms, UI/UX design, SEO, PPC, and more.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services",
+    canonical: "https://health.digitalparadigm.com/services",
   },
 };
 

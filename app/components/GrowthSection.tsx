@@ -78,7 +78,7 @@ export default function GrowthSection() {
                 {growthCards.leftTop.description}
               </p>
               <Link
-                href="/contact"
+                href="/services/ppc"
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
@@ -96,7 +96,7 @@ export default function GrowthSection() {
                 {growthCards.leftBottom.description}
               </p>
               <Link
-                href="/contact"
+                href="/services/enterprise-software-development"
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
@@ -132,7 +132,7 @@ export default function GrowthSection() {
                 {growthCards.rightTop.description}
               </p>
               <Link
-                href="/contact"
+                href="/services/seo"
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
@@ -150,7 +150,7 @@ export default function GrowthSection() {
                 {growthCards.rightBottom.description}
               </p>
               <Link
-                href="/contact"
+                href="/services/social-media-marketing"
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »

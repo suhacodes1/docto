@@ -40,14 +40,14 @@ export default function MVPDevelopment() {
       intro="Launch your product faster with a focused Minimum Viable Product that allows you to test ideas, attract early users, and validate your concept before scaling."
       primaryCtaText="Start Your MVP"
       primaryCtaLink="/contact"
-      heroImage="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600&auto=format&fit=crop"
+      heroImage="/assets/img/services-page/mvp-development/001.webp"
       heroImageAlt="MVP product development workspace"
 
       sectionTwoTitle="Validate your idea before scaling"
       sectionTwoTextOne="MVP development helps startups and innovators bring products to market quickly without overbuilding. Instead of creating everything at once, we focus on the core features that matter most."
       sectionTwoTextTwo="This approach allows you to test your idea with real users, gather feedback, and refine your product before committing to a full-scale build."
-      sectionTwoImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
-      sectionTwoImageAlt="Startup product planning"
+      sectionTwoImage="/assets/img/services-page/mvp-development/002.webp"
+      sectionTwoImageAlt="Service page image 2"
 
       featureCards={[
         {
@@ -70,8 +70,8 @@ export default function MVPDevelopment() {
       valueTitle="Build smarter, not bigger"
       valueTextOne="Instead of investing heavily in a full product upfront, an MVP lets you test assumptions, validate demand, and refine your idea with minimal risk."
       valueTextTwo="We help you identify what matters most, build it efficiently, and create a strong foundation for future development."
-      valueImage="https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1200&auto=format&fit=crop"
-      valueImageAlt="Startup product development process"
+      valueImage="/assets/img/services-page/mvp-development/003.webp"
+      valueImageAlt="Service page image 3"
 
       consultationText="Have an idea you want to launch?"
 
@@ -84,7 +84,7 @@ export default function MVPDevelopment() {
         "Rapid development and deployment",
         "Feedback collection and iteration planning",
       ]}
-      buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+      buildImage="/assets/img/services-page/mvp-development/004.webp"
       buildImageAlt="MVP dashboard interface"
 
       processTitle="Our MVP development framework"

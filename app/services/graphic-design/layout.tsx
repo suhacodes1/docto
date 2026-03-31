@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Graphic Design | Digital Paradigm - Creative Visual Assets",
     description:
       "Health - Digital Paradigm: Creative visual assets that strengthen your brand identity and communicate your message effectively.",
-    url: "https://digitalparadigm.com/health/services/graphic-design",
+    url: "https://health.digitalparadigm.com/services/graphic-design",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Creative visual assets that strengthen your brand identity and communicate your message effectively.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/graphic-design",
+    canonical: "https://health.digitalparadigm.com/services/graphic-design",
   },
 };
 

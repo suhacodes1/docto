@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Img1 from "../../public/assets/img/homepage/4.webp";
+import Img1 from "../../public/assets/img/homepage/17.webp";
 import Img2 from "../../public/assets/img/homepage/6.webp";
 import Img3 from "../../public/assets/img/homepage/5.webp";
-import Img4 from "../../public/assets/img/homepage/7.webp";
+import Img4 from "../../public/assets/img/homepage/16.webp";
 
 const solutions = [
   {
@@ -22,7 +22,7 @@ const solutions = [
     placeholder: false,
   },
   {
-    title: "Design Experience",
+    title: "Design",
     description: "User-focused interfaces that make digital healthcare simple.",
     image: Img3,
     placeholder: false,
@@ -88,11 +88,9 @@ export default function CoreSolutions() {
 
               <div className="p-6">
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">
-                  {solution.title === "Design Experience" ? (
+                  {solution.title === "Design" ? (
                     <>
                       Design
-                      <br />
-                      Experience
                     </>
                   ) : (
                     solution.title

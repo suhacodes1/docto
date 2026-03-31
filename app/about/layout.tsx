@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "About Us | Digital Paradigm - Healthcare Digital Experts",
     description:
       "Health - Digital Paradigm: Learn about our mission to help healthcare brands grow with clarity, trust, and strategic digital solutions.",
-    url: "https://digitalparadigm.com/health/about",
+    url: "https://health.digitalparadigm.com/about",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Learn about our mission to help healthcare brands grow with clarity, trust, and strategic digital solutions.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/about",
+    canonical: "https://health.digitalparadigm.com/about",
   },
 };
 

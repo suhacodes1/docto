@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: `${service.title} | Digital Paradigm - Healthcare Digital Solutions`,
       description: `Health - Digital Paradigm: ${service.description}`,
-      url: `https://digitalparadigm.com/health/services/${service.slug}`,
+      url: `https://health.digitalparadigm.com/services/${service.slug}`,
       siteName: "Digital Paradigm",
       type: "website",
     },
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: `Health - Digital Paradigm: ${service.description}`,
     },
     alternates: {
-      canonical: `https://digitalparadigm.com/health/services/${service.slug}`,
+      canonical: `https://health.digitalparadigm.com/services/${service.slug}`,
     },
   };
 }
@@ -45,6 +45,13 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
   if (!service) {
     notFound();
   }
+
+  const galleryImages =
+    service.slug !== "influencer-marketing"
+      ? [1, 2, 3, 4].map((n) =>
+          `/assets/img/services-page/${service.slug}/${String(n).padStart(3, "0")}.webp`
+        )
+      : [];
 
   return (
     <main className="service-detail-page">
@@ -60,9 +67,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
 
             <p className="service-detail-category">{service.category}</p>
 
-            <h1 className="service-detail-title">{service.heroTitle}</h1>
+            <h1 className="service-detail-title">{service.title}</h1>
 
-            <p className="service-detail-intro">{service.intro}</p>
+            <p className="service-detail-intro">{service.description}</p>
 
             <div className="service-detail-actions">
               <button className="btn-primary">Get Started</button>
@@ -70,13 +77,15 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             </div>
           </div>
 
-          <div className="service-detail-right">
-            <img
-              src={service.image}
-              alt={service.title}
-              className="service-detail-image"
-            />
-          </div>
+          {(service as any).image && (
+            <div className="service-detail-right">
+              <img
+                src={(service as any).image}
+                alt={service.title}
+                className="service-detail-image"
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -103,7 +112,24 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         </div>
       </section>
 
-
+      {galleryImages.length > 0 && (
+        <section className="service-detail-gallery">
+          <div className="container">
+            <h2 className="service-detail-heading">Service Page Gallery</h2>
+            <div className="service-gallery-grid">
+              {galleryImages.map((src, index) => (
+                <div key={src} className="service-gallery-item">
+                  <img
+                    src={src}
+                    alt={`${service.title} screenshot ${index + 1}`}
+                    className="service-gallery-image"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="service-cta-section">

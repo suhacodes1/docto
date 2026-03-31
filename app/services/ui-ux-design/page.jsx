@@ -41,14 +41,14 @@ export default function UIUXDesign() {
         primaryCtaText="Start Your Design"
         primaryCtaLink="/contact"
 
-        heroImage="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/ui-ux-design/001.webp"
         heroImageAlt="UI UX design workspace"
 
         sectionTwoTitle="Design that feels effortless"
         sectionTwoTextOne="Great design is more than visuals — it’s about creating experiences that are intuitive, smooth, and enjoyable to use."
         sectionTwoTextTwo="We focus on user behaviour, usability, and consistency to ensure your product delivers a seamless experience across every interaction."
-        sectionTwoImage="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="UI design planning"
+        sectionTwoImage="/assets/img/services-page/ui-ux-design/002.webp"
+        sectionTwoImageAlt="Service page image 2"
 
         featureCards={[
           {
@@ -71,8 +71,8 @@ export default function UIUXDesign() {
         valueTitle="Better design, better results"
         valueTextOne="Strong UI/UX design helps users interact with your product effortlessly, improving engagement and overall satisfaction."
         valueTextTwo="We combine visual design and usability principles to create experiences that feel natural and effective."
-        valueImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="Team working on UI UX"
+        valueImage="/assets/img/services-page/ui-ux-design/003.webp"
+        valueImageAlt="Service page image 3"
 
         consultationText="Ready to design a better user experience?"
 
@@ -85,7 +85,7 @@ export default function UIUXDesign() {
           "Usability improvements and optimisation",
           "Responsive design across devices",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/ui-ux-design/004.webp"
         buildImageAlt="UI dashboard"
 
         processTitle="Our UI/UX design process"

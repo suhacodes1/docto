@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Responsive Web Design | Digital Paradigm - Seamless Cross-Device Experiences",
     description:
       "Health - Digital Paradigm: Modern responsive websites that deliver seamless experiences across desktop, tablet, and mobile devices.",
-    url: "https://digitalparadigm.com/health/services/responsive-web-design",
+    url: "https://health.digitalparadigm.com/services/responsive-web-design",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical:
-      "https://digitalparadigm.com/health/services/responsive-web-design",
+      "https://health.digitalparadigm.com/services/responsive-web-design",
   },
 };
 

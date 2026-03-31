@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Contact Us | Digital Paradigm - Let's Discuss Your Project",
     description:
       "Health - Digital Paradigm: Ready to transform your healthcare business? Contact us to discuss your digital project.",
-    url: "https://digitalparadigm.com/health/contact",
+    url: "https://health.digitalparadigm.com/contact",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Ready to transform your healthcare business? Contact us to discuss your digital project.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/contact",
+    canonical: "https://health.digitalparadigm.com/contact",
   },
 };
 

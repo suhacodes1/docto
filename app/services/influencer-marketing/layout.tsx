@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Influencer Marketing | Digital Paradigm - Authentic Brand Partnerships",
     description:
       "Health - Digital Paradigm: Partnerships with relevant creators to expand reach, build trust, and amplify your brand message.",
-    url: "https://digitalparadigm.com/health/services/influencer-marketing",
+    url: "https://health.digitalparadigm.com/services/influencer-marketing",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       "Health - Digital Paradigm: Partnerships with relevant creators to expand reach, build trust, and amplify your brand message.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health/services/influencer-marketing",
+    canonical: "https://health.digitalparadigm.com/services/influencer-marketing",
   },
 };
 

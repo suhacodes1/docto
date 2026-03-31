@@ -3,9 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Img1 from "../../public/assets/img/homepage/15.webp";
-import Img2 from "../../public/assets/img/homepage/16.webp";
-import Img3 from "../../public/assets/img/homepage/17.webp";
+import Img1 from "../../public/assets/img/homepage/Dental.webp";
+import Img2 from "../../public/assets/img/homepage/Physiotherapists.webp";
+import Img3 from "../../public/assets/img/homepage/Private.webp";
 import Img4 from "../../public/assets/img/homepage/18.webp";
 import Img5 from "../../public/assets/img/homepage/19.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,23 +17,23 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const audienceItems = [
   {
-    title: "Dental Clinics",
+    title: "Medical Clinics",
     image: Img1,
   },
   {
-    title: "Physiotherapy Clinics",
+    title: "Specialists",
     image: Img2,
   },
   {
-    title: "Private Healthcare Providers",
+    title: "Dental Practices",
     image: Img3,
   },
   {
-    title: "GP Clinics",
+    title: "Allied Health Providers",
     image: Img4,
   },
   {
-    title: "HealthTech Startups",
+    title: "Cosmetic Clinics",
     image: Img5,
   },
 ];
@@ -52,7 +52,7 @@ export default function WhoWeWorkWith() {
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            Built for Healthcare Providers
+            Built specifically for healthcare providers
           </p>
 
           <h2

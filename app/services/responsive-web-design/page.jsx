@@ -41,14 +41,14 @@ export default function ResponsiveWebDesign() {
         primaryCtaText="Build Your Website"
         primaryCtaLink="/contact"
 
-        heroImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600&auto=format&fit=crop"
+        heroImage="/assets/img/services-page/responsive-web-design/001.webp"
         heroImageAlt="Responsive website design across devices"
 
         sectionTwoTitle="Built to perform on every screen"
         sectionTwoTextOne="Modern users access websites from multiple devices, which means your site needs to adapt seamlessly. We create layouts that remain clean, functional, and visually strong across all screen sizes."
         sectionTwoTextTwo="Our responsive design approach ensures your website maintains usability, readability, and performance whether viewed on mobile, tablet, or desktop."
-        sectionTwoImage="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop"
-        sectionTwoImageAlt="Responsive website layouts"
+        sectionTwoImage="/assets/img/services-page/responsive-web-design/002.webp"
+        sectionTwoImageAlt="Service page image 2"
 
         featureCards={[
           {
@@ -71,8 +71,8 @@ export default function ResponsiveWebDesign() {
         valueTitle="Consistency across every device"
         valueTextOne="A responsive website ensures your brand looks consistent and professional no matter how users access it. This builds trust and keeps your audience engaged."
         valueTextTwo="We focus on layout flexibility, spacing, and usability to ensure your website feels natural and easy to navigate on every screen."
-        valueImage="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=1200&auto=format&fit=crop"
-        valueImageAlt="UI design across devices"
+        valueImage="/assets/img/services-page/responsive-web-design/003.webp"
+        valueImageAlt="Service page image 3"
 
         consultationText="Ready to build a fully responsive website?"
 
@@ -85,7 +85,7 @@ export default function ResponsiveWebDesign() {
           "Consistent spacing and UI scaling",
           "Cross-device testing and refinement",
         ]}
-        buildImage="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1200&auto=format&fit=crop"
+        buildImage="/assets/img/services-page/responsive-web-design/004.webp"
         buildImageAlt="Responsive UI interface"
 
         processTitle="Our responsive design process"

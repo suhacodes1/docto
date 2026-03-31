@@ -20,7 +20,7 @@ export default function Head() {
       />
       <meta
         property="og:url"
-        content="https://digitalparadigm.com/health/services/graphic-design"
+        content="https://health.digitalparadigm.com/services/graphic-design"
       />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@ export default function Head() {
       />
       <link
         rel="canonical"
-        href="https://digitalparadigm.com/health/services/graphic-design"
+        href="https://health.digitalparadigm.com/services/graphic-design"
       />
     </>
   );

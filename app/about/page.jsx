@@ -58,11 +58,11 @@ export default function AboutPage() {
               custom={0.3}
               className="about-hero-actions"
             >
-              <Link href="/health/contact" className="btn-primary">
+              <Link href="/contact" className="inline-flex items-center justify-center bg-[#ef2f6b] border border-[#ef2f6b] text-white rounded-full px-7 py-3 font-bold hover:bg-pink-600 transition-colors">
                 Work With Us
               </Link>
 
-              <Link href="/health/services" className="btn-secondary">
+              <Link href="/services" className="inline-flex items-center justify-center bg-transparent text-black hover:text-white border border-[#ef2f6b] rounded-full px-7 py-3 font-bold hover:bg-pink-600 transition-colors">
                 View Services
               </Link>
             </motion.div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <p className="about-section-subtitle">Who We Are</p>
-            <h2 className="about-section-title">
+            <h2 className="about-section-title font-semibold">
               A digital partner built for modern healthcare brands
             </h2>
           </motion.div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <p className="about-section-subtitle">What Guides Us</p>
-            <h2 className="about-section-title">
+            <h2 className="about-section-title font-semibold">
               The values behind the work we do
             </h2>
           </motion.div>
@@ -242,7 +242,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <p className="about-section-subtitle">Why Choose Us</p>
-            <h2 className="about-section-title">
+            <h2 className="about-section-title font-semibold">
               Strategy, creativity, and healthcare-focused digital thinking
             </h2>
             <p className="about-section-text">
@@ -287,7 +287,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <p className="about-section-subtitle">Our Approach</p>
-            <h2 className="about-section-title">
+            <h2 className="about-section-title font-semibold">
               Built around visibility, trust, and digital growth
             </h2>
           </motion.div>
@@ -337,7 +337,7 @@ export default function AboutPage() {
         >
           <div>
             <p className="about-cta-tag">Let’s grow your brand</p>
-            <h2 className="about-cta-title">
+            <h2 className="about-cta-title font-semibold">
               Ready to build a stronger healthcare presence?
             </h2>
             <p className="about-cta-text">
@@ -347,7 +347,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <Link href="/contact" className="btn-primary">
+          <Link href="/contact" className="inline-flex md:min-w-[180px] items-center justify-center bg-[#ef2f6b] border border-[#ef2f6b] text-white rounded-full px-7 py-3 font-bold hover:bg-pink-600 transition-colors">
             Get In Touch
           </Link>
         </motion.div>
