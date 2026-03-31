@@ -30,7 +30,8 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "app/services/custom-web-development/page.jsx",
-    "app/components/AOSProvider.jsx"
+    "app/components/AOSProvider.jsx",
+    "app/services/conversion-focused-website/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

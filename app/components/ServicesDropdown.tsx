@@ -23,7 +23,7 @@ export default function ServicesDropdown({
 
   // Find the active category based on current pathname
   const getActiveCategory = () => {
-    const normalizedPathname = pathname.replace(/\/$/, '');
+    const normalizedPathname = pathname.replace(/\/$/, "");
     for (const group of serviceGroups) {
       for (const service of group.services) {
         if (normalizedPathname === `/services/${service.slug}`) {
@@ -69,11 +69,13 @@ export default function ServicesDropdown({
         {serviceGroups.map((group) => (
           <div key={group.category} className="flex flex-col gap-5">
             <div className=" pb-2 border-b-2 border-[#ef2f6b]">
-              <h3 className={`text-sm font-bold ${
-                activeCategory === group.category
-                  ? "text-[#ef2f6b]"
-                  : "text-slate-900 border-red-500"
-              }`}>
+              <h3
+                className={`text-sm font-bold ${
+                  activeCategory === group.category
+                    ? "text-[#ef2f6b]"
+                    : "text-slate-900 border-red-500"
+                }`}
+              >
                 {group.category}
               </h3>
               {group.positioning && (
@@ -84,13 +86,13 @@ export default function ServicesDropdown({
             </div>
             <ul className="flex flex-col gap-4">
               {group.services.map((service) => {
-                const normalizedPathname = pathname.replace(/\/$/, '');
-                const isActive = normalizedPathname === `/services/${service.slug}`;
+                const normalizedPathname = pathname.replace(/\/$/, "");
+                const isActive =
+                  normalizedPathname === `/services/${service.slug}`;
                 return (
                   <li key={service.slug}>
                     <Link
-                      // href={`/services/${service.slug}`}
-                      href=""
+                      href={`/services/${service.slug}`}
                       className={`flex flex-col gap-1 transition-all group ${
                         isActive ? "opacity-100" : ""
                       }`}
@@ -128,11 +130,13 @@ export default function ServicesDropdown({
         {serviceGroups.map((group) => (
           <div key={group.category} className="flex flex-col gap-3">
             <div className=" pb-2 border-b-2 border-[#ef2f6b]">
-              <h3 className={`text-sm font-bold uppercase tracking-wide ${
-                activeCategory === group.category
-                  ? "text-[#ef2f6b]"
-                  : "text-red-500"
-              }`}>
+              <h3
+                className={`text-sm font-bold uppercase tracking-wide ${
+                  activeCategory === group.category
+                    ? "text-[#ef2f6b]"
+                    : "text-red-500"
+                }`}
+              >
                 {group.category}
               </h3>
               {group.positioning && (
@@ -143,12 +147,13 @@ export default function ServicesDropdown({
             </div>
             <ul className="flex flex-col gap-2">
               {group.services.map((service) => {
-                const normalizedPathname = pathname.replace(/\/$/, '');
-                const isActive = normalizedPathname === `/services/${service.slug}`;
+                const normalizedPathname = pathname.replace(/\/$/, "");
+                const isActive =
+                  normalizedPathname === `/services/${service.slug}`;
                 return (
                   <li key={service.slug}>
                     <Link
-                      href=""
+                      href={`/services/${service.slug}`}
                       className={`flex flex-col gap-1 transition-all group ${
                         isActive ? "opacity-100" : ""
                       }`}
