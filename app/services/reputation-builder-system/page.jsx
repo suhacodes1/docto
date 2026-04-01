@@ -1,4 +1,3 @@
-
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 import {
   Star,
@@ -12,94 +11,124 @@ import {
 export default function ReputationBuilderSystemPage() {
   return (
     <ServicePageLayout
-      category="Launch System"
+      category="HEALTH CLINIC GROWTH SYSTEM"
       titleTop="Reputation Builder"
       titleMain="System"
-      titleBottom="for Clinics"
-      intro="Generate your first reviews quickly and build the trust and credibility patients look for before choosing a clinic."
-      primaryCtaText="Book a Consultation"
+      titleBottom=""
+      intro={`Patients trust reviews before they trust clinics.
+
+We help you generate high-quality reviews quickly — so your clinic looks credible, trustworthy, and ready to choose.`}
+      primaryCtaText="GET A FREE REPUTATION AUDIT"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/reputation-builder-system/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Reputation Builder System/001.jpg"
       heroImageAlt="Reputation builder system for clinics"
-      sectionTwoTitle="Why Reputation Matters for Clinics"
-      sectionTwoTextOne="Patients often decide whether to contact a clinic based on trust signals such as reviews, credibility, and social proof. A strong reputation helps reduce hesitation and makes your clinic feel more reliable."
-      sectionTwoTextTwo="A reputation builder system helps your clinic consistently strengthen trust, improve first impressions, and support better patient acquisition outcomes over time."
-      sectionTwoImage="/assets/img/services/reputation-builder-system/section-two.webp"
+
+      sectionTwoTitle="No reviews = no trust = lost patients"
+      sectionTwoTextOne={`Patients compare before they book.
+
+If your clinic has few or no reviews, it creates doubt — even if your service is excellent.`}
+      sectionTwoTextTwo={`Meanwhile, competitors with strong ratings win the patient’s trust instantly.
+
+We build your Reputation System — helping you consistently generate authentic reviews and position your clinic as a trusted choice.`}
+      sectionTwoImage="/assets/img/inner-pages/Reputation Builder System/002.jpeg"
       sectionTwoImageAlt="Clinic reputation and trust building"
+
       featureCards={[
         {
           icon: <Star size={28} />,
-          title: "Stronger Review Presence",
-          text: "Help your clinic build a stronger review profile that increases trust with potential patients.",
+          title: "Review Generation System",
+          text: "Get more patient reviews consistently without manual effort.",
         },
         {
           icon: <ShieldCheck size={28} />,
-          title: "More Patient Confidence",
-          text: "Show patients your clinic is credible, reliable, and trusted by others in your community.",
+          title: "Trust-Building Strategy",
+          text: "Highlight positive experiences that influence patient decisions.",
         },
         {
           icon: <MessageSquareQuote size={28} />,
-          title: "Better Social Proof",
-          text: "Use positive patient feedback to strengthen your clinic’s reputation and visibility.",
+          title: "Reputation Management",
+          text: "Monitor, manage, and respond to reviews effectively.",
         },
       ]}
-      valueTitle="How a Reputation Builder System Helps"
-      valueTextOne="A strong reputation helps convert more interest into real enquiries by making patients feel more confident in your clinic before they even make contact."
-      valueTextTwo="It also supports local visibility, improves brand perception, and creates a more trustworthy online presence that can influence long-term growth."
-      valueImage="/assets/img/services/reputation-builder-system/value.webp"
-      valueImageAlt="Reputation growth for clinics"
-      consultationText="Want to build stronger trust and credibility for your clinic?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "Review generation foundations",
-        "Trust-building patient touchpoints",
-        "Stronger online credibility signals",
-        "Positive reputation visibility",
-        "Patient feedback support systems",
-        "Review collection strategy support",
-        "Better first impression assets",
-        "Long-term reputation growth foundations",
+
+      valueTitle="Turn patient experiences into powerful trust signals"
+      valueTextOne={`Reviews are one of the biggest decision factors.
+
+A strong reputation doesn’t just build trust — it increases conversions across everything:`}
+      valueResultItems={[
+        { text: "More clicks from search", tag: "Higher visibility", tagColor: "pink" },
+        { text: "Higher website conversions", tag: "More bookings", tagColor: "green" },
+        { text: "More booked appointments", tag: "Real growth", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/reputation-builder-system/build.webp"
+      valueImage="/assets/img/inner-pages/Reputation Builder System/003.jpeg"
+      valueImageAlt="Reputation growth for clinics"
+
+      consultationText="How many reviews does your clinic have right now?"
+
+      buildTitle="Perfect for clinics building trust quickly"
+      buildItems={[
+        "New clinics with no reviews",
+        "Clinics with low ratings or inconsistent feedback",
+        "Clinics competing in high-trust markets",
+        "Clinics wanting to improve Google presence",
+        "Premium clinics needing strong credibility",
+        "Clinics relying too much on word-of-mouth",
+      ]}
+      buildImage="/assets/img/inner-pages/Reputation Builder System/004.jpg"
       buildImageAlt="Clinic reputation building strategy"
-      quoteText="A trusted clinic earns more attention, more confidence, and more patient enquiries from the very beginning."
+
+      quoteText="Trust isn’t claimed — it’s proven through reviews."
+
       relatedServices={[
         {
           icon: <Globe size={26} />,
           title: "Local Visibility Setup",
-          text: "Support your reputation with stronger visibility in local search and map results.",
+          text: "Improve your ranking and presence in local search.",
         },
         {
           icon: <BadgeCheck size={26} />,
-          title: "Conversion-Focused Website",
-          text: "Reinforce credibility with a website designed to build trust and drive action.",
+          title: "Authority Builder",
+          text: "Strengthen your brand and credibility online.",
         },
         {
           icon: <Users size={26} />,
-          title: "Patient Acquisition Campaigns",
-          text: "Pair trust-building with campaigns that bring more high-intent patients to your clinic.",
+          title: "Conversion-Focused Website",
+          text: "Showcase reviews to increase booking rates.",
         },
       ]}
+
       faqs={[
         {
-          q: "Why are reviews important for clinics?",
-          a: "Reviews help patients feel more confident in your clinic and often influence whether they choose to enquire or book.",
+          q: "How quickly can I get reviews?",
+          a: "Many clinics start getting reviews within the first few weeks.",
         },
         {
-          q: "Does reputation affect patient acquisition?",
-          a: "Yes, a stronger reputation can improve trust, visibility, and conversion rates across your digital presence.",
+          q: "Are the reviews real?",
+          a: "Yes — we only implement systems for authentic patient feedback.",
         },
         {
-          q: "Is this useful for a new clinic?",
-          a: "Yes, new clinics especially benefit from building trust signals early to reduce hesitation from potential patients.",
+          q: "Can you help improve low ratings?",
+          a: "Yes — we help manage and improve your overall reputation.",
         },
         {
-          q: "Can reputation building support long-term growth?",
-          a: "Yes, a strong reputation can improve credibility over time and support more consistent patient interest.",
+          q: "Where are the reviews collected?",
+          a: "Primarily on Google and other relevant platforms.",
+        },
+        {
+          q: "Do I need to ask patients manually?",
+          a: "No — we automate the process as much as possible.",
+        },
+        {
+          q: "Will this help increase bookings?",
+          a: "Yes — strong reviews significantly improve patient trust and conversions.",
         },
       ]}
-      finalCtaText="Ready to build a stronger reputation patients can trust?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Build Trust That Brings More Patients?
+
+Start generating reviews that make your clinic stand out and get chosen — every time.`}
+      finalCtaButtonText="Get Free Reputation Audit"
       finalCtaButtonLink="/contact"
     />
   );

@@ -11,94 +11,122 @@ import {
 export default function LocalVisibilitySetupPage() {
   return (
     <ServicePageLayout
-      category="Launch System"
-      titleTop="Local Visibility"
+      category="HEALTH CLINIC GROWTH SYSTEM"
+    titleTop="Local Visibility"
       titleMain="Setup"
-      titleBottom="for Clinics"
-      intro="Optimise your Google presence so patients can easily find and trust your clinic when searching for healthcare services in your local area."
-      primaryCtaText="Book a Consultation"
+      intro={`When patients search for a clinic, will they find you — or your competitors?
+
+We optimize your local presence so your clinic shows up, stands out, and gets chosen.`}
+      primaryCtaText="GET A FREE VISIBILITY AUDIT"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/local-visibility-setup/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Local Visibility Setup/001.jpg"
       heroImageAlt="Local visibility setup for clinics"
-      sectionTwoTitle="Why Local Visibility Matters for Clinics"
-      sectionTwoTextOne="When patients search for a clinic, they usually choose from the first few results they see on Google. If your clinic is not visible in local search, you miss valuable opportunities to attract new patients who are already looking for your services."
-      sectionTwoTextTwo="Local visibility helps your clinic appear in the right places, build trust faster, and make it easier for patients to contact or visit you."
-      sectionTwoImage="/assets/img/services/local-visibility-setup/section-two.webp"
+
+      sectionTwoTitle="If you’re not visible locally, you’re invisible."
+      sectionTwoTextOne={`Patients are searching for clinics every day — but many clinics don’t appear where it matters most.
+
+Incomplete profiles. Poor rankings. Weak reviews.`}
+      sectionTwoTextTwo={`This means lost patients to competitors who are simply more visible.
+
+We build your Local Visibility System — ensuring your clinic appears in local searches, builds trust instantly, and attracts high-intent patients.`}
+      sectionTwoImage="/assets/img/inner-pages/Local Visibility Setup/002.jpg"
       sectionTwoImageAlt="Clinic local search visibility"
+
       featureCards={[
         {
           icon: <MapPin size={28} />,
-          title: "Stronger Local Presence",
-          text: "Help your clinic appear when nearby patients search for relevant treatments and services.",
+          title: "Google Presence Optimization",
+          text: "Fully optimize your profile to rank higher and attract more clicks.",
         },
         {
           icon: <Search size={28} />,
-          title: "Better Google Discoverability",
-          text: "Improve how easily patients can find your clinic through local search results and map listings.",
+          title: "Local SEO Setup",
+          text: "Improve your visibility for high-intent “near me” searches.",
         },
         {
           icon: <BadgeCheck size={28} />,
-          title: "More Trust and Credibility",
-          text: "Build confidence with an optimised presence that looks active, accurate, and professional.",
+          title: "Review & Trust System",
+          text: "Build and manage reviews that increase credibility and conversions.",
         },
       ]}
-      valueTitle="What a Local Visibility Setup Includes"
-      valueTextOne="A strong local setup ensures your clinic’s key details are accurate, consistent, and easy for patients to find across search platforms."
-      valueTextTwo="This includes optimising your Google Business Profile, improving local relevance, strengthening trust signals, and helping your clinic show up more often in the moments that matter."
-      valueImage="/assets/img/services/local-visibility-setup/value.webp"
+
+      valueTitle="Turn local searches into patient bookings"
+valueTextOne={`When your clinic appears at the top — with strong reviews and clear information — patients are far more likely to choose you.`}
+
+valueResultItems={[
+  { text: "Stands out", tag: "More attention", tagColor: "pink" },
+  { text: "Builds trust instantly", tag: "Higher credibility", tagColor: "green" },
+  { text: "Drives real bookings", tag: "More patients", tagColor: "blue" },
+]}
+      valueImage="/assets/img/inner-pages/Local Visibility Setup/002.webp"
       valueImageAlt="Google business profile and local visibility"
-      consultationText="Want your clinic to be easier to find in local search results?"
-      buildTitle="What We Help Set Up"
+
+      consultationText="Are patients finding your clinic — or your competitors?"
+
+      buildTitle="Built for clinics that want to dominate locally"
       buildItems={[
-        "Google Business Profile optimisation",
-        "Accurate clinic details and business information",
-        "Local keyword targeting",
-        "Location relevance improvements",
-        "Trust-building profile updates",
-        "Directory and citation consistency",
-        "Improved map visibility foundations",
-        "Stronger local search presence",
+        "New clinics needing local visibility",
+        "Clinics not appearing in Google searches",
+        "Clinics with low or inconsistent reviews",
+        "Clinics competing in crowded areas",
+        "Clinics relying only on referrals",
+        "Clinics expanding to new locations",
       ]}
-      buildImage="/assets/img/services/local-visibility-setup/build.webp"
+      buildImage="/assets/img/inner-pages/Local Visibility Setup/003.jpeg"
       buildImageAlt="Local visibility strategy for clinics"
-      quoteText="If patients cannot find your clinic locally, they are far more likely to choose a competitor they can see and trust first."
+
+      quoteText="Be the clinic patients find first — and trust instantly."
+
       relatedServices={[
         {
           icon: <PhoneCall size={26} />,
-          title: "Online Booking Integration",
-          text: "Turn local search interest into real appointments with a smoother booking journey.",
+          title: "Reputation Management",
+          text: "Improve and manage your online reviews and ratings.",
         },
         {
           icon: <Globe size={26} />,
           title: "Conversion-Focused Website",
-          text: "Support your visibility with a website built to turn visitors into enquiries and bookings.",
+          text: "Turn local visitors into booked patients.",
         },
         {
           icon: <BarChart3 size={26} />,
-          title: "Patient Acquisition Campaigns",
-          text: "Pair strong organic visibility with targeted campaigns to accelerate clinic growth.",
+          title: "Paid Ads for Clinics",
+          text: "Boost visibility further with targeted campaigns.",
         },
       ]}
+
       faqs={[
         {
-          q: "What is local visibility for a clinic?",
-          a: "Local visibility means how easily your clinic can be found by nearby patients through Google search results, maps, and other local listings.",
+          q: "How long does it take to see results?",
+          a: "Improvements can be seen within weeks, with stronger results building over time.",
         },
         {
-          q: "Why is Google Business Profile important?",
-          a: "It is often one of the first things patients see when searching for a clinic, so an optimised profile can improve trust, clicks, calls, and directions.",
+          q: "Do reviews really matter?",
+          a: "Yes — they are one of the biggest factors in patient decisions.",
         },
         {
-          q: "Will this help my clinic get more patients?",
-          a: "It helps more relevant local patients discover your clinic, which can increase enquiries and bookings when paired with a strong website and booking process.",
+          q: "Can you help get more reviews?",
+          a: "Yes — we implement systems to consistently generate reviews.",
         },
         {
-          q: "Is this only for new clinics?",
-          a: "No, both new and established clinics can benefit from improving their local search presence and visibility.",
+          q: "Will this help me rank higher on Google?",
+          a: "Yes — we optimize for better local search visibility.",
+        },
+        {
+          q: "Do I need a website for this?",
+          a: "It helps, but we can optimize your presence even without one.",
+        },
+        {
+          q: "Is this a one-time setup or ongoing?",
+          a: "Both — we set it up and can also support ongoing optimization.",
         },
       ]}
-      finalCtaText="Ready to make your clinic easier to find and trust locally?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Become the Top Clinic in Your Area?
+
+Make it easy for patients to find you, trust you, and choose you — every time they search.`}
+      finalCtaButtonText="Get Free Visibility Audit"
       finalCtaButtonLink="/contact"
     />
   );

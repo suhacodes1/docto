@@ -1,4 +1,3 @@
-
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 import {
   Megaphone,
@@ -12,94 +11,124 @@ import {
 export default function PatientAcquisitionCampaignsPage() {
   return (
     <ServicePageLayout
-      category="Launch System"
+      category="HEALTH CLINIC GROWTH SYSTEM"
       titleTop="Patient Acquisition"
       titleMain="Campaigns"
-      titleBottom="for Clinics"
-      intro="Targeted campaigns that help bring in high-intent patients from day one and support faster clinic growth."
-      primaryCtaText="Book a Consultation"
+      titleBottom=""
+      intro={`Stop waiting for patients to find you.
+
+We run targeted campaigns that bring in people actively looking for your services — ready to book.`}
+      primaryCtaText="BOOK A STRATEGY CALL"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/patient-acquisition-campaigns/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Patient Acquisition Campaigns/002.jpg"
       heroImageAlt="Patient acquisition campaigns for clinics"
-      sectionTwoTitle="Why Patient Acquisition Campaigns Matter"
-      sectionTwoTextOne="A clinic can have great services, but growth becomes difficult if the right patients are not discovering your business at the right time. Patient acquisition campaigns help generate awareness and bring qualified traffic to your clinic."
-      sectionTwoTextTwo="When campaigns are aligned with strong messaging and clear conversion paths, they can help turn demand into real enquiries and booked appointments."
-      sectionTwoImage="/assets/img/services/patient-acquisition-campaigns/section-two.webp"
+
+      sectionTwoTitle="Most clinics run ads. Few get real patients."
+      sectionTwoTextOne={`Wasted budget. Low-quality leads. No clear strategy.
+
+Running ads without the right system leads to poor results and frustration.`}
+      sectionTwoTextTwo={`The problem isn’t ads — it’s how they’re structured.
+
+We build Patient Acquisition Campaigns designed specifically for clinics — targeting high-intent patients and guiding them toward booking.`}
+      sectionTwoImage="/assets/img/inner-pages/Patient Acquisition Campaigns/002.png"
       sectionTwoImageAlt="Clinic patient acquisition strategy"
+
       featureCards={[
         {
           icon: <Megaphone size={28} />,
-          title: "More Patient Enquiries",
-          text: "Bring more high-intent traffic to your clinic through focused acquisition campaigns.",
+          title: "High-Intent Targeting",
+          text: "Reach people actively searching for your services — not random audiences.",
         },
         {
           icon: <Target size={28} />,
-          title: "Better Audience Targeting",
-          text: "Reach the right local patients based on the services your clinic wants to grow.",
+          title: "Conversion-Driven Campaigns",
+          text: "Ads designed to bring in bookings, not just clicks.",
         },
         {
           icon: <MousePointerClick size={28} />,
-          title: "Stronger Conversion Opportunities",
-          text: "Guide interested patients toward booking, calling, or enquiring with less friction.",
+          title: "Optimized Lead Flow",
+          text: "Connect ads directly to funnels that convert.",
         },
       ]}
-      valueTitle="How Acquisition Campaigns Support Growth"
-      valueTextOne="Patient acquisition campaigns help accelerate clinic visibility and demand by putting your services in front of people actively looking for treatment options."
-      valueTextTwo="They work best when paired with a conversion-focused website, strong trust signals, and a smooth booking experience so campaign traffic can turn into measurable business outcomes."
-      valueImage="/assets/img/services/patient-acquisition-campaigns/value.webp"
+
+      valueTitle="Turn ad spend into real patient bookings"
+      valueTextOne={`Clicks don’t grow clinics — patients do.
+
+We design campaigns that attract the right audience and guide them into your system — where they convert into actual appointments.`}
+      valueResultItems={[
+  { text: "Better lead quality",      tag: "Less noise",        tagColor: "pink"  },
+  { text: "Higher conversion rates",  tag: "More bookings",     tagColor: "green" },
+  { text: "Predictable patient flow", tag: "Consistent growth", tagColor: "blue"  },
+]}
+      valueImage="/assets/img/inner-pages/Patient Acquisition Campaigns/003.jpg"
       valueImageAlt="Patient acquisition and growth campaigns"
-      consultationText="Want to attract more high-intent patients to your clinic?"
-      buildTitle="What We Help Build"
+
+      consultationText="Are your ads bringing patients — or just clicks?"
+
+      buildTitle="Built for clinics that want consistent patient flow"
       buildItems={[
-        "Targeted patient acquisition campaigns",
-        "Service-focused traffic generation",
-        "Local audience targeting foundations",
-        "Lead generation support",
-        "Campaign messaging alignment",
-        "Landing page conversion support",
-        "Stronger enquiry pathways",
-        "Growth-focused campaign foundations",
+        "New clinics needing immediate traction",
+        "Clinics struggling with inconsistent leads",
+        "Clinics running ads with poor ROI",
+        "Clinics launching new services",
+        "Clinics entering competitive markets",
+        "Clinics ready to scale patient acquisition",
       ]}
-      buildImage="/assets/img/services/patient-acquisition-campaigns/build.webp"
+      buildImage="/assets/img/inner-pages/Patient Acquisition Campaigns/004.avif"
       buildImageAlt="Clinic growth campaign setup"
-      quoteText="The right campaign strategy helps your clinic get in front of the right patients before they choose a competitor."
+
+      quoteText="Get patients, not just traffic."
+
       relatedServices={[
         {
           icon: <Globe size={26} />,
           title: "Conversion-Focused Website",
-          text: "Turn campaign traffic into more enquiries and bookings with a high-converting website.",
+          text: "Turn ad traffic into booked patients.",
         },
         {
           icon: <CalendarDays size={26} />,
           title: "Online Booking Integration",
-          text: "Make it easier for interested patients to book as soon as they are ready.",
+          text: "Make it easy for patients to schedule instantly.",
         },
         {
           icon: <TrendingUp size={26} />,
-          title: "Local Visibility Setup",
-          text: "Support paid growth with stronger organic visibility in local search results.",
+          title: "PatientFlow AI",
+          text: "Capture and convert every lead automatically.",
         },
       ]}
+
       faqs={[
         {
-          q: "What are patient acquisition campaigns?",
-          a: "They are targeted marketing campaigns designed to help clinics attract more relevant patient enquiries and appointments.",
+          q: "How quickly can I get patients from ads?",
+          a: "Many clinics start seeing inquiries within days of launching.",
         },
         {
-          q: "Will this help a new clinic grow faster?",
-          a: "Yes, acquisition campaigns can help new clinics build awareness and generate early demand more quickly.",
+          q: "Which platforms do you use?",
+          a: "Google, Facebook, Instagram, and other relevant channels.",
         },
         {
-          q: "Do campaigns work without a good website?",
-          a: "Campaigns work better when paired with a strong website, trust signals, and a smooth booking journey.",
+          q: "Will this work for my type of clinic?",
+          a: "Yes — campaigns are tailored to your specific services and audience.",
         },
         {
-          q: "Can campaigns target specific services?",
-          a: "Yes, campaigns can be aligned around the treatments or services your clinic wants to promote most.",
+          q: "How much budget do I need?",
+          a: "It depends on your goals and market — we guide you on optimal spend.",
+        },
+        {
+          q: "Do you handle everything?",
+          a: "Yes — strategy, setup, creatives, and optimization.",
+        },
+        {
+          q: "Can this scale over time?",
+          a: "Absolutely — we build campaigns designed for long-term growth.",
         },
       ]}
-      finalCtaText="Ready to bring more high-intent patients to your clinic?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Bring in a Consistent Flow of Patients?
+
+Launch campaigns that attract high-intent patients and turn your clinic into a predictable growth system.`}
+      finalCtaButtonText="Get Free Campaign Audit"
       finalCtaButtonLink="/contact"
     />
   );

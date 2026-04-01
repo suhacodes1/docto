@@ -11,94 +11,125 @@ import {
 export default function OnlineBookingIntegrationPage() {
   return (
     <ServicePageLayout
-      category="Launch System"
+      category="HEALTH CLINIC GROWTH SYSTEM"
       titleTop="Online Booking"
       titleMain="Integration"
-      titleBottom="for Clinics"
-      intro="Seamless appointment booking that converts patient interest into instant bookings with a smooth, convenient, and user-friendly experience."
-      primaryCtaText="Book a Consultation"
+      intro={`Every extra step loses patients.
+
+We build seamless online booking systems that make it easy for patients to schedule instantly — anytime, from any device.`}
+      primaryCtaText="BOOK A DEMO"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/online-booking-integration/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Online Booking Integration/001.png"
       heroImageAlt="Online booking integration for clinics"
-      sectionTwoTitle="Why Online Booking Matters for Clinics"
-      sectionTwoTextOne="Patients expect convenience. If they cannot book quickly and easily, they may leave your site and choose another clinic instead. A smooth online booking system helps reduce friction and capture patient intent at the right moment."
-      sectionTwoTextTwo="By making appointments easier to schedule, your clinic can improve the patient experience, save staff time, and increase completed bookings from website traffic."
-      sectionTwoImage="/assets/img/services/online-booking-integration/section-two.webp"
+
+      sectionTwoTitle="If booking isn’t instant, patients drop off."
+      sectionTwoTextOne={`Calling takes time. Waiting for replies creates friction.
+
+Today’s patients expect speed and convenience — if they can’t book immediately, they move on to another clinic.`}
+      sectionTwoTextTwo={`Most clinics lose patients not because of poor marketing…
+
+…but because of a broken booking experience.
+
+We implement Online Booking Systems that remove friction and turn interest into confirmed appointments in seconds.`}
+      sectionTwoImage="/assets/img/inner-pages/Online Booking Integration/002.jpeg"
       sectionTwoImageAlt="Clinic appointment booking system"
+
       featureCards={[
         {
           icon: <CalendarDays size={28} />,
-          title: "Instant Appointment Booking",
-          text: "Let patients book appointments easily without needing to call during business hours.",
+          title: "Instant Appointment Scheduling",
+          text: "Allow patients to book appointments 24/7 without waiting.",
         },
         {
           icon: <Clock3 size={28} />,
-          title: "Reduced Booking Friction",
-          text: "Make the booking process faster and simpler so fewer potential patients drop off.",
+          title: "Seamless User Experience",
+          text: "Simple, intuitive booking flow designed to reduce drop-offs.",
         },
         {
           icon: <Smartphone size={28} />,
-          title: "Mobile-Friendly Experience",
-          text: "Allow patients to book from any device with a smooth and responsive booking journey.",
+          title: "Smart Calendar Integration",
+          text: "Sync with your availability to avoid double bookings and confusion.",
         },
       ]}
-      valueTitle="How Online Booking Supports Clinic Growth"
-      valueTextOne="An effective booking integration helps convert more website visitors into real appointments by making the next step clear and convenient."
-      valueTextTwo="It also improves operational efficiency by reducing manual scheduling work, supporting better availability visibility, and creating a smoother experience for both patients and staff."
-      valueImage="/assets/img/services/online-booking-integration/value.webp"
+
+      valueTitle="Make booking effortless — increase conversions instantly"
+      valueTextOne={`The easier it is to book, the more patients you get.
+
+We design booking experiences that are fast, clear, and frictionless — so patients can go from interest to confirmed appointment in just a few clicks.`}
+ valueResultItems={[
+  { text: "Better patient experience", tag: "Higher satisfaction", tagColor: "pink" },
+  { text: "Higher conversion rates",  tag: "More bookings",     tagColor: "green" },
+  { text: "Fewer missed opportunities", tag: "Consistent growth", tagColor: "blue"  },
+]}
+      valueImage="/assets/img/inner-pages/Online Booking Integration/003.png"
       valueImageAlt="Online booking and scheduling for clinics"
-      consultationText="Want to make it easier for patients to book appointments online?"
-      buildTitle="What We Help Integrate"
+
+      consultationText="How easy is it for your patients to book right now?"
+
+      buildTitle="Built for clinics that want more confirmed appointments"
       buildItems={[
-        "Seamless appointment booking flow",
-        "Website booking integration",
-        "Mobile responsive booking experience",
-        "Clear call-to-action placement",
-        "Reduced patient drop-off points",
-        "Real-time availability display foundations",
-        "User-friendly patient journey design",
-        "Better booking conversion support",
+        "Clinics relying on calls or manual booking",
+        "Clinics missing inquiries after hours",
+        "Clinics with high drop-off before booking",
+        "Busy clinics needing automated scheduling",
+        "Clinics running ads or driving online traffic",
+        "Clinics wanting a modern patient experience",
       ]}
-      buildImage="/assets/img/services/online-booking-integration/build.webp"
+      buildImage="/assets/img/inner-pages/Online Booking Integration/004.png"
       buildImageAlt="Online appointment integration setup"
-      quoteText="The easier it is for patients to book, the more likely they are to choose your clinic at the moment they are ready."
+
+      quoteText="Don’t let friction cost you patients."
+
       relatedServices={[
         {
           icon: <Globe size={26} />,
           title: "Conversion-Focused Website",
-          text: "Strengthen your booking results with a website designed to guide visitors toward action.",
+          text: "Turn visitors into bookings with better design and structure.",
         },
         {
           icon: <CheckCircle2 size={26} />,
-          title: "Local Visibility Setup",
-          text: "Help more local patients discover your clinic before guiding them into your booking flow.",
+          title: "PatientFlow AI",
+          text: "Automate responses and guide patients to booking.",
         },
         {
           icon: <Users size={26} />,
-          title: "Patient Acquisition Campaigns",
-          text: "Drive more high-intent traffic to your clinic and convert that demand into booked appointments.",
+          title: "CRM & Automation Setup",
+          text: "Manage appointments and patient data efficiently.",
         },
       ]}
+
       faqs={[
         {
-          q: "Why is online booking important for clinics?",
-          a: "It gives patients a faster and more convenient way to schedule appointments, which can improve conversions and overall patient experience.",
+          q: "Can patients book anytime?",
+          a: "Yes — the system works 24/7, even outside clinic hours.",
         },
         {
-          q: "Will online booking reduce calls to reception?",
-          a: "It can reduce some manual scheduling work by allowing patients to book directly through your website.",
+          q: "Will it integrate with my current schedule?",
+          a: "Yes — we sync it with your availability to avoid conflicts.",
         },
         {
-          q: "Can patients book from their phone?",
-          a: "Yes, a good online booking integration should be mobile-friendly and easy to use across different devices.",
+          q: "Can I customize appointment types?",
+          a: "Absolutely — based on your services and consultation types.",
         },
         {
-          q: "Does online booking help increase appointments?",
-          a: "It can improve booking conversion by making the process simpler and capturing patient intent right away.",
+          q: "Will patients get reminders?",
+          a: "Yes — automated confirmations and reminders are included.",
+        },
+        {
+          q: "Can it connect with my website?",
+          a: "Yes — it integrates seamlessly with your existing setup.",
+        },
+        {
+          q: "Will this reduce no-shows?",
+          a: "Yes — reminders and a smoother booking experience significantly reduce no-shows.",
         },
       ]}
-      finalCtaText="Ready to turn more website visitors into booked appointments?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Make Booking Effortless for Your Patients?
+
+Remove friction, capture more appointments, and create a seamless experience your patients expect.`}
+      finalCtaButtonText="Get Free Booking Audit"
       finalCtaButtonLink="/contact"
     />
   );

@@ -4,108 +4,129 @@ import { Monitor, MousePointerClick, CalendarCheck, BarChart3, Globe, Users } fr
 export default function ConversionFocusedWebsitePage() {
   return (
     <ServicePageLayout
-      category="Launch System"
-      titleTop="Conversion-Focused"
+      category="HEALTH CLINIC GROWTH SYSTEM"
+      titleTop="Conversion Focused"
       titleMain="Website"
-      titleBottom="for Clinics"
-      intro="A high-performing website designed to turn visitors into booked patients with clear messaging, trust signals, and strong conversion paths."
+      intro="Your website shouldn’t just look good — it should generate patients.
 
-      primaryCtaText="Book a Consultation"
+We design high-converting clinic websites built to turn every visitor into a booked appointment."
+
+      primaryCtaText="GET A FREE WEBSITE AUDIT"
       primaryCtaLink="/contact"
 
-      heroImage="/images/services/conversion-focused-website/hero.jpg"
-      heroImageAlt="Conversion focused healthcare website"
+      heroImage="/assets/img/inner-pages/Conversion-Focused Website/001.png"
+      heroImageAlt="Clinic website hero"
 
-      sectionTwoTitle="Why Your Clinic Needs a Conversion-Focused Website"
-      sectionTwoTextOne="Your website should do more than look good. It should help turn visitors into actual patient enquiries and bookings through clear calls to action, strong service messaging, and an easy-to-use experience."
-      sectionTwoTextTwo="A conversion-focused website helps build trust quickly, reduce drop-off, and guide potential patients toward booking an appointment or contacting your clinic."
+      sectionTwoTitle="Most clinic websites look fine. But they don’t convert."
+      sectionTwoTextOne="Slow loading. Confusing layouts. No clear booking path.
 
-      sectionTwoImage="/images/services/conversion-focused-website/section-two.jpg"
+Patients land on your website — and leave without taking action."
+      sectionTwoTextTwo="The problem isn’t traffic. It’s conversion.
+
+We build conversion-focused clinic websites designed to guide visitors step-by-step toward booking — removing friction and increasing trust at every stage."
+
+      sectionTwoImage="/assets/img/inner-pages/Conversion-Focused Website/002.jpg"
       sectionTwoImageAlt="Clinic website strategy"
 
       featureCards={[
         {
           icon: <Monitor size={28} />,
-          title: "Clear Service Messaging",
-          text: "Show patients exactly what you offer and why they should choose your clinic.",
+          title: "Conversion-First Design",
+          text: "Every section is strategically built to guide visitors toward booking an appointment.",
         },
         {
           icon: <MousePointerClick size={28} />,
-          title: "Stronger Calls to Action",
-          text: "Guide users toward booking, calling, or submitting an enquiry with less friction.",
+          title: "Clear Patient Journey",
+          text: "From landing to booking — a smooth, intuitive experience with zero confusion.",
         },
         {
           icon: <CalendarCheck size={28} />,
-          title: "More Appointment Bookings",
-          text: "Turn more traffic into real patient bookings through better page structure and flow.",
+          title: "Mobile-Optimized Experience",
+          text: "Designed for mobile-first users where most patient decisions happen.",
         },
       ]}
 
-      valueTitle="What Makes a Website Convert Better"
-      valueTextOne="A conversion-focused website is designed around user intent. It helps patients quickly find the information they need, trust your clinic, and take action."
-      valueTextTwo="This includes fast loading pages, strong trust elements, easy navigation, clear headlines, and a seamless journey from landing on the site to booking an appointment."
+valueTitle="Turn clicks into real patient bookings"
 
-      valueImage="/images/services/conversion-focused-website/value.jpg"
+valueTextOne={`A website should do one thing well: convert.
+
+We combine design, psychology, and strategy to ensure your visitors don’t just browse — they take action.`}
+
+valueResultItems={[
+  { text: "Higher booking rates", tag: "More patients", tagColor: "pink" },
+  { text: "Lower cost per lead", tag: "Better ROI", tagColor: "green" },
+  { text: "Better patient experience", tag: "Higher satisfaction", tagColor: "blue" },
+]}
+
+      valueImage="/assets/img/inner-pages/Conversion-Focused Website/003.avif"
       valueImageAlt="Website conversion optimisation"
 
-      consultationText="Want a clinic website that actually drives more patient bookings?"
+      consultationText="Is your website helping you grow — or costing you patients?"
 
-      buildTitle="What We Include in a Conversion-Focused Website"
+      buildTitle="Perfect for clinics that want better results from their website"
       buildItems={[
-        "High-converting homepage structure",
-        "Clear service pages",
-        "Mobile responsive design",
-        "Strong calls to action",
-        "Trust-building sections and testimonials",
-        "Lead capture and enquiry forms",
-        "Booking integration",
-        "SEO-friendly page structure",
+        "Clinics with outdated or low-performing websites",
+        "New clinics needing a strong online presence",
+        "Clinics getting traffic but low bookings",
+        "Clinics running paid ads without conversions",
+        "Premium clinics wanting a high-end digital presence",
+        "Clinics transitioning to digital-first growth",
       ]}
 
-      buildImage="/images/services/conversion-focused-website/build.jpg"
+      buildImage="/assets/img/inner-pages/Conversion-Focused Website/004.webp"
       buildImageAlt="Conversion focused website features"
 
-      quoteText="A well-designed website should not just attract visitors — it should turn them into real enquiries and booked patients."
+      quoteText="A beautiful website is good. A converting website is better."
 
       relatedServices={[
         {
           icon: <Globe size={26} />,
-          title: "Local Visibility Setup",
-          text: "Improve your visibility so local patients can find and trust your clinic.",
+          title: "Landing Page Design",
+          text: "High-converting pages for specific campaigns and offers.",
         },
         {
           icon: <BarChart3 size={26} />,
-          title: "Conversion Tracking & Analytics",
-          text: "Track what is working and measure which channels drive enquiries.",
+          title: "Conversion Rate Optimization (CRO)",
+          text: "Improve your existing website performance.",
         },
         {
           icon: <Users size={26} />,
-          title: "Patient Acquisition Campaigns",
-          text: "Drive high-intent traffic to your website from paid campaigns.",
+          title: "Booking System Integration",
+          text: "Seamless appointment scheduling for better user experience.",
         },
       ]}
 
       faqs={[
         {
-          q: "What is a conversion-focused website?",
-          a: "It is a website designed to guide visitors toward taking action, such as booking an appointment, submitting an enquiry, or calling your clinic.",
-        },
-        {
           q: "How is this different from a normal website?",
-          a: "A normal website may just display information, while a conversion-focused website is structured to increase enquiries, bookings, and patient trust.",
+          a: "It’s built specifically to convert visitors into patients — not just to look good.",
         },
         {
-          q: "Can you redesign an existing clinic website?",
-          a: "Yes, an existing website can be improved with stronger messaging, layout, calls to action, and conversion strategy.",
+          q: "How long does it take to build?",
+          a: "Typically 2–5 weeks depending on complexity.",
         },
         {
-          q: "Will this help with mobile users too?",
-          a: "Yes, the website should be designed to perform well across desktop, tablet, and mobile devices.",
+          q: "Will it work on mobile devices?",
+          a: "Yes — it’s fully optimized for mobile-first users.",
+        },
+        {
+          q: "Can you redesign my existing website?",
+          a: "Absolutely — we can improve or rebuild it for better performance.",
+        },
+        {
+          q: "Do you include booking systems?",
+          a: "Yes — we integrate seamless appointment booking flows.",
+        },
+        {
+          q: "Will this help with ads performance?",
+          a: "Yes — a better website significantly improves conversion rates from ads.",
         },
       ]}
 
-      finalCtaText="Ready to build a website that turns more visitors into patients?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText="Ready to Turn Your Website into a Patient-Generating Machine?
+
+Stop losing patients due to poor design and weak messaging. Build a website that works for your clinic — 24/7."
+      finalCtaButtonText="Get Free Website Audit"
       finalCtaButtonLink="/contact"
     />
   );

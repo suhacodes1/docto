@@ -1,15 +1,100 @@
 "use client";
-
-import { useState } from "react";
+ 
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import ProcessSectionServices from "@/app/components/ProcessSectionServices";
 import CTASection from "@/app/components/CTASection";
-
+ 
+/* =========================
+   ANIMATED RESULTS LIST
+========================= */
+ 
+const tagStyles = {
+  pink: { background: "#fbeaf0", color: "#993556" },
+  green: { background: "#eaf3de", color: "#3b6d11" },
+  blue: { background: "#e6f1fb", color: "#185fa5" },
+};
+ 
+function AnimatedResultsList({ items = [] }) {
+  const [visible, setVisible] = useState([]);
+  const ref = useRef(null);
+ 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          items.forEach((_, i) => {
+            setTimeout(() => {
+              setVisible((prev) => [...prev, i]);
+            }, 200 + i * 180);
+          });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+ 
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [items]);
+ 
+  if (!items.length) return null;
+ 
+  return (
+    <div ref={ref} style={{ display: "flex", flexDirection: "column", gap: "12px", marginTop: "1rem" }}>
+      {items.map((item, i) => (
+        <div
+          key={item.text}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "14px",
+            padding: "14px 18px",
+            border: "0.5px solid rgba(0,0,0,0.1)",
+            borderRadius: "10px",
+            background: "#fff",
+            opacity: visible.includes(i) ? 1 : 0,
+            transform: visible.includes(i) ? "translateX(0)" : "translateX(-24px)",
+            transition: "opacity 0.45s ease, transform 0.45s ease",
+          }}
+        >
+          <span
+            style={{
+              width: "10px",
+              height: "10px",
+              borderRadius: "50%",
+              background: "#e5264a",
+              flexShrink: 0,
+            }}
+          />
+          <span style={{ fontSize: "1rem", fontWeight: 500, flex: 1 }}>
+            {item.text}
+          </span>
+          {item.tag && (
+            <span
+              style={{
+                fontSize: "11px",
+                fontWeight: 500,
+                padding: "3px 10px",
+                borderRadius: "20px",
+                whiteSpace: "nowrap",
+                ...tagStyles[item.tagColor ?? "pink"],
+              }}
+            >
+              {item.tag}
+            </span>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+ 
 /* =========================
    SERVICE PAGE LAYOUT - ALL SERVICES in global.css
 ========================= */
-
+ 
 export default function ServicePageLayout({
   category,
   titleTop,
@@ -18,47 +103,49 @@ export default function ServicePageLayout({
   intro,
   primaryCtaText = "Book a Consultation",
   primaryCtaLink = "/contact",
-
+ 
   heroImage,
   heroImageAlt,
-
+ 
   sectionTwoTitle,
   sectionTwoTextOne,
   sectionTwoTextTwo,
   sectionTwoImage,
   sectionTwoImageAlt,
-
+ 
   featureCards = [],
-
+ 
   valueTitle,
   valueTextOne,
   valueTextTwo,
+  valueResultItems = [],   // NEW: array of { text, tag, tagColor } — replaces bullet list in valueTextTwo
+  valueResultLabel = "The result?", // NEW: label above the animated list
   valueImage,
   valueImageAlt,
-
+ 
   consultationText,
-
+ 
   buildTitle,
   buildItems = [],
-
+ 
   buildImage,
   buildImageAlt,
-
+ 
   processTitle,
   processSteps = [],
-
+ 
   quoteText,
-
+ 
   relatedServices = [],
-
+ 
   faqs = [],
-
+ 
   finalCtaText,
   finalCtaButtonText = "Book Your Free Consultation",
   finalCtaButtonLink = "/contact",
 }) {
   const [openFaq, setOpenFaq] = useState(null);
-
+ 
   return (
     <main className="service-page overflow-x-clip">
       {/* HERO */}
@@ -80,11 +167,11 @@ export default function ServicePageLayout({
             strokeDasharray="6 7"
           />
         </svg>
-
+ 
         <div className="container service-grid service-grid-2 service-grid-hero">
           <div data-aos="fade-right">
             <p className="service-category">{category}</p>
-
+ 
             <h1 className="service-hero-title">
               {titleTop && (
                 <>
@@ -96,11 +183,11 @@ export default function ServicePageLayout({
               <br />
               {titleBottom}
             </h1>
-
+ 
             <div className="service-divider" />
-
+ 
             <p className="service-intro">{intro}</p>
-
+ 
             <Link
               href={primaryCtaLink}
               className="service-btn service-btn-primary"
@@ -108,7 +195,7 @@ export default function ServicePageLayout({
               {primaryCtaText}
             </Link>
           </div>
-
+ 
           <div
             data-aos="fade-left"
             data-aos-delay="150"
@@ -122,7 +209,7 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
-
+ 
       {/* SECTION TWO */}
       <section className="service-section">
         <div className="container service-grid service-grid-2 service-grid-center">
@@ -134,7 +221,7 @@ export default function ServicePageLayout({
               className="service-image service-image-side service-image-side-narrow"
             />
           </div>
-
+ 
           <div data-aos="fade-left" data-aos-delay="100">
             <h2 className="service-heading">{sectionTwoTitle}</h2>
             <div className="service-divider" />
@@ -145,7 +232,7 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
-
+ 
       {/* FEATURE STRIP */}
       <section className="service-strip">
         <div className="container service-grid service-grid-3">
@@ -165,7 +252,7 @@ export default function ServicePageLayout({
           ))}
         </div>
       </section>
-
+ 
       {/* VALUE SECTION */}
       <section className="service-section">
         <div className="container service-grid service-grid-2 service-grid-center">
@@ -173,9 +260,20 @@ export default function ServicePageLayout({
             <h2 className="service-heading">{valueTitle}</h2>
             <div className="service-divider" />
             <p className="service-text service-text-spaced">{valueTextOne}</p>
-            <p className="service-text">{valueTextTwo}</p>
+ 
+            {/* If valueResultItems provided, render animated list; otherwise fall back to valueTextTwo */}
+            {valueResultItems.length > 0 ? (
+              <>
+                <p className="service-text" style={{ marginBottom: "0.5rem" }}>
+                  {valueResultLabel}
+                </p>
+                <AnimatedResultsList items={valueResultItems} />
+              </>
+            ) : (
+              <p className="service-text">{valueTextTwo}</p>
+            )}
           </div>
-
+ 
           <div
             data-aos="fade-left"
             data-aos-delay="100"
@@ -190,14 +288,14 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
-
+ 
       {/* CTA BAR */}
       <section className="service-cta-bar">
         <div className="container">
           <p data-aos="fade-up" className="service-cta-bar-text">
             {consultationText}
           </p>
-
+ 
           <Link
             data-aos="fade-up"
             data-aos-delay="100"
@@ -208,14 +306,14 @@ export default function ServicePageLayout({
           </Link>
         </div>
       </section>
-
+ 
       {/* WHAT WE BUILD */}
       <section className="service-section">
         <div className="container service-grid service-grid-2 service-grid-start">
           <div data-aos="fade-right">
             <h2 className="service-heading">{buildTitle}</h2>
             <div className="service-divider service-divider-green" />
-
+ 
             <div className="service-list">
               {buildItems.map((item, i) => (
                 <div
@@ -230,7 +328,7 @@ export default function ServicePageLayout({
               ))}
             </div>
           </div>
-
+ 
           <div
             data-aos="fade-left"
             data-aos-delay="150"
@@ -251,7 +349,7 @@ export default function ServicePageLayout({
                 strokeDasharray="5 6"
               />
             </svg>
-
+ 
             <img
               src={buildImage}
               alt={buildImageAlt}
@@ -260,44 +358,18 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
-
-      {/* PROCESS */}
-      {/* <section className="service-process">
-        <div className="container">
-          <div data-aos="fade-up" className="service-process-heading">
-            <p className="service-subtitle">Our Process</p>
-            <h2 className="service-heading service-heading-center">
-              {processTitle}
-            </h2>
-            <div className="service-divider service-divider-center" />
-          </div>
-
-          <div className="service-grid service-grid-4">
-            {processSteps.map((item, i) => (
-              <div
-                key={item.step}
-                data-aos="fade-up"
-                data-aos-delay={i * 100}
-                className="service-process-card"
-              >
-                <div className="service-process-step">{item.step}</div>
-                <h3 className="service-process-title">{item.title}</h3>
-                <p className="service-process-text">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+ 
       <div className="pb-8">
         <ProcessSectionServices />
       </div>
+ 
       {/* QUOTE */}
       <section className="service-quote">
         <div className="container service-quote-inner">
           <p data-aos="fade-up" className="service-quote-text">
             {quoteText}
           </p>
-
+ 
           <a
             target="_blank"
             data-aos="fade-up"
@@ -309,7 +381,7 @@ export default function ServicePageLayout({
           </a>
         </div>
       </section>
-
+ 
       {/* RELATED SERVICES */}
       <section className="service-section">
         <div className="container">
@@ -320,7 +392,7 @@ export default function ServicePageLayout({
             </h2>
             <div className="service-divider service-divider-center" />
           </div>
-
+ 
           <div className="service-grid service-grid-3">
             {relatedServices.map((item, i) => (
               <div
@@ -340,7 +412,7 @@ export default function ServicePageLayout({
           </div>
         </div>
       </section>
-
+ 
       {/* FAQ */}
       <section className="service-faq-section">
         <div className="container">
@@ -351,7 +423,7 @@ export default function ServicePageLayout({
             </h2>
             <div className="service-divider service-divider-center" />
           </div>
-
+ 
           <div className="service-grid service-grid-faq">
             {faqs.map((faq, i) => (
               <div
@@ -369,42 +441,19 @@ export default function ServicePageLayout({
                   </span>
                   <span className="service-faq-question">{faq.q}</span>
                 </button>
-
+ 
                 {openFaq === i && <p className="service-faq-answer">{faq.a}</p>}
               </div>
             ))}
           </div>
-
-          {/* <div data-aos="fade-up" className="service-faq-footer">
-            <Link href="/contact" className="service-btn service-btn-dark">
-              Book Your <u>Free</u> Consultation
-            </Link>
-          </div> */}
         </div>
       </section>
-
-      {/* FINAL CTA */}
-      {/* <section className="service-final-cta">
-        <div className="container service-final-cta-inner">
-          <p data-aos="fade-up" className="service-final-cta-text">
-            {finalCtaText}
-          </p>
-
-          <Link
-            data-aos="fade-up"
-            data-aos-delay="100"
-            href={finalCtaButtonLink}
-            className="service-btn service-btn-white"
-          >
-            {finalCtaButtonText}
-          </Link>
-        </div>
-      </section> */}
+ 
       <CTASection />
     </main>
   );
 }
-
+ 
 ServicePageLayout.propTypes = {
   category: PropTypes.string,
   titleTop: PropTypes.string,
@@ -413,63 +462,71 @@ ServicePageLayout.propTypes = {
   intro: PropTypes.string,
   primaryCtaText: PropTypes.string,
   primaryCtaLink: PropTypes.string,
-
+ 
   heroImage: PropTypes.string,
   heroImageAlt: PropTypes.string,
-
+ 
   sectionTwoTitle: PropTypes.string,
   sectionTwoTextOne: PropTypes.string,
   sectionTwoTextTwo: PropTypes.string,
   sectionTwoImage: PropTypes.string,
   sectionTwoImageAlt: PropTypes.string,
-
+ 
   featureCards: PropTypes.arrayOf(
     PropTypes.shape({
-      icon: PropTypes.string,
+      icon: PropTypes.node,
       title: PropTypes.string,
       text: PropTypes.string,
-    }),
+    })
   ),
-
+ 
   valueTitle: PropTypes.string,
   valueTextOne: PropTypes.string,
   valueTextTwo: PropTypes.string,
+  valueResultItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      tag: PropTypes.string,
+      tagColor: PropTypes.oneOf(["pink", "green", "blue"]),
+    })
+  ),
+  valueResultLabel: PropTypes.string,
   valueImage: PropTypes.string,
   valueImageAlt: PropTypes.string,
-
+ 
   consultationText: PropTypes.string,
-
+ 
   buildTitle: PropTypes.string,
   buildItems: PropTypes.arrayOf(PropTypes.string),
   buildImage: PropTypes.string,
   buildImageAlt: PropTypes.string,
-
+ 
   processTitle: PropTypes.string,
   processSteps: PropTypes.arrayOf(
     PropTypes.shape({
       step: PropTypes.string,
       title: PropTypes.string,
       text: PropTypes.string,
-    }),
+    })
   ),
-
+ 
   quoteText: PropTypes.string,
-
+ 
   relatedServices: PropTypes.arrayOf(
     PropTypes.shape({
-      icon: PropTypes.string,
+      icon: PropTypes.node,
       title: PropTypes.string,
       text: PropTypes.string,
-    }),
+    })
   ),
-
+ 
   faqs: PropTypes.arrayOf(
     PropTypes.shape({
       q: PropTypes.string,
       a: PropTypes.string,
-    }),
+    })
   ),
-
+ 
   finalCtaText: PropTypes.string,
   finalCtaButtonText: PropTypes.string,
   finalCtaButtonLink: PropTypes.string,

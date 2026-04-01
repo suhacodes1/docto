@@ -11,94 +11,126 @@ import {
 export default function AiLeadResponseSystemPage() {
   return (
     <ServicePageLayout
-      category="Growth Engine"
-      titleTop="AI Lead"
-      titleMain="Response System"
-      titleBottom="for Clinics"
-      intro="Respond to new patient leads faster with automated follow-up systems that reduce missed opportunities and improve the enquiry experience."
-      primaryCtaText="Book a Consultation"
+      category="HEALTH CLINIC GROWTH SYSTEM"
+      titleTop="AI Lead Response"
+      titleMain="System"
+      titleBottom=""
+      intro={`Speed wins patients.
+
+Our AI Lead Response System replies to every inquiry within seconds — increasing conversions and ensuring no lead is ever missed.`}
+      primaryCtaText="BOOK AN AI DEMO"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/ai-lead-response-system/hero.webp"
+
+      heroImage="/assets/img/inner-pages/AI Lead Response System/001.webp"
       heroImageAlt="AI lead response system for clinics"
-      sectionTwoTitle="Why AI Lead Response Matters"
-      sectionTwoTextOne="When new leads wait too long for a reply, the chance of conversion often drops. Clinics can miss valuable opportunities simply because follow-up is delayed or inconsistent."
-      sectionTwoTextTwo="An AI lead response system helps improve speed, consistency, and responsiveness so interested patients get acknowledged quickly and are guided toward the next step."
-      sectionTwoImage="/assets/img/services/ai-lead-response-system/section-two.webp"
+
+      sectionTwoTitle="The first clinic to respond usually wins the patient."
+      sectionTwoTextOne={`Most clinics take minutes… sometimes hours… to respond.
+
+By then, the patient has already contacted someone else.`}
+      sectionTwoTextTwo={`Missed calls. Delayed replies. No follow-ups.
+
+This is where leads are lost — not in marketing, but in response time.
+
+We implement an AI Lead Response System that replies instantly, qualifies the lead, and guides them toward booking — automatically.`}
+      sectionTwoImage="/assets/img/inner-pages/AI Lead Response System/002.jpg"
       sectionTwoImageAlt="Automated lead response for clinics"
+
       featureCards={[
         {
           icon: <Clock3 size={28} />,
-          title: "Faster First Response",
-          text: "Acknowledge and engage new leads quickly before they lose interest or choose another clinic.",
+          title: "Instant Multi-Channel Replies",
+          text: "Respond within seconds across WhatsApp, website, and forms.",
         },
         {
           icon: <MessageCircleMore size={28} />,
-          title: "Consistent Follow-Up",
-          text: "Create a smoother enquiry experience with structured and timely communication.",
+          title: "Smart Lead Qualification",
+          text: "AI asks the right questions to filter and guide patients.",
         },
         {
           icon: <UserRoundCheck size={28} />,
-          title: "Fewer Missed Opportunities",
-          text: "Reduce lead drop-off caused by delayed replies or inconsistent follow-up workflows.",
+          title: "Automated Follow-Ups",
+          text: "Never lose a lead with timely reminders and nurturing messages.",
         },
       ]}
-      valueTitle="How AI Response Systems Support Growth"
-      valueTextOne="AI-powered response systems help clinics stay responsive even when internal teams are busy, improving the chances that enquiries turn into booked appointments."
-      valueTextTwo="They also help create a more reliable patient journey by making sure new leads receive helpful next-step communication without unnecessary delay."
-      valueImage="/assets/img/services/ai-lead-response-system/value.webp"
-      valueImageAlt="AI-assisted clinic lead follow-up"
-      consultationText="Want to improve how quickly your clinic follows up with new leads?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "Automated first-response flows",
-        "Lead acknowledgement systems",
-        "Faster enquiry handling pathways",
-        "AI-supported follow-up journeys",
-        "Structured patient communication flows",
-        "Response consistency improvements",
-        "Lead capture to booking support",
-        "Missed-opportunity reduction systems",
+
+      valueTitle="Convert more leads — without more effort"
+      valueTextOne={`Every delay reduces your chances of booking.
+
+Our system ensures every inquiry is handled immediately — giving patients answers, building trust, and guiding them toward scheduling.`}
+      valueResultItems={[
+        { text: "Faster response times", tag: "Instant replies", tagColor: "pink" },
+        { text: "Higher conversion rates", tag: "More bookings", tagColor: "green" },
+        { text: "More booked appointments", tag: "Better outcomes", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/ai-lead-response-system/build.webp"
+      valueImage="/assets/img/inner-pages/AI Lead Response System/003.jpg"
+      valueImageAlt="AI-assisted clinic lead follow-up"
+
+      consultationText="How fast are you responding to new leads right now?"
+
+      buildTitle="Built for clinics that want faster conversions"
+      buildItems={[
+        "Clinics missing calls or messages",
+        "Clinics slow to respond to inquiries",
+        "High lead volume with limited staff",
+        "Clinics using WhatsApp or DMs",
+        "Clinics running ads but losing leads",
+        "Busy teams needing automation",
+      ]}
+      buildImage="/assets/img/inner-pages/AI Lead Response System/004.webp"
       buildImageAlt="Clinic lead automation system"
-      quoteText="Speed matters, and the clinic that responds first often wins the patient enquiry."
+
+      quoteText="Speed is the difference between losing and winning patients."
+
       relatedServices={[
         {
-          icon: <PhoneCall size={26} />,
-          title: "Patient Acquisition Ads",
-          text: "Support your lead generation with faster, more consistent lead response workflows.",
+          icon: <Bot size={26} />,
+          title: "PatientFlow AI",
+          text: "Full lead management and conversion system.",
         },
         {
           icon: <Sparkles size={26} />,
-          title: "Landing Page Optimisation",
-          text: "Improve the handoff from page conversion to patient follow-up.",
+          title: "Online Booking Integration",
+          text: "Turn conversations into instant appointments.",
         },
         {
-          icon: <Bot size={26} />,
-          title: "Conversion Tracking & Analytics",
-          text: "Measure how leads move from enquiry to response and identify gaps in follow-up.",
+          icon: <PhoneCall size={26} />,
+          title: "CRM & Automation Setup",
+          text: "Organize and manage all lead interactions efficiently.",
         },
       ]}
+
       faqs={[
         {
-          q: "What is an AI lead response system?",
-          a: "It is a system that helps clinics respond to new patient enquiries faster through automated or AI-assisted communication workflows.",
+          q: "Is this different from a chatbot?",
+          a: "Yes — it’s designed specifically for clinic lead conversion, not generic responses.",
         },
         {
-          q: "Will this replace my team?",
-          a: "No, it is designed to support your team by improving response speed and consistency, not replace human care.",
+          q: "Can it respond on WhatsApp?",
+          a: "Yes — along with website and other channels.",
         },
         {
-          q: "Why does fast response matter?",
-          a: "Quick follow-up helps keep patient interest high and reduces the chance of losing leads to competing clinics.",
+          q: "Will patients feel like they’re talking to AI?",
+          a: "No — responses are designed to feel natural and professional.",
         },
         {
-          q: "Can this help outside business hours?",
-          a: "Yes, automated systems can help acknowledge and guide leads even when your team is unavailable.",
+          q: "Can it book appointments directly?",
+          a: "Yes — it can guide patients to booking or integrate with your system.",
+        },
+        {
+          q: "What if I already have staff responding?",
+          a: "The AI supports your team and ensures no lead is missed.",
+        },
+        {
+          q: "How quickly can this be set up?",
+          a: "Typically within 1–2 weeks.",
         },
       ]}
-      finalCtaText="Ready to respond to leads faster and reduce missed patient opportunities?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Respond Faster Than Every Competitor?
+
+Capture more patients by replying instantly — every time, without fail.`}
+      finalCtaButtonText="Get Free AI Audit"
       finalCtaButtonLink="/contact"
     />
   );

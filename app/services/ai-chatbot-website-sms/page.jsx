@@ -11,94 +11,126 @@ import {
 export default function AiChatbotWebsiteSmsPage() {
   return (
     <ServicePageLayout
-      category="PatientFlow AI"
-      titleTop="AI Chatbot"
+      category="HEALTH CLINIC GROWTH SYSTEM"
+      titleTop="AI Chatbot for"
       titleMain="Website & SMS"
-      titleBottom="for Clinics"
-      intro="Respond to enquiries faster across your website and SMS with AI-assisted conversations that improve patient experience and reduce missed opportunities."
-      primaryCtaText="Book a Consultation"
+      titleBottom="Patients"
+      intro={`Never miss a conversation again.
+
+Our AI chatbot responds instantly on your website and via SMS — answering questions, guiding patients, and turning inquiries into bookings.`}
+      primaryCtaText="BOOK AN AI DEMO"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/ai-chatbot-website-sms/hero.webp"
+
+      heroImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/001.webp"
       heroImageAlt="AI chatbot for clinic website and SMS"
-      sectionTwoTitle="Why AI Chatbot Support Matters"
-      sectionTwoTextOne="Patients often enquire outside business hours or expect quick answers before they decide to book. If responses are delayed, clinics can lose valuable opportunities."
-      sectionTwoTextTwo="An AI chatbot across website and SMS helps your clinic respond faster, guide patients to the right next step, and create a smoother enquiry experience."
-      sectionTwoImage="/assets/img/services/ai-chatbot-website-sms/section-two.webp"
+
+      sectionTwoTitle="Patients expect instant answers — anytime."
+      sectionTwoTextOne={`Visitors come to your website with questions.
+
+If they don’t get answers quickly, they leave.`}
+      sectionTwoTextTwo={`Your staff can’t be available 24/7 — but your chatbot can.
+
+Most clinics lose potential patients simply because no one is there to respond instantly.
+
+We implement an AI Chatbot System that engages visitors in real-time, answers their questions, and guides them toward booking.`}
+      sectionTwoImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/002.webp"
       sectionTwoImageAlt="Clinic chatbot and SMS automation"
+
       featureCards={[
         {
           icon: <Bot size={28} />,
-          title: "Instant Responses",
-          text: "Acknowledge and guide patients quickly across your website and SMS channels.",
+          title: "24/7 Instant Conversations",
+          text: "Engage visitors and respond to SMS inquiries anytime, day or night.",
         },
         {
           icon: <Smartphone size={28} />,
-          title: "Better Accessibility",
-          text: "Support patient communication through channels they already use and trust.",
+          title: "Smart Patient Assistance",
+          text: "Answer FAQs, provide service details, and guide next steps.",
         },
         {
           icon: <UserCheck size={28} />,
-          title: "Fewer Missed Leads",
-          text: "Reduce drop-off caused by slow replies or unanswered questions.",
+          title: "Booking & Lead Capture",
+          text: "Convert conversations into leads and confirmed appointments.",
         },
       ]}
-      valueTitle="How AI Chatbot Systems Support Growth"
-      valueTextOne="AI chatbot systems help clinics improve speed, consistency, and convenience when handling patient enquiries."
-      valueTextTwo="They work especially well for clinics that want to improve first response times, support after-hours engagement, and move more leads toward booking."
-      valueImage="/assets/img/services/ai-chatbot-website-sms/value.webp"
-      valueImageAlt="AI chatbot system for clinic growth"
-      consultationText="Want to improve how your clinic handles website and SMS enquiries?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "Website chatbot flows",
-        "SMS response automation",
-        "Lead qualification pathways",
-        "After-hours patient support",
-        "Frequently asked question handling",
-        "Booking guidance flows",
-        "Faster enquiry response systems",
-        "Multi-channel communication journeys",
+
+      valueTitle="Turn conversations into patient bookings"
+      valueTextOne={`Every question is an opportunity.
+
+Our chatbot ensures no visitor leaves without getting answers — increasing engagement, trust, and conversions.`}
+      valueResultItems={[
+        { text: "Higher engagement rates", tag: "More interaction", tagColor: "pink" },
+        { text: "More captured leads", tag: "Better pipeline", tagColor: "green" },
+        { text: "Increased bookings", tag: "More patients", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/ai-chatbot-website-sms/build.webp"
+      valueImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/003.png"
+      valueImageAlt="AI chatbot system for clinic growth"
+
+      consultationText="Who is answering your patient questions right now?"
+
+      buildTitle="Built for clinics that want constant engagement"
+      buildItems={[
+        "Clinics receiving website traffic but low inquiries",
+        "Clinics missing after-hours leads",
+        "Clinics with repetitive patient questions",
+        "Busy clinics needing automated support",
+        "Clinics using SMS for communication",
+        "Clinics improving patient experience",
+      ]}
+      buildImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/004.webp"
       buildImageAlt="Clinic chatbot and SMS system build"
-      quoteText="Patients are more likely to convert when they get the right answer at the right time."
+
+      quoteText="Your clinic should never miss a conversation."
+
       relatedServices={[
         {
           icon: <Phone size={26} />,
-          title: "Missed Call Textback System",
-          text: "Follow up automatically when a patient call is missed by your clinic.",
+          title: "AI Lead Response System",
+          text: "Instant replies to new leads across channels.",
         },
         {
           icon: <TimerReset size={26} />,
-          title: "Lead Nurturing Follow-Ups",
-          text: "Keep new enquiries engaged after the first interaction.",
+          title: "PatientFlow AI",
+          text: "Full lead conversion and follow-up system.",
         },
         {
           icon: <MessageSquareText size={26} />,
-          title: "No-Show Reduction Workflows",
-          text: "Use better communication flows to improve appointment attendance.",
+          title: "Online Booking Integration",
+          text: "Turn conversations into instant appointments.",
         },
       ]}
+
       faqs={[
         {
-          q: "What does an AI chatbot do for a clinic?",
-          a: "It helps respond to patient enquiries faster, answer common questions, and guide people toward booking or contacting your clinic.",
+          q: "Is this different from a normal chatbot?",
+          a: "Yes — it’s tailored specifically for clinics and designed to convert, not just answer questions.",
         },
         {
-          q: "Can it work after business hours?",
-          a: "Yes, chatbot systems can help engage patients and acknowledge enquiries even when your team is unavailable.",
+          q: "Can it send and receive SMS?",
+          a: "Yes — it works on both website chat and SMS.",
         },
         {
-          q: "Does it replace staff?",
-          a: "No, it is designed to support your team by improving response speed and handling common interactions more efficiently.",
+          q: "Will it sound robotic?",
+          a: "No — responses are designed to feel natural and professional.",
         },
         {
-          q: "Can it work through SMS as well as the website?",
-          a: "Yes, the system can support both website and SMS communication workflows.",
+          q: "Can it book appointments?",
+          a: "Yes — it can guide users to booking or integrate directly with your system.",
+        },
+        {
+          q: "What if my staff is already handling messages?",
+          a: "The chatbot supports your team and handles volume efficiently.",
+        },
+        {
+          q: "How long does setup take?",
+          a: "Typically 1–2 weeks depending on complexity.",
         },
       ]}
-      finalCtaText="Ready to improve patient response across website and SMS?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Engage Every Patient — 24/7?
+
+Let AI handle conversations, answer questions, and convert visitors into patients — even when you’re offline.`}
+      finalCtaButtonText="Get Free AI Audit"
       finalCtaButtonLink="/contact"
     />
   );

@@ -11,94 +11,126 @@ import {
 export default function ReputationManagementPage() {
   return (
     <ServicePageLayout
-      category="Growth Engine"
+      category="HEALTH CLINIC GROWTH SYSTEM"
       titleTop="Reputation"
       titleMain="Management"
-      titleBottom="for Clinics"
-      intro="Strengthen patient trust with a reputation strategy that supports more positive reviews, stronger credibility, and better first impressions online."
-      primaryCtaText="Book a Consultation"
+      titleBottom=""
+      intro={`Your reputation is your strongest asset.
+
+We help you monitor, manage, and improve your online presence so patients always see your clinic in the best light.`}
+      primaryCtaText="GET A FREE REPUTATION AUDIT"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/reputation-management/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Reputation Management/001.webp"
       heroImageAlt="Reputation management for clinics"
-      sectionTwoTitle="Why Reputation Management Matters"
-      sectionTwoTextOne="For many patients, online reviews and first impressions play a major role in whether they choose one clinic over another. A weak reputation can reduce trust even when your services are strong."
-      sectionTwoTextTwo="Reputation management helps clinics improve how they appear online, strengthen credibility, and support more confident patient decision-making."
-      sectionTwoImage="/assets/img/services/reputation-management/section-two.webp"
+
+      sectionTwoTitle="One bad review can cost you multiple patients."
+      sectionTwoTextOne={`Patients read reviews before they book.
+
+A few negative experiences — or no response — can damage trust and push patients toward competitors.`}
+      sectionTwoTextTwo={`Most clinics don’t actively manage their reputation, leaving their image to chance.
+
+We build your Reputation Management System — helping you monitor feedback, respond professionally, and maintain a strong, trustworthy presence.`}
+      sectionTwoImage="/assets/img/inner-pages/Reputation Management/002.png"
       sectionTwoImageAlt="Online reputation strategy for clinics"
+
       featureCards={[
         {
           icon: <Star size={28} />,
-          title: "Stronger Social Proof",
-          text: "Build confidence with reviews and trust signals that support patient decision-making.",
+          title: "Review Monitoring System",
+          text: "Track and manage reviews across platforms in one place.",
         },
         {
           icon: <Shield size={28} />,
-          title: "Better Brand Credibility",
-          text: "Improve how your clinic is perceived across search, reviews, and online touchpoints.",
+          title: "Professional Response Strategy",
+          text: "Respond to both positive and negative feedback effectively.",
         },
         {
           icon: <UserRoundSearch size={28} />,
-          title: "Improved First Impressions",
-          text: "Help patients feel more confident about choosing your clinic from the start.",
+          title: "Reputation Improvement Plan",
+          text: "Turn feedback into opportunities to strengthen trust.",
         },
       ]}
-      valueTitle="How Reputation Management Supports Growth"
-      valueTextOne="A strong online reputation helps clinics convert more interest into action by reducing uncertainty and making trust easier to establish."
-      valueTextTwo="It also supports better performance across other growth channels, because ads, SEO, and referrals all work better when your clinic looks credible online."
-      valueImage="/assets/img/services/reputation-management/value.webp"
-      valueImageAlt="Clinic review and reputation growth"
-      consultationText="Want to strengthen how your clinic is perceived online?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "Reputation improvement strategy",
-        "Review growth foundations",
-        "Trust signal enhancements",
-        "Patient feedback visibility support",
-        "Credibility-focused page improvements",
-        "Online presence refinement",
-        "Brand trust strengthening",
-        "Review-driven growth support",
+
+      valueTitle="Reputation Management"
+      valueTextOne={`A strong reputation doesn’t just protect your clinic — it drives growth.
+
+Patients trust clinics that actively engage, respond, and show care.
+
+We help you create a consistent, positive presence that influences patient decisions.`}
+      valueResultItems={[
+        { text: "Higher trust and credibility", tag: "Stronger perception", tagColor: "pink" },
+        { text: "Better conversion rates", tag: "More bookings", tagColor: "green" },
+        { text: "Stronger patient loyalty", tag: "Long-term growth", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/reputation-management/build.webp"
+      valueImage="/assets/img/inner-pages/Reputation Management/003.jpg"
+      valueImageAlt="Clinic review and reputation growth"
+
+      consultationText="What do patients see when they search your clinic?"
+
+      buildTitle="Built for clinics that care about their image"
+      buildItems={[
+        "Clinics with negative or mixed reviews",
+        "Clinics not responding to feedback",
+        "Clinics in competitive markets",
+        "Premium clinics protecting brand image",
+        "Clinics scaling and increasing visibility",
+        "Clinics wanting long-term trust",
+      ]}
+      buildImage="/assets/img/inner-pages/Reputation Management/004.jpg"
       buildImageAlt="Clinic reputation improvement system"
-      quoteText="When patients trust what they see online, they are far more likely to take the next step with your clinic."
+
+      quoteText="Your reputation is always working — make sure it’s working for you."
+
       relatedServices={[
         {
           icon: <BadgeCheck size={26} />,
-          title: "SEO Content Growth",
-          text: "Support your reputation with useful content that builds authority and patient trust.",
+          title: "Reputation Builder System",
+          text: "Generate more positive reviews consistently.",
         },
         {
           icon: <TrendingUp size={26} />,
-          title: "Patient Acquisition Ads",
-          text: "Get better results from paid traffic when your online reputation supports conversion.",
+          title: "Authority Builder",
+          text: "Strengthen your brand and credibility.",
         },
         {
           icon: <MessageSquareQuote size={26} />,
-          title: "Landing Page Optimisation",
-          text: "Showcase reviews and credibility elements where they can influence patient action most.",
+          title: "Local Visibility Setup",
+          text: "Improve how your clinic appears in search results.",
         },
       ]}
+
       faqs={[
         {
-          q: "What is reputation management for clinics?",
-          a: "It is the process of improving how your clinic is perceived online through stronger reviews, trust signals, and credibility-focused improvements.",
+          q: "Can you remove negative reviews?",
+          a: "Not always — but we can manage and reduce their impact effectively.",
         },
         {
-          q: "Why do reviews matter so much?",
-          a: "Reviews often shape first impressions and help patients decide whether they feel confident booking with your clinic.",
+          q: "How important is responding to reviews?",
+          a: "Very — it shows professionalism and builds trust with potential patients.",
         },
         {
-          q: "Can reputation affect ad and SEO performance?",
-          a: "Yes, strong credibility can improve conversion rates across paid ads, organic search, and referral traffic.",
+          q: "Do you monitor all platforms?",
+          a: "Yes — including Google and other relevant review platforms.",
         },
         {
-          q: "Is this only for clinics with bad reviews?",
-          a: "No, reputation management also helps good clinics strengthen their visibility, trust, and overall online presence.",
+          q: "How quickly should reviews be responded to?",
+          a: "Ideally within 24–48 hours for best impact.",
+        },
+        {
+          q: "Can this improve my ratings over time?",
+          a: "Yes — with proper strategy and consistent management.",
+        },
+        {
+          q: "Is this a one-time service?",
+          a: "It can be ongoing to maintain and improve your reputation.",
         },
       ]}
-      finalCtaText="Ready to build stronger trust and credibility for your clinic?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Take Control of Your Clinic’s Reputation?
+
+Build trust, handle feedback professionally, and create a reputation that attracts more patients.`}
+      finalCtaButtonText="Get Free Reputation Audit"
       finalCtaButtonLink="/contact"
     />
   );

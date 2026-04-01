@@ -11,94 +11,124 @@ import {
 export default function ConversionTrackingAnalyticsPage() {
   return (
     <ServicePageLayout
-      category="Growth Engine"
-      titleTop="Conversion Tracking"
+      category="HEALTH CLINIC GROWTH SYSTEM"
+      titleTop="Conversion Tracking "
       titleMain="& Analytics"
-      titleBottom="for Clinics"
-      intro="Track the patient actions that matter most so your clinic can make better decisions and grow with clearer performance insights."
-      primaryCtaText="Book a Consultation"
+      titleBottom=""
+      intro={`Stop guessing where your patients come from.
+
+We set up advanced tracking systems so you can see exactly what’s working — and scale it with confidence.`}
+      primaryCtaText="GET A FREE TRACKING AUDIT"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/conversion-tracking-analytics/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Conversion Tracking & Analytics/001.jpg"
       heroImageAlt="Conversion tracking and analytics for clinics"
-      sectionTwoTitle="Why Conversion Tracking & Analytics Matter"
-      sectionTwoTextOne="Without accurate tracking, it becomes difficult to know where patient enquiries are coming from, which campaigns are working, and where your website is losing people."
-      sectionTwoTextTwo="Conversion tracking and analytics give clinics visibility into user behaviour so growth decisions can be based on data instead of guesswork."
-      sectionTwoImage="/assets/img/services/conversion-tracking-analytics/section-two.webp"
+
+      sectionTwoTitle="If you can’t track it, you can’t grow it."
+      sectionTwoTextOne={`Most clinics don’t know what’s actually driving results.
+
+Ads, website, WhatsApp, calls — all disconnected.`}
+      sectionTwoTextTwo={`This leads to wasted budget, poor decisions, and slow growth.
+
+We build your Conversion Tracking & Analytics System — giving you full visibility into your patient journey, from first click to confirmed booking.`}
+      sectionTwoImage="/assets/img/inner-pages/Conversion Tracking & Analytics/002.png"
       sectionTwoImageAlt="Clinic analytics and tracking setup"
+
       featureCards={[
         {
           icon: <Target size={28} />,
-          title: "Clearer Performance Data",
-          text: "Understand what channels, pages, and campaigns are driving patient actions.",
+          title: "Accurate Conversion Tracking",
+          text: "Track every lead, call, and booking across all channels.",
         },
         {
           icon: <MousePointerClick size={28} />,
-          title: "Track Key Actions",
-          text: "Measure form submissions, calls, bookings, and other conversion points that matter.",
+          title: "Multi-Channel Attribution",
+          text: "Know exactly which platform is bringing in real patients.",
         },
         {
           icon: <ScanSearch size={28} />,
-          title: "Better Decision-Making",
-          text: "Use real data to improve strategy, campaigns, and conversion pathways.",
+          title: "Data-Driven Insights",
+          text: "Make smarter decisions based on real performance data.",
         },
       ]}
-      valueTitle="How Analytics Support Clinic Growth"
-      valueTextOne="Good tracking helps clinics connect marketing effort to patient outcomes by showing what is actually generating enquiries and appointments."
-      valueTextTwo="It also helps identify friction points on your site so you can improve patient journeys and get better returns from advertising, SEO, and content."
-      valueImage="/assets/img/services/conversion-tracking-analytics/value.webp"
-      valueImageAlt="Clinic performance analytics dashboard"
-      consultationText="Want clearer insights into what is driving your clinic enquiries?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "Conversion event setup",
-        "Patient enquiry tracking",
-        "Booking action measurement",
-        "Campaign attribution foundations",
-        "Behaviour analytics setup",
-        "Reporting clarity improvements",
-        "Performance insight dashboards",
-        "Data-driven optimisation support",
+
+      valueTitle="Turn data into predictable growth"
+      valueTextOne={`Without proper tracking, you’re making decisions blindly.
+
+We connect all your data points — ads, website, CRM, and booking systems — so you can clearly see what’s driving results.`}
+      valueResultItems={[
+        { text: "Better ROI on marketing", tag: "Higher returns", tagColor: "pink" },
+        { text: "Smarter budget allocation", tag: "Less waste", tagColor: "green" },
+        { text: "Confident scaling decisions", tag: "Predictable growth", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/conversion-tracking-analytics/build.webp"
+      valueImage="/assets/img/inner-pages/Conversion Tracking & Analytics/003.png"
+      valueImageAlt="Clinic performance analytics dashboard"
+
+      consultationText="Do you know exactly where your patients are coming from?"
+
+      buildTitle="Built for clinics that want clarity and control"
+      buildItems={[
+        "Clinics running ads without clear ROI",
+        "Clinics using multiple marketing channels",
+        "Clinics struggling to track conversions",
+        "Clinics scaling ad budgets",
+        "Data-driven clinic owners",
+        "Clinics wanting better decision-making",
+      ]}
+      buildImage="/assets/img/inner-pages/Conversion Tracking & Analytics/004.png"
       buildImageAlt="Analytics implementation for clinics"
-      quoteText="You cannot improve what you cannot measure, and strong tracking makes growth easier to scale."
+
+      quoteText="Guessing costs money. Data makes money."
+
       relatedServices={[
         {
           icon: <TrendingUp size={26} />,
-          title: "Patient Acquisition Ads",
-          text: "Track how paid campaigns contribute to real patient enquiries and outcomes.",
+          title: "Intelligence Dashboard",
+          text: "See real-time performance in one place.",
         },
         {
           icon: <BarChart3 size={26} />,
-          title: "Landing Page Optimisation",
-          text: "Use analytics insights to improve the pages that convert visitors into leads.",
+          title: "Patient Acquisition Campaigns",
+          text: "Drive traffic that can be tracked and optimized.",
         },
         {
           icon: <ChartNoAxesCombined size={26} />,
-          title: "SEO Content Growth",
-          text: "Measure how organic traffic contributes to enquiries and long-term clinic growth.",
+          title: "Growth Engine",
+          text: "Scale campaigns based on real data insights.",
         },
       ]}
+
       faqs={[
         {
-          q: "What is conversion tracking?",
-          a: "It is the process of measuring important actions on your website, such as bookings, calls, and enquiry form submissions.",
+          q: "What does conversion tracking include?",
+          a: "Website actions, form submissions, calls, bookings, and ad performance.",
         },
         {
-          q: "Why does my clinic need analytics?",
-          a: "Analytics helps you understand patient behaviour, campaign performance, and where growth opportunities exist.",
+          q: "Will this work with my current tools?",
+          a: "Yes — we integrate with most platforms and systems.",
         },
         {
-          q: "Can this show which marketing channel is working best?",
-          a: "Yes, proper setup can help reveal which campaigns, channels, or pages are leading to enquiries and bookings.",
+          q: "How accurate is the tracking?",
+          a: "We aim for maximum accuracy using advanced setup and best practices.",
         },
         {
-          q: "Is tracking useful even for smaller clinics?",
-          a: "Yes, even a small clinic benefits from understanding what is driving results and where patients are dropping off.",
+          q: "Do I need technical knowledge?",
+          a: "No — we handle everything and simplify reporting for you.",
+        },
+        {
+          q: "Can this improve my ad performance?",
+          a: "Yes — better tracking leads to better optimization and results.",
+        },
+        {
+          q: "How long does setup take?",
+          a: "Typically 1–2 weeks depending on complexity.",
         },
       ]}
-      finalCtaText="Ready to track what is really driving clinic growth?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Make Smarter Growth Decisions?
+
+Get full clarity on your marketing performance and scale your clinic with confidence.`}
+      finalCtaButtonText="Get Free Tracking Audit"
       finalCtaButtonLink="/contact"
     />
   );

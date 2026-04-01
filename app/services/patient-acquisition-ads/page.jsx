@@ -11,57 +11,75 @@ import {
 export default function PatientAcquisitionAdsPage() {
   return (
     <ServicePageLayout
-      category="Growth Engine"
+      category="HEALTH CLINIC GROWTH SYSTEM"
       titleTop="Patient Acquisition"
       titleMain="Ads"
-      titleBottom="for Clinics"
-      intro="Targeted ad campaigns designed to attract high-intent patients, increase enquiries, and support predictable clinic growth."
-      primaryCtaText="Book a Consultation"
+      titleBottom=""
+      intro={`Stop waiting for patients to find you.
+
+We run targeted ad campaigns that bring in people actively looking for your services — ready to book.`}
+      primaryCtaText="BOOK A STRATEGY CALL"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/patient-acquisition-ads/hero.webp"
+
+      heroImage="/assets/img/inner-pages/Patient Acquisition (Ads)/001.webp"
       heroImageAlt="Patient acquisition ads for clinics"
-      sectionTwoTitle="Why Patient Acquisition Ads Matter"
-      sectionTwoTextOne="Running ads without the right strategy can waste budget and bring in low-quality traffic. Patient acquisition ads help clinics reach the right people at the right time with messaging that matches patient intent."
-      sectionTwoTextTwo="When ad campaigns are built around local demand, trust-building creative, and clear next steps, they can turn attention into booked appointments and qualified enquiries."
-      sectionTwoImage="/assets/img/services/patient-acquisition-ads/section-two.webp"
+
+      sectionTwoTitle="Most clinics run ads. Few get real patients."
+      sectionTwoTextOne={`Wasted budget. Low-quality leads. No clear strategy.
+
+Running ads without the right system leads to poor results and frustration.`}
+      sectionTwoTextTwo={`The problem isn’t ads — it’s how they’re structured.
+
+We build Patient Acquisition Ads designed specifically for clinics — targeting high-intent patients and guiding them toward booking.`}
+      sectionTwoImage="/assets/img/inner-pages/Patient Acquisition (Ads)/002.jpg"
       sectionTwoImageAlt="Clinic advertising strategy"
+
       featureCards={[
         {
           icon: <BadgeDollarSign size={28} />,
-          title: "Smarter Ad Spend",
-          text: "Focus your budget on campaigns that are designed to attract real patient enquiries.",
+          title: "High-Intent Targeting",
+          text: "Reach people actively searching for your services — not random audiences.",
         },
         {
           icon: <SearchCheck size={28} />,
-          title: "Higher-Intent Traffic",
-          text: "Reach patients actively searching for services your clinic wants to grow.",
+          title: "Conversion-Driven Ads",
+          text: "Campaigns designed to bring in bookings, not just clicks.",
         },
         {
           icon: <MousePointerClick size={28} />,
-          title: "More Enquiries",
-          text: "Drive more calls, form submissions, and booking actions from your ad traffic.",
+          title: "Optimized Lead Flow",
+          text: "Connect ads directly to funnels that convert.",
         },
       ]}
-      valueTitle="How Ads Support Clinic Growth"
-      valueTextOne="Patient acquisition ads help clinics create faster visibility in competitive markets by putting the right offer in front of the right audience."
-      valueTextTwo="They work best when combined with strong landing pages, clear calls to action, and conversion tracking so you can measure what is driving real patient demand."
-      valueImage="/assets/img/services/patient-acquisition-ads/value.webp"
-      valueImageAlt="Paid ads for clinic growth"
-      consultationText="Want to generate more high-intent patient enquiries with paid ads?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "Clinic-focused ad campaign strategy",
-        "Local targeting setup",
-        "Service-based ad messaging",
-        "Lead generation ad campaigns",
-        "Conversion-focused creative direction",
-        "Campaign optimisation foundations",
-        "Patient enquiry pathways",
-        "Performance-driven ad structure",
+
+      valueTitle="Turn ad spend into real patient bookings"
+      valueTextOne={`Clicks don’t grow clinics — patients do.
+
+We design campaigns that attract the right audience and guide them into your system — where they convert into actual appointments.`}
+      valueResultItems={[
+        { text: "Better lead quality", tag: "Less waste", tagColor: "pink" },
+        { text: "Higher conversion rates", tag: "More bookings", tagColor: "green" },
+        { text: "Predictable patient flow", tag: "Consistent growth", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/patient-acquisition-ads/build.webp"
+      valueImage="/assets/img/inner-pages/Patient Acquisition (Ads)/003.jpeg"
+      valueImageAlt="Paid ads for clinic growth"
+
+      consultationText="Are your ads bringing patients — or just clicks?"
+
+      buildTitle="Built for clinics that want consistent patient flow"
+      buildItems={[
+        "New clinics needing immediate traction",
+        "Clinics struggling with inconsistent leads",
+        "Clinics running ads with poor ROI",
+        "Clinics launching new services",
+        "Clinics entering competitive markets",
+        "Clinics ready to scale patient acquisition",
+      ]}
+      buildImage="/assets/img/inner-pages/Patient Acquisition (Ads)/004.jpg"
       buildImageAlt="Clinic ad campaign setup"
-      quoteText="The right ad strategy helps your clinic appear in front of patients when they are ready to take action."
+
+      quoteText="Get patients, not just traffic."
+
       relatedServices={[
         {
           icon: <MonitorSmartphone size={26} />,
@@ -79,6 +97,7 @@ export default function PatientAcquisitionAdsPage() {
           text: "Follow up with leads faster and reduce missed patient opportunities.",
         },
       ]}
+
       faqs={[
         {
           q: "What are patient acquisition ads?",
@@ -97,8 +116,11 @@ export default function PatientAcquisitionAdsPage() {
           a: "Yes, ads can be tailored around the key services or treatment areas your clinic wants to grow.",
         },
       ]}
-      finalCtaText="Ready to attract more patients with targeted ad campaigns?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Bring in More Patients with Targeted Ads?
+
+Launch campaigns that attract high-intent patients and turn your clinic into a predictable growth system.`}
+      finalCtaButtonText="Get Free Campaign Audit"
       finalCtaButtonLink="/contact"
     />
   );

@@ -11,94 +11,124 @@ import {
 export default function SeoContentGrowthPage() {
   return (
     <ServicePageLayout
-      category="Growth Engine"
-      titleTop="SEO Content"
-      titleMain="Growth"
-      titleBottom="for Clinics"
-      intro="Build long-term visibility with strategic content that helps patients find your clinic through search and trust your expertise."
-      primaryCtaText="Book a Consultation"
+      category="HEALTH CLINIC GROWTH SYSTEM"
+      titleTop="SEO"
+      titleMain="& Content Growth"
+      titleBottom=""
+      intro={`Build a steady flow of patients through search and content.
+
+We help your clinic rank higher, attract the right audience, and grow organically over time.`}
+      primaryCtaText="GET A FREE SEO AUDIT"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/seo-content-growth/hero.webp"
+
+      heroImage="/assets/img/inner-pages/SEO & Content Growth/001.webp"
       heroImageAlt="SEO content growth for clinics"
-      sectionTwoTitle="Why SEO Content Growth Matters"
-      sectionTwoTextOne="Many patients begin their search for treatment options online. If your clinic is not showing up with useful, relevant content, you may be missing long-term opportunities to build awareness and trust."
-      sectionTwoTextTwo="SEO content growth helps clinics strengthen their search presence while creating educational content that supports both visibility and patient confidence."
-      sectionTwoImage="/assets/img/services/seo-content-growth/section-two.webp"
+
+      sectionTwoTitle="Patients are searching every day. Are they finding you?"
+      sectionTwoTextOne={`Most clinics rely only on ads or referrals.
+
+But when patients search on Google, they choose from the top results — and many clinics don’t show up there.`}
+      sectionTwoTextTwo={`No rankings. No visibility. No traffic.
+
+We build your SEO & Content Growth System — helping your clinic rank for high-intent searches and attract patients consistently without ongoing ad spend.`}
+      sectionTwoImage="/assets/img/inner-pages/SEO & Content Growth/002.avif"
       sectionTwoImageAlt="SEO content strategy for clinics"
+
       featureCards={[
         {
           icon: <Search size={28} />,
-          title: "Stronger Search Visibility",
-          text: "Help your clinic appear for more relevant local and service-based searches.",
+          title: "Local & Organic SEO",
+          text: "Rank higher for “near me” and service-based searches in your area.",
         },
         {
           icon: <BookOpenText size={28} />,
-          title: "Educational Content",
-          text: "Answer patient questions with content that builds trust before they enquire.",
+          title: "Content That Attracts Patients",
+          text: "Blogs, pages, and resources designed to answer patient questions and build trust.",
         },
         {
           icon: <TrendingUp size={28} />,
-          title: "Long-Term Growth",
-          text: "Support sustainable traffic growth beyond short-term paid campaigns.",
+          title: "Long-Term Growth Strategy",
+          text: "Build a sustainable system that keeps bringing in traffic over time.",
         },
       ]}
-      valueTitle="How SEO Content Supports Clinic Growth"
-      valueTextOne="SEO content helps clinics attract patients earlier in their decision-making process by showing up for relevant searches and providing useful information."
-      valueTextTwo="Over time, this builds authority, supports local visibility, and brings in traffic that can continue growing without relying entirely on paid advertising."
-      valueImage="/assets/img/services/seo-content-growth/value.webp"
-      valueImageAlt="Clinic SEO and content growth"
-      consultationText="Want to grow your clinic through long-term search visibility?"
-      buildTitle="What We Help Build"
-      buildItems={[
-        "SEO-focused content strategy",
-        "Service page content improvements",
-        "Patient education content",
-        "Search visibility foundations",
-        "Keyword-aligned content planning",
-        "Organic growth support",
-        "Authority-building clinic content",
-        "Long-term search performance improvements",
+
+      valueTitle="Turn searches into patient bookings"
+      valueTextOne={`SEO isn’t just about traffic — it’s about the right traffic.
+
+We focus on high-intent keywords and patient-focused content that not only brings visitors… but converts them into bookings.`}
+      valueResultItems={[
+        { text: "Consistent organic traffic", tag: "Steady growth", tagColor: "pink" },
+        { text: "Lower reliance on ads", tag: "Better ROI", tagColor: "green" },
+        { text: "High-quality patient inquiries", tag: "Better leads", tagColor: "blue" },
       ]}
-      buildImage="/assets/img/services/seo-content-growth/build.webp"
+      valueImage="/assets/img/inner-pages/SEO & Content Growth/003.png"
+      valueImageAlt="Clinic SEO and content growth"
+
+      consultationText="Are patients finding your clinic on Google?"
+
+      buildTitle="Built for clinics focused on long-term growth"
+      buildItems={[
+        "Clinics not ranking on Google",
+        "Clinics relying heavily on ads",
+        "Clinics in competitive local markets",
+        "Clinics wanting consistent traffic",
+        "Clinics building authority in their niche",
+        "Clinics investing in long-term growth",
+      ]}
+      buildImage="/assets/img/inner-pages/SEO & Content Growth/004.jpg"
       buildImageAlt="SEO content planning for clinics"
-      quoteText="Useful content does more than rank, it helps patients trust your clinic before they ever get in touch."
+
+      quoteText="Build a growth system that works — even when ads are off."
+
       relatedServices={[
         {
           icon: <Waypoints size={26} />,
-          title: "Conversion Tracking & Analytics",
-          text: "Measure how organic search traffic turns into real patient enquiries.",
+          title: "Local Visibility Setup",
+          text: "Improve your presence in local search results.",
         },
         {
           icon: <FileText size={26} />,
-          title: "Landing Page Optimisation",
-          text: "Support SEO traffic with stronger service pages and clearer conversion pathways.",
+          title: "Conversion-Focused Website",
+          text: "Turn organic traffic into booked patients.",
         },
         {
           icon: <Users size={26} />,
-          title: "Reputation Management",
-          text: "Strengthen your online presence with both visibility and credibility working together.",
+          title: "Authority Builder",
+          text: "Strengthen trust through content and branding.",
         },
       ]}
+
       faqs={[
         {
-          q: "What is SEO content growth?",
-          a: "It is a strategy focused on improving search visibility through useful, keyword-aligned content that helps patients find and trust your clinic.",
+          q: "How long does SEO take to work?",
+          a: "Typically 3–6 months for noticeable results, with continuous growth over time.",
         },
         {
-          q: "How is this different from paid ads?",
-          a: "SEO content supports longer-term organic growth, while ads generate more immediate visibility through paid traffic.",
+          q: "Is SEO better than ads?",
+          a: "Both work together — SEO provides long-term growth, while ads provide immediate results.",
         },
         {
-          q: "Can content help new clinics too?",
-          a: "Yes, useful content can help new clinics start building authority, trust, and search presence over time.",
+          q: "What type of content do you create?",
+          a: "Patient-focused, educational content based on search intent.",
         },
         {
-          q: "Does SEO content only mean blog posts?",
-          a: "No, it can also include service pages, FAQs, local content, and other patient-focused website content.",
+          q: "Can you improve my existing website SEO?",
+          a: "Yes — we optimize current pages and structure.",
+        },
+        {
+          q: "Will this help me get more patients?",
+          a: "Yes — by attracting high-intent traffic actively searching for your services.",
+        },
+        {
+          q: "Do I need to keep investing long-term?",
+          a: "Yes — SEO is a long-term strategy with compounding results.",
         },
       ]}
-      finalCtaText="Ready to grow your clinic with smarter SEO content?"
-      finalCtaButtonText="Book Your Free Consultation"
+
+      finalCtaText={`Ready to Grow Your Clinic Organically?
+
+Attract patients consistently through search and content — without relying only on ads.`}
+      finalCtaButtonText="Get Free SEO Audit"
       finalCtaButtonLink="/contact"
     />
   );
