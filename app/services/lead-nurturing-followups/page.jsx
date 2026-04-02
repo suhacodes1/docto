@@ -21,7 +21,7 @@ We build smart follow-up systems that nurture leads, build trust, and convert th
       primaryCtaText="BOOK A DEMO"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/services/lead-nurturing-followups/hero.webp"
+      heroImage="/assets/img/inner-pages/lead-nurturing-follow-ups/001.webp"
       heroImageAlt="Lead nurturing follow-ups for clinics"
 
       sectionTwoTitle="Most clinics lose leads after the first contact"
@@ -33,7 +33,7 @@ No follow-up. No reminder. No second touch.`}
 Patients get busy, forget, or hesitate — and without follow-up, they never come back.
 
 We implement a Lead Nurturing & Follow-Up System that keeps your clinic top-of-mind and guides patients toward booking.`}
-      sectionTwoImage="/assets/img/services/lead-nurturing-followups/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/lead-nurturing-follow-ups/002.webp"
       sectionTwoImageAlt="Clinic lead nurturing system"
 
       featureCards={[
@@ -65,7 +65,7 @@ Our system nurtures leads with helpful reminders, information, and gentle prompt
         { text: "More booked appointments", tag: "Better outcomes", tagColor: "green" },
         { text: "Better use of existing leads", tag: "Less waste", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/services/lead-nurturing-followups/value.webp"
+      valueImage="/assets/img/inner-pages/lead-nurturing-follow-ups/003.webp"
       valueImageAlt="Lead nurturing for clinic growth"
 
       consultationText="What happens to your leads after the first contact?"
@@ -79,7 +79,7 @@ Our system nurtures leads with helpful reminders, information, and gentle prompt
         "Clinics wanting better patient engagement",
         "Clinics aiming to increase conversion rates",
       ]}
-      buildImage="/assets/img/services/lead-nurturing-followups/build.webp"
+      buildImage="/assets/img/inner-pages/lead-nurturing-follow-ups/004.webp"
       buildImageAlt="Lead follow-up workflow build"
 
       quoteText="Most conversions happen in the follow-up — don’t miss them."

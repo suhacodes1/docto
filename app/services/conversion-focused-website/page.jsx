@@ -14,7 +14,7 @@ We design high-converting clinic websites built to turn every visitor into a boo
       primaryCtaText="GET A FREE WEBSITE AUDIT"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/conversion-focused-website/001.png"
+      heroImage="/assets/img/inner-pages/conversion-focused-website/001.webp"
       heroImageAlt="Clinic website hero"
 
       sectionTwoTitle="Most clinic websites look fine. But they don’t convert."
@@ -25,7 +25,7 @@ Patients land on your website — and leave without taking action."
 
 We build conversion-focused clinic websites designed to guide visitors step-by-step toward booking — removing friction and increasing trust at every stage."
 
-      sectionTwoImage="/assets/img/inner-pages/conversion-focused-website/002.jpg"
+      sectionTwoImage="/assets/img/inner-pages/conversion-focused-website/002.webp"
       sectionTwoImageAlt="Clinic website strategy"
 
       featureCards={[
@@ -58,7 +58,7 @@ valueResultItems={[
   { text: "Better patient experience", tag: "Higher satisfaction", tagColor: "blue" },
 ]}
 
-      valueImage="/assets/img/inner-pages/conversion-focused-website/003.avif"
+      valueImage="/assets/img/inner-pages/conversion-focused-website/003.webp"
       valueImageAlt="Website conversion optimisation"
 
       consultationText="Is your website helping you grow — or costing you patients?"

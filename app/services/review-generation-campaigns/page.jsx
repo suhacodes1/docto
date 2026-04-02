@@ -18,12 +18,12 @@ export default function ReviewGenerationCampaignsPage() {
       intro="Generate more positive patient reviews with structured campaigns that strengthen trust, credibility, and online visibility."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/review-generation-campaigns/hero.webp"
+      heroImage="/assets/img/inner-pages/review-generation-campaigns/001.webp"
       heroImageAlt="Review generation campaigns for clinics"
       sectionTwoTitle="Why Review Generation Matters"
       sectionTwoTextOne="Online reviews often shape whether a potential patient trusts your clinic enough to enquire or book. Even great clinics can miss opportunities if they are not consistently collecting feedback."
       sectionTwoTextTwo="Review generation campaigns help clinics create a repeatable process for encouraging more satisfied patients to leave positive reviews."
-      sectionTwoImage="/assets/img/services/review-generation-campaigns/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/review-generation-campaigns/002.webp"
       sectionTwoImageAlt="Clinic review generation strategy"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function ReviewGenerationCampaignsPage() {
       valueTitle="How Review Campaigns Support Growth"
       valueTextOne="Review generation campaigns help clinics improve how they appear across search, local listings, and other online touchpoints where patients form early opinions."
       valueTextTwo="They also support better performance across ads, SEO, and referrals by strengthening the trust signals that influence conversion."
-      valueImage="/assets/img/services/review-generation-campaigns/value.webp"
+      valueImage="/assets/img/inner-pages/review-generation-campaigns/003.webp"
       valueImageAlt="Clinic reviews and trust growth"
       consultationText="Want to generate more reviews from happy patients?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function ReviewGenerationCampaignsPage() {
         "Social proof growth systems",
         "Clinic credibility enhancement workflows",
       ]}
-      buildImage="/assets/img/services/review-generation-campaigns/build.webp"
+      buildImage="/assets/img/inner-pages/review-generation-campaigns/004.webp"
       buildImageAlt="Review generation system build"
       quoteText="A steady flow of genuine reviews can become one of your clinic’s most valuable trust assets."
       relatedServices={[

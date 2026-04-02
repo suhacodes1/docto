@@ -31,7 +31,7 @@ Running ads without the right system leads to poor results and frustration.`}
       sectionTwoTextTwo={`The problem isn’t ads — it’s how they’re structured.
 
 We build Patient Acquisition Ads designed specifically for clinics — targeting high-intent patients and guiding them toward booking.`}
-      sectionTwoImage="/assets/img/inner-pages/patient-acquisition-ads/002.jpg"
+      sectionTwoImage="/assets/img/inner-pages/patient-acquisition-ads/002.webp"
       sectionTwoImageAlt="Clinic advertising strategy"
 
       featureCards={[
@@ -61,7 +61,7 @@ We design campaigns that attract the right audience and guide them into your sys
         { text: "Higher conversion rates", tag: "More bookings", tagColor: "green" },
         { text: "Predictable patient flow", tag: "Consistent growth", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/patient-acquisition-ads/003.jpeg"
+      valueImage="/assets/img/inner-pages/patient-acquisition-ads/003.webp"
       valueImageAlt="Paid ads for clinic growth"
 
       consultationText="Are your ads bringing patients — or just clicks?"
@@ -75,7 +75,7 @@ We design campaigns that attract the right audience and guide them into your sys
         "Clinics entering competitive markets",
         "Clinics ready to scale patient acquisition",
       ]}
-      buildImage="/assets/img/inner-pages/patient-acquisition-ads/004.jpg"
+      buildImage="/assets/img/inner-pages/patient-acquisition-ads/004.webp"
       buildImageAlt="Clinic ad campaign setup"
 
       quoteText="Get patients, not just traffic."

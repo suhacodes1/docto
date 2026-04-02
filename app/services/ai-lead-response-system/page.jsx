@@ -33,7 +33,7 @@ By then, the patient has already contacted someone else.`}
 This is where leads are lost — not in marketing, but in response time.
 
 We implement an AI Lead Response System that replies instantly, qualifies the lead, and guides them toward booking — automatically.`}
-      sectionTwoImage="/assets/img/inner-pages/ai-lead-response-system/002.jpg"
+      sectionTwoImage="/assets/img/inner-pages/ai-lead-response-system/002.webp"
       sectionTwoImageAlt="Automated lead response for clinics"
 
       featureCards={[
@@ -63,7 +63,7 @@ Our system ensures every inquiry is handled immediately — giving patients answ
         { text: "Higher conversion rates", tag: "More bookings", tagColor: "green" },
         { text: "More booked appointments", tag: "Better outcomes", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/ai-lead-response-system/003.jpg"
+      valueImage="/assets/img/inner-pages/ai-lead-response-system/003.webp"
       valueImageAlt="AI-assisted clinic lead follow-up"
 
       consultationText="How fast are you responding to new leads right now?"

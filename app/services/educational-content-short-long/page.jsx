@@ -18,12 +18,12 @@ export default function EducationalContentShortLongPage() {
       intro="Build trust and authority with educational content that helps patients understand your services across both quick-consume and deeper-form formats."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/educational-content-short-long/hero.webp"
+      heroImage="/assets/img/inner-pages/educational-content/001.webp"
       heroImageAlt="Educational content for clinics"
       sectionTwoTitle="Why Educational Content Matters"
       sectionTwoTextOne="Patients often need information before they feel ready to book. Educational content helps clinics answer questions, reduce uncertainty, and build confidence earlier in the decision-making journey."
       sectionTwoTextTwo="By using both short-form and long-form content, clinics can meet patients where they are, whether they want a quick overview or a deeper explanation."
-      sectionTwoImage="/assets/img/services/educational-content-short-long/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/educational-content/002.webp"
       sectionTwoImageAlt="Educational content strategy for clinics"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function EducationalContentShortLongPage() {
       valueTitle="How Educational Content Supports Growth"
       valueTextOne="Educational content helps clinics build authority by showing expertise in a way that is genuinely useful to potential patients."
       valueTextTwo="It also supports SEO, social content, practitioner branding, and conversion by creating trust long before the first appointment."
-      valueImage="/assets/img/services/educational-content-short-long/value.webp"
+      valueImage="/assets/img/inner-pages/educational-content/003.webp"
       valueImageAlt="Clinic educational content growth"
       consultationText="Want to build trust through better educational content?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function EducationalContentShortLongPage() {
         "Content repurposing pathways",
         "Visibility and trust content frameworks",
       ]}
-      buildImage="/assets/img/services/educational-content-short-long/build.webp"
+      buildImage="/assets/img/inner-pages/educational-content/004.webp"
       buildImageAlt="Educational content system build"
       quoteText="The more clearly you educate, the more confidently patients can choose your clinic."
       relatedServices={[

@@ -20,7 +20,7 @@ We optimize your local presence so your clinic shows up, stands out, and gets ch
       primaryCtaText="GET A FREE VISIBILITY AUDIT"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/local-visibility-setup/001.jpg"
+      heroImage="/assets/img/inner-pages/local-visibility-setup/001.webp"
       heroImageAlt="Local visibility setup for clinics"
 
       sectionTwoTitle="If you’re not visible locally, you’re invisible."
@@ -30,7 +30,7 @@ Incomplete profiles. Poor rankings. Weak reviews.`}
       sectionTwoTextTwo={`This means lost patients to competitors who are simply more visible.
 
 We build your Local Visibility System — ensuring your clinic appears in local searches, builds trust instantly, and attracts high-intent patients.`}
-      sectionTwoImage="/assets/img/inner-pages/local-visibility-setup/002.jpg"
+      sectionTwoImage="/assets/img/inner-pages/local-visibility-setup/004.webp"
       sectionTwoImageAlt="Clinic local search visibility"
 
       featureCards={[
@@ -73,7 +73,7 @@ valueResultItems={[
         "Clinics relying only on referrals",
         "Clinics expanding to new locations",
       ]}
-      buildImage="/assets/img/inner-pages/local-visibility-setup/003.jpeg"
+      buildImage="/assets/img/inner-pages/local-visibility-setup/003.webp"
       buildImageAlt="Local visibility strategy for clinics"
 
       quoteText="Be the clinic patients find first — and trust instantly."

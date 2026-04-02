@@ -18,12 +18,12 @@ export default function NoShowReductionWorkflowsPage() {
       intro="Reduce missed appointments with better reminder workflows, clearer communication, and patient follow-up systems that improve attendance."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/no-show-reduction-workflows/hero.webp"
+      heroImage="/assets/img/inner-pages/no-show-reduction-workflows/2.webp"
       heroImageAlt="No-show reduction workflows for clinics"
       sectionTwoTitle="Why No-Show Reduction Matters"
       sectionTwoTextOne="Missed appointments can disrupt clinic operations, reduce revenue opportunities, and create inefficiencies in your schedule."
       sectionTwoTextTwo="No-show reduction workflows help patients stay informed, reminded, and prepared so attendance becomes more reliable and easier to manage."
-      sectionTwoImage="/assets/img/services/no-show-reduction-workflows/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/no-show-reduction-workflows/3.webp"
       sectionTwoImageAlt="Clinic no-show reduction workflow"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function NoShowReductionWorkflowsPage() {
       valueTitle="How No-Show Workflows Support Growth"
       valueTextOne="Reducing no-shows helps clinics protect revenue, improve scheduling efficiency, and create a more dependable patient experience."
       valueTextTwo="It also frees up staff from manual reminder tasks and makes attendance improvement more consistent over time."
-      valueImage="/assets/img/services/no-show-reduction-workflows/value.webp"
+      valueImage="/assets/img/inner-pages/no-show-reduction-workflows/4.webp"
       valueImageAlt="Appointment attendance workflow for clinics"
       consultationText="Want to reduce missed appointments and improve clinic efficiency?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function NoShowReductionWorkflowsPage() {
         "Schedule protection systems",
         "No-show risk reduction communication",
       ]}
-      buildImage="/assets/img/services/no-show-reduction-workflows/build.webp"
+      buildImage="/assets/img/inner-pages/no-show-reduction-workflows/5.webp"
       buildImageAlt="No-show reduction system build"
       quoteText="Better attendance often starts with better communication before the appointment ever begins."
       relatedServices={[

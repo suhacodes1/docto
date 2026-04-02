@@ -18,12 +18,12 @@ export default function PersonalBrandBuildingDoctorsPage() {
       intro="Build trust, visibility, and authority around your doctors with a stronger personal brand that helps patients feel more confident choosing your clinic."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/personal-brand-building-doctors/hero.webp"
+      heroImage="/assets/img/inner-pages/personal-brand-building/1.webp"
       heroImageAlt="Personal brand building for doctors"
       sectionTwoTitle="Why Personal Branding for Doctors Matters"
       sectionTwoTextOne="Patients do not just choose clinics, they often choose the people behind them. A strong doctor brand can make your practice feel more credible, familiar, and trustworthy."
       sectionTwoTextTwo="Personal brand building helps practitioners become more visible through educational content, thought leadership, and a stronger online presence that supports patient decision-making."
-      sectionTwoImage="/assets/img/services/personal-brand-building-doctors/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/personal-brand-building/2.webp"
       sectionTwoImageAlt="Doctor personal brand strategy"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function PersonalBrandBuildingDoctorsPage() {
       valueTitle="How Personal Branding Supports Clinic Growth"
       valueTextOne="A strong doctor brand helps clinics attract patients who are looking not only for treatment, but for a practitioner they feel confident in."
       valueTextTwo="It also strengthens content performance, referral confidence, social proof, and overall clinic perception by making expertise more visible and human."
-      valueImage="/assets/img/services/personal-brand-building-doctors/value.webp"
+      valueImage="/assets/img/inner-pages/personal-brand-building/3.webp"
       valueImageAlt="Doctor authority and visibility growth"
       consultationText="Want to build stronger visibility and trust around your practitioners?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function PersonalBrandBuildingDoctorsPage() {
         "Human-centred brand storytelling",
         "Practitioner-led content pathways",
       ]}
-      buildImage="/assets/img/services/personal-brand-building-doctors/build.webp"
+      buildImage="/assets/img/inner-pages/personal-brand-building/4.webp"
       buildImageAlt="Doctor brand system build"
       quoteText="Patients are more likely to choose a clinic when they trust the people behind it."
       relatedServices={[

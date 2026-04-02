@@ -18,12 +18,12 @@ export default function RoiCampaignAttributionPage() {
       intro="Understand which campaigns are driving real returns so your clinic can invest more confidently in the channels that produce results."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/roi-campaign-attribution/hero.webp"
+      heroImage="/assets/img/inner-pages/roi-campaign-attribution/001.webp"
       heroImageAlt="ROI campaign attribution for clinics"
       sectionTwoTitle="Why ROI Attribution Matters"
       sectionTwoTextOne="Many clinics invest in ads, SEO, and other marketing channels without a clear way to connect spend to enquiries, bookings, or business outcomes."
       sectionTwoTextTwo="ROI campaign attribution helps reveal which channels and campaigns are generating meaningful results so budget decisions can be based on performance instead of assumptions."
-      sectionTwoImage="/assets/img/services/roi-campaign-attribution/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/roi-campaign-attribution/002.webp"
       sectionTwoImageAlt="Clinic marketing ROI attribution"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function RoiCampaignAttributionPage() {
       valueTitle="How ROI Attribution Supports Growth"
       valueTextOne="ROI attribution helps clinics move beyond vanity metrics by focusing on the channels and campaigns that influence real patient outcomes."
       valueTextTwo="This makes it easier to scale what is working, reduce wasted spend, and create a more accountable growth strategy over time."
-      valueImage="/assets/img/services/roi-campaign-attribution/value.webp"
+      valueImage="/assets/img/inner-pages/roi-campaign-attribution/003.webp"
       valueImageAlt="Clinic campaign ROI tracking"
       consultationText="Want to know which campaigns are truly delivering returns?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function RoiCampaignAttributionPage() {
         "Performance-based campaign measurement",
         "Return-focused reporting foundations",
       ]}
-      buildImage="/assets/img/services/roi-campaign-attribution/build.webp"
+      buildImage="/assets/img/inner-pages/roi-campaign-attribution/004.webp"
       buildImageAlt="ROI attribution system build"
       quoteText="The more clearly you can attribute results, the more confidently you can scale your growth."
       relatedServices={[

@@ -18,12 +18,12 @@ export default function PatientFlowStaffInsightsPage() {
       intro="Improve clinic efficiency with clearer visibility into patient flow, team activity, and operational patterns that affect service delivery."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/patient-flow-staff-insights/hero.webp"
+      heroImage="/assets/img/inner-pages/patient-flow-staff-insights/001.webp"
       heroImageAlt="Patient flow and staff insights for clinics"
       sectionTwoTitle="Why Patient Flow & Staff Insights Matter"
       sectionTwoTextOne="Operational bottlenecks, inconsistent patient movement, and limited visibility into staff workload can make it harder for clinics to deliver smooth experiences and maintain efficiency."
       sectionTwoTextTwo="Patient flow and staff insights help clinics understand how people, processes, and workloads interact so improvements can be made with more confidence."
-      sectionTwoImage="/assets/img/services/patient-flow-staff-insights/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/patient-flow-staff-insights/002.webp"
       sectionTwoImageAlt="Clinic patient flow and staff reporting"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function PatientFlowStaffInsightsPage() {
       valueTitle="How Flow & Staff Insights Support Growth"
       valueTextOne="Stronger operational visibility helps clinics improve service quality by making patient movement and team coordination easier to monitor."
       valueTextTwo="These insights can also support staffing decisions, workflow changes, and process improvements that reduce friction across the clinic."
-      valueImage="/assets/img/services/patient-flow-staff-insights/value.webp"
+      valueImage="/assets/img/inner-pages/patient-flow-staff-insights/003.webp"
       valueImageAlt="Clinic operations and staff insights"
       consultationText="Want better visibility into how your clinic is operating day to day?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function PatientFlowStaffInsightsPage() {
         "Efficiency monitoring frameworks",
         "Team and process visibility tools",
       ]}
-      buildImage="/assets/img/services/patient-flow-staff-insights/build.webp"
+      buildImage="/assets/img/inner-pages/patient-flow-staff-insights/004.webp"
       buildImageAlt="Patient flow and staff insights system build"
       quoteText="When you understand how your clinic actually flows, it becomes easier to improve both efficiency and patient experience."
       relatedServices={[

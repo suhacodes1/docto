@@ -31,7 +31,7 @@ But when patients search on Google, they choose from the top results — and man
       sectionTwoTextTwo={`No rankings. No visibility. No traffic.
 
 We build your SEO & Content Growth System — helping your clinic rank for high-intent searches and attract patients consistently without ongoing ad spend.`}
-      sectionTwoImage="/assets/img/inner-pages/seo-content-growth/002.avif"
+      sectionTwoImage="/assets/img/inner-pages/seo-content-growth/002.webp"
       sectionTwoImageAlt="SEO content strategy for clinics"
 
       featureCards={[
@@ -61,7 +61,7 @@ We focus on high-intent keywords and patient-focused content that not only bring
         { text: "Lower reliance on ads", tag: "Better ROI", tagColor: "green" },
         { text: "High-quality patient inquiries", tag: "Better leads", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/seo-content-growth/003.png"
+      valueImage="/assets/img/inner-pages/seo-content-growth/003.webp"
       valueImageAlt="Clinic SEO and content growth"
 
       consultationText="Are patients finding your clinic on Google?"
@@ -75,7 +75,7 @@ We focus on high-intent keywords and patient-focused content that not only bring
         "Clinics building authority in their niche",
         "Clinics investing in long-term growth",
       ]}
-      buildImage="/assets/img/inner-pages/seo-content-growth/004.jpg"
+      buildImage="/assets/img/inner-pages/seo-content-growth/004.webp"
       buildImageAlt="SEO content planning for clinics"
 
       quoteText="Build a growth system that works — even when ads are off."

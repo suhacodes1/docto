@@ -18,12 +18,12 @@ export default function LandingPageOptimisationPage() {
       intro="Improve page performance with clearer messaging, stronger trust signals, and conversion-focused design that turns more visitors into enquiries."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/landing-page-optimisation/hero.webp"
+      heroImage="/assets/img/inner-pages/landing-page-optimisation/002.webp"
       heroImageAlt="Landing page optimisation for clinics"
       sectionTwoTitle="Why Landing Page Optimisation Matters"
       sectionTwoTextOne="A clinic can attract traffic from ads, search, or social media, but growth slows down when visitors land on a page that feels unclear, overwhelming, or difficult to act on."
       sectionTwoTextTwo="Landing page optimisation improves the structure, messaging, and flow of each page so more visitors trust your clinic and take the next step."
-      sectionTwoImage="/assets/img/services/landing-page-optimisation/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/landing-page-optimisation/003.webp"
       sectionTwoImageAlt="Optimised landing page design for clinics"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function LandingPageOptimisationPage() {
       valueTitle="How Optimised Pages Support Growth"
       valueTextOne="Landing page optimisation helps clinics get more value from their traffic by making pages easier to understand, more persuasive, and more action-focused."
       valueTextTwo="It becomes especially valuable when your clinic is investing in paid ads or local SEO, because stronger page performance means more enquiries without needing more traffic."
-      valueImage="/assets/img/services/landing-page-optimisation/value.webp"
+      valueImage="/assets/img/inner-pages/landing-page-optimisation/004.webp"
       valueImageAlt="Clinic landing page improvements"
       consultationText="Want your landing pages to convert more visitors into patients?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function LandingPageOptimisationPage() {
         "Mobile-friendly landing experiences",
         "Performance-focused page refinements",
       ]}
-      buildImage="/assets/img/services/landing-page-optimisation/build.webp"
+      buildImage="/assets/img/inner-pages/landing-page-optimisation/001.webp"
       buildImageAlt="Optimised clinic landing page build"
       quoteText="Small changes in page messaging and structure can lead to a major lift in enquiries and bookings."
       relatedServices={[

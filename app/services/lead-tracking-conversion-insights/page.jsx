@@ -18,12 +18,12 @@ export default function LeadTrackingConversionInsightsPage() {
       intro="Track how leads move from first enquiry to booked patient so your clinic can improve conversion pathways with clearer data and better insight."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/lead-tracking-conversion-insights/hero.webp"
+      heroImage="/assets/img/inner-pages/lead-tracking-conversion-insights/001.webp"
       heroImageAlt="Lead tracking and conversion insights for clinics"
       sectionTwoTitle="Why Lead Tracking Matters"
       sectionTwoTextOne="Without lead tracking, clinics often do not know where enquiries are coming from, how leads are progressing, or where conversion opportunities are being lost."
       sectionTwoTextTwo="Lead tracking and conversion insights help your clinic understand the full patient journey from first touchpoint through to action, making optimisation easier and more targeted."
-      sectionTwoImage="/assets/img/services/lead-tracking-conversion-insights/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/lead-tracking-conversion-insights/002.webp"
       sectionTwoImageAlt="Clinic lead tracking and conversions"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function LeadTrackingConversionInsightsPage() {
       valueTitle="How Lead Tracking Supports Growth"
       valueTextOne="Lead tracking helps clinics improve conversion by showing how potential patients interact with your marketing, website, and follow-up systems."
       valueTextTwo="It becomes easier to improve results when you can identify where high-intent leads are being lost and where stronger processes are needed."
-      valueImage="/assets/img/services/lead-tracking-conversion-insights/value.webp"
+      valueImage="/assets/img/inner-pages/lead-tracking-conversion-insights/003.webp"
       valueImageAlt="Lead conversion tracking for clinics"
       consultationText="Want better visibility into how your leads become patients?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function LeadTrackingConversionInsightsPage() {
         "Pipeline insight dashboards",
         "Optimisation-focused lead analytics",
       ]}
-      buildImage="/assets/img/services/lead-tracking-conversion-insights/build.webp"
+      buildImage="/assets/img/inner-pages/lead-tracking-conversion-insights/004.webp"
       buildImageAlt="Lead tracking system build"
       quoteText="When you can see how leads move, it becomes much easier to improve how they convert."
       relatedServices={[

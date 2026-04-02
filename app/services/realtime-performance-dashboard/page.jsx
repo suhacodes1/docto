@@ -18,12 +18,12 @@ export default function RealtimePerformanceDashboardPage() {
       intro="Monitor the metrics that matter most with a real-time dashboard that gives your clinic faster visibility into performance, enquiries, and growth trends."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/realtime-performance-dashboard/hero.webp"
+      heroImage="/assets/img/inner-pages/real-time-performance-dashboard/001.webp"
       heroImageAlt="Realtime performance dashboard for clinics"
       sectionTwoTitle="Why a Realtime Dashboard Matters"
       sectionTwoTextOne="When clinic data is delayed, scattered, or difficult to access, decision-making becomes slower and less effective. Teams can miss important changes in enquiries, campaign performance, or operational trends."
       sectionTwoTextTwo="A realtime performance dashboard helps bring key insights into one place so your clinic can monitor activity, respond faster, and make more informed growth decisions."
-      sectionTwoImage="/assets/img/services/realtime-performance-dashboard/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/real-time-performance-dashboard/002.webp"
       sectionTwoImageAlt="Clinic realtime dashboard and metrics"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function RealtimePerformanceDashboardPage() {
       valueTitle="How Realtime Dashboards Support Growth"
       valueTextOne="Realtime dashboards help clinics reduce guesswork by making performance trends easier to monitor as they happen."
       valueTextTwo="They are especially valuable for teams that want quicker reporting, better visibility into growth channels, and a more proactive way to manage performance."
-      valueImage="/assets/img/services/realtime-performance-dashboard/value.webp"
+      valueImage="/assets/img/inner-pages/real-time-performance-dashboard/003.webp"
       valueImageAlt="Realtime clinic growth dashboard"
       consultationText="Want clearer visibility into how your clinic is performing right now?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function RealtimePerformanceDashboardPage() {
         "Decision-support reporting systems",
         "Performance monitoring foundations",
       ]}
-      buildImage="/assets/img/services/realtime-performance-dashboard/build.webp"
+      buildImage="/assets/img/inner-pages/real-time-performance-dashboard/004.webp"
       buildImageAlt="Clinic dashboard system build"
       quoteText="The faster you can see what is happening, the faster your clinic can respond and improve."
       relatedServices={[

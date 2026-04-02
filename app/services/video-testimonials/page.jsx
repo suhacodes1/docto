@@ -18,12 +18,12 @@ export default function VideoTestimonialsPage() {
       intro="Build stronger trust with patient testimonial videos that make your clinic feel more credible, human, and memorable."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/video-testimonials/hero.webp"
+      heroImage="/assets/img/inner-pages/video-testimonials/001.webp"
       heroImageAlt="Video testimonials for clinics"
       sectionTwoTitle="Why Video Testimonials Matter"
       sectionTwoTextOne="Written reviews are powerful, but video testimonials can create a stronger emotional connection by showing real patient stories in a more personal and credible format."
       sectionTwoTextTwo="For clinics, video testimonials help future patients feel more confident by seeing outcomes, experiences, and trust in a more authentic way."
-      sectionTwoImage="/assets/img/services/video-testimonials/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/video-testimonials/002.webp"
       sectionTwoImageAlt="Patient testimonial video strategy"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function VideoTestimonialsPage() {
       valueTitle="How Video Testimonials Support Growth"
       valueTextOne="Video testimonials help clinics communicate trust faster by making positive patient experiences easier to see, feel, and remember."
       valueTextTwo="They can strengthen performance across landing pages, ads, and social channels where credibility plays a major role in conversion."
-      valueImage="/assets/img/services/video-testimonials/value.webp"
+      valueImage="/assets/img/inner-pages/video-testimonials/003.webp"
       valueImageAlt="Clinic video testimonial marketing"
       consultationText="Want to build stronger trust with real patient stories?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function VideoTestimonialsPage() {
         "Brand trust enhancement content",
         "Conversion support through testimonials",
       ]}
-      buildImage="/assets/img/services/video-testimonials/build.webp"
+      buildImage="/assets/img/inner-pages/video-testimonials/004.webp"
       buildImageAlt="Video testimonial content system"
       quoteText="Seeing and hearing a real patient story often builds trust faster than words alone."
       relatedServices={[

@@ -63,7 +63,7 @@ Our chatbot ensures no visitor leaves without getting answers — increasing eng
         { text: "More captured leads", tag: "Better pipeline", tagColor: "green" },
         { text: "Increased bookings", tag: "More patients", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/ai-chatbot/003.png"
+      valueImage="/assets/img/inner-pages/ai-chatbot/003.webp"
       valueImageAlt="AI chatbot system for clinic growth"
 
       consultationText="Who is answering your patient questions right now?"

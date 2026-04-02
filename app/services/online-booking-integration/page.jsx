@@ -20,7 +20,7 @@ We build seamless online booking systems that make it easy for patients to sched
       primaryCtaText="BOOK A DEMO"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/online-booking-integration/001.png"
+      heroImage="/assets/img/inner-pages/online-booking-integration/001.webp"
       heroImageAlt="Online booking integration for clinics"
 
       sectionTwoTitle="If booking isn’t instant, patients drop off."
@@ -32,7 +32,7 @@ Today’s patients expect speed and convenience — if they can’t book immedia
 …but because of a broken booking experience.
 
 We implement Online Booking Systems that remove friction and turn interest into confirmed appointments in seconds.`}
-      sectionTwoImage="/assets/img/inner-pages/online-booking-integration/002.jpeg"
+      sectionTwoImage="/assets/img/inner-pages/online-booking-integration/002.webp"
       sectionTwoImageAlt="Clinic appointment booking system"
 
       featureCards={[
@@ -62,7 +62,7 @@ We design booking experiences that are fast, clear, and frictionless — so pati
   { text: "Higher conversion rates",  tag: "More bookings",     tagColor: "green" },
   { text: "Fewer missed opportunities", tag: "Consistent growth", tagColor: "blue"  },
 ]}
-      valueImage="/assets/img/inner-pages/online-booking-integration/003.png"
+      valueImage="/assets/img/inner-pages/online-booking-integration/003.webp"
       valueImageAlt="Online booking and scheduling for clinics"
 
       consultationText="How easy is it for your patients to book right now?"
@@ -76,7 +76,7 @@ We design booking experiences that are fast, clear, and frictionless — so pati
         "Clinics running ads or driving online traffic",
         "Clinics wanting a modern patient experience",
       ]}
-      buildImage="/assets/img/inner-pages/online-booking-integration/004.png"
+      buildImage="/assets/img/inner-pages/online-booking-integration/004.webp"
       buildImageAlt="Online appointment integration setup"
 
       quoteText="Don’t let friction cost you patients."
