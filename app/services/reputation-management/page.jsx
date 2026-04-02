@@ -21,7 +21,7 @@ We help you monitor, manage, and improve your online presence so patients always
       primaryCtaText="GET A FREE REPUTATION AUDIT"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/Reputation Management/001.webp"
+      heroImage="/assets/img/inner-pages/reputation-management/001.webp"
       heroImageAlt="Reputation management for clinics"
 
       sectionTwoTitle="One bad review can cost you multiple patients."
@@ -31,7 +31,7 @@ A few negative experiences — or no response — can damage trust and push pati
       sectionTwoTextTwo={`Most clinics don’t actively manage their reputation, leaving their image to chance.
 
 We build your Reputation Management System — helping you monitor feedback, respond professionally, and maintain a strong, trustworthy presence.`}
-      sectionTwoImage="/assets/img/inner-pages/Reputation Management/002.png"
+      sectionTwoImage="/assets/img/inner-pages/reputation-management/002.png"
       sectionTwoImageAlt="Online reputation strategy for clinics"
 
       featureCards={[
@@ -63,7 +63,7 @@ We help you create a consistent, positive presence that influences patient decis
         { text: "Better conversion rates", tag: "More bookings", tagColor: "green" },
         { text: "Stronger patient loyalty", tag: "Long-term growth", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/Reputation Management/003.jpg"
+      valueImage="/assets/img/inner-pages/reputation-management/003.jpg"
       valueImageAlt="Clinic review and reputation growth"
 
       consultationText="What do patients see when they search your clinic?"
@@ -77,7 +77,7 @@ We help you create a consistent, positive presence that influences patient decis
         "Clinics scaling and increasing visibility",
         "Clinics wanting long-term trust",
       ]}
-      buildImage="/assets/img/inner-pages/Reputation Management/004.jpg"
+      buildImage="/assets/img/inner-pages/reputation-management/004.jpg"
       buildImageAlt="Clinic reputation improvement system"
 
       quoteText="Your reputation is always working — make sure it’s working for you."

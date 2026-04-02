@@ -21,7 +21,7 @@ We help you generate high-quality reviews quickly — so your clinic looks credi
       primaryCtaText="GET A FREE REPUTATION AUDIT"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/Reputation Builder System/001.jpg"
+      heroImage="/assets/img/inner-pages/reputation-builder-systems/001.jpg"
       heroImageAlt="Reputation builder system for clinics"
 
       sectionTwoTitle="No reviews = no trust = lost patients"
@@ -31,7 +31,7 @@ If your clinic has few or no reviews, it creates doubt — even if your service 
       sectionTwoTextTwo={`Meanwhile, competitors with strong ratings win the patient’s trust instantly.
 
 We build your Reputation System — helping you consistently generate authentic reviews and position your clinic as a trusted choice.`}
-      sectionTwoImage="/assets/img/inner-pages/Reputation Builder System/002.jpeg"
+      sectionTwoImage="/assets/img/inner-pages/reputation-builder-systems/002.jpeg"
       sectionTwoImageAlt="Clinic reputation and trust building"
 
       featureCards={[
@@ -61,7 +61,7 @@ A strong reputation doesn’t just build trust — it increases conversions acro
         { text: "Higher website conversions", tag: "More bookings", tagColor: "green" },
         { text: "More booked appointments", tag: "Real growth", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/Reputation Builder System/003.jpeg"
+      valueImage="/assets/img/inner-pages/reputation-builder-systems/003.jpeg"
       valueImageAlt="Reputation growth for clinics"
 
       consultationText="How many reviews does your clinic have right now?"
@@ -75,7 +75,7 @@ A strong reputation doesn’t just build trust — it increases conversions acro
         "Premium clinics needing strong credibility",
         "Clinics relying too much on word-of-mouth",
       ]}
-      buildImage="/assets/img/inner-pages/Reputation Builder System/004.jpg"
+      buildImage="/assets/img/inner-pages/reputation-builder-systems/004.jpg"
       buildImageAlt="Clinic reputation building strategy"
 
       quoteText="Trust isn’t claimed — it’s proven through reviews."

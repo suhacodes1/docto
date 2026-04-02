@@ -21,7 +21,7 @@ Our AI chatbot responds instantly on your website and via SMS — answering ques
       primaryCtaText="BOOK AN AI DEMO"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/001.webp"
+      heroImage="/assets/img/inner-pages/ai-chatbot/001.webp"
       heroImageAlt="AI chatbot for clinic website and SMS"
 
       sectionTwoTitle="Patients expect instant answers — anytime."
@@ -33,7 +33,7 @@ If they don’t get answers quickly, they leave.`}
 Most clinics lose potential patients simply because no one is there to respond instantly.
 
 We implement an AI Chatbot System that engages visitors in real-time, answers their questions, and guides them toward booking.`}
-      sectionTwoImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/002.webp"
+      sectionTwoImage="/assets/img/inner-pages/ai-chatbot/002.webp"
       sectionTwoImageAlt="Clinic chatbot and SMS automation"
 
       featureCards={[
@@ -63,7 +63,7 @@ Our chatbot ensures no visitor leaves without getting answers — increasing eng
         { text: "More captured leads", tag: "Better pipeline", tagColor: "green" },
         { text: "Increased bookings", tag: "More patients", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/003.png"
+      valueImage="/assets/img/inner-pages/ai-chatbot/003.png"
       valueImageAlt="AI chatbot system for clinic growth"
 
       consultationText="Who is answering your patient questions right now?"
@@ -77,7 +77,7 @@ Our chatbot ensures no visitor leaves without getting answers — increasing eng
         "Clinics using SMS for communication",
         "Clinics improving patient experience",
       ]}
-      buildImage="/assets/img/inner-pages/AI Chatbot (Website + SMS)/004.webp"
+      buildImage="/assets/img/inner-pages/ai-chatbot/004.webp"
       buildImageAlt="Clinic chatbot and SMS system build"
 
       quoteText="Your clinic should never miss a conversation."

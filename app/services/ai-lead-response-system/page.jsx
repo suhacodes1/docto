@@ -21,7 +21,7 @@ Our AI Lead Response System replies to every inquiry within seconds — increasi
       primaryCtaText="BOOK AN AI DEMO"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/AI Lead Response System/001.webp"
+      heroImage="/assets/img/inner-pages/ai-lead-response-system/001.webp"
       heroImageAlt="AI lead response system for clinics"
 
       sectionTwoTitle="The first clinic to respond usually wins the patient."
@@ -33,7 +33,7 @@ By then, the patient has already contacted someone else.`}
 This is where leads are lost — not in marketing, but in response time.
 
 We implement an AI Lead Response System that replies instantly, qualifies the lead, and guides them toward booking — automatically.`}
-      sectionTwoImage="/assets/img/inner-pages/AI Lead Response System/002.jpg"
+      sectionTwoImage="/assets/img/inner-pages/ai-lead-response-system/002.jpg"
       sectionTwoImageAlt="Automated lead response for clinics"
 
       featureCards={[
@@ -63,7 +63,7 @@ Our system ensures every inquiry is handled immediately — giving patients answ
         { text: "Higher conversion rates", tag: "More bookings", tagColor: "green" },
         { text: "More booked appointments", tag: "Better outcomes", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/AI Lead Response System/003.jpg"
+      valueImage="/assets/img/inner-pages/ai-lead-response-system/003.jpg"
       valueImageAlt="AI-assisted clinic lead follow-up"
 
       consultationText="How fast are you responding to new leads right now?"
@@ -77,7 +77,7 @@ Our system ensures every inquiry is handled immediately — giving patients answ
         "Clinics running ads but losing leads",
         "Busy teams needing automation",
       ]}
-      buildImage="/assets/img/inner-pages/AI Lead Response System/004.webp"
+      buildImage="/assets/img/inner-pages/ai-lead-response-system/004.webp"
       buildImageAlt="Clinic lead automation system"
 
       quoteText="Speed is the difference between losing and winning patients."

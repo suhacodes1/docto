@@ -21,7 +21,7 @@ We run targeted campaigns that bring in people actively looking for your service
       primaryCtaText="BOOK A STRATEGY CALL"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/Patient Acquisition Campaigns/002.jpg"
+      heroImage="/assets/img/inner-pages/patient-acquisition-campaigns/002.jpg"
       heroImageAlt="Patient acquisition campaigns for clinics"
 
       sectionTwoTitle="Most clinics run ads. Few get real patients."
@@ -31,7 +31,7 @@ Running ads without the right system leads to poor results and frustration.`}
       sectionTwoTextTwo={`The problem isn’t ads — it’s how they’re structured.
 
 We build Patient Acquisition Campaigns designed specifically for clinics — targeting high-intent patients and guiding them toward booking.`}
-      sectionTwoImage="/assets/img/inner-pages/Patient Acquisition Campaigns/002.png"
+      sectionTwoImage="/assets/img/inner-pages/patient-acquisition-campaigns/002.png"
       sectionTwoImageAlt="Clinic patient acquisition strategy"
 
       featureCards={[
@@ -61,7 +61,7 @@ We design campaigns that attract the right audience and guide them into your sys
   { text: "Higher conversion rates",  tag: "More bookings",     tagColor: "green" },
   { text: "Predictable patient flow", tag: "Consistent growth", tagColor: "blue"  },
 ]}
-      valueImage="/assets/img/inner-pages/Patient Acquisition Campaigns/003.jpg"
+      valueImage="/assets/img/inner-pages/patient-acquisition-campaigns/003.jpg"
       valueImageAlt="Patient acquisition and growth campaigns"
 
       consultationText="Are your ads bringing patients — or just clicks?"
@@ -75,7 +75,7 @@ We design campaigns that attract the right audience and guide them into your sys
         "Clinics entering competitive markets",
         "Clinics ready to scale patient acquisition",
       ]}
-      buildImage="/assets/img/inner-pages/Patient Acquisition Campaigns/004.avif"
+      buildImage="/assets/img/inner-pages/patient-acquisition-campaigns/004.avif"
       buildImageAlt="Clinic growth campaign setup"
 
       quoteText="Get patients, not just traffic."

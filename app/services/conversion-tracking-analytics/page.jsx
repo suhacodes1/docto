@@ -21,7 +21,7 @@ We set up advanced tracking systems so you can see exactly what’s working — 
       primaryCtaText="GET A FREE TRACKING AUDIT"
       primaryCtaLink="/contact"
 
-      heroImage="/assets/img/inner-pages/Conversion Tracking & Analytics/001.jpg"
+      heroImage="/assets/img/inner-pages/conversion-tracking-analytics/001.jpg"
       heroImageAlt="Conversion tracking and analytics for clinics"
 
       sectionTwoTitle="If you can’t track it, you can’t grow it."
@@ -31,7 +31,7 @@ Ads, website, WhatsApp, calls — all disconnected.`}
       sectionTwoTextTwo={`This leads to wasted budget, poor decisions, and slow growth.
 
 We build your Conversion Tracking & Analytics System — giving you full visibility into your patient journey, from first click to confirmed booking.`}
-      sectionTwoImage="/assets/img/inner-pages/Conversion Tracking & Analytics/002.png"
+      sectionTwoImage="/assets/img/inner-pages/conversion-tracking-analytics/002.png"
       sectionTwoImageAlt="Clinic analytics and tracking setup"
 
       featureCards={[
@@ -61,7 +61,7 @@ We connect all your data points — ads, website, CRM, and booking systems — s
         { text: "Smarter budget allocation", tag: "Less waste", tagColor: "green" },
         { text: "Confident scaling decisions", tag: "Predictable growth", tagColor: "blue" },
       ]}
-      valueImage="/assets/img/inner-pages/Conversion Tracking & Analytics/003.png"
+      valueImage="/assets/img/inner-pages/conversion-tracking-analytics/003.png"
       valueImageAlt="Clinic performance analytics dashboard"
 
       consultationText="Do you know exactly where your patients are coming from?"
@@ -75,7 +75,7 @@ We connect all your data points — ads, website, CRM, and booking systems — s
         "Data-driven clinic owners",
         "Clinics wanting better decision-making",
       ]}
-      buildImage="/assets/img/inner-pages/Conversion Tracking & Analytics/004.png"
+      buildImage="/assets/img/inner-pages/conversion-tracking-analytics/004.png"
       buildImageAlt="Analytics implementation for clinics"
 
       quoteText="Guessing costs money. Data makes money."

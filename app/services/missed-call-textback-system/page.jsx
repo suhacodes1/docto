@@ -18,12 +18,12 @@ export default function MissedCallTextbackSystemPage() {
       intro="Turn missed calls into patient conversations with automated textback systems that improve follow-up and reduce lost opportunities."
       primaryCtaText="Book a Consultation"
       primaryCtaLink="/contact"
-      heroImage="/assets/img/services/missed-call-textback-system/hero.webp"
+      heroImage="/assets/img/inner-pages/missed-call-text-back-system/001.webp"
       heroImageAlt="Missed call textback system for clinics"
       sectionTwoTitle="Why Missed Call Textback Matters"
       sectionTwoTextOne="When a clinic misses a patient call, there is a strong chance that person may contact a competitor instead of waiting for a callback."
       sectionTwoTextTwo="A missed call textback system helps your clinic respond immediately with a message that reassures the patient and guides them toward the next step."
-      sectionTwoImage="/assets/img/services/missed-call-textback-system/section-two.webp"
+      sectionTwoImage="/assets/img/inner-pages/missed-call-text-back-system/002.jpeg"
       sectionTwoImageAlt="Automated missed call textback for clinics"
       featureCards={[
         {
@@ -45,7 +45,7 @@ export default function MissedCallTextbackSystemPage() {
       valueTitle="How Missed Call Textback Supports Growth"
       valueTextOne="A missed call textback system helps clinics capture more value from inbound call traffic by reducing the number of potential patients lost through silence."
       valueTextTwo="It also improves communication consistency and gives patients an easier way to reconnect without needing to call again."
-      valueImage="/assets/img/services/missed-call-textback-system/value.webp"
+      valueImage="/assets/img/inner-pages/missed-call-text-back-system/004.png"
       valueImageAlt="Clinic missed call response workflow"
       consultationText="Want to stop losing patients after missed calls?"
       buildTitle="What We Help Build"
@@ -59,7 +59,7 @@ export default function MissedCallTextbackSystemPage() {
         "Follow-up process automation",
         "Missed-opportunity reduction systems",
       ]}
-      buildImage="/assets/img/services/missed-call-textback-system/build.webp"
+      buildImage="/assets/img/inner-pages/missed-call-text-back-system/001.webp"
       buildImageAlt="Missed call automation system build"
       quoteText="A missed call should not mean a missed patient opportunity."
       relatedServices={[
