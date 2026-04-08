@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesSix from "@/app/components/ProcessSectionServicesSix";
 import {
   BadgeDollarSign,
   ChartPie,
@@ -100,6 +101,7 @@ export default function RoiCampaignAttributionPage() {
       finalCtaText="Ready to understand the real return behind your marketing?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesSix />}
     />
   );
 }

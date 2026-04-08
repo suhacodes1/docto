@@ -436,9 +436,18 @@ export default function CaseStudies() {
 
   return (
     <section className="relative py-16 md:py-20">
-      <div className="case-studies-bg-text">
+      <h3
+        className="
+pointer-events-none max-w-full overflow-hidden
+tracking-[-4px] whitespace-nowrap text-slate-200 opacity-85 z-[1]
+text-[clamp(60px,10vw,120px)] font-extrabold
+absolute top-[40px] left-1/2 -translate-x-1/2
+[mask-image:linear-gradient(#000_40%,#0000_100%)]
+[-webkit-mask-image:linear-gradient(#000_40%,#0000_100%)]
+"
+      >
         Case Studies
-      </div>
+      </h3>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="text-center">

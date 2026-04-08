@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFive from "@/app/components/ProcessSectionServicesFive";
 import {
   BadgeCheck,
   MessageCircle,
@@ -100,6 +101,7 @@ export default function ReviewGenerationCampaignsPage() {
       finalCtaText="Ready to build stronger trust with more patient reviews?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFive />}
     />
   );
 }

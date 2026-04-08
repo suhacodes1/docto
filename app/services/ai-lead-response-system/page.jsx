@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFour from "@/app/components/ProcessSectionServicesFour";
 import {
   Bot,
   Clock3,
@@ -132,6 +133,7 @@ Our system ensures every inquiry is handled immediately — giving patients answ
 Capture more patients by replying instantly — every time, without fail.`}
       finalCtaButtonText="Get Free AI Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFour />}
     />
   );
 }

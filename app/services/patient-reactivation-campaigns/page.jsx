@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFour from "@/app/components/ProcessSectionServicesFour";
 import {
   HeartPulse,
   MessageSquareDashed,
@@ -100,6 +101,7 @@ export default function PatientReactivationCampaignsPage() {
       finalCtaText="Ready to reactivate past patients and recover lost opportunities?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFour />}
     />
   );
 }

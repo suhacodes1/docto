@@ -24,11 +24,11 @@ export default function Header() {
   const pathname = usePathname();
 
   const clinicTypes = [
-    "Dental Clinics",
-    "Orthodontists",
-    "Cosmetic clinics",
-    "Skin clinics",
-    "Physiotherapy clinics",
+    { name: "Dental Clinics", slug: "dental-clinics" },
+    { name: "Orthodontists", slug: "orthodontists" },
+    { name: "Cosmetic clinics", slug: "cosmetic-clinics" },
+    { name: "Skin clinics", slug: "skin-clinics" },
+    { name: "Physiotherapy clinics", slug: "physiotherapy-clinics" },
   ];
 
   const portfolioItems = [
@@ -96,6 +96,10 @@ export default function Header() {
 
   const isServicesActive = () => pathname.startsWith("/services");
 
+  const isClinicTypeActive = () => {
+    return clinicTypes.some(clinic => isActive(`/services/${clinic.slug}`));
+  };
+
   return (
     <header
       className={`w-full fixed top-0 ${
@@ -117,7 +121,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-6">
             <Link
               href="/"
-              className={`text-sm font-bold transition-colors ${
+              className={`xl:text-sm text-[11px] font-bold transition-colors ${
                 isActive("/")
                   ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                   : "text-slate-900 hover:text-[#ef2f6b]"
@@ -133,14 +137,14 @@ export default function Header() {
             >
               <Link
                 href="/services"
-                className={`text-sm font-bold transition-colors ${
-                  isServicesActive() || servicesDropdownOpen
+                className={`xl:text-sm text-[11px] font-bold transition-colors ${
+                  (isServicesActive() && !isClinicTypeActive()) || servicesDropdownOpen
                     ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                     : "text-slate-900 hover:text-[#ef2f6b]"
                 }`}
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
               >
-                Growth Services
+                Growth Solutions
               </Link>
               {servicesDropdownOpen && (
                 <ChevronUp
@@ -156,8 +160,8 @@ export default function Header() {
               onMouseLeave={handleWhoWeWorkWithMouseLeave}
             >
               <button
-                className={`text-sm font-bold transition-colors ${
-                  whoWeWorkWithOpen
+                className={`xl:text-sm text-[11px] font-bold transition-colors ${
+                  isClinicTypeActive() || whoWeWorkWithOpen
                     ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                     : "text-slate-900 hover:text-[#ef2f6b]"
                 }`}
@@ -175,15 +179,18 @@ export default function Header() {
                 <div className="absolute top-12 left-0 bg-white rounded-lg shadow-lg p-4 min-w-[200px] z-[55]">
                   <ul className="flex flex-col gap-2">
                     {clinicTypes.map((clinic) => {
-                      const slug = clinic.toLowerCase().replace(/\s+/g, "-");
+                      const path = `/services/${clinic.slug}`;
                       return (
-                        <li key={clinic}>
+                        <li key={clinic.slug}>
                           <Link
-                            // href={`/who-we-work-with/${slug}`}
-                            href=""
-                            className="text-sm text-slate-900 hover:text-[#ef2f6b] transition-colors font-semibold"
+                            href={path}
+                            className={`xl:text-sm text-[11px] font-semibold transition-colors ${
+                              isActive(path)
+                                ? "text-[#ef2f6b]"
+                                : "text-slate-900 hover:text-[#ef2f6b]"
+                            }`}
                           >
-                            {clinic}
+                            {clinic.name}
                           </Link>
                         </li>
                       );
@@ -199,7 +206,7 @@ export default function Header() {
               onMouseLeave={handlePortfolioMouseLeave}
             >
               <button
-                className={`text-sm font-bold transition-colors ${
+                className={`xl:text-sm text-[11px] font-bold transition-colors ${
                   portfolioOpen
                     ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                     : "text-slate-900 hover:text-[#ef2f6b]"
@@ -221,7 +228,7 @@ export default function Header() {
                       <li key={item.slug}>
                         <Link
                           href={`/${item.slug}`}
-                          className="text-sm text-slate-900 hover:text-[#ef2f6b] transition-colors font-semibold"
+                          className="xl:text-sm text-[11px] text-slate-900 hover:text-[#ef2f6b] transition-colors font-semibold"
                         >
                           {item.name}
                         </Link>
@@ -234,7 +241,7 @@ export default function Header() {
 
             <Link
               href="/about"
-              className={`text-sm font-bold transition-colors ${
+              className={`xl:text-sm text-[11px] font-bold transition-colors ${
                 isActive("/about")
                   ? "text-[#ef2f6b] border-b-2 border-[#ef2f6b]"
                   : "text-slate-900 hover:text-[#ef2f6b]"
@@ -243,18 +250,18 @@ export default function Header() {
               About Us
             </Link>
 
-            <Link
+            {/* <Link
               href=""
-              className="text-slate-900 hover:text-[#ef2f6b] text-sm font-bold transition-colors"
+              className="text-slate-900 hover:text-[#ef2f6b] xl:text-sm text-[11px] font-bold transition-colors"
             >
               Blogs
-            </Link>
+            </Link> */}
           </nav>
 
           <Link
             href="https://calendly.com/digitalparadigm/product-strategy-call"
             target="_blank"
-            className="hidden lg:inline-flex items-center justify-center bg-[#ef2f6b] text-white rounded-full px-6 py-2.5 font-bold hover:bg-pink-600 transition-colors text-sm"
+            className="hidden lg:inline-flex items-center justify-center bg-[#ef2f6b] text-white rounded-full px-6 py-2.5 font-bold hover:bg-pink-600 transition-colors xl:text-sm text-[11px]"
           >
             Get Free Growth Audit
           </Link>
@@ -317,14 +324,14 @@ export default function Header() {
               <div className="my-2">
                 <button
                   className={`w-full flex items-center justify-between px-4 py-3 rounded transition-colors font-semibold ${
-                    isServicesActive()
+                    (isServicesActive() && !isClinicTypeActive())
                       ? "text-[#ef2f6b] bg-slate-800 border-b-2 border-[#ef2f6b]"
                       : "text-white hover:bg-slate-800"
                   }`}
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                 >
                   <Link href="/services" className="text-white">
-                    Growth Services
+                    Growth Solutions
                   </Link>
                   <span
                     className={`text-xs transition-transform ${
@@ -346,7 +353,7 @@ export default function Header() {
                           <Link
                             key={service.slug}
                             href={`/services/${service.slug}`}
-                            className="text-sm text-slate-300 hover:text-pink-400 transition-colors font-semibold"
+                            className="xl:text-sm text-[11px] text-slate-300 hover:text-pink-400 transition-colors font-semibold"
                             onClick={closeMenu}
                           >
                             {service.title}
@@ -360,7 +367,11 @@ export default function Header() {
 
               <div className="my-2">
                 <button
-                  className={`w-full flex items-center justify-between px-4 py-3 rounded transition-colors font-semibold text-white hover:bg-slate-800`}
+                  className={`w-full flex items-center justify-between px-4 py-3 rounded transition-colors font-semibold ${
+                    isClinicTypeActive()
+                      ? "text-[#ef2f6b] bg-slate-800 border-b-2 border-[#ef2f6b]"
+                      : "text-white hover:bg-slate-800"
+                  }`}
                   onClick={() =>
                     setMobileWhoWeWorkWithOpen(!mobileWhoWeWorkWithOpen)
                   }
@@ -378,15 +389,19 @@ export default function Header() {
                 {mobileWhoWeWorkWithOpen && (
                   <div className="flex flex-col gap-2 mt-4 pl-4 border-l-2 border-[#ef2f6b]">
                     {clinicTypes.map((clinic) => {
-                      const slug = clinic.toLowerCase().replace(/\s+/g, "-");
+                      const path = `/services/${clinic.slug}`;
                       return (
                         <Link
-                          key={clinic}
-                          // href={`/who-we-work-with/${slug}`}
-                          href=""
-                          className="text-sm text-slate-300 hover:text-pink-400 transition-colors"
+                          key={clinic.slug}
+                          href={path}
+                          className={`xl:text-sm text-[11px] transition-colors font-semibold ${
+                            isActive(path)
+                              ? "text-[#ef2f6b]"
+                              : "text-slate-300 hover:text-pink-400"
+                          }`}
+                          onClick={closeMenu}
                         >
-                          {clinic}
+                          {clinic.name}
                         </Link>
                       );
                     })}
@@ -415,7 +430,7 @@ export default function Header() {
                       <Link
                         key={item.slug}
                         href={`/${item.slug}`}
-                        className="text-sm text-slate-300 hover:text-pink-400 transition-colors"
+                        className="md:text-sm xl text-[11px] text-slate-300 hover:text-pink-400 transition-colors"
                         onClick={closeMenu}
                       >
                         {item.name}

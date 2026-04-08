@@ -2,7 +2,6 @@
 
 // @ts-expect-error - Types are available but not properly exposed through package.json exports
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import Img1 from "../../public/assets/img/homepage/trustbar-logos/Logo-1.webp";
 import Img2 from "../../public/assets/img/homepage/trustbar-logos/Logo-2.webp";
@@ -25,6 +24,16 @@ const HomeHeroTrustBar = () => {
           type: "loop",
           perPage: 8,
           gap: "3rem",
+          breakpoints: {
+            768: {
+              perPage: 4,
+              gap: "3.5rem",
+            },
+            1024: {
+              perPage: 6,
+              gap: "5.5rem",
+            },
+          },
           arrows: false,
           pagination: false,
           drag: false,
@@ -43,7 +52,7 @@ const HomeHeroTrustBar = () => {
           <SplideSlide key={index}>
             <a href={logoObj.url} target="_blank" rel="noopener noreferrer">
               <div className="flex items-center justify-center">
-                <Image src={logoObj.img} alt={`Logo ${index + 1}`} className={`h-12 w-auto object-center object-contain filter ${index === 0 ? 'brightness-0 invert-[1] hover:brightness-1 hover:invert-0' : 'brightness-100 hover:brightness-110'} transition-all cursor-pointer`} />
+                <Image src={logoObj.img} alt={`Logo ${index + 1}`} className={`h-16 sm:h-14 md:h-12 w-auto object-center object-contain filter ${index === 0 ? 'brightness-0 invert-[1] hover:brightness-1 hover:invert-0' : 'brightness-100 hover:brightness-110'} transition-all cursor-pointer`} />
               </div>
             </a>
           </SplideSlide>

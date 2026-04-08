@@ -2,19 +2,19 @@
 
 const processSteps = [
   {
-    title: "Audit & Strategy",
+    title: "Audit & Growth Strategy",
     description:
-      "We analyse your clinic, competitors, and growth gaps.",
+      "We deep-dive into your clinic, competitors, and local market to uncover missed opportunities and growth gaps. You get a clear, data-backed roadmap to increase patient bookings.",
   },
   {
     title: "Build Your Growth System",
     description:
-      "We implement marketing + automation + tracking.",
+      "We implement your complete patient acquisition engine—website, ads, AI automation, and tracking—fully integrated and ready to perform. Everything is designed to capture, convert, and manage patient enquiries seamlessly.",
   },
   {
-    title: "Scale Patient Flow",
+    title: "Optimize & Scale",
     description:
-      "We implement SEO, paid ads, and growth strategies to attract patients.",
+      "We continuously track performance, refine campaigns, and improve conversions to drive consistent, predictable patient growth. As results improve, we scale what’s working to maximize ROI.",
   },
 ];
 
@@ -22,11 +22,18 @@ export default function ProcessSection() {
 
   return (
     <section className="relative py-16 md:py-20">
-      <div
-        className="process-bg-text"
+      <h3
+        className="
+pointer-events-none max-w-full overflow-hidden
+tracking-[-4px] whitespace-nowrap text-slate-200 opacity-85 z-[1]
+text-[clamp(60px,10vw,120px)] font-extrabold
+absolute top-[40px] left-1/2 -translate-x-1/2
+[mask-image:linear-gradient(#000_40%,#0000_100%)]
+[-webkit-mask-image:linear-gradient(#000_40%,#0000_100%)]
+"
       >
         Process
-      </div>
+      </h3>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="text-center">
@@ -43,9 +50,9 @@ export default function ProcessSection() {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            A Simple Process Designed For Healthcare
-            <br />
-            Businesses
+           Our Proven 3-Step Patient 
+            <br className="md:block hidden" />
+           Growth Framework
           </h2>
 
           <div className="w-24 h-1.5 bg-[#97bb67] mb-8 md:mb-12 mx-auto" data-aos="fade-up" data-aos-delay="300" />

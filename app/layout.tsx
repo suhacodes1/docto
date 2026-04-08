@@ -6,6 +6,7 @@ import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import AOSProvider from "./components/AOSProvider";
 import "aos/dist/aos.css";
+import "@splidejs/react-splide/css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],

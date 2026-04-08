@@ -9,12 +9,11 @@ import Img1 from "../../public/assets/img/homepage/banner/3.webp";
 import Img2 from "../../public/assets/img/homepage/banner/2.webp";
 import Img3 from "../../public/assets/img/homepage/banner/1.webp";
 
-
 const banners = [
   {
     headline: "AI-Powered Healthcare Growth Systems",
     subheadline:
-      "We help clinics, specialists, and healthcare providers attract, convert, and manage more patients through compliant marketing, smart automation, and data-driven systems.",
+      "We help healthcare providers attract, convert, and manage more patients through compliant marketing, smart automation, and data-driven systems.",
     points: [],
     image: Img1,
   },
@@ -44,9 +43,7 @@ const banners = [
 
 export default function Hero() {
   return (
-    <section className="bg-[#edf3f8] md:pt-24 pt-28">
-      <div className="hero-bg-text">Medical</div>
-
+    <section className="bg-[#edf3f8] pt-32 relative overflow-clip">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{
@@ -63,17 +60,28 @@ export default function Hero() {
           <SwiperSlide key={index}>
             <div className="container flex md:flex-row flex-col items-center gap-8 relative z-[1] min-h-[500px] py-5">
               {/* Left Content */}
-              <div className="md:w-1/2 w-full">
+              <div className="md:w-1/2 w-full relative">
+                <h3
+                  className="
+pointer-events-none max-w-full overflow-hidden
+tracking-[-4px] whitespace-nowrap text-white opacity-95 z-[1]
+text-[clamp(60px,10vw,120px)] font-extrabold
+absolute -top-[90px] left-0
+[mask-image:linear-gradient(#000_40%,#0000_100%)]
+[-webkit-mask-image:linear-gradient(#000_40%,#0000_100%)]
+"
+                >
+                  Medical
+                </h3>
                 <h1
-                  className="text-black md:text-5xl text-3xl font-extrabold mb-6 md:text-start text-center"
+                  className="text-black relative z-[2] md:text-5xl text-3xl font-extrabold mb-6 md:text-start text-center"
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
                   {banner.headline}
                 </h1>
-
                 <p
-                  className="text-base md:text-lg mb-6 md:text-start text-center"
+                  className="text-base relative z-[2] md:text-lg mb-6 md:text-start text-center"
                   data-aos="fade-up"
                   data-aos-delay="300"
                 >
@@ -82,12 +90,15 @@ export default function Hero() {
 
                 {banner.points.length > 0 && (
                   <div
-                    className="flex flex-col gap-3 mb-8"
+                    className="flex flex-col gap-3 mb-8 relative z-[2]"
                     data-aos="fade-up"
                     data-aos-delay="350"
                   >
                     {banner.points.map((point, idx) => (
-                      <p key={idx} className="text-base md:text-lg flex items-center md:justify-start justify-center gap-2">
+                      <p
+                        key={idx}
+                        className="text-base md:text-lg flex items-center md:justify-start justify-center gap-2"
+                      >
                         <span className="text-[#ef2f6b] font-bold">✔</span>
                         {point}
                       </p>
@@ -95,9 +106,7 @@ export default function Hero() {
                   </div>
                 )}
 
-                <div
-                  className="hero-buttons flex flex-col md:flex-row gap-4"
-                >
+                <div className="hero-buttons relative z-[2] flex flex-col md:flex-row gap-4">
                   <a
                     href="https://calendly.com/digitalparadigm/product-strategy-call"
                     target="_blank"
@@ -122,11 +131,15 @@ export default function Hero() {
               </div>
 
               {/* Right Image */}
-              <div className="md:w-1/2 w-full" data-aos="fade-left" data-aos-delay="500">
+              <div
+                className="md:w-1/2 w-full"
+                data-aos="fade-left"
+                data-aos-delay="500"
+              >
                 <Image
                   src={banner.image}
                   alt={banner.headline}
-                  className="hero-image"
+                  className="max-w-[500px] max-h-[470px] object-contain -mb-2.5"
                 />
               </div>
             </div>
@@ -136,5 +149,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

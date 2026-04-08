@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesSix from "@/app/components/ProcessSectionServicesSix";
 import {
   BarChart3,
   ChartNoAxesCombined,
@@ -130,6 +131,7 @@ We connect all your data points — ads, website, CRM, and booking systems — s
 Get full clarity on your marketing performance and scale your clinic with confidence.`}
       finalCtaButtonText="Get Free Tracking Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesSix />}
     />
   );
 }

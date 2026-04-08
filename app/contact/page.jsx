@@ -18,7 +18,8 @@ const fadeUp = {
 
 export default function ContactPage() {
   return (
-    <main className="contact-page"><section className="contact-hero">
+    <main className="contact-page">
+      <section className="contact-hero">
         <div className="contact-bg-text">Contact</div>
         <div className="contact-orb contact-orb-one" />
         <div className="contact-orb contact-orb-two" />
@@ -34,13 +35,14 @@ export default function ContactPage() {
             </motion.p>
 
             <motion.h1 custom={0.1} variants={fadeUp} className="contact-title">
-              Let’s discuss your next digital project
+              Build a smarter patient growth system
             </motion.h1>
 
             <motion.p custom={0.2} variants={fadeUp} className="contact-intro">
-              Tell us what you’re building, what challenges you’re facing, and
-              what kind of support you need. We’ll help shape the right
-              solution.
+              Tell us where you're at and what you're aiming for. We’ll identify
+              the gaps, opportunities, and the fastest path to consistent
+              bookings. <br /> No pressure. No obligation. Just clarity on your next
+              steps.
             </motion.p>
 
             <motion.div
@@ -67,14 +69,14 @@ export default function ContactPage() {
               </div>
 
               <div className="contact-info-card">
-                <h3>Services</h3>
-                <p>Web, Software, Design & Marketing</p>
+                <h3>Growth Solutions</h3>
+                <span className="text-sm text-[#1e293b]">Launch System, Growth Engine, PatientFlow AI, Authority Builder & Intelligence Dashboard</span>
               </div>
 
-              <div className="contact-info-card">
+              {/* <div className="contact-info-card">
                 <h3>Response Time</h3>
                 <p>Usually within 1 business day</p>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
 
@@ -95,4 +97,3 @@ export default function ContactPage() {
     </main>
   );
 }
-

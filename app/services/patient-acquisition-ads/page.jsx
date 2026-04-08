@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesThree from "@/app/components/ProcessSectionServicesThree";
 import {
   Activity,
   BadgeDollarSign,
@@ -122,6 +123,7 @@ We design campaigns that attract the right audience and guide them into your sys
 Launch campaigns that attract high-intent patients and turn your clinic into a predictable growth system.`}
       finalCtaButtonText="Get Free Campaign Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesThree />}
     />
   );
 }

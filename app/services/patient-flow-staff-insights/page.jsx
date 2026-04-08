@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesSix from "@/app/components/ProcessSectionServicesSix";
 import {
   BriefcaseBusiness,
   ClipboardList,
@@ -100,6 +101,7 @@ export default function PatientFlowStaffInsightsPage() {
       finalCtaText="Ready to improve clinic efficiency with better operational insight?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesSix />}
     />
   );
 }

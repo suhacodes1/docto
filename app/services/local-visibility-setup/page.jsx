@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesTwo from "@/app/components/ProcessSectionServicesTwo";
 import {
   MapPin,
   Search,
@@ -128,6 +129,7 @@ valueResultItems={[
 Make it easy for patients to find you, trust you, and choose you — every time they search.`}
       finalCtaButtonText="Get Free Visibility Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesTwo />}
     />
   );
 }

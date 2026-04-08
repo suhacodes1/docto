@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFive from "@/app/components/ProcessSectionServicesFive";
 import {
   Star,
   ShieldCheck,
@@ -130,6 +131,7 @@ A strong reputation doesn’t just build trust — it increases conversions acro
 Start generating reviews that make your clinic stand out and get chosen — every time.`}
       finalCtaButtonText="Get Free Reputation Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFive />}
     />
   );
 }

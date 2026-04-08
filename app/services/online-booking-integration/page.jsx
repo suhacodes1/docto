@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesTwo from "@/app/components/ProcessSectionServicesTwo";
 import {
   CalendarDays,
   Clock3,
@@ -131,6 +132,7 @@ We design booking experiences that are fast, clear, and frictionless — so pati
 Remove friction, capture more appointments, and create a seamless experience your patients expect.`}
       finalCtaButtonText="Get Free Booking Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesTwo />}
     />
   );
 }

@@ -35,11 +35,18 @@ const growthCards = {
 export default function GrowthSection() {
   return (
     <section className="relative py-16 md:py-20 bg-gray-50">
-      <div
-        className="absolute top-10 md:top-20 right-4 md:right-8 text-4xl md:text-6xl font-extrabold text-gray-200 opacity-20 pointer-events-none"
+      <h3
+        className="
+pointer-events-none max-w-full overflow-hidden
+tracking-[-4px] whitespace-nowrap text-slate-200 opacity-85 z-[1]
+text-[clamp(60px,10vw,120px)] font-extrabold
+absolute top-[40px] left-1/2 -translate-x-1/2
+[mask-image:linear-gradient(#000_40%,#0000_100%)]
+[-webkit-mask-image:linear-gradient(#000_40%,#0000_100%)]
+"
       >
         Clinics
-      </div>
+      </h3>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center">
@@ -64,10 +71,12 @@ export default function GrowthSection() {
 
         <div className="relative md:flex md:items-center md:justify-between md:space-x-6 mt-6">
           {/* left column - vertical stack */}
-          <div
-            className="flex flex-col space-y-6 md:w-1/4 z-10"
-          >
-            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-right" data-aos-delay="300">
+          <div className="flex flex-col space-y-6 md:w-1/4 z-10">
+            <article
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
               <Brain className="w-8 h-8 mb-3 text-[#ef2f6b]" />
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                 More Online Patient
@@ -78,14 +87,19 @@ export default function GrowthSection() {
                 {growthCards.leftTop.description}
               </p>
               <Link
-                href="/services/ppc"
+                // href="/services/ppc"
+                href=""
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
               </Link>
             </article>
 
-            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:ml-8 md:mt-8" data-aos="fade-right" data-aos-delay="400">
+            <article
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:ml-8 md:mt-8"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
               <Settings className="w-8 h-8 mb-3 text-[#ef2f6b]" />
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                 Better Internal
@@ -96,7 +110,8 @@ export default function GrowthSection() {
                 {growthCards.leftBottom.description}
               </p>
               <Link
-                href="/services/enterprise-software-development"
+                // href="/services/enterprise-software-development"
+                href=""
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
@@ -118,10 +133,12 @@ export default function GrowthSection() {
           </div>
 
           {/* right column - vertical stack */}
-          <div
-            className="flex flex-col space-y-6 md:w-1/4 z-10"
-          >
-            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300" data-aos="fade-left" data-aos-delay="300">
+          <div className="flex flex-col space-y-6 md:w-1/4 z-10">
+            <article
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
               <Search className="w-8 h-8 mb-3 text-[#ef2f6b]" />
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                 Higher Google
@@ -132,14 +149,19 @@ export default function GrowthSection() {
                 {growthCards.rightTop.description}
               </p>
               <Link
-                href="/services/seo"
+                // href="/services/seo"
+                href=""
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
               </Link>
             </article>
 
-            <article className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:mr-8 md:mt-8" data-aos="fade-left" data-aos-delay="400">
+            <article
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 md:mr-8 md:mt-8"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
               <Star className="w-8 h-8 mb-3 text-[#ef2f6b]" />
               <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                 Stronger Online
@@ -150,7 +172,8 @@ export default function GrowthSection() {
                 {growthCards.rightBottom.description}
               </p>
               <Link
-                href="/services/social-media-marketing"
+                // href="/services/social-media-marketing"
+                href=""
                 className="text-pink-600 hover:text-pink-700 mt-4 inline-block font-medium"
               >
                 Read More »
@@ -162,5 +185,3 @@ export default function GrowthSection() {
     </section>
   );
 }
-
-

@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFour from "@/app/components/ProcessSectionServicesFour";
 import {
   CalendarClock,
   HeartHandshake,
@@ -134,6 +135,7 @@ Our system nurtures leads with helpful reminders, information, and gentle prompt
 Make the most of every inquiry with a system that nurtures, engages, and converts patients automatically.`}
       finalCtaButtonText="Get Free Conversion Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFour />}
     />
   );
 }

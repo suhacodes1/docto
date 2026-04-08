@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Digital Paradigm | Smarter Digital Systems for Healthcare",
     description: "Health - Digital Paradigm: Transform your healthcare business with custom web development, SaaS solutions, and digital marketing. We build scalable platforms that drive growth and improve patient experiences.",
-    url: "https://digitalparadigm.com/health",
+    url: "https://health.digitalparadigm.com.au",
     siteName: "Digital Paradigm",
     type: "website",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "Health - Digital Paradigm: Transform your healthcare business with custom web development, SaaS solutions, and digital marketing.",
   },
   alternates: {
-    canonical: "https://digitalparadigm.com/health",
+    canonical: "https://health.digitalparadigm.com.au",
   },
 };
 
@@ -42,16 +42,16 @@ export default function Page() {
     <>
       <Hero />
       <HomeHeroTrustBar />
+      <ClinicChallenges />
       <CoreSolutions />
+      <GrowthSection />
+      <ProcessSection />
       <CaseStudies />
       <WhoWeWorkWith />
-      <AboutSection />
-      <GrowthSection />
-      <StatsSection />
-      <ProcessSection />
       <WhyChooseUs />
-      <ClinicChallenges />
+      <AboutSection />
       <FocusSection />
+      <StatsSection />
       <CTASection />
     </>
   );

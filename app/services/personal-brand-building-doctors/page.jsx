@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesThree from "@/app/components/ProcessSectionServicesThree";
 import {
   BadgePlus,
   BriefcaseMedical,
@@ -100,6 +101,7 @@ export default function PersonalBrandBuildingDoctorsPage() {
       finalCtaText="Ready to build a stronger personal brand for your doctors?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesThree />}
     />
   );
 }

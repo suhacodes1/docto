@@ -24,7 +24,7 @@ function CountUp({ end, suffix = "" }: CountUpProps) {
           setHasAnimated(true);
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     observer.observe(node);
@@ -99,19 +99,25 @@ export default function StatsSection() {
       className="relative bg-gray-50 py-16 md:py-20 overflow-hidden"
       ref={sectionRef}
     >
-      <div
-        className="absolute top-10 md:top-20 left-1/2 transform -translate-x-1/2 text-6xl md:text-9xl font-extrabold text-gray-200 opacity-10 whitespace-nowrap pointer-events-none"
-        ref={bgTextRef}
-        data-aos="zoom-out"
-        data-aos-duration="1000"
-      >
-       Contact Us
-      </div>
-
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-8" ref={leftRef}>
-            <div data-aos="fade-up" data-aos-delay="100">
+          <div className="space-y-8 relative" ref={leftRef}>
+            <h3
+              ref={bgTextRef}
+              data-aos="zoom-out"
+              data-aos-duration="1000"
+              className="
+pointer-events-none max-w-full overflow-hidden
+tracking-[-4px] whitespace-nowrap text-slate-200 opacity-85 z-[1]
+text-[clamp(60px,10vw,120px)] font-extrabold
+absolute -top-[30px] left-0
+[mask-image:linear-gradient(#000_40%,#0000_100%)]
+[-webkit-mask-image:linear-gradient(#000_40%,#0000_100%)]
+"
+            >
+             Contact
+            </h3>
+            <div data-aos="fade-up" data-aos-delay="100" className="relative z-[2]">
               <p className="text-sm uppercase text-pink-600 font-semibold tracking-wider mb-2">
                 Let's talk
               </p>
@@ -125,7 +131,7 @@ export default function StatsSection() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-6 relative z-[2]">
               <a
                 href="mailto:info@digitalparadigm.com.au"
                 className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 group"
@@ -149,7 +155,7 @@ export default function StatsSection() {
                 </span>
               </a>
 
-              <div
+              {/* <div
                 className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 data-aos="fade-up"
                 data-aos-delay="400"
@@ -160,7 +166,7 @@ export default function StatsSection() {
                 <p className="text-gray-600 text-base">
                   Usually within 1 business day
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 

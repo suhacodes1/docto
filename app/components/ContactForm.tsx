@@ -180,7 +180,7 @@ export default function ContactForm({
               htmlFor="service"
               className="block text-sm font-medium text-gray-700 mb-2"
             >
-              Service Needed
+              Solutions Needed
             </label>
             <select
               id="service"
@@ -189,19 +189,12 @@ export default function ContactForm({
               onChange={handleChange}
               className="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent"
             >
-              <option value="">Select a service</option>
-              <option>Custom Web Development</option>
-              <option>MVP Development</option>
-              <option>SaaS Development</option>
-              <option>Enterprise Software Development</option>
-              <option>Web Portal Development</option>
-              <option>UI/UX Design</option>
-              <option>Responsive Web Design</option>
-              <option>Graphic Design</option>
-              <option>SEO</option>
-              <option>Social Media Marketing</option>
-              <option>Influencer Marketing</option>
-              <option>PPC</option>
+              <option value="">Select a solution</option>
+              <option value="Launch System">Launch System</option>
+              <option value="Growth Engine">Growth Engine</option>
+              <option value="PatientFlow AI">PatientFlow AI</option>
+              <option value="Authority Builder">Authority Builder</option>
+              <option value="Intelligence Dashboard">Intelligence Dashboard</option>
             </select>
           </div>
         </div>
@@ -258,7 +251,7 @@ export default function ContactForm({
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
             >
-              Book a Free Audit
+              Book Free Growth Audit
             </a>
           )}
         </div>

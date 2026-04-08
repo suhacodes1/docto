@@ -292,17 +292,17 @@ export const serviceGroups = [
     category: "Growth Engine",
     positioning: "Consistent weekly patient bookings without relying on referrals",
     services: [
-      {
-        title: "Patient Acquisition (Ads)",
-        slug: "patient-acquisition-ads",
-        description: "Drive a steady flow of high-quality patient enquiries.",
-        highlights: [
-          "Targeted ad strategies",
-          "Consistent patient flow",
-          "Quality lead generation",
-          "Scalable acquisition",
-        ],
-      },
+      // {
+      //   title: "Patient Acquisition (Ads)",
+      //   slug: "patient-acquisition-ads",
+      //   description: "Drive a steady flow of high-quality patient enquiries.",
+      //   highlights: [
+      //     "Targeted ad strategies",
+      //     "Consistent patient flow",
+      //     "Quality lead generation",
+      //     "Scalable acquisition",
+      //   ],
+      // },
       {
         title: "Landing Page Optimisation",
         slug: "landing-page-optimisation",

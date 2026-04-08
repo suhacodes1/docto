@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFour from "@/app/components/ProcessSectionServicesFour";
 import {
   Bot,
   MessageSquareText,
@@ -132,6 +133,7 @@ Our chatbot ensures no visitor leaves without getting answers — increasing eng
 Let AI handle conversations, answer questions, and convert visitors into patients — even when you’re offline.`}
       finalCtaButtonText="Get Free AI Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFour />}
     />
   );
 }

@@ -4659,12 +4659,12 @@ a {
 }
 
 .contact-hero-grid {
-  position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 46px;
+  grid-template-columns: 1fr 0.9fr;
   align-items: start;
+  gap: 20px;
+  display: grid;
+  position: relative;
 }
 
 .contact-eyebrow {
@@ -5334,7 +5334,7 @@ a {
 .about-values-grid,
 .about-numbers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -5640,9 +5640,9 @@ a {
 }
 
 .service-hero-title {
-  font-size: clamp(3rem, 6vw, 5.2rem);
+  font-size: clamp(3rem, 6vw, 3.25rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.075;
   color: #1a1a1a;
   margin-bottom: 28px;
   letter-spacing: -1px;

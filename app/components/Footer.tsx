@@ -11,7 +11,7 @@ export default function Footer() {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/services", label: "Growth Services" },
+    { href: "/services", label: "Growth Solutions" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
   ];
@@ -83,7 +83,7 @@ export default function Footer() {
           <ul className="footer-contact-list">
             <li>
               <span>
-                <strong>Address:</strong> Level 1 530 Lt Collins Street
+                <strong>Address:</strong> 530 Lt Collins Street
                 Melbourne VIC
               </span>
             </li>

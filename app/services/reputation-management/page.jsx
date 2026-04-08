@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFive from "@/app/components/ProcessSectionServicesFive";
 import {
   BadgeCheck,
   MessageSquareQuote,
@@ -132,6 +133,7 @@ We help you create a consistent, positive presence that influences patient decis
 Build trust, handle feedback professionally, and create a reputation that attracts more patients.`}
       finalCtaButtonText="Get Free Reputation Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFive />}
     />
   );
 }

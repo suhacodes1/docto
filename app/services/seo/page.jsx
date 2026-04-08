@@ -1,6 +1,7 @@
 "use client";
 
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesThree from "@/app/components/ProcessSectionServicesThree";
 import { Search, Target, TrendingUp, BarChart, Smartphone, Monitor } from 'lucide-react';
 
 const faqs = [
@@ -137,6 +138,7 @@ export default function SearchEngineOptimization() {
         finalCtaText="We create SEO strategies that improve visibility, attract the right audience, and support sustainable business growth over time."
         finalCtaButtonText="Book Your Free SEO Consultation"
         finalCtaButtonLink="/contact"
+        processComponent={<ProcessSectionServicesThree />}
       />
     </>
   );

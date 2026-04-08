@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesTwo from "@/app/components/ProcessSectionServicesTwo";
 import {
   ArrowRightLeft,
   LayoutPanelTop,
@@ -100,6 +101,7 @@ export default function LandingPageOptimisationPage() {
       finalCtaText="Ready to improve how your landing pages convert?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesTwo />}
     />
   );
 }

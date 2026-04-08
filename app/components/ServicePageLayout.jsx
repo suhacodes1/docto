@@ -130,16 +130,18 @@ export default function ServicePageLayout({
  
   buildImage,
   buildImageAlt,
- 
+
   processTitle,
   processSteps = [],
- 
+
+  processComponent = null, // NEW: custom process component
+
   quoteText,
- 
+
   relatedServices = [],
- 
+
   faqs = [],
- 
+
   finalCtaText,
   finalCtaButtonText = "Book Your Free Consultation",
   finalCtaButtonLink = "/contact",
@@ -360,7 +362,7 @@ export default function ServicePageLayout({
       </section>
  
       <div className="pb-8">
-        <ProcessSectionServices />
+        {processComponent ? processComponent : <ProcessSectionServices />}
       </div>
  
       {/* QUOTE */}
@@ -530,4 +532,6 @@ ServicePageLayout.propTypes = {
   finalCtaText: PropTypes.string,
   finalCtaButtonText: PropTypes.string,
   finalCtaButtonLink: PropTypes.string,
+
+  processComponent: PropTypes.node,
 };

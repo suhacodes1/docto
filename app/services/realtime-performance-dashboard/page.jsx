@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesSix from "@/app/components/ProcessSectionServicesSix";
 import {
   Activity,
   Gauge,
@@ -100,6 +101,7 @@ export default function RealtimePerformanceDashboardPage() {
       finalCtaText="Ready to monitor clinic performance with more clarity and speed?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesSix />}
     />
   );
 }

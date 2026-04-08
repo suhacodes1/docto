@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesThree from "@/app/components/ProcessSectionServicesThree";
 import {
   BookOpenText,
   FileText,
@@ -130,6 +131,7 @@ We focus on high-intent keywords and patient-focused content that not only bring
 Attract patients consistently through search and content — without relying only on ads.`}
       finalCtaButtonText="Get Free SEO Audit"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesThree />}
     />
   );
 }

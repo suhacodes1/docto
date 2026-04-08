@@ -1,4 +1,5 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
+import ProcessSectionServicesFour from "@/app/components/ProcessSectionServicesFour";
 import {
   BellRing,
   CalendarCheck2,
@@ -100,6 +101,7 @@ export default function NoShowReductionWorkflowsPage() {
       finalCtaText="Ready to reduce no-shows and improve patient attendance?"
       finalCtaButtonText="Book Your Free Consultation"
       finalCtaButtonLink="/contact"
+      processComponent={<ProcessSectionServicesFour />}
     />
   );
 }
