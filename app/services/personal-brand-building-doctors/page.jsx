@@ -12,43 +12,49 @@ import {
 export default function PersonalBrandBuildingDoctorsPage() {
   return (
     <ServicePageLayout
-      category="Authority Builder"
-      titleTop="Personal Brand Building"
-      titleMain="for Doctors"
-      titleBottom="and Practitioners"
-      intro="Build trust, visibility, and authority around your doctors with a stronger personal brand that helps patients feel more confident choosing your clinic."
-      primaryCtaText="Book a Consultation"
+      category="AUTHORITY BUILDER SYSTEM"
+      titleTop="Turn Doctors Into the First Choice"
+      titleMain="— Not Just an Option"
+      titleBottom=""
+      intro={`Patients don’t just choose clinics — they choose people they trust.
+
+We build personal brands that position doctors as recognised authorities patients actively seek out.`}
+      primaryCtaText="BOOK A BRAND STRATEGY CALL"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/personal-brand-building/1.webp"
       heroImageAlt="Personal brand building for doctors"
-      sectionTwoTitle="Why Personal Branding for Doctors Matters"
-      sectionTwoTextOne="Patients do not just choose clinics, they often choose the people behind them. A strong doctor brand can make your practice feel more credible, familiar, and trustworthy."
-      sectionTwoTextTwo="Personal brand building helps practitioners become more visible through educational content, thought leadership, and a stronger online presence that supports patient decision-making."
+      sectionTwoTitle="If patients don’t know you — they can’t choose you"
+      sectionTwoTextOne={`Today’s patient journey includes Google, social media, and content. If you’re not visible — you’re invisible.`}
+      sectionTwoTextTwo={`Even great doctors get overlooked without a strong presence. We build your Doctor Authority System.`}
       sectionTwoImage="/assets/img/inner-pages/personal-brand-building/2.webp"
       sectionTwoImageAlt="Doctor personal brand strategy"
       featureCards={[
         {
           icon: <UserCircle2 size={28} />,
-          title: "More Familiarity",
-          text: "Help patients feel like they know and trust the practitioner before the first visit.",
+          title: "Authority Positioning",
+          text: "Define your niche and expertise clearly.",
         },
         {
           icon: <Stethoscope size={28} />,
-          title: "Stronger Authority",
-          text: "Showcase expertise in a way that supports credibility and confidence.",
+          title: "Content-Driven Visibility",
+          text: "Build trust through consistent content.",
         },
         {
           icon: <Star size={28} />,
-          title: "Better Differentiation",
-          text: "Stand out in competitive markets with a clearer and more memorable practitioner presence.",
+          title: "Multi-Platform Presence",
+          text: "Stay visible where patients are.",
         },
       ]}
-      valueTitle="How Personal Branding Supports Clinic Growth"
-      valueTextOne="A strong doctor brand helps clinics attract patients who are looking not only for treatment, but for a practitioner they feel confident in."
-      valueTextTwo="It also strengthens content performance, referral confidence, social proof, and overall clinic perception by making expertise more visible and human."
+      valueTitle="Turn expertise into influence — and influence into patients"
+      valueTextOne={`When patients trust you before meeting you — conversion becomes easy.`}
+      valueResultItems={[
+        { text: "More direct inquiries", tagColor: "pink" },
+        { text: "Premium positioning", tagColor: "green" },
+        { text: "Stronger patient relationships", tagColor: "blue" },
+      ]}
       valueImage="/assets/img/inner-pages/personal-brand-building/3.webp"
       valueImageAlt="Doctor authority and visibility growth"
-      consultationText="Want to build stronger visibility and trust around your practitioners?"
+      consultationText="Are patients choosing you — or just the clinic brand?"
       buildTitle="What We Help Build"
       buildItems={[
         "Doctor visibility strategy",
@@ -62,7 +68,7 @@ export default function PersonalBrandBuildingDoctorsPage() {
       ]}
       buildImage="/assets/img/inner-pages/personal-brand-building/4.webp"
       buildImageAlt="Doctor brand system build"
-      quoteText="Patients are more likely to choose a clinic when they trust the people behind it."
+      quoteText="Patients are more likely to choose a doctor they already trust."
       relatedServices={[
         {
           icon: <Mic size={26} />,
@@ -98,8 +104,8 @@ export default function PersonalBrandBuildingDoctorsPage() {
           a: "Yes, stronger practitioner visibility can improve trust, conversion, and long-term brand differentiation.",
         },
       ]}
-      finalCtaText="Ready to build a stronger personal brand for your doctors?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText={`Ready to Become the Doctor Patients Trust First?`}
+      finalCtaButtonText="BOOK A BRAND STRATEGY CALL"
       finalCtaButtonLink="/contact"
       processComponent={<ProcessSectionServicesThree />}
     />

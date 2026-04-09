@@ -12,40 +12,42 @@ import {
 export default function LandingPageOptimisationPage() {
   return (
     <ServicePageLayout
-      category="Growth Engine"
-      titleTop="Landing Page"
-      titleMain="Optimisation"
-      titleBottom="for Clinics"
-      intro="Improve page performance with clearer messaging, stronger trust signals, and conversion-focused design that turns more visitors into enquiries."
-      primaryCtaText="Book a Consultation"
+      category=" HEALTH CLINIC GROWTH SYSTEM"
+      titleTop="Turn Clicks Into Booked Patients"
+      titleMain=" — Not Just Website Visitors"
+      intro=" Getting traffic is only half the equation.
+We design and optimise high-converting landing pages that turn ad clicks into real patient bookings — consistently and predictably.
+"
+      primaryCtaText="GET A FREE LANDING PAGE AUDIT"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/landing-page-optimisation/002.webp"
       heroImageAlt="Landing page optimisation for clinics"
-      sectionTwoTitle="Why Landing Page Optimisation Matters"
-      sectionTwoTextOne="A clinic can attract traffic from ads, search, or social media, but growth slows down when visitors land on a page that feels unclear, overwhelming, or difficult to act on."
+      sectionTwoTitle="Most clinics don’t have a traffic problem — they have a conversion problem."
+sectionTwoTextOne="You’re running ads. You’re getting clicks. But patients aren’t booking. Why? Because they land on generic websites, slow pages, confusing layouts, and too many options — and then they leave."
       sectionTwoTextTwo="Landing page optimisation improves the structure, messaging, and flow of each page so more visitors trust your clinic and take the next step."
       sectionTwoImage="/assets/img/inner-pages/landing-page-optimisation/003.webp"
       sectionTwoImageAlt="Optimised landing page design for clinics"
       featureCards={[
         {
           icon: <LayoutPanelTop size={28} />,
-          title: "Clearer Messaging",
-          text: "Help patients quickly understand your services, value, and next step.",
-        },
-        {
-          icon: <ShieldCheck size={28} />,
-          title: "More Trust Signals",
-          text: "Use reviews, credibility elements, and content structure to build patient confidence.",
+          title: "Conversion-First Design",
+          text: "Every element is built to guide the patient toward one action — booking.",
         },
         {
           icon: <MousePointerClick size={28} />,
-          title: "Higher Conversion Rates",
-          text: "Reduce friction and guide more visitors toward booking, calling, or enquiring.",
+          title: "Message Match & Clarity",
+          text: "Your page aligns perfectly with your ads and search intent.",
+        },
+        {
+          icon: <ShieldCheck size={28} />,
+          title: "Trust & Authority Elements",
+          text: " Patient testimonials, proof, and credibility signals that drive decisions.",
         },
       ]}
-      valueTitle="How Optimised Pages Support Growth"
-      valueTextOne="Landing page optimisation helps clinics get more value from their traffic by making pages easier to understand, more persuasive, and more action-focused."
-      valueTextTwo="It becomes especially valuable when your clinic is investing in paid ads or local SEO, because stronger page performance means more enquiries without needing more traffic."
+      valueTitle="More conversions — without increasing ad spend"
+valueTextOne="You don’t need more traffic — you need your existing traffic to convert better. We optimise your landing pages using proven conversion principles including clear above-the-fold messaging, strong CTAs, reduced friction, and trust signals."
+
+valueTextTwo="Visitors decide within seconds whether to stay or leave — and clarity is what drives action. The result is higher conversion rates, lower cost per patient, and more bookings from the same traffic."
       valueImage="/assets/img/inner-pages/landing-page-optimisation/004.webp"
       valueImageAlt="Clinic landing page improvements"
       consultationText="Want your landing pages to convert more visitors into patients?"

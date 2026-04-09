@@ -12,93 +12,93 @@ export default function VideoTestimonialsPage() {
   return (
     <ServicePageLayout
       category="Authority Builder"
-      titleTop="Video"
-      titleMain="Testimonials"
-      titleBottom="for Clinics"
-      intro="Build stronger trust with patient testimonial videos that make your clinic feel more credible, human, and memorable."
-      primaryCtaText="Book a Consultation"
+      titleTop="Turn Real Patient Stories"
+      titleMain="Into Your Most Powerful"
+      titleBottom="Sales Asset"
+      intro="Reviews build trust. Video builds belief. We create high-impact video testimonials that show real results, real experiences, and real outcomes — driving faster patient decisions."
+      primaryCtaText="BOOK A STRATEGY CALL"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/video-testimonials/001.webp"
       heroImageAlt="Video testimonials for clinics"
-      sectionTwoTitle="Why Video Testimonials Matter"
-      sectionTwoTextOne="Written reviews are powerful, but video testimonials can create a stronger emotional connection by showing real patient stories in a more personal and credible format."
-      sectionTwoTextTwo="For clinics, video testimonials help future patients feel more confident by seeing outcomes, experiences, and trust in a more authentic way."
+      sectionTwoTitle="Patients don’t just want proof — they want to see it"
+      sectionTwoTextOne="Text reviews are important. But they don’t fully answer: “Will this work for me?” and “Can I trust this clinic?”"
+      sectionTwoTextTwo="Video removes doubt instantly. We build a Video Proof System that makes your results visible and believable."
       sectionTwoImage="/assets/img/inner-pages/video-testimonials/002.webp"
-      sectionTwoImageAlt="Patient testimonial video strategy"
+      sectionTwoImageAlt="Video proof system for clinics"
       featureCards={[
         {
           icon: <CirclePlay size={28} />,
-          title: "More Authentic Trust",
-          text: "Show real patient stories in a format that feels more personal and believable.",
+          title: "Structured Patient Stories",
+          text: "Capture before, experience, and outcome journeys in a format that feels clear, persuasive, and real.",
         },
         {
           icon: <HeartHandshake size={28} />,
-          title: "Stronger Emotional Connection",
-          text: "Help future patients relate to the experiences of people like them.",
+          title: "High-Impact Production",
+          text: "Create testimonial videos designed for clarity, emotion, trust, and stronger patient confidence.",
         },
         {
           icon: <Star size={28} />,
-          title: "Higher Credibility",
-          text: "Support your brand with richer social proof across your website and marketing.",
+          title: "Multi-Channel Deployment",
+          text: "Use your testimonial content across websites, ads, landing pages, and social media.",
         },
       ]}
-      valueTitle="How Video Testimonials Support Growth"
-      valueTextOne="Video testimonials help clinics communicate trust faster by making positive patient experiences easier to see, feel, and remember."
-      valueTextTwo="They can strengthen performance across landing pages, ads, and social channels where credibility plays a major role in conversion."
+      valueTitle="Turn trust into immediate action"
+      valueTextOne="When patients see others like them getting real results, hesitation disappears and confidence increases."
+      valueTextTwo="Drive faster decision-making, higher conversion rates, and stronger emotional trust with visible proof."
       valueImage="/assets/img/inner-pages/video-testimonials/003.webp"
-      valueImageAlt="Clinic video testimonial marketing"
-      consultationText="Want to build stronger trust with real patient stories?"
+      valueImageAlt="Video testimonials driving trust and conversions for clinics"
+      consultationText="Do your patients just read about results — or actually see them?"
       buildTitle="What We Help Build"
       buildItems={[
-        "Patient testimonial video strategy",
+        "Structured patient testimonial storylines",
+        "High-impact testimonial video assets",
         "Trust-building website video placement",
-        "Social proof content integration",
-        "Clinic credibility video assets",
-        "Story-led testimonial planning",
-        "Video content repurposing pathways",
-        "Brand trust enhancement content",
-        "Conversion support through testimonials",
+        "Video proof systems for clinics",
+        "Social and ad video deployment plans",
+        "Story-led patient outcome content",
+        "Conversion-focused testimonial campaigns",
+        "Multi-channel trust-building content",
       ]}
       buildImage="/assets/img/inner-pages/video-testimonials/004.webp"
-      buildImageAlt="Video testimonial content system"
-      quoteText="Seeing and hearing a real patient story often builds trust faster than words alone."
+      buildImageAlt="Video testimonial system for clinic marketing"
+      quoteText="When patients can see real outcomes and hear real experiences, trust happens faster."
       relatedServices={[
         {
           icon: <MessageSquareQuote size={26} />,
           title: "Review Generation Campaigns",
-          text: "Support written reviews with deeper and more persuasive video-based trust signals.",
+          text: "Strengthen written reviews with richer, more persuasive video-based proof.",
         },
         {
           icon: <Camera size={26} />,
           title: "Educational Content Short & Long",
-          text: "Expand your content strategy with trust-building video alongside educational media.",
+          text: "Build trust and authority with educational content alongside testimonial media.",
         },
         {
           icon: <Users size={26} />,
           title: "Personal Brand Building Doctors",
-          text: "Help doctors build familiarity and authority through more visible human content.",
+          text: "Help doctors become more familiar, credible, and trusted through human-centered content.",
         },
       ]}
       faqs={[
         {
           q: "Why are video testimonials effective for clinics?",
-          a: "They help future patients see real stories and build trust in a more personal and emotionally engaging way.",
+          a: "They help patients see real stories, real outcomes, and real experiences in a way that feels more believable than text alone.",
         },
         {
           q: "Are video testimonials better than written reviews?",
-          a: "They are different but complementary, with video often creating stronger emotional connection and credibility.",
+          a: "They work best together, but video often creates stronger emotional trust and faster belief.",
         },
         {
           q: "Where can clinics use testimonial videos?",
-          a: "They can be used on websites, landing pages, social media, and marketing campaigns.",
+          a: "They can be used across websites, landing pages, social media, paid ads, and email campaigns.",
         },
         {
-          q: "Do they help conversion?",
-          a: "Yes, strong testimonials can help reduce hesitation and increase patient confidence in taking action.",
+          q: "Do video testimonials help conversions?",
+          a: "Yes. They reduce doubt, build trust faster, and help patients feel more confident taking action.",
         },
       ]}
-      finalCtaText="Ready to build trust with powerful patient stories?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText="Ready to Show Proof That Patients Believe?"
+      finalCtaButtonText="BOOK A STRATEGY CALL"
       finalCtaButtonLink="/contact"
     />
   );

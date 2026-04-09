@@ -13,64 +13,48 @@ export default function LeadNurturingFollowupsPage() {
   return (
     <ServicePageLayout
       category="HEALTH CLINIC GROWTH SYSTEM"
-      titleTop="Lead Nurturing "
-      titleMain="& Follow-Ups"
+      titleTop="Turn More Inquiries Into"
+      titleMain="Booked Patients — Automatically"
       titleBottom=""
-      intro={`Most patients don’t book on the first interaction.
+      intro={`Most patients don’t book immediately.
 
-We build smart follow-up systems that nurture leads, build trust, and convert them into appointments over time.`}
+We build automated follow-up systems that nurture, remind, and convert leads into appointments — without manual effort.`}
       primaryCtaText="BOOK A DEMO"
       primaryCtaLink="/contact"
-
       heroImage="/assets/img/inner-pages/lead-nurturing-follow-ups/001.webp"
       heroImageAlt="Lead nurturing follow-ups for clinics"
-
-      sectionTwoTitle="Most clinics lose leads after the first contact"
-      sectionTwoTextOne={`A patient shows interest… then disappears.
-
-No follow-up. No reminder. No second touch.`}
-      sectionTwoTextTwo={`This is where most clinics lose a huge percentage of potential patients.
-
-Patients get busy, forget, or hesitate — and without follow-up, they never come back.
-
-We implement a Lead Nurturing & Follow-Up System that keeps your clinic top-of-mind and guides patients toward booking.`}
+      sectionTwoTitle="Most clinics lose leads after first contact"
+      sectionTwoTextOne={`A patient shows interest… Then disappears. No follow-up. No reminder. No system.`}
+      sectionTwoTextTwo={`This is where the majority of revenue is lost. We install a Lead Conversion System that continues the conversation until the patient books.`}
       sectionTwoImage="/assets/img/inner-pages/lead-nurturing-follow-ups/002.webp"
       sectionTwoImageAlt="Clinic lead nurturing system"
-
       featureCards={[
         {
           icon: <Send size={28} />,
           title: "Automated Follow-Up Sequences",
-          text: "Send timely messages that re-engage and remind patients.",
+          text: "Consistent, structured patient communication.",
         },
         {
           icon: <MessageCircleHeart size={28} />,
-          title: "Multi-Channel Nurturing",
-          text: "Reach patients via SMS, WhatsApp, and email.",
+          title: "Multi-Channel Engagement",
+          text: "SMS, WhatsApp, email — all connected.",
         },
         {
           icon: <UserRoundPlus size={28} />,
-          title: "Smart Timing & Personalization",
-          text: "Deliver the right message at the right time to increase conversions.",
+          title: "Smart Timing & Personalisation",
+          text: "Right message, right time, higher conversion.",
         },
       ]}
-
-      valueTitle="Convert interest into action — even days later"
-      valueTextOne={`Not every patient books immediately — and that’s normal.
-
-The key is staying connected.
-
-Our system nurtures leads with helpful reminders, information, and gentle prompts that guide them back to booking.`}
+      valueTitle="Convert interest into action"
+      valueTextOne={`Follow-up isn’t optional — it’s where most conversions happen.`}
       valueResultItems={[
-        { text: "Higher conversion rates", tag: "More bookings", tagColor: "pink" },
-        { text: "More booked appointments", tag: "Better outcomes", tagColor: "green" },
-        { text: "Better use of existing leads", tag: "Less waste", tagColor: "blue" },
+        { text: "More bookings from existing leads", tagColor: "pink" },
+        { text: "Higher conversion rates", tagColor: "green" },
+        { text: "Better ROI from marketing", tagColor: "blue" },
       ]}
       valueImage="/assets/img/inner-pages/lead-nurturing-follow-ups/003.webp"
       valueImageAlt="Lead nurturing for clinic growth"
-
-      consultationText="What happens to your leads after the first contact?"
-
+      consultationText="What happens after a patient shows interest?"
       buildTitle="Built for clinics that want to maximise every lead"
       buildItems={[
         "Clinics getting inquiries but low bookings",
@@ -82,9 +66,7 @@ Our system nurtures leads with helpful reminders, information, and gentle prompt
       ]}
       buildImage="/assets/img/inner-pages/lead-nurturing-follow-ups/004.webp"
       buildImageAlt="Lead follow-up workflow build"
-
       quoteText="Most conversions happen in the follow-up — don’t miss them."
-
       relatedServices={[
         {
           icon: <RefreshCcw size={26} />,
@@ -102,7 +84,6 @@ Our system nurtures leads with helpful reminders, information, and gentle prompt
           text: "Recover lost leads and start conversations.",
         },
       ]}
-
       faqs={[
         {
           q: "How many follow-ups are included?",
@@ -129,11 +110,8 @@ Our system nurtures leads with helpful reminders, information, and gentle prompt
           a: "Usually 1–2 weeks.",
         },
       ]}
-
-      finalCtaText={`Ready to Convert More Leads Without More Traffic?
-
-Make the most of every inquiry with a system that nurtures, engages, and converts patients automatically.`}
-      finalCtaButtonText="Get Free Conversion Audit"
+      finalCtaText={`Ready to Convert More Leads Without More Traffic?`}
+      finalCtaButtonText="Book a Demo"
       finalCtaButtonLink="/contact"
       processComponent={<ProcessSectionServicesFour />}
     />

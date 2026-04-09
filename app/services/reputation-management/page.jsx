@@ -13,76 +13,62 @@ export default function ReputationManagementPage() {
   return (
     <ServicePageLayout
       category="HEALTH CLINIC GROWTH SYSTEM"
-      titleTop="Reputation"
-      titleMain="Management"
+      titleTop="Turn Your Online Reputation"
+      titleMain="Into a Patient Magnet"
       titleBottom=""
-      intro={`Your reputation is your strongest asset.
+      intro={`Patients trust what others say about you more than what you say about yourself.
 
-We help you monitor, manage, and improve your online presence so patients always see your clinic in the best light.`}
-      primaryCtaText="GET A FREE REPUTATION AUDIT"
+We help you control, improve, and leverage your reputation to drive more bookings.`}
+      primaryCtaText="GET YOUR FREE REPUTATION AUDIT"
       primaryCtaLink="/contact"
-
       heroImage="/assets/img/inner-pages/reputation-management/001.webp"
       heroImageAlt="Reputation management for clinics"
+      sectionTwoTitle="Your reputation is influencing decisions — whether you manage it or not."
+      sectionTwoTextOne={`Before booking, patients check Google reviews, ratings, and responses.
 
-      sectionTwoTitle="One bad review can cost you multiple patients."
-      sectionTwoTextOne={`Patients read reviews before they book.
-
-A few negative experiences — or no response — can damage trust and push patients toward competitors.`}
-      sectionTwoTextTwo={`Most clinics don’t actively manage their reputation, leaving their image to chance.
-
-We build your Reputation Management System — helping you monitor feedback, respond professionally, and maintain a strong, trustworthy presence.`}
+If they see inconsistency, negativity, or silence — they choose someone else.`}
+      sectionTwoTextTwo={`We build your Reputation Control System.`}
       sectionTwoImage="/assets/img/inner-pages/reputation-management/002.webp"
       sectionTwoImageAlt="Online reputation strategy for clinics"
-
       featureCards={[
         {
           icon: <Star size={28} />,
-          title: "Review Monitoring System",
-          text: "Track and manage reviews across platforms in one place.",
+          title: "Centralised Review Monitoring",
+          text: "Track everything in one place.",
         },
         {
           icon: <Shield size={28} />,
-          title: "Professional Response Strategy",
-          text: "Respond to both positive and negative feedback effectively.",
+          title: "Strategic Response Framework",
+          text: "Turn every review into a trust signal.",
         },
         {
           icon: <UserRoundSearch size={28} />,
-          title: "Reputation Improvement Plan",
-          text: "Turn feedback into opportunities to strengthen trust.",
+          title: "Reputation Growth Strategy",
+          text: "Increase positive sentiment over time.",
         },
       ]}
-
-      valueTitle="Reputation Management"
-      valueTextOne={`A strong reputation doesn’t just protect your clinic — it drives growth.
-
-Patients trust clinics that actively engage, respond, and show care.
-
-We help you create a consistent, positive presence that influences patient decisions.`}
+      valueTitle="Trust drives bookings"
+      valueTextOne={`A strong reputation doesn’t just protect your brand — it multiplies conversions.`}
       valueResultItems={[
-        { text: "Higher trust and credibility", tag: "Stronger perception", tagColor: "pink" },
-        { text: "Better conversion rates", tag: "More bookings", tagColor: "green" },
-        { text: "Stronger patient loyalty", tag: "Long-term growth", tagColor: "blue" },
+        { text: "Higher patient trust", tagColor: "pink" },
+        { text: "Better first impressions", tagColor: "green" },
+        { text: "Increased booking rates", tagColor: "blue" },
       ]}
       valueImage="/assets/img/inner-pages/reputation-management/003.webp"
       valueImageAlt="Clinic review and reputation growth"
-
-      consultationText="What do patients see when they search your clinic?"
-
-      buildTitle="Built for clinics that care about their image"
+      consultationText="If a new patient Googled you today — would they feel confident booking?"
+      buildTitle="Built for clinics serious about reputation"
       buildItems={[
-        "Clinics with negative or mixed reviews",
-        "Clinics not responding to feedback",
-        "Clinics in competitive markets",
-        "Premium clinics protecting brand image",
-        "Clinics scaling and increasing visibility",
-        "Clinics wanting long-term trust",
+        "Clinics with inconsistent reviews",
+        "Clinics with low online ratings",
+        "Clinics not responding to patient feedback",
+        "Clinics wanting stronger credibility",
+        "Clinics focused on brand trust",
+        "Clinics wanting long-term patient confidence",
       ]}
       buildImage="/assets/img/inner-pages/reputation-management/004.webp"
       buildImageAlt="Clinic reputation improvement system"
-
-      quoteText="Your reputation is always working — make sure it’s working for you."
-
+      quoteText="Your reputation is either growing your clinic — or limiting it."
       relatedServices={[
         {
           icon: <BadgeCheck size={26} />,
@@ -100,7 +86,6 @@ We help you create a consistent, positive presence that influences patient decis
           text: "Improve how your clinic appears in search results.",
         },
       ]}
-
       faqs={[
         {
           q: "Can you remove negative reviews?",
@@ -127,10 +112,9 @@ We help you create a consistent, positive presence that influences patient decis
           a: "It can be ongoing to maintain and improve your reputation.",
         },
       ]}
+      finalCtaText={`Ready to Build a Reputation Patients Trust Instantly?
 
-      finalCtaText={`Ready to Take Control of Your Clinic’s Reputation?
-
-Build trust, handle feedback professionally, and create a reputation that attracts more patients.`}
+Take control of your online presence and turn it into a growth asset.`}
       finalCtaButtonText="Get Free Reputation Audit"
       finalCtaButtonLink="/contact"
       processComponent={<ProcessSectionServicesFive />}

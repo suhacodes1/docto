@@ -15,14 +15,14 @@ export default function ConversionFocusedWebsitePage() {
       category="HEALTH CLINIC GROWTH SYSTEM"
       titleTop="Turn Your Website Into a"
       titleMain="Predictable Patient Booking System"
-      intro="We help healthcare clinics generate consistent patient enquiries through high-converting websites, smart automation, and data-driven optimisation. This isn’t just a website, it’s the foundation of your clinic’s growth engine."
+      intro="We help healthcare clinics generate consistent patient enquiries through high-converting websites, smart automation, and data-driven optimisation. This isn't just a website, it's the foundation of your clinic's growth engine."
       primaryCtaText="Get Free Website Audit"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/conversion-focused-website/001.webp"
       heroImageAlt="Clinic website hero"
-      sectionTwoTitle="Most Clinic Websites Don’t Bring Patients, They Just Sit There"
-      sectionTwoTextOne="You may already have a website. But if it’s not consistently bringing in patient enquiries, it’s not doing its job."
-      sectionTwoTextTwo="The issue isn’t traffic alone — it’s the lack of a structured system designed to convert visitors into booked patients."
+      sectionTwoTitle="Most Clinic Websites Don't Bring Patients, They Just Sit There"
+      sectionTwoTextOne="You may already have a website. But if it's not consistently bringing in patient enquiries, it's not doing its job."
+      sectionTwoTextTwo="The issue isn't traffic alone — it's the lack of a structured system designed to convert visitors into booked patients."
       sectionTwoImage="/assets/img/inner-pages/conversion-focused-website/002.webp"
       sectionTwoImageAlt="Clinic website strategy"
       featureCards={[
@@ -43,19 +43,15 @@ export default function ConversionFocusedWebsitePage() {
         },
       ]}
       valueTitle="Turn clicks into real patient bookings"
-      valueTextOne={`A website should do one thing well: convert.
-
-We combine design, psychology, and strategy to ensure your visitors don’t just browse — they take action.`}
+      valueTextOne={`Your website directly impacts:`}
       valueResultItems={[
         {
-          text: "Higher booking rates",
-          tag: "More patients",
+          text: "How many visitors become enquiries",
           tagColor: "pink",
         },
-        { text: "Lower cost per lead", tag: "Better ROI", tagColor: "green" },
+        { text: "How many enquiries become bookings ", tagColor: "green" },
         {
-          text: "Better patient experience",
-          tag: "Higher satisfaction",
+          text: "How much revenue your marketing generates",
           tagColor: "blue",
         },
       ]}
@@ -94,7 +90,7 @@ We combine design, psychology, and strategy to ensure your visitors don’t just
       faqs={[
         {
           q: "How is this different from a normal website?",
-          a: "It’s built specifically to convert visitors into patients — not just to look good.",
+          a: "It's built specifically to convert visitors into patients — not just to look good.",
         },
         {
           q: "How long does it take to build?",
@@ -102,7 +98,7 @@ We combine design, psychology, and strategy to ensure your visitors don’t just
         },
         {
           q: "Will it work on mobile devices?",
-          a: "Yes — it’s fully optimized for mobile-first users.",
+          a: "Yes — it's fully optimized for mobile-first users.",
         },
         {
           q: "Can you redesign my existing website?",
@@ -122,7 +118,13 @@ We combine design, psychology, and strategy to ensure your visitors don’t just
 Stop losing patients due to poor design and weak messaging. Build a website that works for your clinic — 24/7."
       finalCtaButtonText="Get Free Website Audit"
       finalCtaButtonLink="/contact"
-      processComponent={<ProcessSectionServicesTwo />}
+      processComponent={
+  <ProcessSectionServicesTwo
+    extraText="This ensures every dollar spent on ads or SEO generates maximum return."
+  />
+}
+      showGrowthSystem={true}
+      growthSystemHighlightIndex={1}
     />
   );
 }

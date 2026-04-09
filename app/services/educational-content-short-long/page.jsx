@@ -11,43 +11,49 @@ import {
 export default function EducationalContentShortLongPage() {
   return (
     <ServicePageLayout
-      category="Authority Builder"
-      titleTop="Educational Content"
-      titleMain="Short & Long"
-      titleBottom="for Clinics"
-      intro="Build trust and authority with educational content that helps patients understand your services across both quick-consume and deeper-form formats."
-      primaryCtaText="Book a Consultation"
+      category="AUTHORITY BUILDER SYSTEM"
+      titleTop="Become the Clinic Patients Trust"
+      titleMain="Before They Even Contact You"
+      titleBottom=""
+      intro={`Patients don’t book immediately — they research first.
+
+We build a content system that educates, builds trust, and positions your clinic as the obvious choice.`}
+      primaryCtaText="BOOK A CONTENT STRATEGY CALL"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/educational-content/001.webp"
       heroImageAlt="Educational content for clinics"
-      sectionTwoTitle="Why Educational Content Matters"
-      sectionTwoTextOne="Patients often need information before they feel ready to book. Educational content helps clinics answer questions, reduce uncertainty, and build confidence earlier in the decision-making journey."
-      sectionTwoTextTwo="By using both short-form and long-form content, clinics can meet patients where they are, whether they want a quick overview or a deeper explanation."
+      sectionTwoTitle="The clinic that educates — wins"
+      sectionTwoTextOne={`Patients are searching: symptoms, treatments, and options. If you’re not answering those questions, your competitors are building trust before you even enter the conversation.`}
+      sectionTwoTextTwo={`We build your Authority Content Engine.`}
       sectionTwoImage="/assets/img/inner-pages/educational-content/002.webp"
       sectionTwoImageAlt="Educational content strategy for clinics"
       featureCards={[
         {
           icon: <PlaySquare size={28} />,
-          title: "Short-Form Engagement",
-          text: "Capture attention with clear, simple educational content that is easy to consume.",
+          title: "Short-Form Content Engine",
+          text: "Reels, Shorts, TikTok — capture attention at scale.",
         },
         {
           icon: <ScrollText size={28} />,
-          title: "Long-Form Authority",
-          text: "Build deeper trust with more detailed content that answers important patient questions.",
+          title: "SEO Content System",
+          text: "Blogs that rank and attract high-intent patients.",
         },
         {
           icon: <Sparkles size={28} />,
-          title: "Stronger Patient Confidence",
-          text: "Help people feel more informed and comfortable before they enquire or book.",
+          title: "Trust-Building Education",
+          text: "Answer questions before patients even ask.",
         },
       ]}
-      valueTitle="How Educational Content Supports Growth"
-      valueTextOne="Educational content helps clinics build authority by showing expertise in a way that is genuinely useful to potential patients."
-      valueTextTwo="It also supports SEO, social content, practitioner branding, and conversion by creating trust long before the first appointment."
+      valueTitle="Turn attention into trust — and trust into bookings"
+      valueTextOne={`Content is not just marketing — it’s pre-selling your expertise.`}
+      valueResultItems={[
+        { text: "More inbound inquiries", tagColor: "pink" },
+        { text: "Higher trust before first contact", tagColor: "green" },
+        { text: "Better conversion rates", tagColor: "blue" },
+      ]}
       valueImage="/assets/img/inner-pages/educational-content/003.webp"
       valueImageAlt="Clinic educational content growth"
-      consultationText="Want to build trust through better educational content?"
+      consultationText="Are you the clinic educating your market — or watching others do it?"
       buildTitle="What We Help Build"
       buildItems={[
         "Short-form educational content",
@@ -82,23 +88,23 @@ export default function EducationalContentShortLongPage() {
       faqs={[
         {
           q: "What counts as educational content for clinics?",
-          a: "It includes content that helps patients understand treatments, processes, outcomes, and common questions before booking.",
+          a: "It includes content that helps patients understand symptoms, treatments, options, processes, outcomes, and common questions before booking.",
         },
         {
           q: "Why use both short and long content?",
-          a: "Short content helps grab attention quickly, while long content supports deeper trust and understanding.",
+          a: "Short content helps capture attention quickly, while long content builds deeper trust and supports search visibility.",
         },
         {
           q: "Can educational content help conversion?",
-          a: "Yes, informed patients often feel more confident and prepared to take the next step.",
+          a: "Yes — informed patients often feel more confident and prepared to take the next step.",
         },
         {
           q: "Does this also support SEO and social media?",
-          a: "Yes, educational content can strengthen both search visibility and ongoing social engagement.",
+          a: "Yes — educational content can strengthen both search visibility and ongoing social engagement.",
         },
       ]}
-      finalCtaText="Ready to grow your authority with educational content?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText={`Ready to Attract Patients Without Chasing Them?`}
+      finalCtaButtonText="Book a Content Strategy Call"
       finalCtaButtonLink="/contact"
     />
   );

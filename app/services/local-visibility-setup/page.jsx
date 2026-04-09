@@ -13,7 +13,7 @@ export default function LocalVisibilitySetupPage() {
   return (
     <ServicePageLayout
       category="HEALTH CLINIC GROWTH SYSTEM"
-    titleTop="Local Visibility"
+  titleTop="Local Visibility"
       titleMain="Setup"
       intro={`When patients search for a clinic, will they find you — or your competitors?
 
@@ -53,7 +53,8 @@ We build your Local Visibility System — ensuring your clinic appears in local 
       ]}
 
       valueTitle="Turn local searches into patient bookings"
-valueTextOne={`When your clinic appears at the top — with strong reviews and clear information — patients are far more likely to choose you.`}
+valueTextOne={`Local search traffic converts at the highest rate — meaning better patients, lower acquisition costs, and stronger ROI.
+When your clinic appears at the top — with strong reviews and clear information — patients are far more likely to choose you.`}
 
 valueResultItems={[
   { text: "Stands out", tag: "More attention", tagColor: "pink" },

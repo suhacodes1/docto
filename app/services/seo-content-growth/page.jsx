@@ -7,77 +7,158 @@ import {
   TrendingUp,
   Users,
   Waypoints,
+  Sprout,
 } from "lucide-react";
 
 export default function SeoContentGrowthPage() {
   return (
     <ServicePageLayout
       category="HEALTH CLINIC GROWTH SYSTEM"
-      titleTop="SEO"
-      titleMain="& Content Growth"
-      titleBottom=""
-      intro={`Build a steady flow of patients through search and content.
-
-We help your clinic rank higher, attract the right audience, and grow organically over time.`}
-      primaryCtaText="GET A FREE SEO AUDIT"
+      titleTop="Build a Consistent Flow of Patients —"
+      titleMain="Without Paying"
+      titleBottom="Per Click"
+      intro="Stop relying only on ads. We build a long-term organic growth system that brings in high-intent patients every month."
+      primaryCtaText="Get Your Free SEO Audit"
       primaryCtaLink="/contact"
 
       heroImage="/assets/img/inner-pages/seo-content-growth/001.webp"
       heroImageAlt="SEO content growth for clinics"
 
-      sectionTwoTitle="Patients are searching every day. Are they finding you?"
-      sectionTwoTextOne={`Most clinics rely only on ads or referrals.
+      sectionTwoTitle="If you're not showing up, you're losing patients daily."
+      sectionTwoTextOne={`Patients are actively searching for services you offer — but they choose from the top results, not page two.
 
-But when patients search on Google, they choose from the top results — and many clinics don’t show up there.`}
-      sectionTwoTextTwo={`No rankings. No visibility. No traffic.
-
-We build your SEO & Content Growth System — helping your clinic rank for high-intent searches and attract patients consistently without ongoing ad spend.`}
+If your clinic isn't visible, you don't exist in their decision process.`}
+      sectionTwoTextTwo="We build your Organic Patient Acquisition Engine — a long-term system that brings patients to you consistently, without spending on every click."
       sectionTwoImage="/assets/img/inner-pages/seo-content-growth/002.webp"
       sectionTwoImageAlt="SEO content strategy for clinics"
+
+      showGrowthSystem={true}
+      growthSystemHighlightIndex={0}
 
       featureCards={[
         {
           icon: <Search size={28} />,
-          title: "Local & Organic SEO",
-          text: "Rank higher for “near me” and service-based searches in your area.",
+          title: "High-Intent SEO Strategy",
+          text: "Rank for searches that lead to bookings — not just traffic.",
         },
         {
           icon: <BookOpenText size={28} />,
-          title: "Content That Attracts Patients",
-          text: "Blogs, pages, and resources designed to answer patient questions and build trust.",
+          title: "Patient-Focused Content",
+          text: "Content that builds trust and answers real patient questions.",
         },
         {
           icon: <TrendingUp size={28} />,
-          title: "Long-Term Growth Strategy",
-          text: "Build a sustainable system that keeps bringing in traffic over time.",
+          title: "Compounding Growth System",
+          text: "Results that grow month after month without extra ad spend.",
         },
       ]}
 
-      valueTitle="Turn searches into patient bookings"
-      valueTextOne={`SEO isn’t just about traffic — it’s about the right traffic.
-
-We focus on high-intent keywords and patient-focused content that not only brings visitors… but converts them into bookings.`}
+      valueTitle="Turn Google into your most reliable referral source"
+      valueTextOne="This isn't about vanity rankings. It's about owning your category in your local market."
+      valueResultLabel="The result:"
       valueResultItems={[
-        { text: "Consistent organic traffic", tag: "Steady growth", tagColor: "pink" },
-        { text: "Lower reliance on ads", tag: "Better ROI", tagColor: "green" },
-        { text: "High-quality patient inquiries", tag: "Better leads", tagColor: "blue" },
+        { text: "Consistent inbound traffic", tag: "Steady growth", tagColor: "pink" },
+        { text: "Higher quality leads", tag: "Better patients", tagColor: "green" },
+        { text: "Reduced ad dependency", tag: "Lower costs", tagColor: "blue" },
       ]}
       valueImage="/assets/img/inner-pages/seo-content-growth/003.webp"
       valueImageAlt="Clinic SEO and content growth"
 
-      consultationText="Are patients finding your clinic on Google?"
+      consultationText="Are patients choosing your competitors on Google?"
 
       buildTitle="Built for clinics focused on long-term growth"
       buildItems={[
         "Clinics not ranking on Google",
-        "Clinics relying heavily on ads",
+        "Clinics relying heavily on paid ads",
         "Clinics in competitive local markets",
-        "Clinics wanting consistent traffic",
+        "Clinics wanting consistent monthly traffic",
         "Clinics building authority in their niche",
-        "Clinics investing in long-term growth",
+        "Clinics investing in compounding growth",
       ]}
       buildImage="/assets/img/inner-pages/seo-content-growth/004.webp"
       buildImageAlt="SEO content planning for clinics"
+
+      processComponent={
+        <>
+          <ProcessSectionServicesThree />
+
+          {/* Mid CTA — consistent card style across all service pages */}
+          <div style={{ background: "#fff", padding: "3rem 0" }}>
+            <div
+              className="container"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1.5rem",
+                maxWidth: "780px",
+                padding: "2rem 2.5rem",
+                border: "0.5px solid rgba(229,38,74,0.2)",
+                borderRadius: "16px",
+                background: "linear-gradient(135deg, #fff9fb 0%, #fff 100%)",
+                boxShadow: "0 4px 32px rgba(229,38,74,0.06)",
+              }}
+              data-aos="fade-up"
+            >
+              <div
+                style={{
+                  width: "52px",
+                  height: "52px",
+                  borderRadius: "50%",
+                  background: "#fbeaf0",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexShrink: 0,
+                  color: "#e5264a",
+                }}
+              >
+                <Sprout size={22} />
+              </div>
+              <div style={{ flex: 1 }}>
+                <p
+                  style={{
+                    fontSize: "0.7rem",
+                    fontWeight: 600,
+                    letterSpacing: "0.1em",
+                    color: "#e5264a",
+                    textTransform: "uppercase",
+                    margin: "0 0 6px",
+                  }}
+                >
+                  Keep in mind
+                </p>
+                <p
+                  style={{
+                    fontSize: "1.05rem",
+                    fontWeight: 600,
+                    color: "#243847",
+                    margin: "0 0 1rem",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  The best time to start SEO was 6 months ago. The next best time is now.
+                </p>
+                <a
+                  href="/contact"
+                  style={{
+                    display: "inline-block",
+                    padding: "10px 24px",
+                    background: "#e5264a",
+                    color: "#fff",
+                    borderRadius: "999px",
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    letterSpacing: "0.04em",
+                  }}
+                >
+                  Get Your Audit
+                </a>
+              </div>
+            </div>
+          </div>
+        </>
+      }
 
       quoteText="Build a growth system that works — even when ads are off."
 
@@ -122,16 +203,13 @@ We focus on high-intent keywords and patient-focused content that not only bring
         },
         {
           q: "Do I need to keep investing long-term?",
-          a: "Yes — SEO is a long-term strategy with compounding results.",
+          a: "Yes — SEO is a long-term strategy with compounding results over time.",
         },
       ]}
 
-      finalCtaText={`Ready to Grow Your Clinic Organically?
-
-Attract patients consistently through search and content — without relying only on ads.`}
+      finalCtaText="Ready to Build Long-Term Patient Growth? Create a system that brings patients in — every single month."
       finalCtaButtonText="Get Free SEO Audit"
       finalCtaButtonLink="/contact"
-      processComponent={<ProcessSectionServicesThree />}
     />
   );
 }

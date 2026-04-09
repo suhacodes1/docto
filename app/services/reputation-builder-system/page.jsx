@@ -13,8 +13,8 @@ export default function ReputationBuilderSystemPage() {
   return (
     <ServicePageLayout
       category="HEALTH CLINIC GROWTH SYSTEM"
-      titleTop="Reputation Builder"
-      titleMain="System"
+      titleTop="Build a Reputation That"
+      titleMain=" Drives More Patient Bookings"
       titleBottom=""
       intro={`Patients trust reviews before they trust clinics.
 

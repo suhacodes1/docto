@@ -1,3 +1,4 @@
+
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 import ProcessSectionServicesSix from "@/app/components/ProcessSectionServicesSix";
 import {
@@ -8,79 +9,84 @@ import {
   Target,
   TrendingUp,
 } from "lucide-react";
-
+ 
 export default function ConversionTrackingAnalyticsPage() {
   return (
     <ServicePageLayout
       category="HEALTH CLINIC GROWTH SYSTEM"
-      titleTop="Conversion Tracking "
-      titleMain="& Analytics"
+      titleTop="Know Exactly What's Driving"
+      titleMain="Your Patient Bookings"
       titleBottom=""
-      intro={`Stop guessing where your patients come from.
-
-We set up advanced tracking systems so you can see exactly what’s working — and scale it with confidence.`}
-      primaryCtaText="GET A FREE TRACKING AUDIT"
+      intro="Stop relying on guesswork. We build a complete tracking system that shows you exactly where your patients come from — so every decision you make is backed by real data."
+      primaryCtaText="Get Your Free Tracking Audit"
       primaryCtaLink="/contact"
-
+ 
       heroImage="/assets/img/inner-pages/conversion-tracking-analytics/001.webp"
       heroImageAlt="Conversion tracking and analytics for clinics"
-
-      sectionTwoTitle="If you can’t track it, you can’t grow it."
-      sectionTwoTextOne={`Most clinics don’t know what’s actually driving results.
-
-Ads, website, WhatsApp, calls — all disconnected.`}
-      sectionTwoTextTwo={`This leads to wasted budget, poor decisions, and slow growth.
-
-We build your Conversion Tracking & Analytics System — giving you full visibility into your patient journey, from first click to confirmed booking.`}
+ 
+      sectionTwoTitle="Most clinics are flying blind."
+      sectionTwoTextOne={`You're investing in ads, SEO, and your website… but you don't truly know what's working.
+ 
+Leads come in — but from where? Calls happen — but from which campaign? Bookings increase — but why?`}
+      sectionTwoTextTwo="Without clear tracking, growth becomes inconsistent and expensive. We implement a Conversion Intelligence System that connects every touchpoint — from first click to confirmed booking."
       sectionTwoImage="/assets/img/inner-pages/conversion-tracking-analytics/002.webp"
       sectionTwoImageAlt="Clinic analytics and tracking setup"
-
+ 
+      showGrowthSystem={true}
+      growthSystemHighlightIndex={0}
+ 
       featureCards={[
         {
           icon: <Target size={28} />,
-          title: "Accurate Conversion Tracking",
-          text: "Track every lead, call, and booking across all channels.",
+          title: "End-to-End Tracking",
+          text: "Track every patient interaction — clicks, calls, forms, and bookings.",
         },
         {
           icon: <MousePointerClick size={28} />,
-          title: "Multi-Channel Attribution",
-          text: "Know exactly which platform is bringing in real patients.",
+          title: "True Source Attribution",
+          text: "Know exactly which channel, campaign, and keyword drives results.",
         },
         {
           icon: <ScanSearch size={28} />,
-          title: "Data-Driven Insights",
-          text: "Make smarter decisions based on real performance data.",
+          title: "Decision-Ready Data",
+          text: "Clear insights that guide where to invest, cut, and scale.",
         },
       ]}
-
-      valueTitle="Turn data into predictable growth"
-      valueTextOne={`Without proper tracking, you’re making decisions blindly.
-
-We connect all your data points — ads, website, CRM, and booking systems — so you can clearly see what’s driving results.`}
+ 
+      valueTitle="Turn marketing into a predictable system"
+      valueTextOne="When your data is clear, your growth becomes controllable. We unify your marketing, website, CRM, and booking systems into one tracking ecosystem."
+      valueResultLabel="The result:"
       valueResultItems={[
-        { text: "Better ROI on marketing", tag: "Higher returns", tagColor: "pink" },
-        { text: "Smarter budget allocation", tag: "Less waste", tagColor: "green" },
-        { text: "Confident scaling decisions", tag: "Predictable growth", tagColor: "blue" },
+        { text: "You stop wasting budget", tag: "Less waste", tagColor: "pink" },
+        { text: "You double down on what works", tag: "Better ROI", tagColor: "green" },
+        { text: "You scale with confidence", tag: "Predictable growth", tagColor: "blue" },
       ]}
       valueImage="/assets/img/inner-pages/conversion-tracking-analytics/003.webp"
       valueImageAlt="Clinic performance analytics dashboard"
-
-      consultationText="Do you know exactly where your patients are coming from?"
-
+ 
+      consultationText="If you paused your marketing today — would you know what actually worked?"
+ 
       buildTitle="Built for clinics that want clarity and control"
       buildItems={[
-        "Clinics running ads without clear ROI",
-        "Clinics using multiple marketing channels",
-        "Clinics struggling to track conversions",
-        "Clinics scaling ad budgets",
-        "Data-driven clinic owners",
-        "Clinics wanting better decision-making",
+        "Clinics spending on ads without clear ROI",
+        "Multi-channel marketing without visibility",
+        "Scaling clinics needing accurate data",
+        "Owners making decisions based on assumptions",
+        "Clinics preparing to grow aggressively",
+        "Teams lacking performance clarity",
       ]}
       buildImage="/assets/img/inner-pages/conversion-tracking-analytics/004.webp"
       buildImageAlt="Analytics implementation for clinics"
-
-      quoteText="Guessing costs money. Data makes money."
-
+ 
+      processComponent={
+        <>
+          <ProcessSectionServicesSix />
+ 
+        </>
+      }
+ 
+      quoteText=" The difference between guessing and scaling is data."
+ 
       relatedServices={[
         {
           icon: <TrendingUp size={26} />,
@@ -98,7 +104,7 @@ We connect all your data points — ads, website, CRM, and booking systems — s
           text: "Scale campaigns based on real data insights.",
         },
       ]}
-
+ 
       faqs={[
         {
           q: "What does conversion tracking include?",
@@ -125,13 +131,10 @@ We connect all your data points — ads, website, CRM, and booking systems — s
           a: "Typically 1–2 weeks depending on complexity.",
         },
       ]}
-
-      finalCtaText={`Ready to Make Smarter Growth Decisions?
-
-Get full clarity on your marketing performance and scale your clinic with confidence.`}
+ 
+      finalCtaText="Ready to Turn Data Into Growth? Get full clarity on what's working — and scale your clinic with confidence."
       finalCtaButtonText="Get Free Tracking Audit"
       finalCtaButtonLink="/contact"
-      processComponent={<ProcessSectionServicesSix />}
     />
   );
 }

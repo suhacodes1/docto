@@ -55,7 +55,8 @@ We implement Online Booking Systems that remove friction and turn interest into 
       ]}
 
       valueTitle="Make booking effortless — increase conversions instantly"
-      valueTextOne={`The easier it is to book, the more patients you get.
+      valueTextOne={`Every extra step in your booking process reduces conversions.
+ A frictionless system means more confirmed appointments from the same traffic. Clinics often lose 20–40% of potential bookings due to friction in scheduling.The easier it is to book, the more patients you get.
 
 We design booking experiences that are fast, clear, and frictionless — so patients can go from interest to confirmed appointment in just a few clicks.`}
  valueResultItems={[

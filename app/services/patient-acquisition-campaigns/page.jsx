@@ -53,7 +53,8 @@ We build Patient Acquisition Campaigns designed specifically for clinics — tar
       ]}
 
       valueTitle="Turn ad spend into real patient bookings"
-      valueTextOne={`Clicks don’t grow clinics — patients do.
+      valueTextOne={`Clicks don’t grow clinics — patients do. We focus on cost per patient, not cost per click. Most agencies optimise for traffic.
+ We optimise for booked appointments and ROI.
 
 We design campaigns that attract the right audience and guide them into your system — where they convert into actual appointments.`}
       valueResultItems={[

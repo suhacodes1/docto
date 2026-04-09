@@ -12,43 +12,49 @@ import {
 export default function NoShowReductionWorkflowsPage() {
   return (
     <ServicePageLayout
-      category="PatientFlow AI"
-      titleTop="No-Show Reduction"
-      titleMain="Workflows"
-      titleBottom="for Clinics"
-      intro="Reduce missed appointments with better reminder workflows, clearer communication, and patient follow-up systems that improve attendance."
-      primaryCtaText="Book a Consultation"
+      category="PATIENTFLOW AI SYSTEM"
+      titleTop="Fill Your Calendar —"
+      titleMain="And Keep It Full"
+      titleBottom=""
+      intro={`A booking means nothing if the patient doesn’t show up.
+
+We install automated workflows that ensure patients confirm, remember, and attend their appointments.`}
+      primaryCtaText="BOOK A DEMO"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/no-show-reduction-workflows/2.webp"
       heroImageAlt="No-show reduction workflows for clinics"
-      sectionTwoTitle="Why No-Show Reduction Matters"
-      sectionTwoTextOne="Missed appointments can disrupt clinic operations, reduce revenue opportunities, and create inefficiencies in your schedule."
-      sectionTwoTextTwo="No-show reduction workflows help patients stay informed, reminded, and prepared so attendance becomes more reliable and easier to manage."
+      sectionTwoTitle="No-shows are predictable — and preventable"
+      sectionTwoTextOne={`Patients forget. Plans change. Reminders don’t happen. And your schedule suffers.`}
+      sectionTwoTextTwo={`This isn’t unavoidable — it’s a system gap. We install an Attendance Optimisation System.`}
       sectionTwoImage="/assets/img/inner-pages/no-show-reduction-workflows/3.webp"
       sectionTwoImageAlt="Clinic no-show reduction workflow"
       featureCards={[
         {
           icon: <BellRing size={28} />,
-          title: "Better Appointment Reminders",
-          text: "Keep patients informed with timely reminders before their scheduled visit.",
+          title: "Smart Reminder Sequences",
+          text: "Timed reminders across channels.",
         },
         {
           icon: <MessageSquareMore size={28} />,
-          title: "Clearer Communication",
-          text: "Reduce confusion around appointment details, timing, and preparation steps.",
+          title: "Confirmation Workflows",
+          text: "Lock in commitment before appointments.",
         },
         {
           icon: <CalendarCheck2 size={28} />,
-          title: "Higher Attendance Rates",
-          text: "Support stronger patient follow-through with structured reminder systems.",
+          title: "Reschedule & Gap Filling",
+          text: "Replace cancellations quickly.",
         },
       ]}
-      valueTitle="How No-Show Workflows Support Growth"
-      valueTextOne="Reducing no-shows helps clinics protect revenue, improve scheduling efficiency, and create a more dependable patient experience."
-      valueTextTwo="It also frees up staff from manual reminder tasks and makes attendance improvement more consistent over time."
+      valueTitle="Turn bookings into actual revenue"
+      valueTextOne={`Your growth depends on completed appointments — not just bookings.`}
+      valueResultItems={[
+        { text: "Fewer no-shows", tagColor: "pink" },
+        { text: "Higher utilisation", tagColor: "green" },
+        { text: "More revenue per lead", tagColor: "blue" },
+      ]}
       valueImage="/assets/img/inner-pages/no-show-reduction-workflows/4.webp"
       valueImageAlt="Appointment attendance workflow for clinics"
-      consultationText="Want to reduce missed appointments and improve clinic efficiency?"
+      consultationText="How many appointments didn’t show up this week?"
       buildTitle="What We Help Build"
       buildItems={[
         "Appointment reminder workflows",
@@ -83,23 +89,23 @@ export default function NoShowReductionWorkflowsPage() {
       faqs={[
         {
           q: "What are no-show reduction workflows?",
-          a: "They are communication and reminder systems designed to help patients attend their scheduled appointments more consistently.",
+          a: "They are automated reminder and confirmation systems designed to help more patients attend their booked appointments.",
         },
         {
           q: "Why do patients miss appointments?",
-          a: "Common reasons include forgetting, confusion about timing, poor communication, or low commitment after booking.",
+          a: "Common reasons include forgetting, schedule changes, lack of reminders, or low commitment after booking.",
         },
         {
-          q: "Can reminders really reduce no-shows?",
-          a: "Yes, clear and timely reminders often help improve attendance and reduce avoidable missed appointments.",
+          q: "Can this really reduce no-shows?",
+          a: "Yes — better reminders, confirmations, and rescheduling workflows can significantly reduce avoidable missed appointments.",
         },
         {
-          q: "Is this useful for busy clinics?",
-          a: "Yes, it can be especially valuable for busy clinics that want better schedule reliability and less manual follow-up work.",
+          q: "Does this help with cancellations too?",
+          a: "Yes — reschedule and gap-filling workflows can help replace cancellations faster and protect your calendar.",
         },
       ]}
-      finalCtaText="Ready to reduce no-shows and improve patient attendance?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText={`Ready to Eliminate No-Shows as a Growth Problem?`}
+      finalCtaButtonText="BOOK A DEMO"
       finalCtaButtonLink="/contact"
       processComponent={<ProcessSectionServicesFour />}
     />

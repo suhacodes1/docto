@@ -12,43 +12,49 @@ import {
 export default function ReviewGenerationCampaignsPage() {
   return (
     <ServicePageLayout
-      category="Authority Builder"
-      titleTop="Review Generation"
-      titleMain="Campaigns"
-      titleBottom="for Clinics"
-      intro="Generate more positive patient reviews with structured campaigns that strengthen trust, credibility, and online visibility."
-      primaryCtaText="Book a Consultation"
+      category="AUTHORITY BUILDER SYSTEM"
+      titleTop="Turn Patient Satisfaction"
+      titleMain="Into 5-Star Authority"
+      titleBottom=""
+      intro={`Patients don’t choose the “best” clinic — they choose the most trusted one.
+
+We install a system that consistently generates high-quality reviews — turning your reputation into a patient acquisition asset.`}
+      primaryCtaText="GET YOUR FREE REVIEW AUDIT"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/review-generation-campaigns/001.webp"
       heroImageAlt="Review generation campaigns for clinics"
-      sectionTwoTitle="Why Review Generation Matters"
-      sectionTwoTextOne="Online reviews often shape whether a potential patient trusts your clinic enough to enquire or book. Even great clinics can miss opportunities if they are not consistently collecting feedback."
-      sectionTwoTextTwo="Review generation campaigns help clinics create a repeatable process for encouraging more satisfied patients to leave positive reviews."
+      sectionTwoTitle="Your reputation is being judged — instantly"
+      sectionTwoTextOne={`When patients search, they compare ratings, volume, and recency. If your competitors look stronger — you lose the decision before they even visit your website.`}
+      sectionTwoTextTwo={`Most clinics rely on random reviews. No system. No consistency. No control. We install a Review Generation Engine that builds your reputation continuously.`}
       sectionTwoImage="/assets/img/inner-pages/review-generation-campaigns/002.webp"
       sectionTwoImageAlt="Clinic review generation strategy"
       featureCards={[
         {
           icon: <Star size={28} />,
-          title: "More Positive Reviews",
-          text: "Increase the number of patient reviews that support trust and credibility.",
+          title: "Automated Review Capture",
+          text: "Trigger review requests at the perfect moment post-visit.",
         },
         {
           icon: <BadgeCheck size={28} />,
-          title: "Stronger Online Trust",
-          text: "Improve first impressions for potential patients researching your clinic.",
+          title: "High-Intent Patient Targeting",
+          text: "Focus on satisfied patients most likely to leave strong reviews.",
         },
         {
           icon: <SmilePlus size={28} />,
-          title: "Better Social Proof",
-          text: "Make it easier for patients to feel confident choosing your clinic.",
+          title: "Consistent Reputation Growth",
+          text: "Build volume, quality, and recency — every month.",
         },
       ]}
-      valueTitle="How Review Campaigns Support Growth"
-      valueTextOne="Review generation campaigns help clinics improve how they appear across search, local listings, and other online touchpoints where patients form early opinions."
-      valueTextTwo="They also support better performance across ads, SEO, and referrals by strengthening the trust signals that influence conversion."
+      valueTitle="More reviews → higher trust → more bookings"
+      valueTextOne={`Your reviews are your first impression. We turn happy patient experiences into visible proof that influences every future decision.`}
+      valueResultItems={[
+        { text: "Increased review volume", tagColor: "pink" },
+        { text: "Higher average rating", tagColor: "green" },
+        { text: "Stronger patient confidence", tagColor: "blue" },
+      ]}
       valueImage="/assets/img/inner-pages/review-generation-campaigns/003.webp"
       valueImageAlt="Clinic reviews and trust growth"
-      consultationText="Want to generate more reviews from happy patients?"
+      consultationText="If a patient compared you to 3 competitors today — would you win?"
       buildTitle="What We Help Build"
       buildItems={[
         "Review request workflows",
@@ -98,8 +104,8 @@ export default function ReviewGenerationCampaignsPage() {
           a: "No, even clinics with existing reviews benefit from a consistent review generation process.",
         },
       ]}
-      finalCtaText="Ready to build stronger trust with more patient reviews?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText={`Ready to Build a Reputation That Attracts Patients?`}
+      finalCtaButtonText="Get Your Free Review Audit"
       finalCtaButtonLink="/contact"
       processComponent={<ProcessSectionServicesFive />}
     />

@@ -1,105 +1,105 @@
 import ServicePageLayout from "@/app/components/ServicePageLayout";
 import ProcessSectionServicesFour from "@/app/components/ProcessSectionServicesFour";
 import {
-  MessageSquareReply,
   PhoneMissed,
-  PhoneOutgoing,
+  MessageCircleMore,
+  MessageSquareReply,
+  Bot,
+  CalendarCheck,
   RefreshCw,
-  Smartphone,
-  Timer,
 } from "lucide-react";
 
 export default function MissedCallTextbackSystemPage() {
   return (
     <ServicePageLayout
       category="PatientFlow AI"
-      titleTop="Missed Call"
-      titleMain="Textback System"
-      titleBottom="for Clinics"
-      intro="Turn missed calls into patient conversations with automated textback systems that improve follow-up and reduce lost opportunities."
-      primaryCtaText="Book a Consultation"
+      titleTop="Turn Missed Calls"
+      titleMain="Into Booked Patients"
+      titleBottom="— Automatically"
+      intro="If you miss the call, you lose the patient. We install an instant response system that texts back every missed call — keeping the conversation alive and converting it into bookings."
+      primaryCtaText="BOOK A DEMO"
       primaryCtaLink="/contact"
       heroImage="/assets/img/inner-pages/missed-call-text-back-system/001.webp"
-      heroImageAlt="Missed call textback system for clinics"
-      sectionTwoTitle="Why Missed Call Textback Matters"
-      sectionTwoTextOne="When a clinic misses a patient call, there is a strong chance that person may contact a competitor instead of waiting for a callback."
-      sectionTwoTextTwo="A missed call textback system helps your clinic respond immediately with a message that reassures the patient and guides them toward the next step."
+      heroImageAlt="Missed call text-back system for clinics"
+      sectionTwoTitle="Missed calls are silent revenue leaks"
+      sectionTwoTextOne="Patients don’t call twice. If you don’t answer — they move on. Most clinics lose dozens of ready-to-book patients every month because of this one gap."
+      sectionTwoTextTwo="We fix it with an Instant Call Recovery System."
       sectionTwoImage="/assets/img/inner-pages/missed-call-text-back-system/002.webp"
-      sectionTwoImageAlt="Automated missed call textback for clinics"
+      sectionTwoImageAlt="Instant missed call recovery system for clinics"
       featureCards={[
         {
           icon: <PhoneMissed size={28} />,
-          title: "Recover Lost Opportunities",
-          text: "Respond automatically when calls are missed so patients are less likely to drop off.",
+          title: "Instant SMS Response",
+          text: "Reply within seconds of a missed call so every enquiry gets an immediate follow-up.",
         },
         {
-          icon: <Smartphone size={28} />,
-          title: "Instant Follow-Up",
-          text: "Send quick text replies that acknowledge the missed call and keep the conversation open.",
+          icon: <MessageCircleMore size={28} />,
+          title: "Guided Booking Flow",
+          text: "Turn missed calls into active conversations that guide patients toward booking.",
         },
         {
-          icon: <PhoneOutgoing size={28} />,
-          title: "Stronger Patient Experience",
-          text: "Show patients that your clinic is responsive even when calls cannot be answered immediately.",
+          icon: <MessageSquareReply size={28} />,
+          title: "Lead Recovery Engine",
+          text: "Recover patients you already paid to acquire instead of losing them after one missed call.",
         },
       ]}
-      valueTitle="How Missed Call Textback Supports Growth"
-      valueTextOne="A missed call textback system helps clinics capture more value from inbound call traffic by reducing the number of potential patients lost through silence."
-      valueTextTwo="It also improves communication consistency and gives patients an easier way to reconnect without needing to call again."
+      valueTitle="Recover revenue you’re already generating"
+      valueTextOne="You don’t need more leads. You need to stop losing the ones you already have."
+      valueTextTwo="Recover more patients, increase booking rates, and reduce acquisition waste by fixing the missed-call gap."
       valueImage="/assets/img/inner-pages/missed-call-text-back-system/004.webp"
-      valueImageAlt="Clinic missed call response workflow"
-      consultationText="Want to stop losing patients after missed calls?"
+      valueImageAlt="Recovered patient bookings through missed call text-back automation"
+      consultationText="How many calls did you miss this week?"
       buildTitle="What We Help Build"
       buildItems={[
-        "Automated missed call textback flows",
-        "Instant call acknowledgment messages",
-        "Patient callback pathways",
-        "SMS-based re-engagement prompts",
-        "Lead recovery communication",
-        "Contact option guidance",
-        "Follow-up process automation",
-        "Missed-opportunity reduction systems",
+        "Instant missed call SMS response systems",
+        "Automated call recovery workflows",
+        "Guided text-based booking journeys",
+        "Lead recovery follow-up sequences",
+        "After-hours patient response systems",
+        "Missed call conversion messaging flows",
+        "SMS re-engagement pathways",
+        "Patient booking recovery automation",
       ]}
       buildImage="/assets/img/inner-pages/landing-page-optimisation/005.webp"
-      buildImageAlt="Missed call automation system build"
-      quoteText="A missed call should not mean a missed patient opportunity."
+      buildImageAlt="Missed call text-back workflow setup for clinics"
+      quoteText="Every missed call is a patient you may never hear from again — unless you respond instantly."
       relatedServices={[
         {
-          icon: <RefreshCw size={26} />,
-          title: "Lead Nurturing Follow-Ups",
-          text: "Keep patient conversations moving after the first missed interaction.",
-        },
-        {
-          icon: <Timer size={26} />,
+          icon: <Bot size={26} />,
           title: "AI Chatbot Website & SMS",
-          text: "Support real-time enquiry handling across more patient touchpoints.",
+          text: "Handle patient enquiries instantly across your website and messaging channels.",
         },
         {
-          icon: <MessageSquareReply size={26} />,
+          icon: <CalendarCheck size={26} />,
+          title: "Online Booking Integration",
+          text: "Connect conversations directly to appointment actions and reduce drop-off.",
+        },
+        {
+          icon: <RefreshCw size={26} />,
           title: "Patient Reactivation Campaigns",
-          text: "Reconnect with older leads and past patients through timely messaging.",
+          text: "Reconnect with patients and older leads through timely automated follow-ups.",
         },
       ]}
       faqs={[
         {
-          q: "What is a missed call textback system?",
-          a: "It is an automated system that sends a text message to patients when your clinic misses their call.",
+          q: "What is a missed call text-back system?",
+          a: "It’s an automated system that sends a text message to patients immediately after your clinic misses their call.",
         },
         {
           q: "Why is this important for clinics?",
-          a: "It helps reduce lost opportunities by replying quickly instead of leaving callers with no response.",
+          a: "Because patients often move on quickly. A fast response helps keep the conversation alive instead of losing the enquiry.",
         },
         {
-          q: "Can it improve patient experience?",
-          a: "Yes, patients often appreciate quick acknowledgment and clear next-step guidance after a missed call.",
+          q: "Can this improve bookings?",
+          a: "Yes. It helps convert missed calls into active conversations that can lead to appointments.",
         },
         {
-          q: "Does it replace callbacks?",
-          a: "No, it supports your process by bridging the gap until your team can respond properly.",
+          q: "Does it replace my front desk team?",
+          a: "No. It supports your team by bridging the gap instantly until staff can continue the conversation properly.",
         },
       ]}
-      finalCtaText="Ready to recover more missed call opportunities?"
-      finalCtaButtonText="Book Your Free Consultation"
+      finalCtaText="Ready to Stop Losing Patients on Missed Calls?"
+      finalCtaButtonText="BOOK A DEMO"
       finalCtaButtonLink="/contact"
       processComponent={<ProcessSectionServicesFour />}
     />
